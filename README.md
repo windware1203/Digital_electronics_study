@@ -1,7 +1,13 @@
+[**HackMD**](https://hackmd.io/@takedaTW/digitalExperimen)
 ![](https://i.imgur.com/S3HWjUq.png)
 
 ${\rm\bf{Digital\hspace{4mm}electronics\hspace{4mm}study}}$
 ===
+
+:::success
+- $Author:$ [name=張呈顥]、[name=武田奈々]
+
+:::
 
 ###### tags: `digital`、`experiment`
 
@@ -9,7 +15,7 @@ ${\rm\bf{Digital\hspace{4mm}electronics\hspace{4mm}study}}$
 ### ==$21$點、$\rm{BlackJack}$==
 
 ## :construction_worker: Team
-* **[name= 張呈顥、武田奈々] [u10916024]** 
+* **[name= 張呈顥] [u10916024]** 
 * **[name= 郭子筠] [u10916028]**
 * **[name=黃楷媛] [u10916032]**
 * **[name=簡劭宸] [u10916041]**
@@ -26,8 +32,8 @@ ${\rm\bf{Digital\hspace{4mm}electronics\hspace{4mm}study}}$
 ## :clipboard: The minutes
 ### :small_blue_diamond: 4_24 (Sun.)
 - 討論主題
-    1. [ ] 骰子 ==0==
-    2. [ ] 自行輸入 ==1==
+    1. [ ] ~~骰子~~ ==0==
+    2. [ ] ~~自行輸入~~ ==1==
     3. [x] 21點 ==6==
 
 - 摘要 
@@ -65,9 +71,9 @@ classDef startClass fill:#f2a7c8;
 classDef startClass stroke:#f2a7c8;
 
 Start([start]):::startClass-->shuffle洗牌-->initP-->chooseLv{choose Level}
-    chooseLv--Lv.1-->one-->deal
-    chooseLv--Lv.2-->two-->deal
-    chooseLv--Lv.3-->three-->deal
+    chooseLv--Lv. 1-->one-->deal
+    chooseLv--Lv. 2-->two-->deal
+    chooseLv--Lv. 3-->three-->deal
     deal-->raise-->checkPt
     checkPt-- not enough -->raise
     checkPt-- enough -->playerDecision
@@ -96,7 +102,9 @@ Start([start]):::startClass-->shuffle洗牌-->initP-->chooseLv{choose Level}
         - 決戰
             - 對未有爆牌的玩家，比點數大小，大者勝，可得賠金（根據加注金額）
             - 如莊家爆牌、未有爆牌的玩家便可得賠金
-- 企劃書草稿截止日:==$4/26 \hspace{2mm} _{A.M.} \hspace{0.5mm} 00:00$==
+:::danger
+#### 企劃書草稿截止日:==$\hspace{2mm}4/26 \hspace{2mm} _{A.M.} \hspace{0.5mm} 00:00\hspace{2mm}$==
+:::
 ## :ballot_box_with_check: TODO
 - [x] find the topic
 - [ ] write the proposal
