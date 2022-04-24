@@ -6,7 +6,8 @@ ${\rm\bf{Digital\hspace{4mm}electronics\hspace{4mm}study}}$
 ###### tags: `digital`、`experiment`
 
 ## :pushpin: Topic
-### ==$21$點==
+### ==$21$點、$\rm{BlackJack}$==
+
 ## :construction_worker: Team
 * **[name= 張呈顥、武田奈々] [u10916024]** 
 * **[name= 郭子筠] [u10916028]**
@@ -42,7 +43,7 @@ ${\rm\bf{Digital\hspace{4mm}electronics\hspace{4mm}study}}$
         - $J、Q、K$: $10$
     - 分級（獲勝分數）
         - Switch 控制
-        - $0$分 = 你輸了
+        - $0$ 分 = 你輸了
         - 初始分數: $5$
         - 初階:star:
             - 贏了: ==$10$==
@@ -56,23 +57,26 @@ ${\rm\bf{Digital\hspace{4mm}electronics\hspace{4mm}study}}$
         - 紀錄發牌張數
 - 提出方法與步驟 
     - 依照規則->流程圖
+    - [$\rm{documentation}$](https://mermaid-js.github.io/mermaid/#/flowchart)
 
 ```mermaid
-graph TD;
+flowchart TB;
 classDef startClass fill:#f2a7c8;
 classDef startClass stroke:#f2a7c8;
 
-Start([start]):::startClass-->shuffle-->chooseLv{choose Level}
+Start([start]):::startClass-->shuffle洗牌-->initP-->chooseLv{choose Level}
     chooseLv--Lv.1-->one-->deal
     chooseLv--Lv.2-->two-->deal
     chooseLv--Lv.3-->three-->deal
     deal-->raise-->checkPt
     checkPt-- not enough -->raise
     checkPt-- enough -->playerDecision
-    playerDecision-->hit--keep going?-->playerDecision
+    playerDecision-->hit-->|keep going?| playerDecision
     playerDecision-->stand
     
-    deal[deal]
+    initP[initial point: 5]
+    raise[raise加注]
+    deal[deal發牌]
     one[10 point WIN]
     two[20 point WIN]
     three[30 point WIN]
@@ -97,11 +101,11 @@ Start([start]):::startClass-->shuffle-->chooseLv{choose Level}
 - [x] find the topic
 - [ ] write the proposal
     - **統一整合與規劃** [name=張呈顥]
-    - **一、 摘要** [name=楊皓翔]
-    - **二、 製作目的** [name=郭子筠]
-    - **三、 方法探討** [name=簡劭宸]
-    - **四、 提出方法及步驟** [name=侯正成]、[name=范圃綱]
-    - **五、 預期成果** [name=黃楷媛]
+        - **一、 摘要** [name=楊皓翔]
+        - **二、 製作目的** [name=郭子筠]
+        - **三、 方法探討** [name=簡劭宸]
+        - **四、 提出方法及步驟** [name=侯正成]、[name=范圃綱]
+        - **五、 預期成果** [name=黃楷媛]
 
 <br><br><br><br><br><br>
 <center style="margin-top=100px">
