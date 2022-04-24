@@ -1,4 +1,5 @@
-[**HackMD**](https://hackmd.io/@takedaTW/digitalExperimen)
+[**HackMD**](https://hackmd.io/@takedaTW/digitalExperiment)
+
 ![](https://i.imgur.com/S3HWjUq.png)
 
 ${\rm\bf{Digital\hspace{4mm}electronics\hspace{4mm}study}}$
@@ -64,22 +65,64 @@ ${\rm\bf{Digital\hspace{4mm}electronics\hspace{4mm}study}}$
 - 提出方法與步驟 
     - 依照規則->流程圖
     - [$\rm{documentation}$](https://mermaid-js.github.io/mermaid/#/flowchart)
+    <!--可以看這個，有語法教學-->
 
 ```mermaid
 flowchart TB;
 classDef startClass fill:#f2a7c8;
 classDef startClass stroke:#f2a7c8;
 
-Start([start]):::startClass-->shuffle洗牌-->initP-->chooseLv{choose Level}
+    %%*********************************/
+    %% Start
+    Start([start]):::startClass-->
+    shuffle洗牌-->
+    initP-->
+    chooseLv{choose Level}
+    
+    %%*********************************/
+    %% Linked Nodes
+    %% Ex: Node1--text-->Node2
     chooseLv--Lv. 1-->one-->deal
     chooseLv--Lv. 2-->two-->deal
     chooseLv--Lv. 3-->three-->deal
     deal-->raise-->checkPt
     checkPt-- not enough -->raise
-    checkPt-- enough -->playerDecision
-    playerDecision-->hit-->|keep going?| playerDecision
-    playerDecision-->stand
+    linkStyle 11 stroke:red,stroke-width:4px,color:red;
     
+    checkPt-- enough -->playerDecision
+    playerDecision-->playerHit-->|keep going?| playerDecision
+    playerDecision-->playerStand
+    playerStand-->dealerDecision
+    dealerDecision--No-->dealerHit-->|keep going?| dealerDecision
+    dealerDecision--Yes-->dealerStand
+    dealerStand-->checkPlayerExceed
+    
+    %% 玩家沒爆牌
+    checkPlayerExceed--No-->checkDealerExceedPNo
+    checkDealerExceedPNo--No-->compare
+    checkDealerExceedPNo--Yes-->playerWin
+    
+    %% 玩家爆牌
+    checkPlayerExceed--Yes-->checkDealerExceedPYes
+    checkDealerExceedPYes--No-->dealerWin
+    checkDealerExceedPYes--Yes-->peace
+    
+    %%比大小
+    compare--player>dealer-->playerWin
+    compare--player<=dealer-->dealerWin
+    
+    %%*********************************/
+    
+    %%我先往下寫 看你有沒有要修改 有就直接改
+    %% 最後找個地方寫過五關 現在加哪都覺得怪怪的
+    %% 過五關感覺會在發牌那
+    %% 我先撤 寫個林明聖-->武田是渾蛋QQ
+    %%那菱形超大 真的
+    
+    
+    %%*********************************/
+    %% The information of Nodes
+    %% Ex: nodeName[Text] 方框 ([])圓角方框 {}菱形大框框(確實)
     initP[initial point: 5]
     raise[raise加注]
     deal[deal發牌]
@@ -87,9 +130,21 @@ Start([start]):::startClass-->shuffle洗牌-->initP-->chooseLv{choose Level}
     two[20 point WIN]
     three[30 point WIN]
     checkPt{check player's point}
-    hit[take another card]
-    stand[take no more cards]
+    playerHit[take another card]
+    playerStand[take no more cards]
     playerDecision[player decision]
+    dealerDecision{check if dealer's point >= 11}
+    dealerHit[take another card]
+    dealerStand[take no more cards]
+    checkPlayerExceed[check if player's point > 21]
+    checkDealerExceedPNo[check if dealer's point > 21]
+    checkDealerExceedPYes[check if dealer's point > 21]
+    playerWin[Player win!]
+    compare[比大小]
+    dealerWin[Dealer win!]
+    peace[和局 不加分不扣分]
+    %% 尚未完成: 過五關 改成英文(睡覺) 晚安ZZ
+    %%*********************************/
 ```
 
 - 預期成果 
