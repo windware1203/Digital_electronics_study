@@ -61,14 +61,7 @@ ${\rm\bf{Digital\hspace{4mm}electronics\hspace{4mm}study}}$
 |  number   |  40  |  41  | ... | 50  | 51  | 52 |
 :::
 
-:::danger
-- Game  (本局)
-    - win: **earn the money** :moneybag: 
-    - lose:**lose the money** :money_with_wings: 
-- Match (本遊戲)
-    - win:  **victory** :
-    - lose: **defeat**
-:::
+
 ## :clipboard: The minutes
 ### :small_blue_diamond: 4_24 (Sun.)
 - 討論主題
@@ -114,6 +107,11 @@ flowchart TB;
 classDef startClass fill:#f2a7c8;
 classDef startClass stroke:#f2a7c8;
 
+classDef winlass fill:##87A330;
+classDef winClass stroke:##87A330;
+
+classDef loseClass fill:##87BCDE;
+classDef loseClass stroke:##87BCDE;
     %%*********************************/
     %% Start
     
@@ -121,27 +119,44 @@ classDef startClass stroke:#f2a7c8;
     shuffle洗牌-->deal
     -->playerChoose
     playerChoose--yes-->passFive
-    passFive--no-->playerAgain
-    passFive--yes-->win
     
+    passFive--no-->plus
+    
+    plus-->checkGG
     
     playerChoose--no-->dealerPlus
+    checkGG--no-->playerAgain
+    
+    
+    playerAgain--yes-->passFive
+    playerAgain--no-->dealerPlus
+    
+    dealerPlus--yes-->dealerChoose
+    dealerPlus--no-->dealerPP
+    
+    checkGG--yes-->lose
+    passFive--yes-->win
     %%*********************************/
     %% The information of Nodes
     %% Ex: nodeName[Text] 方框 ([])圓角方框 {}菱形大框框(確實)
     
     deal[deal發牌]
+    plus[玩家加牌]
+    dealerPP[莊家加牌]
     playerChoose{玩家選擇是否加牌}
     playerAgain{玩家選擇是否繼續加牌}
-    dealerPlus{莊家選擇是否加牌}
+    dealerChoose{莊家選擇是否加牌}
+    dealerPlus{莊家持有點數是否大於11}
     passFive{持有牌達5張?}
+    checkGG{確認是否爆牌>21}
+    win[you win!]:::winClass
+    lose[you lose!]:::loseClass
     
-    win[you win!]
-    lose[you lose!]
+    GG[Good Game]
  
   
  
-    %% 尚未完成: 過五關、改成英文、重新發牌拉線
+  
     %%*********************************/
 ```
 
