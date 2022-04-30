@@ -80,7 +80,7 @@ ${\rm\bf{Digital\hspace{4mm}electronics\hspace{4mm}study}}$
     - 點數計算
         - $A$: $1$
         - $J、Q、K$: $10$
-    - 分級（獲勝分數）
+    -- 分級（獲勝分數）
         - Switch 控制
         - $0$ 分 = 你輸了
         - 初始分數: $10$
@@ -132,7 +132,14 @@ classDef loseClass stroke:##87BCDE;
     playerAgain--no-->dealerPlus
     
     dealerPlus--yes-->dealerChoose
-    dealerPlus--no-->dealerPP
+    dealerPlus--no-->dealerPP-->dealerChoose
+    -->checkGG2
+    checkGG2--no-->fight
+    checkGG2--yes-->win
+    fight--yes-->win
+    fight--no-->lose
+    
+    
     
     checkGG--yes-->lose
     passFive--yes-->win
@@ -142,13 +149,15 @@ classDef loseClass stroke:##87BCDE;
     
     deal[deal發牌]
     plus[玩家加牌]
-    dealerPP[莊家加牌]
+    dealerPP[莊家加牌至超過11]
     playerChoose{玩家選擇是否加牌}
     playerAgain{玩家選擇是否繼續加牌}
-    dealerChoose{莊家選擇是否加牌}
+    dealerChoose{莊家隨機選擇是否加牌}
     dealerPlus{莊家持有點數是否大於11}
     passFive{持有牌達5張?}
     checkGG{確認是否爆牌>21}
+    checkGG2{確認是否爆牌>21}
+    fight{玩家點數大於莊家點數?}
     win[you win!]:::winClass
     lose[you lose!]:::loseClass
     
