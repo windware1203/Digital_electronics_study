@@ -132,9 +132,10 @@ classDef loseClass stroke:##87BCDE;
     playerAgain--no-->dealerPlus
     
     dealerPlus--yes-->dealerChoose
-    dealerPlus--no-->dealerPP-->dealerChoose
-    -->checkGG2
-    checkGG2--no-->fight
+    dealerPlus--no-->dealerPP-->
+    dealerChoose--yes-->checkGG2
+    dealerChoose--no-->fight
+    checkGG2--no-->dealerChoose
     checkGG2--yes-->win
     fight--yes-->win
     fight--no-->lose
@@ -199,13 +200,51 @@ classDef loseClass stroke:##87BCDE;
 
 ## :ballot_box_with_check: TODO
 - [x] find the topic
-- [ ] write the proposal
+- [x] write the proposal
     - **統一整合與規劃** [name=張呈顥]
         - **一、 摘要** [name=楊皓翔]
         - **二、 製作目的** [name=郭子筠]
         - **三、 方法探討** [name=簡劭宸]
         - **四、 提出方法及步驟** [name=侯正成]、[name=范圃綱]
         - **五、 預期成果** [name=黃楷媛]
+## 專題分工
+### 項目
+* **LFSR(Left Feedback Shift Register)**
+    * 產生亂數
+        * 洗牌
+        * 隨機選擇是否加牌
+* **6bits比較器**
+    * 是否爆牌?
+    * 持有牌達5張?
+    * 莊家持有點數>11?
+    * 玩家點數>莊家點數?
+* **Switch**
+    * 開始遊戲
+    * 選擇是否加牌
+* **七段顯示器**
+    * 點數
+* **加牌器**
+    * 從牌組的LFSR Shift一張牌出來
+    * 加到總和點數
+* **骰子**
+    * 綠-贏
+    * 紅-輸
+    
+### 人員
+* **[name= 張呈顥] [u10916024]**
+    * LFSR
+* **[name= 郭子筠] [u10916028]**
+    * 比較器
+* **[name=黃楷媛] [u10916032]**
+    * 比較器
+* **[name=簡劭宸] [u10916041]**
+    * Sw、七段、加牌、骰子
+* **[name=楊皓翔] [u10916035]**
+    * Sw、七段、加牌、骰子
+* **[name=侯正成] [u10916039]**
+    * Sw、七段、加牌、骰子
+* **[name=范圃綱] [u10916031]**
+    * 整合
 
 <br><br><br><br><br><br>
 <center style="margin-top=100px">
