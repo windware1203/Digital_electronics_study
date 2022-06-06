@@ -1,0 +1,81 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\User\Documents\GitHub\Digital_electronics_study\src\0606\simulation\qsim
+vp0606
+Z1 !s100 bMYCQf@zXhE5`8X4UnjZd3
+Z2 I=?7A`:AC]41V]g3kc0RIl2
+Z3 V_kQSeMo@8GCUo;[=Cl]E30
+Z4 dC:\Users\User\Documents\GitHub\Digital_electronics_study\src\0606\simulation\qsim
+Z5 w1654496702
+Z6 8p0606.vo
+Z7 Fp0606.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|p0606.vo|
+Z10 o-work work -O0
+!i10b 1
+!s85 0
+Z11 !s108 1654496703.184000
+Z12 !s107 p0606.vo|
+!s101 -O0
+vp0606_vlg_check_tst
+!i10b 1
+Z13 !s100 Xi[zEMUW1K[L7cbQ3R8@M3
+Z14 I;HLHchadnOKc2KQEDhcL50
+Z15 VW2YITU=KzAA6Ve_I=[C4N3
+R4
+Z16 w1654496701
+Z17 8Waveform2.vwf.vt
+Z18 FWaveform2.vwf.vt
+L0 57
+R8
+r1
+!s85 0
+31
+Z19 !s108 1654496703.225000
+Z20 !s107 Waveform2.vwf.vt|
+Z21 !s90 -work|work|Waveform2.vwf.vt|
+!s101 -O0
+R10
+vp0606_vlg_sample_tst
+!i10b 1
+Z22 !s100 GAYU><1jF_3M4iniR1d9a2
+Z23 IDO[Y^Ch=IFhXTLEMiA3O;3
+Z24 V[APNefSUO;oJ_El=kiFU`3
+R4
+R16
+R17
+R18
+L0 29
+R8
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R10
+vp0606_vlg_vec_tst
+!i10b 1
+!s100 Ik_i3F05SZFKAkzB3EAeO1
+IhgzADhcm3?n26Rj8dMFDJ1
+Z25 VdbCY;=PKbJ<D0O:<c8;MW2
+R4
+R16
+R17
+R18
+Z26 L0 259
+R8
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R10

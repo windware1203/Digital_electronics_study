@@ -1,0 +1,427 @@
+$comment
+	File created using the following command:
+		vcd file p0606.msim.vcd -direction
+$end
+$date
+	Mon Jun 06 14:25:03 2022
+$end
+$version
+	ModelSim Version 10.1d
+$end
+$timescale
+	1ps
+$end
+$scope module p0606_vlg_vec_tst $end
+$var reg 4 ! inputer [0:3] $end
+$var wire 1 " outputer [0] $end
+$var wire 1 # outputer [1] $end
+$var wire 1 $ outputer [2] $end
+$var wire 1 % outputer [3] $end
+$var wire 1 & outputer [4] $end
+$var wire 1 ' outputer [5] $end
+$var wire 1 ( outputer [6] $end
+$var wire 1 ) sampler $end
+$scope module i1 $end
+$var wire 1 * gnd $end
+$var wire 1 + vcc $end
+$var wire 1 , unknown $end
+$var tri1 1 - devclrn $end
+$var tri1 1 . devpor $end
+$var tri1 1 / devoe $end
+$var wire 1 0 outputer[6]~output_o $end
+$var wire 1 1 outputer[5]~output_o $end
+$var wire 1 2 outputer[4]~output_o $end
+$var wire 1 3 outputer[3]~output_o $end
+$var wire 1 4 outputer[2]~output_o $end
+$var wire 1 5 outputer[1]~output_o $end
+$var wire 1 6 outputer[0]~output_o $end
+$var wire 1 7 inputer[0]~input_o $end
+$var wire 1 8 inputer[3]~input_o $end
+$var wire 1 9 inputer[1]~input_o $end
+$var wire 1 : inputer[2]~input_o $end
+$var wire 1 ; Mux6~0_combout $end
+$var wire 1 < Mux5~0_combout $end
+$var wire 1 = Mux4~0_combout $end
+$var wire 1 > Mux3~0_combout $end
+$var wire 1 ? Mux2~0_combout $end
+$var wire 1 @ Mux1~0_combout $end
+$var wire 1 A Mux0~0_combout $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 !
+0(
+1'
+1&
+1%
+1$
+1#
+1"
+x)
+0*
+1+
+x,
+1-
+1.
+1/
+00
+11
+12
+13
+14
+15
+16
+07
+08
+09
+0:
+0;
+0<
+0=
+0>
+0?
+0@
+0A
+$end
+#40000
+b1 !
+18
+0)
+1A
+1>
+1=
+1<
+06
+03
+02
+01
+0"
+0%
+0&
+0'
+#80000
+b11 !
+b10 !
+08
+1:
+1)
+0A
+1?
+0>
+0=
+1;
+16
+04
+13
+12
+10
+1"
+0$
+1%
+1&
+1(
+#120000
+b11 !
+18
+0)
+0?
+1=
+14
+02
+1$
+0&
+#160000
+b111 !
+b101 !
+b100 !
+08
+0:
+19
+1)
+1A
+1>
+0<
+06
+03
+11
+0"
+0%
+1'
+#200000
+b101 !
+18
+0)
+0A
+1@
+0>
+16
+05
+13
+1"
+0#
+1%
+#240000
+b111 !
+b110 !
+08
+1:
+1)
+0=
+12
+1&
+#280000
+b111 !
+18
+0)
+0@
+1>
+1=
+1<
+0;
+15
+03
+02
+01
+00
+1#
+0%
+0&
+0'
+0(
+#320000
+b1111 !
+b1011 !
+b1001 !
+b1000 !
+08
+0:
+09
+17
+1)
+0>
+0=
+0<
+1;
+13
+12
+11
+10
+1%
+1&
+1'
+1(
+#360000
+b1001 !
+18
+0)
+1=
+02
+0&
+#400000
+b1011 !
+b1010 !
+08
+1:
+1)
+1A
+1@
+1?
+1>
+1<
+0;
+06
+05
+04
+03
+01
+00
+0"
+0#
+0$
+0%
+0'
+0(
+#440000
+b1011 !
+18
+0)
+#480000
+b1111 !
+b1101 !
+b1100 !
+08
+0:
+19
+1)
+#520000
+b1101 !
+18
+0)
+#560000
+b1111 !
+b1110 !
+08
+1:
+1)
+#600000
+b1111 !
+18
+0)
+#640000
+b111 !
+b11 !
+b1 !
+b0 !
+08
+0:
+09
+07
+1)
+0A
+0@
+0?
+0>
+0=
+0<
+16
+15
+14
+13
+12
+11
+1"
+1#
+1$
+1%
+1&
+1'
+#680000
+b1 !
+18
+0)
+1A
+1>
+1=
+1<
+06
+03
+02
+01
+0"
+0%
+0&
+0'
+#720000
+b11 !
+b10 !
+08
+1:
+1)
+0A
+1?
+0>
+0=
+1;
+16
+04
+13
+12
+10
+1"
+0$
+1%
+1&
+1(
+#760000
+b11 !
+18
+0)
+0?
+1=
+14
+02
+1$
+0&
+#800000
+b111 !
+b101 !
+b100 !
+08
+0:
+19
+1)
+1A
+1>
+0<
+06
+03
+11
+0"
+0%
+1'
+#840000
+b101 !
+18
+0)
+0A
+1@
+0>
+16
+05
+13
+1"
+0#
+1%
+#880000
+b111 !
+b110 !
+08
+1:
+1)
+0=
+12
+1&
+#920000
+b111 !
+18
+0)
+0@
+1>
+1=
+1<
+0;
+15
+03
+02
+01
+00
+1#
+0%
+0&
+0'
+0(
+#960000
+b1111 !
+b1011 !
+b1001 !
+b1000 !
+08
+0:
+09
+17
+1)
+0>
+0=
+0<
+1;
+13
+12
+11
+10
+1%
+1&
+1'
+1(
+#1000000

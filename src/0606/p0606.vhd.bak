@@ -1,0 +1,18 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+use IEEE.numeric_std.all;
+
+entity Seven is
+port
+(
+    Input       : in    std_logic(3 downto 0);
+    Number      : out   std_logic(6 downto 0)
+);
+end entity Seven;
+
+architecture Main of Seven is
+begin
+
+
+
+end architecture Main;
