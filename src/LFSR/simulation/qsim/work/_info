@@ -1,0 +1,85 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\User\Documents\GitHub\Digital_electronics_study\src\LFSR\simulation\qsim
+vLFSR
+Z1 !s100 amb[;g`j4^4j[6Pi@=CB92
+Z2 ISonzU2RcU9J82BzhfB5nk0
+Z3 VODZMEK8o@UVdX[P:i4HK41
+Z4 dC:\Users\User\Documents\GitHub\Digital_electronics_study\src\LFSR\simulation\qsim
+Z5 w1654607549
+Z6 8LFSR.vo
+Z7 FLFSR.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|LFSR.vo|
+Z10 o-work work -O0
+Z11 n@l@f@s@r
+!i10b 1
+!s85 0
+Z12 !s108 1654607549.759000
+Z13 !s107 LFSR.vo|
+!s101 -O0
+vLFSR_vlg_check_tst
+!i10b 1
+Z14 !s100 2F1KZ1Q?`99?E]?Mhk`]32
+Z15 I]AeYJaTO2Qge^OEJzLYX:2
+Z16 V>M2^VAnkzQ1ibW=ZAA?ZD2
+R4
+Z17 w1654607548
+Z18 8Waveform.vwf.vt
+Z19 FWaveform.vwf.vt
+L0 63
+R8
+r1
+!s85 0
+31
+Z20 !s108 1654607549.801000
+Z21 !s107 Waveform.vwf.vt|
+Z22 !s90 -work|work|Waveform.vwf.vt|
+!s101 -O0
+R10
+Z23 n@l@f@s@r_vlg_check_tst
+vLFSR_vlg_sample_tst
+!i10b 1
+Z24 !s100 H__25S8;GdIM_JD3j58201
+Z25 IO?88`CBa7[=W8^ZYJ7P:B3
+Z26 VkK1HFnQ7LD78c:MBXj=XO3
+R4
+R17
+R18
+R19
+L0 29
+R8
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R10
+Z27 n@l@f@s@r_vlg_sample_tst
+vLFSR_vlg_vec_tst
+!i10b 1
+!s100 Z??@am5aZZ@HUmU_8MUn43
+ICW[VPGziCg5hF:6a2DdkK1
+Z28 Vm]HO<jS_dhM@[?nNb_8aV1
+R4
+R17
+R18
+R19
+Z29 L0 234
+R8
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R10
+Z30 n@l@f@s@r_vlg_vec_tst

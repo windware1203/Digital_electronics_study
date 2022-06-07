@@ -1,0 +1,15 @@
+vendor_name = ModelSim
+source_file = 1, C:/Users/User/Documents/GitHub/Digital_electronics_study/src/LFSR_r/lfsr.vhd
+source_file = 1, C:/Users/User/Documents/GitHub/Digital_electronics_study/src/LFSR_r/db/lfsr.cbx.xml
+source_file = 1, c:/altera/13.1/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
+source_file = 1, c:/altera/13.1/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
+source_file = 1, c:/altera/13.1/quartus/libraries/vhdl/ieee/timing_b.vhd
+source_file = 1, c:/altera/13.1/quartus/libraries/vhdl/ieee/timing_p.vhd
+design_name = lfsr
+instance = comp, \outt~output\, outt~output, lfsr, 1
+instance = comp, \inSeed[0]~input\, inSeed[0]~input, lfsr, 1
+instance = comp, \inSeed[5]~input\, inSeed[5]~input, lfsr, 1
+instance = comp, \inSeed[4]~input\, inSeed[4]~input, lfsr, 1
+instance = comp, \inSeed[3]~input\, inSeed[3]~input, lfsr, 1
+instance = comp, \inSeed[2]~input\, inSeed[2]~input, lfsr, 1
+instance = comp, \inSeed[1]~input\, inSeed[1]~input, lfsr, 1
