@@ -1,8 +1,8 @@
 vendor_name = ModelSim
 source_file = 1, C:/Users/User/Documents/GitHub/Digital_electronics_study/src/0606/p0606.vhd
 source_file = 1, C:/Users/User/Documents/GitHub/Digital_electronics_study/src/0606/Waveform.vwf
-source_file = 1, C:/Users/User/Documents/GitHub/Digital_electronics_study/src/0606/Waveform1.vwf
-source_file = 1, C:/Users/User/Documents/GitHub/Digital_electronics_study/src/0606/Waveform2.vwf
+source_file = 1, Waveform1.vwf
+source_file = 1, Waveform2.vwf
 source_file = 1, C:/Users/User/Documents/GitHub/Digital_electronics_study/src/0606/db/p0606.cbx.xml
 source_file = 1, c:/altera/13.1/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
 source_file = 1, c:/altera/13.1/quartus/libraries/vhdl/ieee/prmtvs_p.vhd

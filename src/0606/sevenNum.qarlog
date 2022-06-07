@@ -1,0 +1,25 @@
+Quartus II Archive log --	C:/Users/User/Documents/GitHub/Digital_electronics_study/src/0606/sevenNum.qarlog
+
+Archive:	C:/Users/User/Documents/GitHub/Digital_electronics_study/src/0606/sevenNum.qar
+Date:		Mon Jun 06 14:45:26 2022
+Quartus II 64-Bit		13.1.0 Build 162 10/23/2013 SJ Web Edition
+
+	=========== Files Selected: ===========
+C:/Users/User/Documents/GitHub/Digital_electronics_study/src/0606/Waveform.vwf
+C:/Users/User/Documents/GitHub/Digital_electronics_study/src/0606/db/p0606.cmp.hdb
+C:/Users/User/Documents/GitHub/Digital_electronics_study/src/0606/db/p0606.db_info
+C:/Users/User/Documents/GitHub/Digital_electronics_study/src/0606/incremental_db/compiled_partitions/p0606.db_info
+C:/Users/User/Documents/GitHub/Digital_electronics_study/src/0606/p0606.qpf
+C:/Users/User/Documents/GitHub/Digital_electronics_study/src/0606/p0606.qsf
+C:/Users/User/Documents/GitHub/Digital_electronics_study/src/0606/p0606.vhd
+c:/altera/13.1/quartus/bin64/assignment_defaults.qdf
+	======= Total: 8 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.
+
+
+******* Archived project restoration attempt on Mon Jun 06 14:45:41 2022
+Source archive file:	C:/Users/User/Documents/GitHub/Digital_electronics_study/src/0606/sevenNum.qar
+Archive was extracted into	C:/Users/User/Documents/GitHub/Digital_electronics_study/src/0606/sevenNum_restored/
+		 - successfully.

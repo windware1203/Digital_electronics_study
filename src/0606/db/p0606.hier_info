@@ -27,12 +27,12 @@ inputer[0] => Mux3.IN16
 inputer[0] => Mux4.IN16
 inputer[0] => Mux5.IN16
 inputer[0] => Mux6.IN16
-outputer[6] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
-outputer[5] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
-outputer[4] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
-outputer[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
-outputer[2] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
-outputer[1] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
-outputer[0] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+outputer[6] << Mux6.DB_MAX_OUTPUT_PORT_TYPE
+outputer[5] << Mux5.DB_MAX_OUTPUT_PORT_TYPE
+outputer[4] << Mux4.DB_MAX_OUTPUT_PORT_TYPE
+outputer[3] << Mux3.DB_MAX_OUTPUT_PORT_TYPE
+outputer[2] << Mux2.DB_MAX_OUTPUT_PORT_TYPE
+outputer[1] << Mux1.DB_MAX_OUTPUT_PORT_TYPE
+outputer[0] << Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 

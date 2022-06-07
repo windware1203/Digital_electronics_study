@@ -22,5 +22,5 @@
 # Loading work.p0606_vlg_sample_tst
 # Loading work.p0606_vlg_check_tst
 # Simulation passed !
-# ** Note: $finish    : Waveform2.vwf.vt(255)
+# ** Note: $finish    : Waveform.vwf.vt(255)
 #    Time: 1 us  Iteration: 0  Instance: /p0606_vlg_vec_tst/tb_out
