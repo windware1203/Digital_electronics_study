@@ -1,10 +1,16 @@
 |lfsr
-inSeed[5] => ~NO_FANOUT~
-inSeed[4] => ~NO_FANOUT~
-inSeed[3] => ~NO_FANOUT~
-inSeed[2] => ~NO_FANOUT~
-inSeed[1] => ~NO_FANOUT~
-inSeed[0] => outt.DATAIN
-outt <= inSeed[0].DB_MAX_OUTPUT_PORT_TYPE
+inSeed[5] => temp.IN0
+inSeed[4] => temp.IN1
+inSeed[4] => outt[5].DATAIN
+inSeed[3] => outt[4].DATAIN
+inSeed[2] => outt[3].DATAIN
+inSeed[1] => outt[2].DATAIN
+inSeed[0] => outt[1].DATAIN
+outt[5] <= inSeed[4].DB_MAX_OUTPUT_PORT_TYPE
+outt[4] <= inSeed[3].DB_MAX_OUTPUT_PORT_TYPE
+outt[3] <= inSeed[2].DB_MAX_OUTPUT_PORT_TYPE
+outt[2] <= inSeed[1].DB_MAX_OUTPUT_PORT_TYPE
+outt[1] <= inSeed[0].DB_MAX_OUTPUT_PORT_TYPE
+outt[0] <= temp.DB_MAX_OUTPUT_PORT_TYPE
 
 

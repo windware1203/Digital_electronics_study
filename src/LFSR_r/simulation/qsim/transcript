@@ -1,4 +1,6 @@
 # do lfsr.do 
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module lfsr
 # 
@@ -16,8 +18,9 @@
 # Loading work.lfsr
 # Loading cycloneiv_ver.cycloneiv_io_obuf
 # Loading cycloneiv_ver.cycloneiv_io_ibuf
+# Loading cycloneiv_ver.cycloneiv_lcell_comb
 # Loading work.lfsr_vlg_sample_tst
 # Loading work.lfsr_vlg_check_tst
 # Simulation passed !
-# ** Note: $finish    : Waveform.vwf.vt(148)
+# ** Note: $finish    : Waveform3.vwf.vt(237)
 #    Time: 1 us  Iteration: 0  Instance: /lfsr_vlg_vec_tst/tb_out
