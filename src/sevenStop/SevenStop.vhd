@@ -1,38 +1,58 @@
 library IEEE;
 use IEEE.std_logic_1164.all;
 
-entity p0606 is
+entity SevenStop is
 port
 (
-    inputer       : in    std_logic_vector(0 to 3);--c3c2c1c0
+	 x,clk			: in    std_logic;
+    inputer       : in    std_logic_vector(0 to 6);--c3c2c1c0
     outputer      : out   std_logic_vector(0 to 6) --abcdefg
 );
-end entity p0606;
+end entity SevenStop;
 
-architecture Main of p0606 is
+architecture Main of SevenStop is
 begin
-	with inputer select
-		outputer <="1111110" when "0000", --0
+	
+	process(clk,x)
+	begin
+	if clk'event and clk = '1' then
 		
-					"0110000" when "0001", --1
-					"1101101" when "0010", --2
-					"1111001" when "0011", --3
-					
-					"0110011" when "0100", --4
-					"1011011" when "0101", --5
-					"1011111" when "0110", --6
-					
-					"1110000" when "0111", --7
-					"1111111" when "1000", --8
-					"1111011" when "1001", --9
-					
-					"1111101" when "1010", --10
-					"0011111" when "1011", --11
-					"0001101" when "1100", --12
-					
-					"0111101" when "1101", --13
-					"1101111" when "1110", --14
-					"1000111" when "1111", --15
-					"0000000" when others; 	 --don't care
-
+		if x = '1' then
+			case inputer is
+				when 	"1011011" =>
+						outputer <= "0001111";--s>t
+				when 	"0001111" =>
+						outputer <= "0011101";--t>o
+				when 	"0011101" =>
+						outputer <= "1100111";--o>p
+				when 	"1100111" =>
+						outputer <= "1011011";--p>s		
+				when others =>
+						outputer <= "1011011";
+			end case;
+--s 1011011
+--t 0001111
+--o 0011101
+--p 1100111
+--l 0110000
+--a 1111101
+--y 0111011
+--- 0000001
+		elsif x = '0' then
+			case inputer is
+				when 	"1100111" =>
+						outputer <= "0110000";--p>l
+				when 	"0110000" =>
+						outputer <= "1111101";--l>a
+				when 	"1111101" =>
+						outputer <= "0111011";--a>y
+				when 	"0111011" =>
+						outputer <= "1100111";--y>p		
+				when others =>
+						outputer <= "1100111";
+			end case;
+		end if;
+		
+	end if;
+	end process;
 end architecture Main;

@@ -8,7 +8,7 @@ Z1 !s100 BA??QW_9L@^<E7IcmzOBi0
 Z2 I?hLolhS`?7]_][SenTZ093
 Z3 VZAam>hMlJSPlQE9H1bPA21
 Z4 dC:\Users\User\Documents\GitHub\Digital_electronics_study\src\LFSR_r\simulation\qsim
-Z5 w1655137069
+Z5 w1655224245
 Z6 8lfsr.vo
 Z7 Flfsr.vo
 L0 31
@@ -19,7 +19,7 @@ Z9 !s90 -work|work|lfsr.vo|
 Z10 o-work work -O0
 !i10b 1
 !s85 0
-Z11 !s108 1655137070.289000
+Z11 !s108 1655224246.021000
 Z12 !s107 lfsr.vo|
 !s101 -O0
 vlfsr_vlg_check_tst
@@ -28,7 +28,7 @@ Z13 !s100 P=@U[hdhG4D]NXX9`fJ9A1
 Z14 I=`FVVTjzZnUcBgKP74<o91
 Z15 V;oH7j_jDllbS1PO`34YRH0
 R4
-Z16 w1655137068
+Z16 w1655224244
 Z17 8Waveform3.vwf.vt
 Z18 FWaveform3.vwf.vt
 L0 57
@@ -36,7 +36,7 @@ R8
 r1
 !s85 0
 31
-Z19 !s108 1655137070.330000
+Z19 !s108 1655224246.065000
 Z20 !s107 Waveform3.vwf.vt|
 Z21 !s90 -work|work|Waveform3.vwf.vt|
 !s101 -O0

@@ -3,7 +3,7 @@ $comment
 		vcd file lfsr.msim.vcd -direction
 $end
 $date
-	Tue Jun 14 00:17:50 2022
+	Wed Jun 15 00:30:46 2022
 $end
 $version
 	ModelSim Version 10.1d

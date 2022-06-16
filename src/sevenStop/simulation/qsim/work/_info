@@ -1,0 +1,85 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\User\Documents\GitHub\Digital_electronics_study\src\sevenStop\simulation\qsim
+vSevenStop
+Z1 !s100 0F7eZ:OVXKIaZ?hQm?eGV1
+Z2 IWlPEh;^@Q1gLzG`W_?5`[0
+Z3 V@SHX5UWUHAb]0Y>zVMg]Y1
+Z4 dC:\Users\User\Documents\GitHub\Digital_electronics_study\src\sevenStop\simulation\qsim
+Z5 w1655263005
+Z6 8SevenStop.vo
+Z7 FSevenStop.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|SevenStop.vo|
+Z10 o-work work -O0
+Z11 n@seven@stop
+!i10b 1
+!s85 0
+Z12 !s108 1655263005.681000
+Z13 !s107 SevenStop.vo|
+!s101 -O0
+vSevenStop_vlg_check_tst
+!i10b 1
+Z14 !s100 U?nRFMFj0=9U<nVL^L74f3
+Z15 IcVi1j3?MG9gBMj4gGh8mW3
+Z16 VkRUBaJ9EYMIjdMUhXT^gE1
+R4
+Z17 w1655263004
+Z18 8Waveform.vwf.vt
+Z19 FWaveform.vwf.vt
+L0 61
+R8
+r1
+!s85 0
+31
+Z20 !s108 1655263005.724000
+Z21 !s107 Waveform.vwf.vt|
+Z22 !s90 -work|work|Waveform.vwf.vt|
+!s101 -O0
+R10
+Z23 n@seven@stop_vlg_check_tst
+vSevenStop_vlg_sample_tst
+!i10b 1
+Z24 !s100 bP0H^A[E4LZK3cQM6GDQ83
+Z25 IX2@l@dzFLE=0O<eSO;3@h0
+Z26 VIK`cPU?c2a[m<6^kdjhhF0
+R4
+R17
+R18
+R19
+L0 29
+R8
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R10
+Z27 n@seven@stop_vlg_sample_tst
+vSevenStop_vlg_vec_tst
+!i10b 1
+Z28 !s100 ^bPT5k?i@O[8RKnUFjc1a1
+Z29 IF3OHCc`H_]Je?47dVbc3F3
+Z30 V[1=oW@:8_<Vm^f^fgj9a52
+R4
+R17
+R18
+R19
+Z31 L0 263
+R8
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R10
+Z32 n@seven@stop_vlg_vec_tst
