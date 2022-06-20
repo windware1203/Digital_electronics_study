@@ -1,0 +1,7 @@
+|switch
+C13 => Add.DATAIN
+B13 => Nadd.DATAIN
+Add <= C13.DB_MAX_OUTPUT_PORT_TYPE
+Nadd <= B13.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,18 @@
+|win_lose
+result_input => ~NO_FANOUT~
+E2 << <VCC>
+D3 << <VCC>
+C2 << <VCC>
+C1 << <VCC>
+L2 << <VCC>
+L1 << <VCC>
+G2 << <VCC>
+G1 << <VCC>
+U2 << <VCC>
+N1 << <VCC>
+AA2 << <VCC>
+AA1 << <VCC>
+W2 << <VCC>
+U1 << <VCC>
+
+
