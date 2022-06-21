@@ -1,9 +1,7 @@
 |final
 n21 <= <VCC>
 e1 <= win_lose:inst2.E2
-clk => Point:inst4.clk
-clk => cardNum:inst7.clk
-clk => vectorToBits:inst21.clk
+clk => clk_gen:inst23.clock
 ps3 => inst6.IN0
 ps3 => Point:inst4.reset
 ps3 => cardNum:inst7.reset
@@ -131,6 +129,70 @@ nextC[3] <= nextC[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 nextC[2] <= nextC[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 nextC[1] <= nextC[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 nextC[0] <= nextC[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|clk_gen:inst23
+1KHz <= div10_t:inst3.CLK_out
+clock => div10_t:inst.CLK
+100Hz <= div10_t:inst4.CLK_out
+10Hz <= div10_t:inst5.CLK_out
+1Hz <= div10_t:inst6.CLK_out
+
+
+|final|clk_gen:inst23|div10_t:inst3
+CLK_out <= 2.DB_MAX_OUTPUT_PORT_TYPE
+CLK => 5.CLK
+CLK => 3.CLK
+CLK => 1.CLK
+CLK => 2.CLK
+
+
+|final|clk_gen:inst23|div10_t:inst2
+CLK_out <= 2.DB_MAX_OUTPUT_PORT_TYPE
+CLK => 5.CLK
+CLK => 3.CLK
+CLK => 1.CLK
+CLK => 2.CLK
+
+
+|final|clk_gen:inst23|div10_t:inst1
+CLK_out <= 2.DB_MAX_OUTPUT_PORT_TYPE
+CLK => 5.CLK
+CLK => 3.CLK
+CLK => 1.CLK
+CLK => 2.CLK
+
+
+|final|clk_gen:inst23|div10_t:inst
+CLK_out <= 2.DB_MAX_OUTPUT_PORT_TYPE
+CLK => 5.CLK
+CLK => 3.CLK
+CLK => 1.CLK
+CLK => 2.CLK
+
+
+|final|clk_gen:inst23|div10_t:inst4
+CLK_out <= 2.DB_MAX_OUTPUT_PORT_TYPE
+CLK => 5.CLK
+CLK => 3.CLK
+CLK => 1.CLK
+CLK => 2.CLK
+
+
+|final|clk_gen:inst23|div10_t:inst5
+CLK_out <= 2.DB_MAX_OUTPUT_PORT_TYPE
+CLK => 5.CLK
+CLK => 3.CLK
+CLK => 1.CLK
+CLK => 2.CLK
+
+
+|final|clk_gen:inst23|div10_t:inst6
+CLK_out <= 2.DB_MAX_OUTPUT_PORT_TYPE
+CLK => 5.CLK
+CLK => 3.CLK
+CLK => 1.CLK
+CLK => 2.CLK
 
 
 |final|switch:inst5
