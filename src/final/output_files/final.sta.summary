@@ -466,4 +466,20 @@ Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clk_gen:inst23|div10_t:inst1|2
 Slack : 0.136
 TNS   : 0.000
 
-Type  : Fast 1100mV 0C Mod
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clk_gen:inst24|div10_t:inst1|2'
+Slack : 0.143
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clk_gen:inst24|div10_t:inst3|2'
+Slack : 0.146
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clk_gen:inst24|div10_t:inst|2'
+Slack : 0.148
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clk_gen:inst23|div10_t:inst2|2'
+Slack : 0.152
+TNS   : 0.000
+
+------------------------------------------------------------
