@@ -1,6 +1,6 @@
 |final
 n21 <= <VCC>
-e1 <= win_lose:inst2.E2
+d3 <= win_lose:inst2.D3
 clk => clk_gen:inst23.clock
 ps3 => inst6.IN0
 ps3 => Point:inst4.reset
@@ -9,7 +9,6 @@ ps3 => cardNum:inst13.add
 ps3 => Point:inst10.add
 c13 => switch:inst5.C13
 b13 => switch:inst5.B13
-d3 <= win_lose:inst2.D3
 c2 <= win_lose:inst2.C2
 c1 <= win_lose:inst2.C1
 L1 <= win_lose:inst2.L1
@@ -32,6 +31,7 @@ g_ab8 <= seven:inst11.g
 de1 <= vectorToBits:inst21.de1
 de2 <= vectorToBits:inst21.de2
 de3 <= vectorToBits:inst21.de3
+e2 <= win_lose:inst2.E2
 
 
 |final|win_lose:inst2
