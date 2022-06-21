@@ -31,25 +31,27 @@ variable dout: std_logic_vector (6 downto 0);
 begin
 
 case q is
-when "0000" => dout := "0000000";--0
+when "0000" => dout := "0000001";--0
 
-when "0001" => dout := "1111001";
+when "0001" => dout := "0110000";
 
-when "0010" => dout := "0100100";
+when "0010" => dout := "1101101";
 
-when "0011" => dout := "0110000";
+when "0011" => dout := "1111001";
 
-when "0100" => dout := "0011001";
+when "0100" => dout := "0110011";
 
-when "0101" => dout := "0010010";
+when "0101" => dout := "1011011";
 
-when "0110" => dout := "0000010";
+when "0110" => dout := "1011111";
 
-when "0111" => dout := "1111000";
+when "0111" => dout := "1110000";
 
-when "1000" => dout := "0000000";
+when "1000" => dout := "1111111";
 
-when "1001" => dout := "0011000";--9
+when "1001" => dout := "1111011";--9
+
+when "1010" => dout := "1111101";--9
 
 when others => dout := "0000000";
 

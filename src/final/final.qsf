@@ -37,7 +37,7 @@
 
 
 set_global_assignment -name FAMILY "Cyclone V"
-set_global_assignment -name DEVICE 5CEFA4F23C8
+set_global_assignment -name DEVICE 5CEFA2F23C8
 set_global_assignment -name TOP_LEVEL_ENTITY final
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 13.1
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "22:24:33  JUNE 20, 2022"
@@ -74,7 +74,6 @@ set_location_assignment PIN_AB5 -to d_ab5
 set_location_assignment PIN_AA12 -to de1
 set_location_assignment PIN_AB11 -to de2
 set_location_assignment PIN_AB10 -to de3
-set_location_assignment PIN_E10 -to e1
 set_location_assignment PIN_AA9 -to e_aa9
 set_location_assignment PIN_Y9 -to f_y9
 set_location_assignment PIN_G1 -to G1
