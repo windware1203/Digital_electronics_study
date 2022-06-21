@@ -11,27 +11,27 @@ end vectorToBits;
 
 architecture main of vectorToBits is
 
-	signal temp: unsigned(0 to 5);
-	signal ten : unsigned(0 to 5);
+	signal temp: unsigned(0 to 5):="000000";
+	signal ten : unsigned(0 to 5):="000000";
 	
-	signal tempP: unsigned(0 to 5);
-	signal tenP : unsigned(0 to 5);
+	signal tempP: unsigned(0 to 5):="000000";
+	signal tenP : unsigned(0 to 5):="000000";
 	
-	signal tempMOM: unsigned(0 to 5);
-	signal tenMOM : unsigned(0 to 5);
-	signal de  : unsigned(0 to 2);
+	signal tempMOM: unsigned(0 to 5):="000000";
+	signal tenMOM : unsigned(0 to 5):="000000";
+	signal de  : unsigned(0 to 2):="000";
 begin
 	process(clk)
 	begin
 		if rising_edge(clk) then
-			ten <= inputLFSR mod 10;
-			temp <= inputLFSR rem 10;
+			ten <= inputLFSR rem 10;
+			temp <= inputLFSR mod 10;
 			
-			tenP <= inputPoints mod 10;
-			tempP <= inputPoints rem 10;
+			tenP <= inputPoints rem 10;
+			tempP <= inputPoints mod 10;
 			
-			tenMOM <= inputPointsMOM mod 10;
-			tempMOM <= inputPointsMOM rem 10;
+			tenMOM <= inputPointsMOM rem 10;
+			tempMOM <= inputPointsMOM mod 10;
 			case de is
 				when "000" =>
 				
