@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for final
-Wed Jun 22 02:30:07 2022
+Wed Jun 22 02:44:21 2022
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -127,13 +127,11 @@ applicable agreement for further details.
 +--------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------------------------------+
 ; Clock Name                     ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets                            ;
 +--------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------------------------------+
-; cardNum:inst7|nextC[0]         ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { cardNum:inst7|nextC[0] }         ;
 ; clk                            ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk }                            ;
 ; clk_gen:inst23|div10_t:inst1|2 ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk_gen:inst23|div10_t:inst1|2 } ;
 ; clk_gen:inst23|div10_t:inst2|2 ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk_gen:inst23|div10_t:inst2|2 } ;
 ; clk_gen:inst23|div10_t:inst3|2 ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk_gen:inst23|div10_t:inst3|2 } ;
 ; clk_gen:inst23|div10_t:inst|2  ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk_gen:inst23|div10_t:inst|2 }  ;
-; Point:inst10|nextC[0]          ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { Point:inst10|nextC[0] }          ;
 +--------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------------------------------+
 
 
@@ -142,13 +140,11 @@ applicable agreement for further details.
 +------------+-----------------+--------------------------------+------------------------------------------------------+
 ; Fmax       ; Restricted Fmax ; Clock Name                     ; Note                                                 ;
 +------------+-----------------+--------------------------------+------------------------------------------------------+
-; 116.13 MHz ; 116.13 MHz      ; Point:inst10|nextC[0]          ;                                                      ;
-; 122.61 MHz ; 122.61 MHz      ; clk_gen:inst23|div10_t:inst3|2 ;                                                      ;
-; 127.5 MHz  ; 127.5 MHz       ; cardNum:inst7|nextC[0]         ;                                                      ;
-; 381.97 MHz ; 381.97 MHz      ; clk_gen:inst23|div10_t:inst1|2 ;                                                      ;
-; 399.04 MHz ; 399.04 MHz      ; clk_gen:inst23|div10_t:inst2|2 ;                                                      ;
-; 452.08 MHz ; 452.08 MHz      ; clk_gen:inst23|div10_t:inst|2  ;                                                      ;
-; 594.18 MHz ; 479.85 MHz      ; clk                            ; limit due to low minimum pulse width violation (tcl) ;
+; 124.84 MHz ; 124.84 MHz      ; clk_gen:inst23|div10_t:inst3|2 ;                                                      ;
+; 376.08 MHz ; 376.08 MHz      ; clk_gen:inst23|div10_t:inst2|2 ;                                                      ;
+; 389.56 MHz ; 389.56 MHz      ; clk_gen:inst23|div10_t:inst1|2 ;                                                      ;
+; 449.24 MHz ; 449.24 MHz      ; clk_gen:inst23|div10_t:inst|2  ;                                                      ;
+; 599.52 MHz ; 527.43 MHz      ; clk                            ; limit due to low minimum pulse width violation (tcl) ;
 +------------+-----------------+--------------------------------+------------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -164,13 +160,11 @@ HTML report is unavailable in plain text report export.
 +--------------------------------+--------+---------------+
 ; Clock                          ; Slack  ; End Point TNS ;
 +--------------------------------+--------+---------------+
-; clk_gen:inst23|div10_t:inst3|2 ; -8.893 ; -209.954      ;
-; Point:inst10|nextC[0]          ; -7.611 ; -62.424       ;
-; cardNum:inst7|nextC[0]         ; -6.843 ; -58.163       ;
-; clk_gen:inst23|div10_t:inst1|2 ; -1.618 ; -7.201        ;
-; clk_gen:inst23|div10_t:inst2|2 ; -1.506 ; -5.268        ;
-; clk_gen:inst23|div10_t:inst|2  ; -1.212 ; -5.000        ;
-; clk                            ; -0.683 ; -2.432        ;
+; clk_gen:inst23|div10_t:inst3|2 ; -7.010 ; -66.986       ;
+; clk_gen:inst23|div10_t:inst2|2 ; -1.659 ; -6.458        ;
+; clk_gen:inst23|div10_t:inst1|2 ; -1.567 ; -5.925        ;
+; clk_gen:inst23|div10_t:inst|2  ; -1.226 ; -4.346        ;
+; clk                            ; -0.796 ; -3.241        ;
 +--------------------------------+--------+---------------+
 
 
@@ -179,13 +173,11 @@ HTML report is unavailable in plain text report export.
 +--------------------------------+--------+---------------+
 ; Clock                          ; Slack  ; End Point TNS ;
 +--------------------------------+--------+---------------+
-; clk                            ; -1.992 ; -3.200        ;
-; clk_gen:inst23|div10_t:inst3|2 ; -1.031 ; -1.173        ;
-; clk_gen:inst23|div10_t:inst|2  ; -0.816 ; -1.470        ;
-; clk_gen:inst23|div10_t:inst1|2 ; -0.742 ; -1.375        ;
-; clk_gen:inst23|div10_t:inst2|2 ; -0.520 ; -0.915        ;
-; cardNum:inst7|nextC[0]         ; 0.596  ; 0.000         ;
-; Point:inst10|nextC[0]          ; 0.695  ; 0.000         ;
+; clk                            ; -1.658 ; -2.961        ;
+; clk_gen:inst23|div10_t:inst|2  ; -0.869 ; -1.737        ;
+; clk_gen:inst23|div10_t:inst1|2 ; -0.855 ; -1.507        ;
+; clk_gen:inst23|div10_t:inst2|2 ; -0.347 ; -0.680        ;
+; clk_gen:inst23|div10_t:inst3|2 ; 0.513  ; 0.000         ;
 +--------------------------------+--------+---------------+
 
 
@@ -206,13 +198,11 @@ No paths to report.
 +--------------------------------+--------+---------------+
 ; Clock                          ; Slack  ; End Point TNS ;
 +--------------------------------+--------+---------------+
-; clk_gen:inst23|div10_t:inst3|2 ; -0.724 ; -74.957       ;
-; Point:inst10|nextC[0]          ; -0.724 ; -17.969       ;
-; cardNum:inst7|nextC[0]         ; -0.724 ; -17.089       ;
-; clk_gen:inst23|div10_t:inst1|2 ; -0.724 ; -5.688        ;
-; clk_gen:inst23|div10_t:inst|2  ; -0.724 ; -5.665        ;
-; clk                            ; -0.724 ; -4.593        ;
-; clk_gen:inst23|div10_t:inst2|2 ; -0.724 ; -4.420        ;
+; clk_gen:inst23|div10_t:inst3|2 ; -0.724 ; -24.770       ;
+; clk                            ; -0.724 ; -5.656        ;
+; clk_gen:inst23|div10_t:inst2|2 ; -0.724 ; -5.529        ;
+; clk_gen:inst23|div10_t:inst1|2 ; -0.724 ; -4.790        ;
+; clk_gen:inst23|div10_t:inst|2  ; -0.724 ; -4.664        ;
 +--------------------------------+--------+---------------+
 
 
@@ -221,8 +211,7 @@ No paths to report.
 +-----------+--------------------------------+-------+-------+------------+--------------------------------+
 ; Data Port ; Clock Port                     ; Rise  ; Fall  ; Clock Edge ; Clock Reference                ;
 +-----------+--------------------------------+-------+-------+------------+--------------------------------+
-; c13       ; clk_gen:inst23|div10_t:inst3|2 ; 5.710 ; 6.032 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; ps3       ; clk_gen:inst23|div10_t:inst3|2 ; 6.247 ; 6.479 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
+; c13       ; clk_gen:inst23|div10_t:inst3|2 ; 7.199 ; 7.490 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
 +-----------+--------------------------------+-------+-------+------------+--------------------------------+
 
 
@@ -231,97 +220,24 @@ No paths to report.
 +-----------+--------------------------------+--------+--------+------------+--------------------------------+
 ; Data Port ; Clock Port                     ; Rise   ; Fall   ; Clock Edge ; Clock Reference                ;
 +-----------+--------------------------------+--------+--------+------------+--------------------------------+
-; c13       ; clk_gen:inst23|div10_t:inst3|2 ; -2.555 ; -2.796 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; ps3       ; clk_gen:inst23|div10_t:inst3|2 ; -3.071 ; -3.229 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
+; c13       ; clk_gen:inst23|div10_t:inst3|2 ; -4.036 ; -4.238 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
 +-----------+--------------------------------+--------+--------+------------+--------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------+
-; Clock to Output Times                                                                                      ;
-+-----------+--------------------------------+--------+--------+------------+--------------------------------+
-; Data Port ; Clock Port                     ; Rise   ; Fall   ; Clock Edge ; Clock Reference                ;
-+-----------+--------------------------------+--------+--------+------------+--------------------------------+
-; AA1       ; Point:inst10|nextC[0]          ; 10.213 ;        ; Rise       ; Point:inst10|nextC[0]          ;
-; AA2       ; Point:inst10|nextC[0]          ; 10.286 ;        ; Rise       ; Point:inst10|nextC[0]          ;
-; G1        ; Point:inst10|nextC[0]          ; 9.641  ;        ; Rise       ; Point:inst10|nextC[0]          ;
-; G2        ; Point:inst10|nextC[0]          ;        ; 9.643  ; Rise       ; Point:inst10|nextC[0]          ;
-; L1        ; Point:inst10|nextC[0]          ;        ; 10.023 ; Rise       ; Point:inst10|nextC[0]          ;
-; L2        ; Point:inst10|nextC[0]          ;        ; 10.052 ; Rise       ; Point:inst10|nextC[0]          ;
-; N1        ; Point:inst10|nextC[0]          ; 10.151 ;        ; Rise       ; Point:inst10|nextC[0]          ;
-; U1        ; Point:inst10|nextC[0]          ; 10.069 ;        ; Rise       ; Point:inst10|nextC[0]          ;
-; U2        ; Point:inst10|nextC[0]          ; 10.071 ;        ; Rise       ; Point:inst10|nextC[0]          ;
-; W2        ; Point:inst10|nextC[0]          ; 10.076 ;        ; Rise       ; Point:inst10|nextC[0]          ;
-; c1        ; Point:inst10|nextC[0]          ;        ; 9.786  ; Rise       ; Point:inst10|nextC[0]          ;
-; c2        ; Point:inst10|nextC[0]          ;        ; 9.856  ; Rise       ; Point:inst10|nextC[0]          ;
-; d3        ; Point:inst10|nextC[0]          ;        ; 9.981  ; Rise       ; Point:inst10|nextC[0]          ;
-; e2        ; Point:inst10|nextC[0]          ;        ; 9.989  ; Rise       ; Point:inst10|nextC[0]          ;
-; AA1       ; Point:inst10|nextC[0]          ;        ; 11.308 ; Fall       ; Point:inst10|nextC[0]          ;
-; AA2       ; Point:inst10|nextC[0]          ;        ; 11.386 ; Fall       ; Point:inst10|nextC[0]          ;
-; G1        ; Point:inst10|nextC[0]          ;        ; 10.594 ; Fall       ; Point:inst10|nextC[0]          ;
-; G2        ; Point:inst10|nextC[0]          ; 10.607 ;        ; Fall       ; Point:inst10|nextC[0]          ;
-; L1        ; Point:inst10|nextC[0]          ; 11.051 ;        ; Fall       ; Point:inst10|nextC[0]          ;
-; L2        ; Point:inst10|nextC[0]          ; 11.082 ;        ; Fall       ; Point:inst10|nextC[0]          ;
-; N1        ; Point:inst10|nextC[0]          ;        ; 11.185 ; Fall       ; Point:inst10|nextC[0]          ;
-; U1        ; Point:inst10|nextC[0]          ;        ; 11.095 ; Fall       ; Point:inst10|nextC[0]          ;
-; U2        ; Point:inst10|nextC[0]          ;        ; 11.108 ; Fall       ; Point:inst10|nextC[0]          ;
-; W2        ; Point:inst10|nextC[0]          ;        ; 11.166 ; Fall       ; Point:inst10|nextC[0]          ;
-; c1        ; Point:inst10|nextC[0]          ; 10.743 ;        ; Fall       ; Point:inst10|nextC[0]          ;
-; c2        ; Point:inst10|nextC[0]          ; 10.818 ;        ; Fall       ; Point:inst10|nextC[0]          ;
-; d3        ; Point:inst10|nextC[0]          ; 11.014 ;        ; Fall       ; Point:inst10|nextC[0]          ;
-; e2        ; Point:inst10|nextC[0]          ; 11.011 ;        ; Fall       ; Point:inst10|nextC[0]          ;
-; AA1       ; cardNum:inst7|nextC[0]         ; 7.212  ;        ; Rise       ; cardNum:inst7|nextC[0]         ;
-; AA2       ; cardNum:inst7|nextC[0]         ; 7.285  ;        ; Rise       ; cardNum:inst7|nextC[0]         ;
-; G1        ; cardNum:inst7|nextC[0]         ; 6.640  ;        ; Rise       ; cardNum:inst7|nextC[0]         ;
-; G2        ; cardNum:inst7|nextC[0]         ;        ; 6.642  ; Rise       ; cardNum:inst7|nextC[0]         ;
-; L1        ; cardNum:inst7|nextC[0]         ;        ; 7.022  ; Rise       ; cardNum:inst7|nextC[0]         ;
-; L2        ; cardNum:inst7|nextC[0]         ;        ; 7.051  ; Rise       ; cardNum:inst7|nextC[0]         ;
-; N1        ; cardNum:inst7|nextC[0]         ; 7.150  ;        ; Rise       ; cardNum:inst7|nextC[0]         ;
-; U1        ; cardNum:inst7|nextC[0]         ; 7.068  ;        ; Rise       ; cardNum:inst7|nextC[0]         ;
-; U2        ; cardNum:inst7|nextC[0]         ; 7.070  ;        ; Rise       ; cardNum:inst7|nextC[0]         ;
-; W2        ; cardNum:inst7|nextC[0]         ; 7.075  ;        ; Rise       ; cardNum:inst7|nextC[0]         ;
-; c1        ; cardNum:inst7|nextC[0]         ;        ; 6.785  ; Rise       ; cardNum:inst7|nextC[0]         ;
-; c2        ; cardNum:inst7|nextC[0]         ;        ; 6.855  ; Rise       ; cardNum:inst7|nextC[0]         ;
-; d3        ; cardNum:inst7|nextC[0]         ;        ; 6.980  ; Rise       ; cardNum:inst7|nextC[0]         ;
-; e2        ; cardNum:inst7|nextC[0]         ;        ; 6.988  ; Rise       ; cardNum:inst7|nextC[0]         ;
-; AA1       ; cardNum:inst7|nextC[0]         ;        ; 7.551  ; Fall       ; cardNum:inst7|nextC[0]         ;
-; AA2       ; cardNum:inst7|nextC[0]         ;        ; 7.629  ; Fall       ; cardNum:inst7|nextC[0]         ;
-; G1        ; cardNum:inst7|nextC[0]         ;        ; 6.837  ; Fall       ; cardNum:inst7|nextC[0]         ;
-; G2        ; cardNum:inst7|nextC[0]         ; 6.850  ;        ; Fall       ; cardNum:inst7|nextC[0]         ;
-; L1        ; cardNum:inst7|nextC[0]         ; 7.294  ;        ; Fall       ; cardNum:inst7|nextC[0]         ;
-; L2        ; cardNum:inst7|nextC[0]         ; 7.325  ;        ; Fall       ; cardNum:inst7|nextC[0]         ;
-; N1        ; cardNum:inst7|nextC[0]         ;        ; 7.428  ; Fall       ; cardNum:inst7|nextC[0]         ;
-; U1        ; cardNum:inst7|nextC[0]         ;        ; 7.338  ; Fall       ; cardNum:inst7|nextC[0]         ;
-; U2        ; cardNum:inst7|nextC[0]         ;        ; 7.351  ; Fall       ; cardNum:inst7|nextC[0]         ;
-; W2        ; cardNum:inst7|nextC[0]         ;        ; 7.409  ; Fall       ; cardNum:inst7|nextC[0]         ;
-; c1        ; cardNum:inst7|nextC[0]         ; 6.986  ;        ; Fall       ; cardNum:inst7|nextC[0]         ;
-; c2        ; cardNum:inst7|nextC[0]         ; 7.061  ;        ; Fall       ; cardNum:inst7|nextC[0]         ;
-; d3        ; cardNum:inst7|nextC[0]         ; 7.257  ;        ; Fall       ; cardNum:inst7|nextC[0]         ;
-; e2        ; cardNum:inst7|nextC[0]         ; 7.254  ;        ; Fall       ; cardNum:inst7|nextC[0]         ;
-; AA1       ; clk_gen:inst23|div10_t:inst3|2 ; 11.684 ; 12.300 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; AA2       ; clk_gen:inst23|div10_t:inst3|2 ; 11.757 ; 12.378 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; G1        ; clk_gen:inst23|div10_t:inst3|2 ; 11.112 ; 11.586 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; G2        ; clk_gen:inst23|div10_t:inst3|2 ; 11.599 ; 11.114 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; L1        ; clk_gen:inst23|div10_t:inst3|2 ; 12.043 ; 11.494 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; L2        ; clk_gen:inst23|div10_t:inst3|2 ; 12.074 ; 11.523 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; N1        ; clk_gen:inst23|div10_t:inst3|2 ; 11.622 ; 12.177 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; U1        ; clk_gen:inst23|div10_t:inst3|2 ; 11.540 ; 12.087 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; U2        ; clk_gen:inst23|div10_t:inst3|2 ; 11.542 ; 12.100 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; W2        ; clk_gen:inst23|div10_t:inst3|2 ; 11.547 ; 12.158 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; a_ab7     ; clk_gen:inst23|div10_t:inst3|2 ; 11.493 ; 10.782 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; b_aa7     ; clk_gen:inst23|div10_t:inst3|2 ; 10.158 ; 9.865  ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; c1        ; clk_gen:inst23|div10_t:inst3|2 ; 11.735 ; 11.257 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; c2        ; clk_gen:inst23|div10_t:inst3|2 ; 11.810 ; 11.327 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; c_ab6     ; clk_gen:inst23|div10_t:inst3|2 ; 11.876 ; 11.063 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; d3        ; clk_gen:inst23|div10_t:inst3|2 ; 12.006 ; 11.452 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; d_ab5     ; clk_gen:inst23|div10_t:inst3|2 ; 11.341 ; 10.628 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; de1       ; clk_gen:inst23|div10_t:inst3|2 ; 7.220  ; 7.713  ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; de2       ; clk_gen:inst23|div10_t:inst3|2 ; 6.719  ; 6.862  ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; de3       ; clk_gen:inst23|div10_t:inst3|2 ; 7.301  ; 7.756  ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; e2        ; clk_gen:inst23|div10_t:inst3|2 ; 12.003 ; 11.460 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; e_aa9     ; clk_gen:inst23|div10_t:inst3|2 ; 11.118 ; 10.406 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; f_y9      ; clk_gen:inst23|div10_t:inst3|2 ; 10.164 ; 9.717  ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; g_ab8     ; clk_gen:inst23|div10_t:inst3|2 ; 10.614 ; 11.196 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-+-----------+--------------------------------+--------+--------+------------+--------------------------------+
++----------------------------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                                    ;
++-----------+--------------------------------+-------+-------+------------+--------------------------------+
+; Data Port ; Clock Port                     ; Rise  ; Fall  ; Clock Edge ; Clock Reference                ;
++-----------+--------------------------------+-------+-------+------------+--------------------------------+
+; a_ab7     ; clk_gen:inst23|div10_t:inst3|2 ; 8.468 ; 8.107 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
+; b_aa7     ; clk_gen:inst23|div10_t:inst3|2 ; 8.782 ; 8.360 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
+; c_ab6     ; clk_gen:inst23|div10_t:inst3|2 ; 8.545 ; 8.216 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
+; d_ab5     ; clk_gen:inst23|div10_t:inst3|2 ; 8.500 ; 8.227 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
+; de1       ; clk_gen:inst23|div10_t:inst3|2 ; 6.972 ; 7.388 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
+; e_aa9     ; clk_gen:inst23|div10_t:inst3|2 ; 7.801 ; 7.528 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
+; f_y9      ; clk_gen:inst23|div10_t:inst3|2 ; 7.758 ; 7.553 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
+; g_ab8     ; clk_gen:inst23|div10_t:inst3|2 ; 8.117 ; 8.461 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
++-----------+--------------------------------+-------+-------+------------+--------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------+
@@ -329,86 +245,14 @@ No paths to report.
 +-----------+--------------------------------+-------+-------+------------+--------------------------------+
 ; Data Port ; Clock Port                     ; Rise  ; Fall  ; Clock Edge ; Clock Reference                ;
 +-----------+--------------------------------+-------+-------+------------+--------------------------------+
-; AA1       ; Point:inst10|nextC[0]          ; 9.161 ;       ; Rise       ; Point:inst10|nextC[0]          ;
-; AA2       ; Point:inst10|nextC[0]          ; 9.240 ;       ; Rise       ; Point:inst10|nextC[0]          ;
-; G1        ; Point:inst10|nextC[0]          ; 8.628 ;       ; Rise       ; Point:inst10|nextC[0]          ;
-; G2        ; Point:inst10|nextC[0]          ;       ; 8.630 ; Rise       ; Point:inst10|nextC[0]          ;
-; L1        ; Point:inst10|nextC[0]          ;       ; 8.995 ; Rise       ; Point:inst10|nextC[0]          ;
-; L2        ; Point:inst10|nextC[0]          ;       ; 9.024 ; Rise       ; Point:inst10|nextC[0]          ;
-; N1        ; Point:inst10|nextC[0]          ; 9.086 ;       ; Rise       ; Point:inst10|nextC[0]          ;
-; U1        ; Point:inst10|nextC[0]          ; 9.004 ;       ; Rise       ; Point:inst10|nextC[0]          ;
-; U2        ; Point:inst10|nextC[0]          ; 9.006 ;       ; Rise       ; Point:inst10|nextC[0]          ;
-; W2        ; Point:inst10|nextC[0]          ; 9.025 ;       ; Rise       ; Point:inst10|nextC[0]          ;
-; c1        ; Point:inst10|nextC[0]          ;       ; 8.771 ; Rise       ; Point:inst10|nextC[0]          ;
-; c2        ; Point:inst10|nextC[0]          ;       ; 8.846 ; Rise       ; Point:inst10|nextC[0]          ;
-; d3        ; Point:inst10|nextC[0]          ;       ; 8.951 ; Rise       ; Point:inst10|nextC[0]          ;
-; e2        ; Point:inst10|nextC[0]          ;       ; 8.959 ; Rise       ; Point:inst10|nextC[0]          ;
-; AA1       ; Point:inst10|nextC[0]          ;       ; 9.722 ; Fall       ; Point:inst10|nextC[0]          ;
-; AA2       ; Point:inst10|nextC[0]          ;       ; 9.805 ; Fall       ; Point:inst10|nextC[0]          ;
-; G1        ; Point:inst10|nextC[0]          ;       ; 9.066 ; Fall       ; Point:inst10|nextC[0]          ;
-; G2        ; Point:inst10|nextC[0]          ; 9.079 ;       ; Fall       ; Point:inst10|nextC[0]          ;
-; L1        ; Point:inst10|nextC[0]          ; 9.504 ;       ; Fall       ; Point:inst10|nextC[0]          ;
-; L2        ; Point:inst10|nextC[0]          ; 9.536 ;       ; Fall       ; Point:inst10|nextC[0]          ;
-; N1        ; Point:inst10|nextC[0]          ;       ; 9.573 ; Fall       ; Point:inst10|nextC[0]          ;
-; U1        ; Point:inst10|nextC[0]          ;       ; 9.485 ; Fall       ; Point:inst10|nextC[0]          ;
-; U2        ; Point:inst10|nextC[0]          ;       ; 9.498 ; Fall       ; Point:inst10|nextC[0]          ;
-; W2        ; Point:inst10|nextC[0]          ;       ; 9.580 ; Fall       ; Point:inst10|nextC[0]          ;
-; c1        ; Point:inst10|nextC[0]          ; 9.214 ;       ; Fall       ; Point:inst10|nextC[0]          ;
-; c2        ; Point:inst10|nextC[0]          ; 9.293 ;       ; Fall       ; Point:inst10|nextC[0]          ;
-; d3        ; Point:inst10|nextC[0]          ; 9.466 ;       ; Fall       ; Point:inst10|nextC[0]          ;
-; e2        ; Point:inst10|nextC[0]          ; 9.463 ;       ; Fall       ; Point:inst10|nextC[0]          ;
-; AA1       ; cardNum:inst7|nextC[0]         ; 6.609 ;       ; Rise       ; cardNum:inst7|nextC[0]         ;
-; AA2       ; cardNum:inst7|nextC[0]         ; 6.688 ;       ; Rise       ; cardNum:inst7|nextC[0]         ;
-; G1        ; cardNum:inst7|nextC[0]         ; 6.076 ;       ; Rise       ; cardNum:inst7|nextC[0]         ;
-; G2        ; cardNum:inst7|nextC[0]         ;       ; 6.078 ; Rise       ; cardNum:inst7|nextC[0]         ;
-; L1        ; cardNum:inst7|nextC[0]         ;       ; 6.443 ; Rise       ; cardNum:inst7|nextC[0]         ;
-; L2        ; cardNum:inst7|nextC[0]         ;       ; 6.472 ; Rise       ; cardNum:inst7|nextC[0]         ;
-; N1        ; cardNum:inst7|nextC[0]         ; 6.534 ;       ; Rise       ; cardNum:inst7|nextC[0]         ;
-; U1        ; cardNum:inst7|nextC[0]         ; 6.452 ;       ; Rise       ; cardNum:inst7|nextC[0]         ;
-; U2        ; cardNum:inst7|nextC[0]         ; 6.454 ;       ; Rise       ; cardNum:inst7|nextC[0]         ;
-; W2        ; cardNum:inst7|nextC[0]         ; 6.473 ;       ; Rise       ; cardNum:inst7|nextC[0]         ;
-; c1        ; cardNum:inst7|nextC[0]         ;       ; 6.219 ; Rise       ; cardNum:inst7|nextC[0]         ;
-; c2        ; cardNum:inst7|nextC[0]         ;       ; 6.294 ; Rise       ; cardNum:inst7|nextC[0]         ;
-; d3        ; cardNum:inst7|nextC[0]         ;       ; 6.399 ; Rise       ; cardNum:inst7|nextC[0]         ;
-; e2        ; cardNum:inst7|nextC[0]         ;       ; 6.407 ; Rise       ; cardNum:inst7|nextC[0]         ;
-; AA1       ; cardNum:inst7|nextC[0]         ;       ; 6.779 ; Fall       ; cardNum:inst7|nextC[0]         ;
-; AA2       ; cardNum:inst7|nextC[0]         ;       ; 6.862 ; Fall       ; cardNum:inst7|nextC[0]         ;
-; G1        ; cardNum:inst7|nextC[0]         ;       ; 6.123 ; Fall       ; cardNum:inst7|nextC[0]         ;
-; G2        ; cardNum:inst7|nextC[0]         ; 6.136 ;       ; Fall       ; cardNum:inst7|nextC[0]         ;
-; L1        ; cardNum:inst7|nextC[0]         ; 6.561 ;       ; Fall       ; cardNum:inst7|nextC[0]         ;
-; L2        ; cardNum:inst7|nextC[0]         ; 6.593 ;       ; Fall       ; cardNum:inst7|nextC[0]         ;
-; N1        ; cardNum:inst7|nextC[0]         ;       ; 6.630 ; Fall       ; cardNum:inst7|nextC[0]         ;
-; U1        ; cardNum:inst7|nextC[0]         ;       ; 6.542 ; Fall       ; cardNum:inst7|nextC[0]         ;
-; U2        ; cardNum:inst7|nextC[0]         ;       ; 6.555 ; Fall       ; cardNum:inst7|nextC[0]         ;
-; W2        ; cardNum:inst7|nextC[0]         ;       ; 6.637 ; Fall       ; cardNum:inst7|nextC[0]         ;
-; c1        ; cardNum:inst7|nextC[0]         ; 6.271 ;       ; Fall       ; cardNum:inst7|nextC[0]         ;
-; c2        ; cardNum:inst7|nextC[0]         ; 6.350 ;       ; Fall       ; cardNum:inst7|nextC[0]         ;
-; d3        ; cardNum:inst7|nextC[0]         ; 6.523 ;       ; Fall       ; cardNum:inst7|nextC[0]         ;
-; e2        ; cardNum:inst7|nextC[0]         ; 6.520 ;       ; Fall       ; cardNum:inst7|nextC[0]         ;
-; AA1       ; clk_gen:inst23|div10_t:inst3|2 ; 8.841 ; 9.056 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; AA2       ; clk_gen:inst23|div10_t:inst3|2 ; 8.920 ; 9.139 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; G1        ; clk_gen:inst23|div10_t:inst3|2 ; 8.308 ; 8.400 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; G2        ; clk_gen:inst23|div10_t:inst3|2 ; 8.413 ; 8.310 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; L1        ; clk_gen:inst23|div10_t:inst3|2 ; 8.838 ; 8.675 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; L2        ; clk_gen:inst23|div10_t:inst3|2 ; 8.870 ; 8.704 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; N1        ; clk_gen:inst23|div10_t:inst3|2 ; 8.766 ; 8.907 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; U1        ; clk_gen:inst23|div10_t:inst3|2 ; 8.684 ; 8.819 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; U2        ; clk_gen:inst23|div10_t:inst3|2 ; 8.686 ; 8.832 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; W2        ; clk_gen:inst23|div10_t:inst3|2 ; 8.705 ; 8.914 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; a_ab7     ; clk_gen:inst23|div10_t:inst3|2 ; 9.493 ; 8.863 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; b_aa7     ; clk_gen:inst23|div10_t:inst3|2 ; 8.405 ; 8.161 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; c1        ; clk_gen:inst23|div10_t:inst3|2 ; 8.548 ; 8.451 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; c2        ; clk_gen:inst23|div10_t:inst3|2 ; 8.627 ; 8.526 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; c_ab6     ; clk_gen:inst23|div10_t:inst3|2 ; 9.857 ; 9.129 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; d3        ; clk_gen:inst23|div10_t:inst3|2 ; 8.800 ; 8.631 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; d_ab5     ; clk_gen:inst23|div10_t:inst3|2 ; 9.464 ; 9.007 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; de1       ; clk_gen:inst23|div10_t:inst3|2 ; 6.572 ; 6.952 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; de2       ; clk_gen:inst23|div10_t:inst3|2 ; 6.148 ; 6.238 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; de3       ; clk_gen:inst23|div10_t:inst3|2 ; 6.655 ; 6.999 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; e2        ; clk_gen:inst23|div10_t:inst3|2 ; 8.797 ; 8.639 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; e_aa9     ; clk_gen:inst23|div10_t:inst3|2 ; 9.225 ; 8.621 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; f_y9      ; clk_gen:inst23|div10_t:inst3|2 ; 8.439 ; 8.221 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; g_ab8     ; clk_gen:inst23|div10_t:inst3|2 ; 8.793 ; 9.260 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
+; a_ab7     ; clk_gen:inst23|div10_t:inst3|2 ; 7.032 ; 6.788 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
+; b_aa7     ; clk_gen:inst23|div10_t:inst3|2 ; 7.281 ; 7.008 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
+; c_ab6     ; clk_gen:inst23|div10_t:inst3|2 ; 7.145 ; 6.922 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
+; d_ab5     ; clk_gen:inst23|div10_t:inst3|2 ; 7.095 ; 6.919 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
+; de1       ; clk_gen:inst23|div10_t:inst3|2 ; 6.328 ; 6.636 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
+; e_aa9     ; clk_gen:inst23|div10_t:inst3|2 ; 6.550 ; 6.419 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
+; f_y9      ; clk_gen:inst23|div10_t:inst3|2 ; 6.494 ; 6.379 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
+; g_ab8     ; clk_gen:inst23|div10_t:inst3|2 ; 6.806 ; 7.107 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
 +-----------+--------------------------------+-------+-------+------------+--------------------------------+
 
 
@@ -423,13 +267,11 @@ No synchronizer chains to report.
 +------------+-----------------+--------------------------------+------------------------------------------------------+
 ; Fmax       ; Restricted Fmax ; Clock Name                     ; Note                                                 ;
 +------------+-----------------+--------------------------------+------------------------------------------------------+
-; 109.1 MHz  ; 109.1 MHz       ; Point:inst10|nextC[0]          ;                                                      ;
-; 116.08 MHz ; 116.08 MHz      ; clk_gen:inst23|div10_t:inst3|2 ;                                                      ;
-; 118.99 MHz ; 118.99 MHz      ; cardNum:inst7|nextC[0]         ;                                                      ;
-; 371.75 MHz ; 371.75 MHz      ; clk_gen:inst23|div10_t:inst1|2 ;                                                      ;
-; 396.35 MHz ; 396.35 MHz      ; clk_gen:inst23|div10_t:inst2|2 ;                                                      ;
-; 448.43 MHz ; 448.43 MHz      ; clk_gen:inst23|div10_t:inst|2  ;                                                      ;
-; 551.88 MHz ; 434.4 MHz       ; clk                            ; limit due to low minimum pulse width violation (tcl) ;
+; 118.41 MHz ; 118.41 MHz      ; clk_gen:inst23|div10_t:inst3|2 ;                                                      ;
+; 362.58 MHz ; 362.58 MHz      ; clk_gen:inst23|div10_t:inst2|2 ;                                                      ;
+; 384.47 MHz ; 384.47 MHz      ; clk_gen:inst23|div10_t:inst1|2 ;                                                      ;
+; 446.83 MHz ; 446.83 MHz      ; clk_gen:inst23|div10_t:inst|2  ;                                                      ;
+; 529.1 MHz  ; 497.51 MHz      ; clk                            ; limit due to low minimum pulse width violation (tcl) ;
 +------------+-----------------+--------------------------------+------------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -439,13 +281,11 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +--------------------------------+--------+---------------+
 ; Clock                          ; Slack  ; End Point TNS ;
 +--------------------------------+--------+---------------+
-; clk_gen:inst23|div10_t:inst3|2 ; -9.287 ; -216.989      ;
-; Point:inst10|nextC[0]          ; -8.166 ; -65.460       ;
-; cardNum:inst7|nextC[0]         ; -7.404 ; -61.462       ;
-; clk_gen:inst23|div10_t:inst1|2 ; -1.690 ; -7.123        ;
-; clk_gen:inst23|div10_t:inst2|2 ; -1.523 ; -5.340        ;
-; clk_gen:inst23|div10_t:inst|2  ; -1.230 ; -4.848        ;
-; clk                            ; -0.812 ; -2.871        ;
+; clk_gen:inst23|div10_t:inst3|2 ; -7.445 ; -68.848       ;
+; clk_gen:inst23|div10_t:inst2|2 ; -1.758 ; -6.698        ;
+; clk_gen:inst23|div10_t:inst1|2 ; -1.601 ; -6.090        ;
+; clk_gen:inst23|div10_t:inst|2  ; -1.238 ; -4.300        ;
+; clk                            ; -0.890 ; -3.693        ;
 +--------------------------------+--------+---------------+
 
 
@@ -454,13 +294,11 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +--------------------------------+--------+---------------+
 ; Clock                          ; Slack  ; End Point TNS ;
 +--------------------------------+--------+---------------+
-; clk                            ; -2.040 ; -3.364        ;
-; clk_gen:inst23|div10_t:inst3|2 ; -0.915 ; -1.109        ;
-; clk_gen:inst23|div10_t:inst|2  ; -0.690 ; -1.175        ;
-; clk_gen:inst23|div10_t:inst2|2 ; -0.496 ; -0.781        ;
-; clk_gen:inst23|div10_t:inst1|2 ; -0.491 ; -0.883        ;
-; cardNum:inst7|nextC[0]         ; 0.582  ; 0.000         ;
-; Point:inst10|nextC[0]          ; 0.732  ; 0.000         ;
+; clk                            ; -1.637 ; -3.176        ;
+; clk_gen:inst23|div10_t:inst|2  ; -0.684 ; -1.366        ;
+; clk_gen:inst23|div10_t:inst1|2 ; -0.630 ; -1.087        ;
+; clk_gen:inst23|div10_t:inst2|2 ; -0.227 ; -0.442        ;
+; clk_gen:inst23|div10_t:inst3|2 ; 0.554  ; 0.000         ;
 +--------------------------------+--------+---------------+
 
 
@@ -481,13 +319,11 @@ No paths to report.
 +--------------------------------+--------+---------------+
 ; Clock                          ; Slack  ; End Point TNS ;
 +--------------------------------+--------+---------------+
-; clk_gen:inst23|div10_t:inst3|2 ; -0.724 ; -75.982       ;
-; Point:inst10|nextC[0]          ; -0.724 ; -19.938       ;
-; cardNum:inst7|nextC[0]         ; -0.724 ; -16.981       ;
-; clk_gen:inst23|div10_t:inst1|2 ; -0.724 ; -5.670        ;
-; clk_gen:inst23|div10_t:inst|2  ; -0.724 ; -5.635        ;
-; clk                            ; -0.724 ; -4.683        ;
-; clk_gen:inst23|div10_t:inst2|2 ; -0.724 ; -4.420        ;
+; clk_gen:inst23|div10_t:inst3|2 ; -0.724 ; -24.719       ;
+; clk                            ; -0.724 ; -5.641        ;
+; clk_gen:inst23|div10_t:inst2|2 ; -0.724 ; -5.527        ;
+; clk_gen:inst23|div10_t:inst1|2 ; -0.724 ; -4.752        ;
+; clk_gen:inst23|div10_t:inst|2  ; -0.724 ; -4.608        ;
 +--------------------------------+--------+---------------+
 
 
@@ -496,8 +332,7 @@ No paths to report.
 +-----------+--------------------------------+-------+-------+------------+--------------------------------+
 ; Data Port ; Clock Port                     ; Rise  ; Fall  ; Clock Edge ; Clock Reference                ;
 +-----------+--------------------------------+-------+-------+------------+--------------------------------+
-; c13       ; clk_gen:inst23|div10_t:inst3|2 ; 5.799 ; 6.254 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; ps3       ; clk_gen:inst23|div10_t:inst3|2 ; 6.317 ; 6.688 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
+; c13       ; clk_gen:inst23|div10_t:inst3|2 ; 7.210 ; 7.684 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
 +-----------+--------------------------------+-------+-------+------------+--------------------------------+
 
 
@@ -506,97 +341,24 @@ No paths to report.
 +-----------+--------------------------------+--------+--------+------------+--------------------------------+
 ; Data Port ; Clock Port                     ; Rise   ; Fall   ; Clock Edge ; Clock Reference                ;
 +-----------+--------------------------------+--------+--------+------------+--------------------------------+
-; c13       ; clk_gen:inst23|div10_t:inst3|2 ; -2.593 ; -2.945 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; ps3       ; clk_gen:inst23|div10_t:inst3|2 ; -3.083 ; -3.368 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
+; c13       ; clk_gen:inst23|div10_t:inst3|2 ; -3.986 ; -4.355 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
 +-----------+--------------------------------+--------+--------+------------+--------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------+
-; Clock to Output Times                                                                                      ;
-+-----------+--------------------------------+--------+--------+------------+--------------------------------+
-; Data Port ; Clock Port                     ; Rise   ; Fall   ; Clock Edge ; Clock Reference                ;
-+-----------+--------------------------------+--------+--------+------------+--------------------------------+
-; AA1       ; Point:inst10|nextC[0]          ; 9.997  ;        ; Rise       ; Point:inst10|nextC[0]          ;
-; AA2       ; Point:inst10|nextC[0]          ; 10.068 ;        ; Rise       ; Point:inst10|nextC[0]          ;
-; G1        ; Point:inst10|nextC[0]          ; 9.454  ;        ; Rise       ; Point:inst10|nextC[0]          ;
-; G2        ; Point:inst10|nextC[0]          ;        ; 9.460  ; Rise       ; Point:inst10|nextC[0]          ;
-; L1        ; Point:inst10|nextC[0]          ;        ; 9.818  ; Rise       ; Point:inst10|nextC[0]          ;
-; L2        ; Point:inst10|nextC[0]          ;        ; 9.850  ; Rise       ; Point:inst10|nextC[0]          ;
-; N1        ; Point:inst10|nextC[0]          ; 9.926  ;        ; Rise       ; Point:inst10|nextC[0]          ;
-; U1        ; Point:inst10|nextC[0]          ; 9.842  ;        ; Rise       ; Point:inst10|nextC[0]          ;
-; U2        ; Point:inst10|nextC[0]          ; 9.848  ;        ; Rise       ; Point:inst10|nextC[0]          ;
-; W2        ; Point:inst10|nextC[0]          ; 9.860  ;        ; Rise       ; Point:inst10|nextC[0]          ;
-; c1        ; Point:inst10|nextC[0]          ;        ; 9.597  ; Rise       ; Point:inst10|nextC[0]          ;
-; c2        ; Point:inst10|nextC[0]          ;        ; 9.667  ; Rise       ; Point:inst10|nextC[0]          ;
-; d3        ; Point:inst10|nextC[0]          ;        ; 9.778  ; Rise       ; Point:inst10|nextC[0]          ;
-; e2        ; Point:inst10|nextC[0]          ;        ; 9.782  ; Rise       ; Point:inst10|nextC[0]          ;
-; AA1       ; Point:inst10|nextC[0]          ;        ; 11.310 ; Fall       ; Point:inst10|nextC[0]          ;
-; AA2       ; Point:inst10|nextC[0]          ;        ; 11.390 ; Fall       ; Point:inst10|nextC[0]          ;
-; G1        ; Point:inst10|nextC[0]          ;        ; 10.611 ; Fall       ; Point:inst10|nextC[0]          ;
-; G2        ; Point:inst10|nextC[0]          ; 10.622 ;        ; Fall       ; Point:inst10|nextC[0]          ;
-; L1        ; Point:inst10|nextC[0]          ; 11.058 ;        ; Fall       ; Point:inst10|nextC[0]          ;
-; L2        ; Point:inst10|nextC[0]          ; 11.094 ;        ; Fall       ; Point:inst10|nextC[0]          ;
-; N1        ; Point:inst10|nextC[0]          ;        ; 11.190 ; Fall       ; Point:inst10|nextC[0]          ;
-; U1        ; Point:inst10|nextC[0]          ;        ; 11.096 ; Fall       ; Point:inst10|nextC[0]          ;
-; U2        ; Point:inst10|nextC[0]          ;        ; 11.107 ; Fall       ; Point:inst10|nextC[0]          ;
-; W2        ; Point:inst10|nextC[0]          ;        ; 11.163 ; Fall       ; Point:inst10|nextC[0]          ;
-; c1        ; Point:inst10|nextC[0]          ; 10.764 ;        ; Fall       ; Point:inst10|nextC[0]          ;
-; c2        ; Point:inst10|nextC[0]          ; 10.842 ;        ; Fall       ; Point:inst10|nextC[0]          ;
-; d3        ; Point:inst10|nextC[0]          ; 11.015 ;        ; Fall       ; Point:inst10|nextC[0]          ;
-; e2        ; Point:inst10|nextC[0]          ; 11.014 ;        ; Fall       ; Point:inst10|nextC[0]          ;
-; AA1       ; cardNum:inst7|nextC[0]         ; 6.915  ;        ; Rise       ; cardNum:inst7|nextC[0]         ;
-; AA2       ; cardNum:inst7|nextC[0]         ; 6.986  ;        ; Rise       ; cardNum:inst7|nextC[0]         ;
-; G1        ; cardNum:inst7|nextC[0]         ; 6.372  ;        ; Rise       ; cardNum:inst7|nextC[0]         ;
-; G2        ; cardNum:inst7|nextC[0]         ;        ; 6.378  ; Rise       ; cardNum:inst7|nextC[0]         ;
-; L1        ; cardNum:inst7|nextC[0]         ;        ; 6.736  ; Rise       ; cardNum:inst7|nextC[0]         ;
-; L2        ; cardNum:inst7|nextC[0]         ;        ; 6.768  ; Rise       ; cardNum:inst7|nextC[0]         ;
-; N1        ; cardNum:inst7|nextC[0]         ; 6.844  ;        ; Rise       ; cardNum:inst7|nextC[0]         ;
-; U1        ; cardNum:inst7|nextC[0]         ; 6.760  ;        ; Rise       ; cardNum:inst7|nextC[0]         ;
-; U2        ; cardNum:inst7|nextC[0]         ; 6.766  ;        ; Rise       ; cardNum:inst7|nextC[0]         ;
-; W2        ; cardNum:inst7|nextC[0]         ; 6.778  ;        ; Rise       ; cardNum:inst7|nextC[0]         ;
-; c1        ; cardNum:inst7|nextC[0]         ;        ; 6.515  ; Rise       ; cardNum:inst7|nextC[0]         ;
-; c2        ; cardNum:inst7|nextC[0]         ;        ; 6.585  ; Rise       ; cardNum:inst7|nextC[0]         ;
-; d3        ; cardNum:inst7|nextC[0]         ;        ; 6.696  ; Rise       ; cardNum:inst7|nextC[0]         ;
-; e2        ; cardNum:inst7|nextC[0]         ;        ; 6.700  ; Rise       ; cardNum:inst7|nextC[0]         ;
-; AA1       ; cardNum:inst7|nextC[0]         ;        ; 7.312  ; Fall       ; cardNum:inst7|nextC[0]         ;
-; AA2       ; cardNum:inst7|nextC[0]         ;        ; 7.392  ; Fall       ; cardNum:inst7|nextC[0]         ;
-; G1        ; cardNum:inst7|nextC[0]         ;        ; 6.613  ; Fall       ; cardNum:inst7|nextC[0]         ;
-; G2        ; cardNum:inst7|nextC[0]         ; 6.624  ;        ; Fall       ; cardNum:inst7|nextC[0]         ;
-; L1        ; cardNum:inst7|nextC[0]         ; 7.060  ;        ; Fall       ; cardNum:inst7|nextC[0]         ;
-; L2        ; cardNum:inst7|nextC[0]         ; 7.096  ;        ; Fall       ; cardNum:inst7|nextC[0]         ;
-; N1        ; cardNum:inst7|nextC[0]         ;        ; 7.192  ; Fall       ; cardNum:inst7|nextC[0]         ;
-; U1        ; cardNum:inst7|nextC[0]         ;        ; 7.098  ; Fall       ; cardNum:inst7|nextC[0]         ;
-; U2        ; cardNum:inst7|nextC[0]         ;        ; 7.109  ; Fall       ; cardNum:inst7|nextC[0]         ;
-; W2        ; cardNum:inst7|nextC[0]         ;        ; 7.165  ; Fall       ; cardNum:inst7|nextC[0]         ;
-; c1        ; cardNum:inst7|nextC[0]         ; 6.766  ;        ; Fall       ; cardNum:inst7|nextC[0]         ;
-; c2        ; cardNum:inst7|nextC[0]         ; 6.844  ;        ; Fall       ; cardNum:inst7|nextC[0]         ;
-; d3        ; cardNum:inst7|nextC[0]         ; 7.017  ;        ; Fall       ; cardNum:inst7|nextC[0]         ;
-; e2        ; cardNum:inst7|nextC[0]         ; 7.016  ;        ; Fall       ; cardNum:inst7|nextC[0]         ;
-; AA1       ; clk_gen:inst23|div10_t:inst3|2 ; 11.287 ; 12.108 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; AA2       ; clk_gen:inst23|div10_t:inst3|2 ; 11.358 ; 12.188 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; G1        ; clk_gen:inst23|div10_t:inst3|2 ; 10.744 ; 11.409 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; G2        ; clk_gen:inst23|div10_t:inst3|2 ; 11.420 ; 10.750 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; L1        ; clk_gen:inst23|div10_t:inst3|2 ; 11.856 ; 11.108 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; L2        ; clk_gen:inst23|div10_t:inst3|2 ; 11.892 ; 11.140 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; N1        ; clk_gen:inst23|div10_t:inst3|2 ; 11.216 ; 11.988 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; U1        ; clk_gen:inst23|div10_t:inst3|2 ; 11.132 ; 11.894 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; U2        ; clk_gen:inst23|div10_t:inst3|2 ; 11.138 ; 11.905 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; W2        ; clk_gen:inst23|div10_t:inst3|2 ; 11.150 ; 11.961 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; a_ab7     ; clk_gen:inst23|div10_t:inst3|2 ; 11.279 ; 10.469 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; b_aa7     ; clk_gen:inst23|div10_t:inst3|2 ; 9.912  ; 9.524  ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; c1        ; clk_gen:inst23|div10_t:inst3|2 ; 11.562 ; 10.887 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; c2        ; clk_gen:inst23|div10_t:inst3|2 ; 11.640 ; 10.957 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; c_ab6     ; clk_gen:inst23|div10_t:inst3|2 ; 11.723 ; 10.816 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; d3        ; clk_gen:inst23|div10_t:inst3|2 ; 11.813 ; 11.068 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; d_ab5     ; clk_gen:inst23|div10_t:inst3|2 ; 11.147 ; 10.293 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; de1       ; clk_gen:inst23|div10_t:inst3|2 ; 6.926  ; 7.520  ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; de2       ; clk_gen:inst23|div10_t:inst3|2 ; 6.399  ; 6.623  ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; de3       ; clk_gen:inst23|div10_t:inst3|2 ; 7.021  ; 7.568  ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; e2        ; clk_gen:inst23|div10_t:inst3|2 ; 11.812 ; 11.072 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; e_aa9     ; clk_gen:inst23|div10_t:inst3|2 ; 10.916 ; 10.118 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; f_y9      ; clk_gen:inst23|div10_t:inst3|2 ; 9.944  ; 9.397  ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; g_ab8     ; clk_gen:inst23|div10_t:inst3|2 ; 10.282 ; 10.984 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-+-----------+--------------------------------+--------+--------+------------+--------------------------------+
++----------------------------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                                    ;
++-----------+--------------------------------+-------+-------+------------+--------------------------------+
+; Data Port ; Clock Port                     ; Rise  ; Fall  ; Clock Edge ; Clock Reference                ;
++-----------+--------------------------------+-------+-------+------------+--------------------------------+
+; a_ab7     ; clk_gen:inst23|div10_t:inst3|2 ; 8.201 ; 7.806 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
+; b_aa7     ; clk_gen:inst23|div10_t:inst3|2 ; 8.563 ; 8.068 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
+; c_ab6     ; clk_gen:inst23|div10_t:inst3|2 ; 8.328 ; 7.949 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
+; d_ab5     ; clk_gen:inst23|div10_t:inst3|2 ; 8.288 ; 7.945 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
+; de1       ; clk_gen:inst23|div10_t:inst3|2 ; 6.696 ; 7.181 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
+; e_aa9     ; clk_gen:inst23|div10_t:inst3|2 ; 7.624 ; 7.260 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
+; f_y9      ; clk_gen:inst23|div10_t:inst3|2 ; 7.544 ; 7.309 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
+; g_ab8     ; clk_gen:inst23|div10_t:inst3|2 ; 7.838 ; 8.232 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
++-----------+--------------------------------+-------+-------+------------+--------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------+
@@ -604,86 +366,14 @@ No paths to report.
 +-----------+--------------------------------+-------+-------+------------+--------------------------------+
 ; Data Port ; Clock Port                     ; Rise  ; Fall  ; Clock Edge ; Clock Reference                ;
 +-----------+--------------------------------+-------+-------+------------+--------------------------------+
-; AA1       ; Point:inst10|nextC[0]          ; 8.901 ;       ; Rise       ; Point:inst10|nextC[0]          ;
-; AA2       ; Point:inst10|nextC[0]          ; 8.976 ;       ; Rise       ; Point:inst10|nextC[0]          ;
-; G1        ; Point:inst10|nextC[0]          ; 8.411 ;       ; Rise       ; Point:inst10|nextC[0]          ;
-; G2        ; Point:inst10|nextC[0]          ;       ; 8.417 ; Rise       ; Point:inst10|nextC[0]          ;
-; L1        ; Point:inst10|nextC[0]          ;       ; 8.749 ; Rise       ; Point:inst10|nextC[0]          ;
-; L2        ; Point:inst10|nextC[0]          ;       ; 8.781 ; Rise       ; Point:inst10|nextC[0]          ;
-; N1        ; Point:inst10|nextC[0]          ; 8.830 ;       ; Rise       ; Point:inst10|nextC[0]          ;
-; U1        ; Point:inst10|nextC[0]          ; 8.747 ;       ; Rise       ; Point:inst10|nextC[0]          ;
-; U2        ; Point:inst10|nextC[0]          ; 8.753 ;       ; Rise       ; Point:inst10|nextC[0]          ;
-; W2        ; Point:inst10|nextC[0]          ; 8.764 ;       ; Rise       ; Point:inst10|nextC[0]          ;
-; c1        ; Point:inst10|nextC[0]          ;       ; 8.553 ; Rise       ; Point:inst10|nextC[0]          ;
-; c2        ; Point:inst10|nextC[0]          ;       ; 8.627 ; Rise       ; Point:inst10|nextC[0]          ;
-; d3        ; Point:inst10|nextC[0]          ;       ; 8.708 ; Rise       ; Point:inst10|nextC[0]          ;
-; e2        ; Point:inst10|nextC[0]          ;       ; 8.712 ; Rise       ; Point:inst10|nextC[0]          ;
-; AA1       ; Point:inst10|nextC[0]          ;       ; 9.713 ; Fall       ; Point:inst10|nextC[0]          ;
-; AA2       ; Point:inst10|nextC[0]          ;       ; 9.798 ; Fall       ; Point:inst10|nextC[0]          ;
-; G1        ; Point:inst10|nextC[0]          ;       ; 9.076 ; Fall       ; Point:inst10|nextC[0]          ;
-; G2        ; Point:inst10|nextC[0]          ; 9.087 ;       ; Fall       ; Point:inst10|nextC[0]          ;
-; L1        ; Point:inst10|nextC[0]          ; 9.502 ;       ; Fall       ; Point:inst10|nextC[0]          ;
-; L2        ; Point:inst10|nextC[0]          ; 9.538 ;       ; Fall       ; Point:inst10|nextC[0]          ;
-; N1        ; Point:inst10|nextC[0]          ;       ; 9.572 ; Fall       ; Point:inst10|nextC[0]          ;
-; U1        ; Point:inst10|nextC[0]          ;       ; 9.479 ; Fall       ; Point:inst10|nextC[0]          ;
-; U2        ; Point:inst10|nextC[0]          ;       ; 9.490 ; Fall       ; Point:inst10|nextC[0]          ;
-; W2        ; Point:inst10|nextC[0]          ;       ; 9.567 ; Fall       ; Point:inst10|nextC[0]          ;
-; c1        ; Point:inst10|nextC[0]          ; 9.228 ;       ; Fall       ; Point:inst10|nextC[0]          ;
-; c2        ; Point:inst10|nextC[0]          ; 9.309 ;       ; Fall       ; Point:inst10|nextC[0]          ;
-; d3        ; Point:inst10|nextC[0]          ; 9.457 ;       ; Fall       ; Point:inst10|nextC[0]          ;
-; e2        ; Point:inst10|nextC[0]          ; 9.456 ;       ; Fall       ; Point:inst10|nextC[0]          ;
-; AA1       ; cardNum:inst7|nextC[0]         ; 6.310 ;       ; Rise       ; cardNum:inst7|nextC[0]         ;
-; AA2       ; cardNum:inst7|nextC[0]         ; 6.385 ;       ; Rise       ; cardNum:inst7|nextC[0]         ;
-; G1        ; cardNum:inst7|nextC[0]         ; 5.820 ;       ; Rise       ; cardNum:inst7|nextC[0]         ;
-; G2        ; cardNum:inst7|nextC[0]         ;       ; 5.826 ; Rise       ; cardNum:inst7|nextC[0]         ;
-; L1        ; cardNum:inst7|nextC[0]         ;       ; 6.158 ; Rise       ; cardNum:inst7|nextC[0]         ;
-; L2        ; cardNum:inst7|nextC[0]         ;       ; 6.190 ; Rise       ; cardNum:inst7|nextC[0]         ;
-; N1        ; cardNum:inst7|nextC[0]         ; 6.239 ;       ; Rise       ; cardNum:inst7|nextC[0]         ;
-; U1        ; cardNum:inst7|nextC[0]         ; 6.156 ;       ; Rise       ; cardNum:inst7|nextC[0]         ;
-; U2        ; cardNum:inst7|nextC[0]         ; 6.162 ;       ; Rise       ; cardNum:inst7|nextC[0]         ;
-; W2        ; cardNum:inst7|nextC[0]         ; 6.173 ;       ; Rise       ; cardNum:inst7|nextC[0]         ;
-; c1        ; cardNum:inst7|nextC[0]         ;       ; 5.962 ; Rise       ; cardNum:inst7|nextC[0]         ;
-; c2        ; cardNum:inst7|nextC[0]         ;       ; 6.036 ; Rise       ; cardNum:inst7|nextC[0]         ;
-; d3        ; cardNum:inst7|nextC[0]         ;       ; 6.117 ; Rise       ; cardNum:inst7|nextC[0]         ;
-; e2        ; cardNum:inst7|nextC[0]         ;       ; 6.121 ; Rise       ; cardNum:inst7|nextC[0]         ;
-; AA1       ; cardNum:inst7|nextC[0]         ;       ; 6.563 ; Fall       ; cardNum:inst7|nextC[0]         ;
-; AA2       ; cardNum:inst7|nextC[0]         ;       ; 6.648 ; Fall       ; cardNum:inst7|nextC[0]         ;
-; G1        ; cardNum:inst7|nextC[0]         ;       ; 5.926 ; Fall       ; cardNum:inst7|nextC[0]         ;
-; G2        ; cardNum:inst7|nextC[0]         ; 5.937 ;       ; Fall       ; cardNum:inst7|nextC[0]         ;
-; L1        ; cardNum:inst7|nextC[0]         ; 6.352 ;       ; Fall       ; cardNum:inst7|nextC[0]         ;
-; L2        ; cardNum:inst7|nextC[0]         ; 6.388 ;       ; Fall       ; cardNum:inst7|nextC[0]         ;
-; N1        ; cardNum:inst7|nextC[0]         ;       ; 6.422 ; Fall       ; cardNum:inst7|nextC[0]         ;
-; U1        ; cardNum:inst7|nextC[0]         ;       ; 6.329 ; Fall       ; cardNum:inst7|nextC[0]         ;
-; U2        ; cardNum:inst7|nextC[0]         ;       ; 6.340 ; Fall       ; cardNum:inst7|nextC[0]         ;
-; W2        ; cardNum:inst7|nextC[0]         ;       ; 6.417 ; Fall       ; cardNum:inst7|nextC[0]         ;
-; c1        ; cardNum:inst7|nextC[0]         ; 6.078 ;       ; Fall       ; cardNum:inst7|nextC[0]         ;
-; c2        ; cardNum:inst7|nextC[0]         ; 6.159 ;       ; Fall       ; cardNum:inst7|nextC[0]         ;
-; d3        ; cardNum:inst7|nextC[0]         ; 6.307 ;       ; Fall       ; cardNum:inst7|nextC[0]         ;
-; e2        ; cardNum:inst7|nextC[0]         ; 6.306 ;       ; Fall       ; cardNum:inst7|nextC[0]         ;
-; AA1       ; clk_gen:inst23|div10_t:inst3|2 ; 8.469 ; 8.688 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; AA2       ; clk_gen:inst23|div10_t:inst3|2 ; 8.544 ; 8.773 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; G1        ; clk_gen:inst23|div10_t:inst3|2 ; 7.979 ; 8.051 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; G2        ; clk_gen:inst23|div10_t:inst3|2 ; 8.062 ; 7.985 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; L1        ; clk_gen:inst23|div10_t:inst3|2 ; 8.477 ; 8.317 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; L2        ; clk_gen:inst23|div10_t:inst3|2 ; 8.513 ; 8.349 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; N1        ; clk_gen:inst23|div10_t:inst3|2 ; 8.398 ; 8.547 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; U1        ; clk_gen:inst23|div10_t:inst3|2 ; 8.315 ; 8.454 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; U2        ; clk_gen:inst23|div10_t:inst3|2 ; 8.321 ; 8.465 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; W2        ; clk_gen:inst23|div10_t:inst3|2 ; 8.332 ; 8.542 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; a_ab7     ; clk_gen:inst23|div10_t:inst3|2 ; 9.269 ; 8.535 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; b_aa7     ; clk_gen:inst23|div10_t:inst3|2 ; 8.134 ; 7.822 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; c1        ; clk_gen:inst23|div10_t:inst3|2 ; 8.203 ; 8.121 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; c2        ; clk_gen:inst23|div10_t:inst3|2 ; 8.284 ; 8.195 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; c_ab6     ; clk_gen:inst23|div10_t:inst3|2 ; 9.690 ; 8.861 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; d3        ; clk_gen:inst23|div10_t:inst3|2 ; 8.432 ; 8.276 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; d_ab5     ; clk_gen:inst23|div10_t:inst3|2 ; 9.304 ; 8.724 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; de1       ; clk_gen:inst23|div10_t:inst3|2 ; 6.292 ; 6.785 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; de2       ; clk_gen:inst23|div10_t:inst3|2 ; 5.830 ; 6.010 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; de3       ; clk_gen:inst23|div10_t:inst3|2 ; 6.385 ; 6.837 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; e2        ; clk_gen:inst23|div10_t:inst3|2 ; 8.431 ; 8.280 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; e_aa9     ; clk_gen:inst23|div10_t:inst3|2 ; 9.005 ; 8.334 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; f_y9      ; clk_gen:inst23|div10_t:inst3|2 ; 8.261 ; 7.902 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; g_ab8     ; clk_gen:inst23|div10_t:inst3|2 ; 8.484 ; 9.105 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
+; a_ab7     ; clk_gen:inst23|div10_t:inst3|2 ; 6.750 ; 6.459 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
+; b_aa7     ; clk_gen:inst23|div10_t:inst3|2 ; 7.025 ; 6.676 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
+; c_ab6     ; clk_gen:inst23|div10_t:inst3|2 ; 6.924 ; 6.643 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
+; d_ab5     ; clk_gen:inst23|div10_t:inst3|2 ; 6.873 ; 6.622 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
+; de1       ; clk_gen:inst23|div10_t:inst3|2 ; 6.069 ; 6.458 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
+; e_aa9     ; clk_gen:inst23|div10_t:inst3|2 ; 6.324 ; 6.120 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
+; f_y9      ; clk_gen:inst23|div10_t:inst3|2 ; 6.276 ; 6.078 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
+; g_ab8     ; clk_gen:inst23|div10_t:inst3|2 ; 6.472 ; 6.792 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
 +-----------+--------------------------------+-------+-------+------------+--------------------------------+
 
 
@@ -698,13 +388,11 @@ No synchronizer chains to report.
 +--------------------------------+--------+---------------+
 ; Clock                          ; Slack  ; End Point TNS ;
 +--------------------------------+--------+---------------+
-; clk_gen:inst23|div10_t:inst3|2 ; -3.382 ; -69.336       ;
-; Point:inst10|nextC[0]          ; -2.381 ; -19.997       ;
-; cardNum:inst7|nextC[0]         ; -2.296 ; -18.740       ;
-; clk                            ; -0.823 ; -1.219        ;
-; clk_gen:inst23|div10_t:inst1|2 ; -0.336 ; -1.324        ;
-; clk_gen:inst23|div10_t:inst2|2 ; -0.327 ; -1.038        ;
-; clk_gen:inst23|div10_t:inst|2  ; -0.222 ; -0.645        ;
+; clk_gen:inst23|div10_t:inst3|2 ; -2.403 ; -20.027       ;
+; clk                            ; -0.762 ; -1.268        ;
+; clk_gen:inst23|div10_t:inst1|2 ; -0.326 ; -1.072        ;
+; clk_gen:inst23|div10_t:inst2|2 ; -0.305 ; -0.997        ;
+; clk_gen:inst23|div10_t:inst|2  ; -0.183 ; -0.610        ;
 +--------------------------------+--------+---------------+
 
 
@@ -713,13 +401,11 @@ No synchronizer chains to report.
 +--------------------------------+--------+---------------+
 ; Clock                          ; Slack  ; End Point TNS ;
 +--------------------------------+--------+---------------+
-; clk                            ; -0.790 ; -1.559        ;
-; clk_gen:inst23|div10_t:inst3|2 ; -0.749 ; -2.360        ;
-; clk_gen:inst23|div10_t:inst|2  ; -0.534 ; -1.046        ;
-; clk_gen:inst23|div10_t:inst1|2 ; -0.513 ; -0.983        ;
-; clk_gen:inst23|div10_t:inst2|2 ; -0.405 ; -0.754        ;
-; Point:inst10|nextC[0]          ; 0.188  ; 0.000         ;
-; cardNum:inst7|nextC[0]         ; 0.227  ; 0.000         ;
+; clk                            ; -0.793 ; -1.515        ;
+; clk_gen:inst23|div10_t:inst|2  ; -0.609 ; -1.210        ;
+; clk_gen:inst23|div10_t:inst1|2 ; -0.586 ; -1.091        ;
+; clk_gen:inst23|div10_t:inst2|2 ; -0.317 ; -0.633        ;
+; clk_gen:inst23|div10_t:inst3|2 ; 0.165  ; 0.000         ;
 +--------------------------------+--------+---------------+
 
 
@@ -740,13 +426,11 @@ No paths to report.
 +--------------------------------+--------+---------------+
 ; Clock                          ; Slack  ; End Point TNS ;
 +--------------------------------+--------+---------------+
-; clk                            ; -0.497 ; -0.916        ;
-; clk_gen:inst23|div10_t:inst3|2 ; -0.146 ; -3.652        ;
-; Point:inst10|nextC[0]          ; -0.095 ; -0.990        ;
-; cardNum:inst7|nextC[0]         ; 0.021  ; 0.000         ;
-; clk_gen:inst23|div10_t:inst1|2 ; 0.090  ; 0.000         ;
-; clk_gen:inst23|div10_t:inst|2  ; 0.099  ; 0.000         ;
-; clk_gen:inst23|div10_t:inst2|2 ; 0.151  ; 0.000         ;
+; clk                            ; -0.409 ; -0.827        ;
+; clk_gen:inst23|div10_t:inst|2  ; 0.007  ; 0.000         ;
+; clk_gen:inst23|div10_t:inst1|2 ; 0.075  ; 0.000         ;
+; clk_gen:inst23|div10_t:inst3|2 ; 0.100  ; 0.000         ;
+; clk_gen:inst23|div10_t:inst2|2 ; 0.150  ; 0.000         ;
 +--------------------------------+--------+---------------+
 
 
@@ -755,8 +439,7 @@ No paths to report.
 +-----------+--------------------------------+-------+-------+------------+--------------------------------+
 ; Data Port ; Clock Port                     ; Rise  ; Fall  ; Clock Edge ; Clock Reference                ;
 +-----------+--------------------------------+-------+-------+------------+--------------------------------+
-; c13       ; clk_gen:inst23|div10_t:inst3|2 ; 2.298 ; 2.922 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; ps3       ; clk_gen:inst23|div10_t:inst3|2 ; 2.516 ; 3.147 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
+; c13       ; clk_gen:inst23|div10_t:inst3|2 ; 3.027 ; 3.715 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
 +-----------+--------------------------------+-------+-------+------------+--------------------------------+
 
 
@@ -765,8 +448,7 @@ No paths to report.
 +-----------+--------------------------------+--------+--------+------------+--------------------------------+
 ; Data Port ; Clock Port                     ; Rise   ; Fall   ; Clock Edge ; Clock Reference                ;
 +-----------+--------------------------------+--------+--------+------------+--------------------------------+
-; c13       ; clk_gen:inst23|div10_t:inst3|2 ; -1.016 ; -1.600 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; ps3       ; clk_gen:inst23|div10_t:inst3|2 ; -1.223 ; -1.817 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
+; c13       ; clk_gen:inst23|div10_t:inst3|2 ; -1.736 ; -2.381 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
 +-----------+--------------------------------+--------+--------+------------+--------------------------------+
 
 
@@ -775,86 +457,14 @@ No paths to report.
 +-----------+--------------------------------+-------+-------+------------+--------------------------------+
 ; Data Port ; Clock Port                     ; Rise  ; Fall  ; Clock Edge ; Clock Reference                ;
 +-----------+--------------------------------+-------+-------+------------+--------------------------------+
-; AA1       ; Point:inst10|nextC[0]          ; 5.106 ;       ; Rise       ; Point:inst10|nextC[0]          ;
-; AA2       ; Point:inst10|nextC[0]          ; 5.120 ;       ; Rise       ; Point:inst10|nextC[0]          ;
-; G1        ; Point:inst10|nextC[0]          ; 4.824 ;       ; Rise       ; Point:inst10|nextC[0]          ;
-; G2        ; Point:inst10|nextC[0]          ;       ; 4.818 ; Rise       ; Point:inst10|nextC[0]          ;
-; L1        ; Point:inst10|nextC[0]          ;       ; 4.961 ; Rise       ; Point:inst10|nextC[0]          ;
-; L2        ; Point:inst10|nextC[0]          ;       ; 4.958 ; Rise       ; Point:inst10|nextC[0]          ;
-; N1        ; Point:inst10|nextC[0]          ; 5.032 ;       ; Rise       ; Point:inst10|nextC[0]          ;
-; U1        ; Point:inst10|nextC[0]          ; 5.020 ;       ; Rise       ; Point:inst10|nextC[0]          ;
-; U2        ; Point:inst10|nextC[0]          ; 5.014 ;       ; Rise       ; Point:inst10|nextC[0]          ;
-; W2        ; Point:inst10|nextC[0]          ; 5.040 ;       ; Rise       ; Point:inst10|nextC[0]          ;
-; c1        ; Point:inst10|nextC[0]          ;       ; 4.896 ; Rise       ; Point:inst10|nextC[0]          ;
-; c2        ; Point:inst10|nextC[0]          ;       ; 4.908 ; Rise       ; Point:inst10|nextC[0]          ;
-; d3        ; Point:inst10|nextC[0]          ;       ; 4.979 ; Rise       ; Point:inst10|nextC[0]          ;
-; e2        ; Point:inst10|nextC[0]          ;       ; 4.995 ; Rise       ; Point:inst10|nextC[0]          ;
-; AA1       ; Point:inst10|nextC[0]          ;       ; 6.198 ; Fall       ; Point:inst10|nextC[0]          ;
-; AA2       ; Point:inst10|nextC[0]          ;       ; 6.224 ; Fall       ; Point:inst10|nextC[0]          ;
-; G1        ; Point:inst10|nextC[0]          ;       ; 5.791 ; Fall       ; Point:inst10|nextC[0]          ;
-; G2        ; Point:inst10|nextC[0]          ; 5.810 ;       ; Fall       ; Point:inst10|nextC[0]          ;
-; L1        ; Point:inst10|nextC[0]          ; 6.005 ;       ; Fall       ; Point:inst10|nextC[0]          ;
-; L2        ; Point:inst10|nextC[0]          ; 6.006 ;       ; Fall       ; Point:inst10|nextC[0]          ;
-; N1        ; Point:inst10|nextC[0]          ;       ; 6.091 ; Fall       ; Point:inst10|nextC[0]          ;
-; U1        ; Point:inst10|nextC[0]          ;       ; 6.064 ; Fall       ; Point:inst10|nextC[0]          ;
-; U2        ; Point:inst10|nextC[0]          ;       ; 6.082 ; Fall       ; Point:inst10|nextC[0]          ;
-; W2        ; Point:inst10|nextC[0]          ;       ; 6.117 ; Fall       ; Point:inst10|nextC[0]          ;
-; c1        ; Point:inst10|nextC[0]          ; 5.878 ;       ; Fall       ; Point:inst10|nextC[0]          ;
-; c2        ; Point:inst10|nextC[0]          ; 5.901 ;       ; Fall       ; Point:inst10|nextC[0]          ;
-; d3        ; Point:inst10|nextC[0]          ; 6.036 ;       ; Fall       ; Point:inst10|nextC[0]          ;
-; e2        ; Point:inst10|nextC[0]          ; 6.027 ;       ; Fall       ; Point:inst10|nextC[0]          ;
-; AA1       ; cardNum:inst7|nextC[0]         ; 3.627 ;       ; Rise       ; cardNum:inst7|nextC[0]         ;
-; AA2       ; cardNum:inst7|nextC[0]         ; 3.641 ;       ; Rise       ; cardNum:inst7|nextC[0]         ;
-; G1        ; cardNum:inst7|nextC[0]         ; 3.345 ;       ; Rise       ; cardNum:inst7|nextC[0]         ;
-; G2        ; cardNum:inst7|nextC[0]         ;       ; 3.339 ; Rise       ; cardNum:inst7|nextC[0]         ;
-; L1        ; cardNum:inst7|nextC[0]         ;       ; 3.482 ; Rise       ; cardNum:inst7|nextC[0]         ;
-; L2        ; cardNum:inst7|nextC[0]         ;       ; 3.479 ; Rise       ; cardNum:inst7|nextC[0]         ;
-; N1        ; cardNum:inst7|nextC[0]         ; 3.553 ;       ; Rise       ; cardNum:inst7|nextC[0]         ;
-; U1        ; cardNum:inst7|nextC[0]         ; 3.541 ;       ; Rise       ; cardNum:inst7|nextC[0]         ;
-; U2        ; cardNum:inst7|nextC[0]         ; 3.535 ;       ; Rise       ; cardNum:inst7|nextC[0]         ;
-; W2        ; cardNum:inst7|nextC[0]         ; 3.561 ;       ; Rise       ; cardNum:inst7|nextC[0]         ;
-; c1        ; cardNum:inst7|nextC[0]         ;       ; 3.417 ; Rise       ; cardNum:inst7|nextC[0]         ;
-; c2        ; cardNum:inst7|nextC[0]         ;       ; 3.429 ; Rise       ; cardNum:inst7|nextC[0]         ;
-; d3        ; cardNum:inst7|nextC[0]         ;       ; 3.500 ; Rise       ; cardNum:inst7|nextC[0]         ;
-; e2        ; cardNum:inst7|nextC[0]         ;       ; 3.516 ; Rise       ; cardNum:inst7|nextC[0]         ;
-; AA1       ; cardNum:inst7|nextC[0]         ;       ; 4.011 ; Fall       ; cardNum:inst7|nextC[0]         ;
-; AA2       ; cardNum:inst7|nextC[0]         ;       ; 4.037 ; Fall       ; cardNum:inst7|nextC[0]         ;
-; G1        ; cardNum:inst7|nextC[0]         ;       ; 3.604 ; Fall       ; cardNum:inst7|nextC[0]         ;
-; G2        ; cardNum:inst7|nextC[0]         ; 3.623 ;       ; Fall       ; cardNum:inst7|nextC[0]         ;
-; L1        ; cardNum:inst7|nextC[0]         ; 3.818 ;       ; Fall       ; cardNum:inst7|nextC[0]         ;
-; L2        ; cardNum:inst7|nextC[0]         ; 3.819 ;       ; Fall       ; cardNum:inst7|nextC[0]         ;
-; N1        ; cardNum:inst7|nextC[0]         ;       ; 3.904 ; Fall       ; cardNum:inst7|nextC[0]         ;
-; U1        ; cardNum:inst7|nextC[0]         ;       ; 3.877 ; Fall       ; cardNum:inst7|nextC[0]         ;
-; U2        ; cardNum:inst7|nextC[0]         ;       ; 3.895 ; Fall       ; cardNum:inst7|nextC[0]         ;
-; W2        ; cardNum:inst7|nextC[0]         ;       ; 3.930 ; Fall       ; cardNum:inst7|nextC[0]         ;
-; c1        ; cardNum:inst7|nextC[0]         ; 3.691 ;       ; Fall       ; cardNum:inst7|nextC[0]         ;
-; c2        ; cardNum:inst7|nextC[0]         ; 3.714 ;       ; Fall       ; cardNum:inst7|nextC[0]         ;
-; d3        ; cardNum:inst7|nextC[0]         ; 3.849 ;       ; Fall       ; cardNum:inst7|nextC[0]         ;
-; e2        ; cardNum:inst7|nextC[0]         ; 3.840 ;       ; Fall       ; cardNum:inst7|nextC[0]         ;
-; AA1       ; clk_gen:inst23|div10_t:inst3|2 ; 5.512 ; 6.144 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; AA2       ; clk_gen:inst23|div10_t:inst3|2 ; 5.526 ; 6.170 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; G1        ; clk_gen:inst23|div10_t:inst3|2 ; 5.230 ; 5.737 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; G2        ; clk_gen:inst23|div10_t:inst3|2 ; 5.756 ; 5.224 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; L1        ; clk_gen:inst23|div10_t:inst3|2 ; 5.951 ; 5.367 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; L2        ; clk_gen:inst23|div10_t:inst3|2 ; 5.952 ; 5.364 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; N1        ; clk_gen:inst23|div10_t:inst3|2 ; 5.438 ; 6.037 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; U1        ; clk_gen:inst23|div10_t:inst3|2 ; 5.426 ; 6.010 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; U2        ; clk_gen:inst23|div10_t:inst3|2 ; 5.420 ; 6.028 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; W2        ; clk_gen:inst23|div10_t:inst3|2 ; 5.446 ; 6.063 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; a_ab7     ; clk_gen:inst23|div10_t:inst3|2 ; 5.795 ; 5.133 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; b_aa7     ; clk_gen:inst23|div10_t:inst3|2 ; 4.957 ; 4.527 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; c1        ; clk_gen:inst23|div10_t:inst3|2 ; 5.824 ; 5.302 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; c2        ; clk_gen:inst23|div10_t:inst3|2 ; 5.847 ; 5.314 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; c_ab6     ; clk_gen:inst23|div10_t:inst3|2 ; 6.100 ; 5.360 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; d3        ; clk_gen:inst23|div10_t:inst3|2 ; 5.982 ; 5.385 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; d_ab5     ; clk_gen:inst23|div10_t:inst3|2 ; 5.719 ; 5.090 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; de1       ; clk_gen:inst23|div10_t:inst3|2 ; 3.519 ; 4.030 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; de2       ; clk_gen:inst23|div10_t:inst3|2 ; 3.171 ; 3.426 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; de3       ; clk_gen:inst23|div10_t:inst3|2 ; 3.577 ; 4.051 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; e2        ; clk_gen:inst23|div10_t:inst3|2 ; 5.973 ; 5.401 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; e_aa9     ; clk_gen:inst23|div10_t:inst3|2 ; 5.647 ; 4.916 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; f_y9      ; clk_gen:inst23|div10_t:inst3|2 ; 4.963 ; 4.573 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; g_ab8     ; clk_gen:inst23|div10_t:inst3|2 ; 5.013 ; 5.591 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
+; a_ab7     ; clk_gen:inst23|div10_t:inst3|2 ; 4.175 ; 3.784 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
+; b_aa7     ; clk_gen:inst23|div10_t:inst3|2 ; 4.364 ; 3.876 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
+; c_ab6     ; clk_gen:inst23|div10_t:inst3|2 ; 4.186 ; 3.853 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
+; d_ab5     ; clk_gen:inst23|div10_t:inst3|2 ; 4.215 ; 3.872 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
+; de1       ; clk_gen:inst23|div10_t:inst3|2 ; 3.422 ; 3.839 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
+; e_aa9     ; clk_gen:inst23|div10_t:inst3|2 ; 3.800 ; 3.500 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
+; f_y9      ; clk_gen:inst23|div10_t:inst3|2 ; 3.734 ; 3.518 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
+; g_ab8     ; clk_gen:inst23|div10_t:inst3|2 ; 3.782 ; 4.152 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
 +-----------+--------------------------------+-------+-------+------------+--------------------------------+
 
 
@@ -863,86 +473,14 @@ No paths to report.
 +-----------+--------------------------------+-------+-------+------------+--------------------------------+
 ; Data Port ; Clock Port                     ; Rise  ; Fall  ; Clock Edge ; Clock Reference                ;
 +-----------+--------------------------------+-------+-------+------------+--------------------------------+
-; AA1       ; Point:inst10|nextC[0]          ; 4.640 ;       ; Rise       ; Point:inst10|nextC[0]          ;
-; AA2       ; Point:inst10|nextC[0]          ; 4.656 ;       ; Rise       ; Point:inst10|nextC[0]          ;
-; G1        ; Point:inst10|nextC[0]          ; 4.383 ;       ; Rise       ; Point:inst10|nextC[0]          ;
-; G2        ; Point:inst10|nextC[0]          ;       ; 4.377 ; Rise       ; Point:inst10|nextC[0]          ;
-; L1        ; Point:inst10|nextC[0]          ;       ; 4.510 ; Rise       ; Point:inst10|nextC[0]          ;
-; L2        ; Point:inst10|nextC[0]          ;       ; 4.507 ; Rise       ; Point:inst10|nextC[0]          ;
-; N1        ; Point:inst10|nextC[0]          ; 4.565 ;       ; Rise       ; Point:inst10|nextC[0]          ;
-; U1        ; Point:inst10|nextC[0]          ; 4.554 ;       ; Rise       ; Point:inst10|nextC[0]          ;
-; U2        ; Point:inst10|nextC[0]          ; 4.548 ;       ; Rise       ; Point:inst10|nextC[0]          ;
-; W2        ; Point:inst10|nextC[0]          ; 4.575 ;       ; Rise       ; Point:inst10|nextC[0]          ;
-; c1        ; Point:inst10|nextC[0]          ;       ; 4.454 ; Rise       ; Point:inst10|nextC[0]          ;
-; c2        ; Point:inst10|nextC[0]          ;       ; 4.468 ; Rise       ; Point:inst10|nextC[0]          ;
-; d3        ; Point:inst10|nextC[0]          ;       ; 4.527 ; Rise       ; Point:inst10|nextC[0]          ;
-; e2        ; Point:inst10|nextC[0]          ;       ; 4.543 ; Rise       ; Point:inst10|nextC[0]          ;
-; AA1       ; Point:inst10|nextC[0]          ;       ; 5.426 ; Fall       ; Point:inst10|nextC[0]          ;
-; AA2       ; Point:inst10|nextC[0]          ;       ; 5.456 ; Fall       ; Point:inst10|nextC[0]          ;
-; G1        ; Point:inst10|nextC[0]          ;       ; 5.058 ; Fall       ; Point:inst10|nextC[0]          ;
-; G2        ; Point:inst10|nextC[0]          ; 5.076 ;       ; Fall       ; Point:inst10|nextC[0]          ;
-; L1        ; Point:inst10|nextC[0]          ; 5.257 ;       ; Fall       ; Point:inst10|nextC[0]          ;
-; L2        ; Point:inst10|nextC[0]          ; 5.259 ;       ; Fall       ; Point:inst10|nextC[0]          ;
-; N1        ; Point:inst10|nextC[0]          ;       ; 5.314 ; Fall       ; Point:inst10|nextC[0]          ;
-; U1        ; Point:inst10|nextC[0]          ;       ; 5.288 ; Fall       ; Point:inst10|nextC[0]          ;
-; U2        ; Point:inst10|nextC[0]          ;       ; 5.306 ; Fall       ; Point:inst10|nextC[0]          ;
-; W2        ; Point:inst10|nextC[0]          ;       ; 5.346 ; Fall       ; Point:inst10|nextC[0]          ;
-; c1        ; Point:inst10|nextC[0]          ; 5.143 ;       ; Fall       ; Point:inst10|nextC[0]          ;
-; c2        ; Point:inst10|nextC[0]          ; 5.168 ;       ; Fall       ; Point:inst10|nextC[0]          ;
-; d3        ; Point:inst10|nextC[0]          ; 5.287 ;       ; Fall       ; Point:inst10|nextC[0]          ;
-; e2        ; Point:inst10|nextC[0]          ; 5.278 ;       ; Fall       ; Point:inst10|nextC[0]          ;
-; AA1       ; cardNum:inst7|nextC[0]         ; 3.380 ;       ; Rise       ; cardNum:inst7|nextC[0]         ;
-; AA2       ; cardNum:inst7|nextC[0]         ; 3.396 ;       ; Rise       ; cardNum:inst7|nextC[0]         ;
-; G1        ; cardNum:inst7|nextC[0]         ; 3.123 ;       ; Rise       ; cardNum:inst7|nextC[0]         ;
-; G2        ; cardNum:inst7|nextC[0]         ;       ; 3.117 ; Rise       ; cardNum:inst7|nextC[0]         ;
-; L1        ; cardNum:inst7|nextC[0]         ;       ; 3.250 ; Rise       ; cardNum:inst7|nextC[0]         ;
-; L2        ; cardNum:inst7|nextC[0]         ;       ; 3.247 ; Rise       ; cardNum:inst7|nextC[0]         ;
-; N1        ; cardNum:inst7|nextC[0]         ; 3.305 ;       ; Rise       ; cardNum:inst7|nextC[0]         ;
-; U1        ; cardNum:inst7|nextC[0]         ; 3.294 ;       ; Rise       ; cardNum:inst7|nextC[0]         ;
-; U2        ; cardNum:inst7|nextC[0]         ; 3.288 ;       ; Rise       ; cardNum:inst7|nextC[0]         ;
-; W2        ; cardNum:inst7|nextC[0]         ; 3.315 ;       ; Rise       ; cardNum:inst7|nextC[0]         ;
-; c1        ; cardNum:inst7|nextC[0]         ;       ; 3.194 ; Rise       ; cardNum:inst7|nextC[0]         ;
-; c2        ; cardNum:inst7|nextC[0]         ;       ; 3.208 ; Rise       ; cardNum:inst7|nextC[0]         ;
-; d3        ; cardNum:inst7|nextC[0]         ;       ; 3.267 ; Rise       ; cardNum:inst7|nextC[0]         ;
-; e2        ; cardNum:inst7|nextC[0]         ;       ; 3.283 ; Rise       ; cardNum:inst7|nextC[0]         ;
-; AA1       ; cardNum:inst7|nextC[0]         ;       ; 3.690 ; Fall       ; cardNum:inst7|nextC[0]         ;
-; AA2       ; cardNum:inst7|nextC[0]         ;       ; 3.720 ; Fall       ; cardNum:inst7|nextC[0]         ;
-; G1        ; cardNum:inst7|nextC[0]         ;       ; 3.322 ; Fall       ; cardNum:inst7|nextC[0]         ;
-; G2        ; cardNum:inst7|nextC[0]         ; 3.340 ;       ; Fall       ; cardNum:inst7|nextC[0]         ;
-; L1        ; cardNum:inst7|nextC[0]         ; 3.521 ;       ; Fall       ; cardNum:inst7|nextC[0]         ;
-; L2        ; cardNum:inst7|nextC[0]         ; 3.523 ;       ; Fall       ; cardNum:inst7|nextC[0]         ;
-; N1        ; cardNum:inst7|nextC[0]         ;       ; 3.578 ; Fall       ; cardNum:inst7|nextC[0]         ;
-; U1        ; cardNum:inst7|nextC[0]         ;       ; 3.552 ; Fall       ; cardNum:inst7|nextC[0]         ;
-; U2        ; cardNum:inst7|nextC[0]         ;       ; 3.570 ; Fall       ; cardNum:inst7|nextC[0]         ;
-; W2        ; cardNum:inst7|nextC[0]         ;       ; 3.610 ; Fall       ; cardNum:inst7|nextC[0]         ;
-; c1        ; cardNum:inst7|nextC[0]         ; 3.407 ;       ; Fall       ; cardNum:inst7|nextC[0]         ;
-; c2        ; cardNum:inst7|nextC[0]         ; 3.432 ;       ; Fall       ; cardNum:inst7|nextC[0]         ;
-; d3        ; cardNum:inst7|nextC[0]         ; 3.551 ;       ; Fall       ; cardNum:inst7|nextC[0]         ;
-; e2        ; cardNum:inst7|nextC[0]         ; 3.542 ;       ; Fall       ; cardNum:inst7|nextC[0]         ;
-; AA1       ; clk_gen:inst23|div10_t:inst3|2 ; 4.278 ; 4.530 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; AA2       ; clk_gen:inst23|div10_t:inst3|2 ; 4.294 ; 4.560 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; G1        ; clk_gen:inst23|div10_t:inst3|2 ; 4.021 ; 4.162 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; G2        ; clk_gen:inst23|div10_t:inst3|2 ; 4.180 ; 4.015 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; L1        ; clk_gen:inst23|div10_t:inst3|2 ; 4.361 ; 4.148 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; L2        ; clk_gen:inst23|div10_t:inst3|2 ; 4.363 ; 4.145 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; N1        ; clk_gen:inst23|div10_t:inst3|2 ; 4.203 ; 4.418 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; U1        ; clk_gen:inst23|div10_t:inst3|2 ; 4.192 ; 4.392 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; U2        ; clk_gen:inst23|div10_t:inst3|2 ; 4.186 ; 4.410 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; W2        ; clk_gen:inst23|div10_t:inst3|2 ; 4.213 ; 4.450 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; a_ab7     ; clk_gen:inst23|div10_t:inst3|2 ; 4.888 ; 4.312 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; b_aa7     ; clk_gen:inst23|div10_t:inst3|2 ; 4.192 ; 3.899 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; c1        ; clk_gen:inst23|div10_t:inst3|2 ; 4.247 ; 4.092 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; c2        ; clk_gen:inst23|div10_t:inst3|2 ; 4.272 ; 4.106 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; c_ab6     ; clk_gen:inst23|div10_t:inst3|2 ; 5.176 ; 4.531 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; d3        ; clk_gen:inst23|div10_t:inst3|2 ; 4.391 ; 4.165 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; d_ab5     ; clk_gen:inst23|div10_t:inst3|2 ; 4.857 ; 4.338 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; de1       ; clk_gen:inst23|div10_t:inst3|2 ; 3.209 ; 3.648 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; de2       ; clk_gen:inst23|div10_t:inst3|2 ; 2.897 ; 3.128 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; de3       ; clk_gen:inst23|div10_t:inst3|2 ; 3.268 ; 3.686 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; e2        ; clk_gen:inst23|div10_t:inst3|2 ; 4.382 ; 4.181 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; e_aa9     ; clk_gen:inst23|div10_t:inst3|2 ; 4.822 ; 4.244 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; f_y9      ; clk_gen:inst23|div10_t:inst3|2 ; 4.195 ; 3.865 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; g_ab8     ; clk_gen:inst23|div10_t:inst3|2 ; 4.253 ; 4.726 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
+; a_ab7     ; clk_gen:inst23|div10_t:inst3|2 ; 3.533 ; 3.222 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
+; b_aa7     ; clk_gen:inst23|div10_t:inst3|2 ; 3.697 ; 3.358 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
+; c_ab6     ; clk_gen:inst23|div10_t:inst3|2 ; 3.642 ; 3.345 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
+; d_ab5     ; clk_gen:inst23|div10_t:inst3|2 ; 3.602 ; 3.324 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
+; de1       ; clk_gen:inst23|div10_t:inst3|2 ; 3.107 ; 3.449 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
+; e_aa9     ; clk_gen:inst23|div10_t:inst3|2 ; 3.306 ; 3.051 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
+; f_y9      ; clk_gen:inst23|div10_t:inst3|2 ; 3.279 ; 3.030 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
+; g_ab8     ; clk_gen:inst23|div10_t:inst3|2 ; 3.241 ; 3.534 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
 +-----------+--------------------------------+-------+-------+------------+--------------------------------+
 
 
@@ -957,13 +495,11 @@ No synchronizer chains to report.
 +--------------------------------+--------+---------------+
 ; Clock                          ; Slack  ; End Point TNS ;
 +--------------------------------+--------+---------------+
-; clk_gen:inst23|div10_t:inst3|2 ; -3.213 ; -63.954       ;
-; Point:inst10|nextC[0]          ; -2.260 ; -18.540       ;
-; cardNum:inst7|nextC[0]         ; -2.149 ; -17.297       ;
-; clk                            ; -0.742 ; -1.039        ;
-; clk_gen:inst23|div10_t:inst1|2 ; -0.291 ; -1.055        ;
-; clk_gen:inst23|div10_t:inst2|2 ; -0.272 ; -0.929        ;
-; clk_gen:inst23|div10_t:inst|2  ; -0.234 ; -0.554        ;
+; clk_gen:inst23|div10_t:inst3|2 ; -2.260 ; -18.325       ;
+; clk                            ; -0.647 ; -1.006        ;
+; clk_gen:inst23|div10_t:inst2|2 ; -0.312 ; -0.910        ;
+; clk_gen:inst23|div10_t:inst1|2 ; -0.273 ; -0.894        ;
+; clk_gen:inst23|div10_t:inst|2  ; -0.171 ; -0.523        ;
 +--------------------------------+--------+---------------+
 
 
@@ -972,13 +508,11 @@ No synchronizer chains to report.
 +--------------------------------+--------+---------------+
 ; Clock                          ; Slack  ; End Point TNS ;
 +--------------------------------+--------+---------------+
-; clk                            ; -0.798 ; -1.568        ;
-; clk_gen:inst23|div10_t:inst3|2 ; -0.717 ; -2.490        ;
-; clk_gen:inst23|div10_t:inst|2  ; -0.506 ; -0.984        ;
-; clk_gen:inst23|div10_t:inst1|2 ; -0.459 ; -0.886        ;
-; clk_gen:inst23|div10_t:inst2|2 ; -0.396 ; -0.733        ;
-; Point:inst10|nextC[0]          ; 0.173  ; 0.000         ;
-; cardNum:inst7|nextC[0]         ; 0.202  ; 0.000         ;
+; clk                            ; -0.852 ; -1.581        ;
+; clk_gen:inst23|div10_t:inst|2  ; -0.569 ; -1.132        ;
+; clk_gen:inst23|div10_t:inst1|2 ; -0.526 ; -0.988        ;
+; clk_gen:inst23|div10_t:inst2|2 ; -0.304 ; -0.607        ;
+; clk_gen:inst23|div10_t:inst3|2 ; 0.151  ; 0.000         ;
 +--------------------------------+--------+---------------+
 
 
@@ -999,13 +533,11 @@ No paths to report.
 +--------------------------------+--------+---------------+
 ; Clock                          ; Slack  ; End Point TNS ;
 +--------------------------------+--------+---------------+
-; clk                            ; -0.482 ; -0.902        ;
-; clk_gen:inst23|div10_t:inst3|2 ; -0.096 ; -1.720        ;
-; Point:inst10|nextC[0]          ; -0.082 ; -0.780        ;
-; cardNum:inst7|nextC[0]         ; 0.039  ; 0.000         ;
-; clk_gen:inst23|div10_t:inst1|2 ; 0.100  ; 0.000         ;
-; clk_gen:inst23|div10_t:inst|2  ; 0.104  ; 0.000         ;
-; clk_gen:inst23|div10_t:inst2|2 ; 0.145  ; 0.000         ;
+; clk                            ; -0.401 ; -0.833        ;
+; clk_gen:inst23|div10_t:inst|2  ; 0.029  ; 0.000         ;
+; clk_gen:inst23|div10_t:inst1|2 ; 0.080  ; 0.000         ;
+; clk_gen:inst23|div10_t:inst3|2 ; 0.111  ; 0.000         ;
+; clk_gen:inst23|div10_t:inst2|2 ; 0.146  ; 0.000         ;
 +--------------------------------+--------+---------------+
 
 
@@ -1014,8 +546,7 @@ No paths to report.
 +-----------+--------------------------------+-------+-------+------------+--------------------------------+
 ; Data Port ; Clock Port                     ; Rise  ; Fall  ; Clock Edge ; Clock Reference                ;
 +-----------+--------------------------------+-------+-------+------------+--------------------------------+
-; c13       ; clk_gen:inst23|div10_t:inst3|2 ; 2.223 ; 2.854 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; ps3       ; clk_gen:inst23|div10_t:inst3|2 ; 2.433 ; 3.071 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
+; c13       ; clk_gen:inst23|div10_t:inst3|2 ; 2.879 ; 3.582 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
 +-----------+--------------------------------+-------+-------+------------+--------------------------------+
 
 
@@ -1024,8 +555,7 @@ No paths to report.
 +-----------+--------------------------------+--------+--------+------------+--------------------------------+
 ; Data Port ; Clock Port                     ; Rise   ; Fall   ; Clock Edge ; Clock Reference                ;
 +-----------+--------------------------------+--------+--------+------------+--------------------------------+
-; c13       ; clk_gen:inst23|div10_t:inst3|2 ; -0.960 ; -1.540 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; ps3       ; clk_gen:inst23|div10_t:inst3|2 ; -1.161 ; -1.755 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
+; c13       ; clk_gen:inst23|div10_t:inst3|2 ; -1.612 ; -2.256 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
 +-----------+--------------------------------+--------+--------+------------+--------------------------------+
 
 
@@ -1034,86 +564,14 @@ No paths to report.
 +-----------+--------------------------------+-------+-------+------------+--------------------------------+
 ; Data Port ; Clock Port                     ; Rise  ; Fall  ; Clock Edge ; Clock Reference                ;
 +-----------+--------------------------------+-------+-------+------------+--------------------------------+
-; AA1       ; Point:inst10|nextC[0]          ; 4.813 ;       ; Rise       ; Point:inst10|nextC[0]          ;
-; AA2       ; Point:inst10|nextC[0]          ; 4.838 ;       ; Rise       ; Point:inst10|nextC[0]          ;
-; G1        ; Point:inst10|nextC[0]          ; 4.527 ;       ; Rise       ; Point:inst10|nextC[0]          ;
-; G2        ; Point:inst10|nextC[0]          ;       ; 4.518 ; Rise       ; Point:inst10|nextC[0]          ;
-; L1        ; Point:inst10|nextC[0]          ;       ; 4.670 ; Rise       ; Point:inst10|nextC[0]          ;
-; L2        ; Point:inst10|nextC[0]          ;       ; 4.681 ; Rise       ; Point:inst10|nextC[0]          ;
-; N1        ; Point:inst10|nextC[0]          ; 4.733 ;       ; Rise       ; Point:inst10|nextC[0]          ;
-; U1        ; Point:inst10|nextC[0]          ; 4.709 ;       ; Rise       ; Point:inst10|nextC[0]          ;
-; U2        ; Point:inst10|nextC[0]          ; 4.700 ;       ; Rise       ; Point:inst10|nextC[0]          ;
-; W2        ; Point:inst10|nextC[0]          ; 4.734 ;       ; Rise       ; Point:inst10|nextC[0]          ;
-; c1        ; Point:inst10|nextC[0]          ;       ; 4.612 ; Rise       ; Point:inst10|nextC[0]          ;
-; c2        ; Point:inst10|nextC[0]          ;       ; 4.635 ; Rise       ; Point:inst10|nextC[0]          ;
-; d3        ; Point:inst10|nextC[0]          ;       ; 4.672 ; Rise       ; Point:inst10|nextC[0]          ;
-; e2        ; Point:inst10|nextC[0]          ;       ; 4.691 ; Rise       ; Point:inst10|nextC[0]          ;
-; AA1       ; Point:inst10|nextC[0]          ;       ; 5.756 ; Fall       ; Point:inst10|nextC[0]          ;
-; AA2       ; Point:inst10|nextC[0]          ;       ; 5.789 ; Fall       ; Point:inst10|nextC[0]          ;
-; G1        ; Point:inst10|nextC[0]          ;       ; 5.377 ; Fall       ; Point:inst10|nextC[0]          ;
-; G2        ; Point:inst10|nextC[0]          ; 5.397 ;       ; Fall       ; Point:inst10|nextC[0]          ;
-; L1        ; Point:inst10|nextC[0]          ; 5.571 ;       ; Fall       ; Point:inst10|nextC[0]          ;
-; L2        ; Point:inst10|nextC[0]          ; 5.583 ;       ; Fall       ; Point:inst10|nextC[0]          ;
-; N1        ; Point:inst10|nextC[0]          ;       ; 5.653 ; Fall       ; Point:inst10|nextC[0]          ;
-; U1        ; Point:inst10|nextC[0]          ;       ; 5.631 ; Fall       ; Point:inst10|nextC[0]          ;
-; U2        ; Point:inst10|nextC[0]          ;       ; 5.651 ; Fall       ; Point:inst10|nextC[0]          ;
-; W2        ; Point:inst10|nextC[0]          ;       ; 5.680 ; Fall       ; Point:inst10|nextC[0]          ;
-; c1        ; Point:inst10|nextC[0]          ; 5.460 ;       ; Fall       ; Point:inst10|nextC[0]          ;
-; c2        ; Point:inst10|nextC[0]          ; 5.490 ;       ; Fall       ; Point:inst10|nextC[0]          ;
-; d3        ; Point:inst10|nextC[0]          ; 5.607 ;       ; Fall       ; Point:inst10|nextC[0]          ;
-; e2        ; Point:inst10|nextC[0]          ; 5.596 ;       ; Fall       ; Point:inst10|nextC[0]          ;
-; AA1       ; cardNum:inst7|nextC[0]         ; 3.371 ;       ; Rise       ; cardNum:inst7|nextC[0]         ;
-; AA2       ; cardNum:inst7|nextC[0]         ; 3.396 ;       ; Rise       ; cardNum:inst7|nextC[0]         ;
-; G1        ; cardNum:inst7|nextC[0]         ; 3.085 ;       ; Rise       ; cardNum:inst7|nextC[0]         ;
-; G2        ; cardNum:inst7|nextC[0]         ;       ; 3.076 ; Rise       ; cardNum:inst7|nextC[0]         ;
-; L1        ; cardNum:inst7|nextC[0]         ;       ; 3.228 ; Rise       ; cardNum:inst7|nextC[0]         ;
-; L2        ; cardNum:inst7|nextC[0]         ;       ; 3.239 ; Rise       ; cardNum:inst7|nextC[0]         ;
-; N1        ; cardNum:inst7|nextC[0]         ; 3.291 ;       ; Rise       ; cardNum:inst7|nextC[0]         ;
-; U1        ; cardNum:inst7|nextC[0]         ; 3.267 ;       ; Rise       ; cardNum:inst7|nextC[0]         ;
-; U2        ; cardNum:inst7|nextC[0]         ; 3.258 ;       ; Rise       ; cardNum:inst7|nextC[0]         ;
-; W2        ; cardNum:inst7|nextC[0]         ; 3.292 ;       ; Rise       ; cardNum:inst7|nextC[0]         ;
-; c1        ; cardNum:inst7|nextC[0]         ;       ; 3.170 ; Rise       ; cardNum:inst7|nextC[0]         ;
-; c2        ; cardNum:inst7|nextC[0]         ;       ; 3.193 ; Rise       ; cardNum:inst7|nextC[0]         ;
-; d3        ; cardNum:inst7|nextC[0]         ;       ; 3.230 ; Rise       ; cardNum:inst7|nextC[0]         ;
-; e2        ; cardNum:inst7|nextC[0]         ;       ; 3.249 ; Rise       ; cardNum:inst7|nextC[0]         ;
-; AA1       ; cardNum:inst7|nextC[0]         ;       ; 3.693 ; Fall       ; cardNum:inst7|nextC[0]         ;
-; AA2       ; cardNum:inst7|nextC[0]         ;       ; 3.726 ; Fall       ; cardNum:inst7|nextC[0]         ;
-; G1        ; cardNum:inst7|nextC[0]         ;       ; 3.314 ; Fall       ; cardNum:inst7|nextC[0]         ;
-; G2        ; cardNum:inst7|nextC[0]         ; 3.334 ;       ; Fall       ; cardNum:inst7|nextC[0]         ;
-; L1        ; cardNum:inst7|nextC[0]         ; 3.508 ;       ; Fall       ; cardNum:inst7|nextC[0]         ;
-; L2        ; cardNum:inst7|nextC[0]         ; 3.520 ;       ; Fall       ; cardNum:inst7|nextC[0]         ;
-; N1        ; cardNum:inst7|nextC[0]         ;       ; 3.590 ; Fall       ; cardNum:inst7|nextC[0]         ;
-; U1        ; cardNum:inst7|nextC[0]         ;       ; 3.568 ; Fall       ; cardNum:inst7|nextC[0]         ;
-; U2        ; cardNum:inst7|nextC[0]         ;       ; 3.588 ; Fall       ; cardNum:inst7|nextC[0]         ;
-; W2        ; cardNum:inst7|nextC[0]         ;       ; 3.617 ; Fall       ; cardNum:inst7|nextC[0]         ;
-; c1        ; cardNum:inst7|nextC[0]         ; 3.397 ;       ; Fall       ; cardNum:inst7|nextC[0]         ;
-; c2        ; cardNum:inst7|nextC[0]         ; 3.427 ;       ; Fall       ; cardNum:inst7|nextC[0]         ;
-; d3        ; cardNum:inst7|nextC[0]         ; 3.544 ;       ; Fall       ; cardNum:inst7|nextC[0]         ;
-; e2        ; cardNum:inst7|nextC[0]         ; 3.533 ;       ; Fall       ; cardNum:inst7|nextC[0]         ;
-; AA1       ; clk_gen:inst23|div10_t:inst3|2 ; 5.150 ; 5.672 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; AA2       ; clk_gen:inst23|div10_t:inst3|2 ; 5.175 ; 5.705 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; G1        ; clk_gen:inst23|div10_t:inst3|2 ; 4.864 ; 5.293 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; G2        ; clk_gen:inst23|div10_t:inst3|2 ; 5.313 ; 4.855 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; L1        ; clk_gen:inst23|div10_t:inst3|2 ; 5.487 ; 5.007 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; L2        ; clk_gen:inst23|div10_t:inst3|2 ; 5.499 ; 5.018 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; N1        ; clk_gen:inst23|div10_t:inst3|2 ; 5.070 ; 5.569 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; U1        ; clk_gen:inst23|div10_t:inst3|2 ; 5.046 ; 5.547 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; U2        ; clk_gen:inst23|div10_t:inst3|2 ; 5.037 ; 5.567 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; W2        ; clk_gen:inst23|div10_t:inst3|2 ; 5.071 ; 5.596 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; a_ab7     ; clk_gen:inst23|div10_t:inst3|2 ; 5.338 ; 4.789 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; b_aa7     ; clk_gen:inst23|div10_t:inst3|2 ; 4.522 ; 4.154 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; c1        ; clk_gen:inst23|div10_t:inst3|2 ; 5.376 ; 4.949 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; c2        ; clk_gen:inst23|div10_t:inst3|2 ; 5.406 ; 4.972 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; c_ab6     ; clk_gen:inst23|div10_t:inst3|2 ; 5.616 ; 5.008 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; d3        ; clk_gen:inst23|div10_t:inst3|2 ; 5.523 ; 5.009 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; d_ab5     ; clk_gen:inst23|div10_t:inst3|2 ; 5.274 ; 4.748 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; de1       ; clk_gen:inst23|div10_t:inst3|2 ; 3.296 ; 3.704 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; de2       ; clk_gen:inst23|div10_t:inst3|2 ; 2.912 ; 3.122 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; de3       ; clk_gen:inst23|div10_t:inst3|2 ; 3.332 ; 3.719 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; e2        ; clk_gen:inst23|div10_t:inst3|2 ; 5.512 ; 5.028 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; e_aa9     ; clk_gen:inst23|div10_t:inst3|2 ; 5.208 ; 4.610 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; f_y9      ; clk_gen:inst23|div10_t:inst3|2 ; 4.546 ; 4.217 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; g_ab8     ; clk_gen:inst23|div10_t:inst3|2 ; 4.665 ; 5.140 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
+; a_ab7     ; clk_gen:inst23|div10_t:inst3|2 ; 3.832 ; 3.506 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
+; b_aa7     ; clk_gen:inst23|div10_t:inst3|2 ; 3.994 ; 3.602 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
+; c_ab6     ; clk_gen:inst23|div10_t:inst3|2 ; 3.837 ; 3.569 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
+; d_ab5     ; clk_gen:inst23|div10_t:inst3|2 ; 3.874 ; 3.585 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
+; de1       ; clk_gen:inst23|div10_t:inst3|2 ; 3.208 ; 3.531 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
+; e_aa9     ; clk_gen:inst23|div10_t:inst3|2 ; 3.500 ; 3.261 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
+; f_y9      ; clk_gen:inst23|div10_t:inst3|2 ; 3.427 ; 3.255 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
+; g_ab8     ; clk_gen:inst23|div10_t:inst3|2 ; 3.518 ; 3.810 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
 +-----------+--------------------------------+-------+-------+------------+--------------------------------+
 
 
@@ -1122,86 +580,14 @@ No paths to report.
 +-----------+--------------------------------+-------+-------+------------+--------------------------------+
 ; Data Port ; Clock Port                     ; Rise  ; Fall  ; Clock Edge ; Clock Reference                ;
 +-----------+--------------------------------+-------+-------+------------+--------------------------------+
-; AA1       ; Point:inst10|nextC[0]          ; 4.369 ;       ; Rise       ; Point:inst10|nextC[0]          ;
-; AA2       ; Point:inst10|nextC[0]          ; 4.396 ;       ; Rise       ; Point:inst10|nextC[0]          ;
-; G1        ; Point:inst10|nextC[0]          ; 4.107 ;       ; Rise       ; Point:inst10|nextC[0]          ;
-; G2        ; Point:inst10|nextC[0]          ;       ; 4.097 ; Rise       ; Point:inst10|nextC[0]          ;
-; L1        ; Point:inst10|nextC[0]          ;       ; 4.240 ; Rise       ; Point:inst10|nextC[0]          ;
-; L2        ; Point:inst10|nextC[0]          ;       ; 4.251 ; Rise       ; Point:inst10|nextC[0]          ;
-; N1        ; Point:inst10|nextC[0]          ; 4.289 ;       ; Rise       ; Point:inst10|nextC[0]          ;
-; U1        ; Point:inst10|nextC[0]          ; 4.266 ;       ; Rise       ; Point:inst10|nextC[0]          ;
-; U2        ; Point:inst10|nextC[0]          ; 4.257 ;       ; Rise       ; Point:inst10|nextC[0]          ;
-; W2        ; Point:inst10|nextC[0]          ; 4.291 ;       ; Rise       ; Point:inst10|nextC[0]          ;
-; c1        ; Point:inst10|nextC[0]          ;       ; 4.190 ; Rise       ; Point:inst10|nextC[0]          ;
-; c2        ; Point:inst10|nextC[0]          ;       ; 4.215 ; Rise       ; Point:inst10|nextC[0]          ;
-; d3        ; Point:inst10|nextC[0]          ;       ; 4.241 ; Rise       ; Point:inst10|nextC[0]          ;
-; e2        ; Point:inst10|nextC[0]          ;       ; 4.260 ; Rise       ; Point:inst10|nextC[0]          ;
-; AA1       ; Point:inst10|nextC[0]          ;       ; 5.073 ; Fall       ; Point:inst10|nextC[0]          ;
-; AA2       ; Point:inst10|nextC[0]          ;       ; 5.109 ; Fall       ; Point:inst10|nextC[0]          ;
-; G1        ; Point:inst10|nextC[0]          ;       ; 4.726 ; Fall       ; Point:inst10|nextC[0]          ;
-; G2        ; Point:inst10|nextC[0]          ; 4.746 ;       ; Fall       ; Point:inst10|nextC[0]          ;
-; L1        ; Point:inst10|nextC[0]          ; 4.909 ;       ; Fall       ; Point:inst10|nextC[0]          ;
-; L2        ; Point:inst10|nextC[0]          ; 4.922 ;       ; Fall       ; Point:inst10|nextC[0]          ;
-; N1        ; Point:inst10|nextC[0]          ;       ; 4.962 ; Fall       ; Point:inst10|nextC[0]          ;
-; U1        ; Point:inst10|nextC[0]          ;       ; 4.941 ; Fall       ; Point:inst10|nextC[0]          ;
-; U2        ; Point:inst10|nextC[0]          ;       ; 4.961 ; Fall       ; Point:inst10|nextC[0]          ;
-; W2        ; Point:inst10|nextC[0]          ;       ; 4.997 ; Fall       ; Point:inst10|nextC[0]          ;
-; c1        ; Point:inst10|nextC[0]          ; 4.807 ;       ; Fall       ; Point:inst10|nextC[0]          ;
-; c2        ; Point:inst10|nextC[0]          ; 4.840 ;       ; Fall       ; Point:inst10|nextC[0]          ;
-; d3        ; Point:inst10|nextC[0]          ; 4.944 ;       ; Fall       ; Point:inst10|nextC[0]          ;
-; e2        ; Point:inst10|nextC[0]          ; 4.933 ;       ; Fall       ; Point:inst10|nextC[0]          ;
-; AA1       ; cardNum:inst7|nextC[0]         ; 3.139 ;       ; Rise       ; cardNum:inst7|nextC[0]         ;
-; AA2       ; cardNum:inst7|nextC[0]         ; 3.166 ;       ; Rise       ; cardNum:inst7|nextC[0]         ;
-; G1        ; cardNum:inst7|nextC[0]         ; 2.877 ;       ; Rise       ; cardNum:inst7|nextC[0]         ;
-; G2        ; cardNum:inst7|nextC[0]         ;       ; 2.867 ; Rise       ; cardNum:inst7|nextC[0]         ;
-; L1        ; cardNum:inst7|nextC[0]         ;       ; 3.010 ; Rise       ; cardNum:inst7|nextC[0]         ;
-; L2        ; cardNum:inst7|nextC[0]         ;       ; 3.021 ; Rise       ; cardNum:inst7|nextC[0]         ;
-; N1        ; cardNum:inst7|nextC[0]         ; 3.059 ;       ; Rise       ; cardNum:inst7|nextC[0]         ;
-; U1        ; cardNum:inst7|nextC[0]         ; 3.036 ;       ; Rise       ; cardNum:inst7|nextC[0]         ;
-; U2        ; cardNum:inst7|nextC[0]         ; 3.027 ;       ; Rise       ; cardNum:inst7|nextC[0]         ;
-; W2        ; cardNum:inst7|nextC[0]         ; 3.061 ;       ; Rise       ; cardNum:inst7|nextC[0]         ;
-; c1        ; cardNum:inst7|nextC[0]         ;       ; 2.960 ; Rise       ; cardNum:inst7|nextC[0]         ;
-; c2        ; cardNum:inst7|nextC[0]         ;       ; 2.985 ; Rise       ; cardNum:inst7|nextC[0]         ;
-; d3        ; cardNum:inst7|nextC[0]         ;       ; 3.011 ; Rise       ; cardNum:inst7|nextC[0]         ;
-; e2        ; cardNum:inst7|nextC[0]         ;       ; 3.030 ; Rise       ; cardNum:inst7|nextC[0]         ;
-; AA1       ; cardNum:inst7|nextC[0]         ;       ; 3.399 ; Fall       ; cardNum:inst7|nextC[0]         ;
-; AA2       ; cardNum:inst7|nextC[0]         ;       ; 3.435 ; Fall       ; cardNum:inst7|nextC[0]         ;
-; G1        ; cardNum:inst7|nextC[0]         ;       ; 3.052 ; Fall       ; cardNum:inst7|nextC[0]         ;
-; G2        ; cardNum:inst7|nextC[0]         ; 3.072 ;       ; Fall       ; cardNum:inst7|nextC[0]         ;
-; L1        ; cardNum:inst7|nextC[0]         ; 3.235 ;       ; Fall       ; cardNum:inst7|nextC[0]         ;
-; L2        ; cardNum:inst7|nextC[0]         ; 3.248 ;       ; Fall       ; cardNum:inst7|nextC[0]         ;
-; N1        ; cardNum:inst7|nextC[0]         ;       ; 3.288 ; Fall       ; cardNum:inst7|nextC[0]         ;
-; U1        ; cardNum:inst7|nextC[0]         ;       ; 3.267 ; Fall       ; cardNum:inst7|nextC[0]         ;
-; U2        ; cardNum:inst7|nextC[0]         ;       ; 3.287 ; Fall       ; cardNum:inst7|nextC[0]         ;
-; W2        ; cardNum:inst7|nextC[0]         ;       ; 3.323 ; Fall       ; cardNum:inst7|nextC[0]         ;
-; c1        ; cardNum:inst7|nextC[0]         ; 3.133 ;       ; Fall       ; cardNum:inst7|nextC[0]         ;
-; c2        ; cardNum:inst7|nextC[0]         ; 3.166 ;       ; Fall       ; cardNum:inst7|nextC[0]         ;
-; d3        ; cardNum:inst7|nextC[0]         ; 3.270 ;       ; Fall       ; cardNum:inst7|nextC[0]         ;
-; e2        ; cardNum:inst7|nextC[0]         ; 3.259 ;       ; Fall       ; cardNum:inst7|nextC[0]         ;
-; AA1       ; clk_gen:inst23|div10_t:inst3|2 ; 3.953 ; 4.156 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; AA2       ; clk_gen:inst23|div10_t:inst3|2 ; 3.980 ; 4.192 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; G1        ; clk_gen:inst23|div10_t:inst3|2 ; 3.691 ; 3.809 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; G2        ; clk_gen:inst23|div10_t:inst3|2 ; 3.829 ; 3.681 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; L1        ; clk_gen:inst23|div10_t:inst3|2 ; 3.992 ; 3.824 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; L2        ; clk_gen:inst23|div10_t:inst3|2 ; 4.005 ; 3.835 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; N1        ; clk_gen:inst23|div10_t:inst3|2 ; 3.873 ; 4.045 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; U1        ; clk_gen:inst23|div10_t:inst3|2 ; 3.850 ; 4.024 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; U2        ; clk_gen:inst23|div10_t:inst3|2 ; 3.841 ; 4.044 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; W2        ; clk_gen:inst23|div10_t:inst3|2 ; 3.875 ; 4.080 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; a_ab7     ; clk_gen:inst23|div10_t:inst3|2 ; 4.526 ; 4.043 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; b_aa7     ; clk_gen:inst23|div10_t:inst3|2 ; 3.836 ; 3.583 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; c1        ; clk_gen:inst23|div10_t:inst3|2 ; 3.890 ; 3.774 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; c2        ; clk_gen:inst23|div10_t:inst3|2 ; 3.923 ; 3.799 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; c_ab6     ; clk_gen:inst23|div10_t:inst3|2 ; 4.790 ; 4.250 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; d3        ; clk_gen:inst23|div10_t:inst3|2 ; 4.027 ; 3.825 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; d_ab5     ; clk_gen:inst23|div10_t:inst3|2 ; 4.501 ; 4.074 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; de1       ; clk_gen:inst23|div10_t:inst3|2 ; 2.996 ; 3.347 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; de2       ; clk_gen:inst23|div10_t:inst3|2 ; 2.651 ; 2.836 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; de3       ; clk_gen:inst23|div10_t:inst3|2 ; 3.032 ; 3.371 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; e2        ; clk_gen:inst23|div10_t:inst3|2 ; 4.016 ; 3.844 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; e_aa9     ; clk_gen:inst23|div10_t:inst3|2 ; 4.447 ; 3.989 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; f_y9      ; clk_gen:inst23|div10_t:inst3|2 ; 3.848 ; 3.577 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; g_ab8     ; clk_gen:inst23|div10_t:inst3|2 ; 3.979 ; 4.367 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
+; a_ab7     ; clk_gen:inst23|div10_t:inst3|2 ; 3.233 ; 2.985 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
+; b_aa7     ; clk_gen:inst23|div10_t:inst3|2 ; 3.374 ; 3.095 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
+; c_ab6     ; clk_gen:inst23|div10_t:inst3|2 ; 3.320 ; 3.084 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
+; d_ab5     ; clk_gen:inst23|div10_t:inst3|2 ; 3.296 ; 3.074 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
+; de1       ; clk_gen:inst23|div10_t:inst3|2 ; 2.903 ; 3.175 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
+; e_aa9     ; clk_gen:inst23|div10_t:inst3|2 ; 3.015 ; 2.822 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
+; f_y9      ; clk_gen:inst23|div10_t:inst3|2 ; 2.991 ; 2.803 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
+; g_ab8     ; clk_gen:inst23|div10_t:inst3|2 ; 3.002 ; 3.235 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
 +-----------+--------------------------------+-------+-------+------------+--------------------------------+
 
 
@@ -1211,28 +597,24 @@ No paths to report.
 No synchronizer chains to report.
 
 
-+------------------------------------------------------------------------------------------------+
-; Multicorner Timing Analysis Summary                                                            ;
-+---------------------------------+----------+--------+----------+---------+---------------------+
-; Clock                           ; Setup    ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
-+---------------------------------+----------+--------+----------+---------+---------------------+
-; Worst-case Slack                ; -9.287   ; -2.040 ; N/A      ; N/A     ; -0.724              ;
-;  Point:inst10|nextC[0]          ; -8.166   ; 0.173  ; N/A      ; N/A     ; -0.724              ;
-;  cardNum:inst7|nextC[0]         ; -7.404   ; 0.202  ; N/A      ; N/A     ; -0.724              ;
-;  clk                            ; -0.823   ; -2.040 ; N/A      ; N/A     ; -0.724              ;
-;  clk_gen:inst23|div10_t:inst1|2 ; -1.690   ; -0.742 ; N/A      ; N/A     ; -0.724              ;
-;  clk_gen:inst23|div10_t:inst2|2 ; -1.523   ; -0.520 ; N/A      ; N/A     ; -0.724              ;
-;  clk_gen:inst23|div10_t:inst3|2 ; -9.287   ; -1.031 ; N/A      ; N/A     ; -0.724              ;
-;  clk_gen:inst23|div10_t:inst|2  ; -1.230   ; -0.816 ; N/A      ; N/A     ; -0.724              ;
-; Design-wide TNS                 ; -364.093 ; -8.133 ; 0.0      ; 0.0     ; -133.309            ;
-;  Point:inst10|nextC[0]          ; -65.460  ; 0.000  ; N/A      ; N/A     ; -19.938             ;
-;  cardNum:inst7|nextC[0]         ; -61.462  ; 0.000  ; N/A      ; N/A     ; -17.089             ;
-;  clk                            ; -2.871   ; -3.364 ; N/A      ; N/A     ; -4.683              ;
-;  clk_gen:inst23|div10_t:inst1|2 ; -7.201   ; -1.375 ; N/A      ; N/A     ; -5.688              ;
-;  clk_gen:inst23|div10_t:inst2|2 ; -5.340   ; -0.915 ; N/A      ; N/A     ; -4.420              ;
-;  clk_gen:inst23|div10_t:inst3|2 ; -216.989 ; -2.490 ; N/A      ; N/A     ; -75.982             ;
-;  clk_gen:inst23|div10_t:inst|2  ; -5.000   ; -1.470 ; N/A      ; N/A     ; -5.665              ;
-+---------------------------------+----------+--------+----------+---------+---------------------+
++-----------------------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                                           ;
++---------------------------------+---------+--------+----------+---------+---------------------+
+; Clock                           ; Setup   ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
++---------------------------------+---------+--------+----------+---------+---------------------+
+; Worst-case Slack                ; -7.445  ; -1.658 ; N/A      ; N/A     ; -0.724              ;
+;  clk                            ; -0.890  ; -1.658 ; N/A      ; N/A     ; -0.724              ;
+;  clk_gen:inst23|div10_t:inst1|2 ; -1.601  ; -0.855 ; N/A      ; N/A     ; -0.724              ;
+;  clk_gen:inst23|div10_t:inst2|2 ; -1.758  ; -0.347 ; N/A      ; N/A     ; -0.724              ;
+;  clk_gen:inst23|div10_t:inst3|2 ; -7.445  ; 0.151  ; N/A      ; N/A     ; -0.724              ;
+;  clk_gen:inst23|div10_t:inst|2  ; -1.238  ; -0.869 ; N/A      ; N/A     ; -0.724              ;
+; Design-wide TNS                 ; -89.629 ; -6.885 ; 0.0      ; 0.0     ; -45.409             ;
+;  clk                            ; -3.693  ; -3.176 ; N/A      ; N/A     ; -5.656              ;
+;  clk_gen:inst23|div10_t:inst1|2 ; -6.090  ; -1.507 ; N/A      ; N/A     ; -4.790              ;
+;  clk_gen:inst23|div10_t:inst2|2 ; -6.698  ; -0.680 ; N/A      ; N/A     ; -5.529              ;
+;  clk_gen:inst23|div10_t:inst3|2 ; -68.848 ; 0.000  ; N/A      ; N/A     ; -24.770             ;
+;  clk_gen:inst23|div10_t:inst|2  ; -4.346  ; -1.737 ; N/A      ; N/A     ; -4.664              ;
++---------------------------------+---------+--------+----------+---------+---------------------+
 
 
 +----------------------------------------------------------------------------------------------------------+
@@ -1240,8 +622,7 @@ No synchronizer chains to report.
 +-----------+--------------------------------+-------+-------+------------+--------------------------------+
 ; Data Port ; Clock Port                     ; Rise  ; Fall  ; Clock Edge ; Clock Reference                ;
 +-----------+--------------------------------+-------+-------+------------+--------------------------------+
-; c13       ; clk_gen:inst23|div10_t:inst3|2 ; 5.799 ; 6.254 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; ps3       ; clk_gen:inst23|div10_t:inst3|2 ; 6.317 ; 6.688 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
+; c13       ; clk_gen:inst23|div10_t:inst3|2 ; 7.210 ; 7.684 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
 +-----------+--------------------------------+-------+-------+------------+--------------------------------+
 
 
@@ -1250,97 +631,24 @@ No synchronizer chains to report.
 +-----------+--------------------------------+--------+--------+------------+--------------------------------+
 ; Data Port ; Clock Port                     ; Rise   ; Fall   ; Clock Edge ; Clock Reference                ;
 +-----------+--------------------------------+--------+--------+------------+--------------------------------+
-; c13       ; clk_gen:inst23|div10_t:inst3|2 ; -0.960 ; -1.540 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; ps3       ; clk_gen:inst23|div10_t:inst3|2 ; -1.161 ; -1.755 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
+; c13       ; clk_gen:inst23|div10_t:inst3|2 ; -1.612 ; -2.256 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
 +-----------+--------------------------------+--------+--------+------------+--------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------+
-; Clock to Output Times                                                                                      ;
-+-----------+--------------------------------+--------+--------+------------+--------------------------------+
-; Data Port ; Clock Port                     ; Rise   ; Fall   ; Clock Edge ; Clock Reference                ;
-+-----------+--------------------------------+--------+--------+------------+--------------------------------+
-; AA1       ; Point:inst10|nextC[0]          ; 10.213 ;        ; Rise       ; Point:inst10|nextC[0]          ;
-; AA2       ; Point:inst10|nextC[0]          ; 10.286 ;        ; Rise       ; Point:inst10|nextC[0]          ;
-; G1        ; Point:inst10|nextC[0]          ; 9.641  ;        ; Rise       ; Point:inst10|nextC[0]          ;
-; G2        ; Point:inst10|nextC[0]          ;        ; 9.643  ; Rise       ; Point:inst10|nextC[0]          ;
-; L1        ; Point:inst10|nextC[0]          ;        ; 10.023 ; Rise       ; Point:inst10|nextC[0]          ;
-; L2        ; Point:inst10|nextC[0]          ;        ; 10.052 ; Rise       ; Point:inst10|nextC[0]          ;
-; N1        ; Point:inst10|nextC[0]          ; 10.151 ;        ; Rise       ; Point:inst10|nextC[0]          ;
-; U1        ; Point:inst10|nextC[0]          ; 10.069 ;        ; Rise       ; Point:inst10|nextC[0]          ;
-; U2        ; Point:inst10|nextC[0]          ; 10.071 ;        ; Rise       ; Point:inst10|nextC[0]          ;
-; W2        ; Point:inst10|nextC[0]          ; 10.076 ;        ; Rise       ; Point:inst10|nextC[0]          ;
-; c1        ; Point:inst10|nextC[0]          ;        ; 9.786  ; Rise       ; Point:inst10|nextC[0]          ;
-; c2        ; Point:inst10|nextC[0]          ;        ; 9.856  ; Rise       ; Point:inst10|nextC[0]          ;
-; d3        ; Point:inst10|nextC[0]          ;        ; 9.981  ; Rise       ; Point:inst10|nextC[0]          ;
-; e2        ; Point:inst10|nextC[0]          ;        ; 9.989  ; Rise       ; Point:inst10|nextC[0]          ;
-; AA1       ; Point:inst10|nextC[0]          ;        ; 11.310 ; Fall       ; Point:inst10|nextC[0]          ;
-; AA2       ; Point:inst10|nextC[0]          ;        ; 11.390 ; Fall       ; Point:inst10|nextC[0]          ;
-; G1        ; Point:inst10|nextC[0]          ;        ; 10.611 ; Fall       ; Point:inst10|nextC[0]          ;
-; G2        ; Point:inst10|nextC[0]          ; 10.622 ;        ; Fall       ; Point:inst10|nextC[0]          ;
-; L1        ; Point:inst10|nextC[0]          ; 11.058 ;        ; Fall       ; Point:inst10|nextC[0]          ;
-; L2        ; Point:inst10|nextC[0]          ; 11.094 ;        ; Fall       ; Point:inst10|nextC[0]          ;
-; N1        ; Point:inst10|nextC[0]          ;        ; 11.190 ; Fall       ; Point:inst10|nextC[0]          ;
-; U1        ; Point:inst10|nextC[0]          ;        ; 11.096 ; Fall       ; Point:inst10|nextC[0]          ;
-; U2        ; Point:inst10|nextC[0]          ;        ; 11.108 ; Fall       ; Point:inst10|nextC[0]          ;
-; W2        ; Point:inst10|nextC[0]          ;        ; 11.166 ; Fall       ; Point:inst10|nextC[0]          ;
-; c1        ; Point:inst10|nextC[0]          ; 10.764 ;        ; Fall       ; Point:inst10|nextC[0]          ;
-; c2        ; Point:inst10|nextC[0]          ; 10.842 ;        ; Fall       ; Point:inst10|nextC[0]          ;
-; d3        ; Point:inst10|nextC[0]          ; 11.015 ;        ; Fall       ; Point:inst10|nextC[0]          ;
-; e2        ; Point:inst10|nextC[0]          ; 11.014 ;        ; Fall       ; Point:inst10|nextC[0]          ;
-; AA1       ; cardNum:inst7|nextC[0]         ; 7.212  ;        ; Rise       ; cardNum:inst7|nextC[0]         ;
-; AA2       ; cardNum:inst7|nextC[0]         ; 7.285  ;        ; Rise       ; cardNum:inst7|nextC[0]         ;
-; G1        ; cardNum:inst7|nextC[0]         ; 6.640  ;        ; Rise       ; cardNum:inst7|nextC[0]         ;
-; G2        ; cardNum:inst7|nextC[0]         ;        ; 6.642  ; Rise       ; cardNum:inst7|nextC[0]         ;
-; L1        ; cardNum:inst7|nextC[0]         ;        ; 7.022  ; Rise       ; cardNum:inst7|nextC[0]         ;
-; L2        ; cardNum:inst7|nextC[0]         ;        ; 7.051  ; Rise       ; cardNum:inst7|nextC[0]         ;
-; N1        ; cardNum:inst7|nextC[0]         ; 7.150  ;        ; Rise       ; cardNum:inst7|nextC[0]         ;
-; U1        ; cardNum:inst7|nextC[0]         ; 7.068  ;        ; Rise       ; cardNum:inst7|nextC[0]         ;
-; U2        ; cardNum:inst7|nextC[0]         ; 7.070  ;        ; Rise       ; cardNum:inst7|nextC[0]         ;
-; W2        ; cardNum:inst7|nextC[0]         ; 7.075  ;        ; Rise       ; cardNum:inst7|nextC[0]         ;
-; c1        ; cardNum:inst7|nextC[0]         ;        ; 6.785  ; Rise       ; cardNum:inst7|nextC[0]         ;
-; c2        ; cardNum:inst7|nextC[0]         ;        ; 6.855  ; Rise       ; cardNum:inst7|nextC[0]         ;
-; d3        ; cardNum:inst7|nextC[0]         ;        ; 6.980  ; Rise       ; cardNum:inst7|nextC[0]         ;
-; e2        ; cardNum:inst7|nextC[0]         ;        ; 6.988  ; Rise       ; cardNum:inst7|nextC[0]         ;
-; AA1       ; cardNum:inst7|nextC[0]         ;        ; 7.551  ; Fall       ; cardNum:inst7|nextC[0]         ;
-; AA2       ; cardNum:inst7|nextC[0]         ;        ; 7.629  ; Fall       ; cardNum:inst7|nextC[0]         ;
-; G1        ; cardNum:inst7|nextC[0]         ;        ; 6.837  ; Fall       ; cardNum:inst7|nextC[0]         ;
-; G2        ; cardNum:inst7|nextC[0]         ; 6.850  ;        ; Fall       ; cardNum:inst7|nextC[0]         ;
-; L1        ; cardNum:inst7|nextC[0]         ; 7.294  ;        ; Fall       ; cardNum:inst7|nextC[0]         ;
-; L2        ; cardNum:inst7|nextC[0]         ; 7.325  ;        ; Fall       ; cardNum:inst7|nextC[0]         ;
-; N1        ; cardNum:inst7|nextC[0]         ;        ; 7.428  ; Fall       ; cardNum:inst7|nextC[0]         ;
-; U1        ; cardNum:inst7|nextC[0]         ;        ; 7.338  ; Fall       ; cardNum:inst7|nextC[0]         ;
-; U2        ; cardNum:inst7|nextC[0]         ;        ; 7.351  ; Fall       ; cardNum:inst7|nextC[0]         ;
-; W2        ; cardNum:inst7|nextC[0]         ;        ; 7.409  ; Fall       ; cardNum:inst7|nextC[0]         ;
-; c1        ; cardNum:inst7|nextC[0]         ; 6.986  ;        ; Fall       ; cardNum:inst7|nextC[0]         ;
-; c2        ; cardNum:inst7|nextC[0]         ; 7.061  ;        ; Fall       ; cardNum:inst7|nextC[0]         ;
-; d3        ; cardNum:inst7|nextC[0]         ; 7.257  ;        ; Fall       ; cardNum:inst7|nextC[0]         ;
-; e2        ; cardNum:inst7|nextC[0]         ; 7.254  ;        ; Fall       ; cardNum:inst7|nextC[0]         ;
-; AA1       ; clk_gen:inst23|div10_t:inst3|2 ; 11.684 ; 12.300 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; AA2       ; clk_gen:inst23|div10_t:inst3|2 ; 11.757 ; 12.378 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; G1        ; clk_gen:inst23|div10_t:inst3|2 ; 11.112 ; 11.586 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; G2        ; clk_gen:inst23|div10_t:inst3|2 ; 11.599 ; 11.114 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; L1        ; clk_gen:inst23|div10_t:inst3|2 ; 12.043 ; 11.494 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; L2        ; clk_gen:inst23|div10_t:inst3|2 ; 12.074 ; 11.523 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; N1        ; clk_gen:inst23|div10_t:inst3|2 ; 11.622 ; 12.177 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; U1        ; clk_gen:inst23|div10_t:inst3|2 ; 11.540 ; 12.087 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; U2        ; clk_gen:inst23|div10_t:inst3|2 ; 11.542 ; 12.100 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; W2        ; clk_gen:inst23|div10_t:inst3|2 ; 11.547 ; 12.158 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; a_ab7     ; clk_gen:inst23|div10_t:inst3|2 ; 11.493 ; 10.782 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; b_aa7     ; clk_gen:inst23|div10_t:inst3|2 ; 10.158 ; 9.865  ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; c1        ; clk_gen:inst23|div10_t:inst3|2 ; 11.735 ; 11.257 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; c2        ; clk_gen:inst23|div10_t:inst3|2 ; 11.810 ; 11.327 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; c_ab6     ; clk_gen:inst23|div10_t:inst3|2 ; 11.876 ; 11.063 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; d3        ; clk_gen:inst23|div10_t:inst3|2 ; 12.006 ; 11.452 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; d_ab5     ; clk_gen:inst23|div10_t:inst3|2 ; 11.341 ; 10.628 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; de1       ; clk_gen:inst23|div10_t:inst3|2 ; 7.220  ; 7.713  ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; de2       ; clk_gen:inst23|div10_t:inst3|2 ; 6.719  ; 6.862  ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; de3       ; clk_gen:inst23|div10_t:inst3|2 ; 7.301  ; 7.756  ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; e2        ; clk_gen:inst23|div10_t:inst3|2 ; 12.003 ; 11.460 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; e_aa9     ; clk_gen:inst23|div10_t:inst3|2 ; 11.118 ; 10.406 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; f_y9      ; clk_gen:inst23|div10_t:inst3|2 ; 10.164 ; 9.717  ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; g_ab8     ; clk_gen:inst23|div10_t:inst3|2 ; 10.614 ; 11.196 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-+-----------+--------------------------------+--------+--------+------------+--------------------------------+
++----------------------------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                                    ;
++-----------+--------------------------------+-------+-------+------------+--------------------------------+
+; Data Port ; Clock Port                     ; Rise  ; Fall  ; Clock Edge ; Clock Reference                ;
++-----------+--------------------------------+-------+-------+------------+--------------------------------+
+; a_ab7     ; clk_gen:inst23|div10_t:inst3|2 ; 8.468 ; 8.107 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
+; b_aa7     ; clk_gen:inst23|div10_t:inst3|2 ; 8.782 ; 8.360 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
+; c_ab6     ; clk_gen:inst23|div10_t:inst3|2 ; 8.545 ; 8.216 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
+; d_ab5     ; clk_gen:inst23|div10_t:inst3|2 ; 8.500 ; 8.227 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
+; de1       ; clk_gen:inst23|div10_t:inst3|2 ; 6.972 ; 7.388 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
+; e_aa9     ; clk_gen:inst23|div10_t:inst3|2 ; 7.801 ; 7.528 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
+; f_y9      ; clk_gen:inst23|div10_t:inst3|2 ; 7.758 ; 7.553 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
+; g_ab8     ; clk_gen:inst23|div10_t:inst3|2 ; 8.117 ; 8.461 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
++-----------+--------------------------------+-------+-------+------------+--------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------+
@@ -1348,86 +656,14 @@ No synchronizer chains to report.
 +-----------+--------------------------------+-------+-------+------------+--------------------------------+
 ; Data Port ; Clock Port                     ; Rise  ; Fall  ; Clock Edge ; Clock Reference                ;
 +-----------+--------------------------------+-------+-------+------------+--------------------------------+
-; AA1       ; Point:inst10|nextC[0]          ; 4.369 ;       ; Rise       ; Point:inst10|nextC[0]          ;
-; AA2       ; Point:inst10|nextC[0]          ; 4.396 ;       ; Rise       ; Point:inst10|nextC[0]          ;
-; G1        ; Point:inst10|nextC[0]          ; 4.107 ;       ; Rise       ; Point:inst10|nextC[0]          ;
-; G2        ; Point:inst10|nextC[0]          ;       ; 4.097 ; Rise       ; Point:inst10|nextC[0]          ;
-; L1        ; Point:inst10|nextC[0]          ;       ; 4.240 ; Rise       ; Point:inst10|nextC[0]          ;
-; L2        ; Point:inst10|nextC[0]          ;       ; 4.251 ; Rise       ; Point:inst10|nextC[0]          ;
-; N1        ; Point:inst10|nextC[0]          ; 4.289 ;       ; Rise       ; Point:inst10|nextC[0]          ;
-; U1        ; Point:inst10|nextC[0]          ; 4.266 ;       ; Rise       ; Point:inst10|nextC[0]          ;
-; U2        ; Point:inst10|nextC[0]          ; 4.257 ;       ; Rise       ; Point:inst10|nextC[0]          ;
-; W2        ; Point:inst10|nextC[0]          ; 4.291 ;       ; Rise       ; Point:inst10|nextC[0]          ;
-; c1        ; Point:inst10|nextC[0]          ;       ; 4.190 ; Rise       ; Point:inst10|nextC[0]          ;
-; c2        ; Point:inst10|nextC[0]          ;       ; 4.215 ; Rise       ; Point:inst10|nextC[0]          ;
-; d3        ; Point:inst10|nextC[0]          ;       ; 4.241 ; Rise       ; Point:inst10|nextC[0]          ;
-; e2        ; Point:inst10|nextC[0]          ;       ; 4.260 ; Rise       ; Point:inst10|nextC[0]          ;
-; AA1       ; Point:inst10|nextC[0]          ;       ; 5.073 ; Fall       ; Point:inst10|nextC[0]          ;
-; AA2       ; Point:inst10|nextC[0]          ;       ; 5.109 ; Fall       ; Point:inst10|nextC[0]          ;
-; G1        ; Point:inst10|nextC[0]          ;       ; 4.726 ; Fall       ; Point:inst10|nextC[0]          ;
-; G2        ; Point:inst10|nextC[0]          ; 4.746 ;       ; Fall       ; Point:inst10|nextC[0]          ;
-; L1        ; Point:inst10|nextC[0]          ; 4.909 ;       ; Fall       ; Point:inst10|nextC[0]          ;
-; L2        ; Point:inst10|nextC[0]          ; 4.922 ;       ; Fall       ; Point:inst10|nextC[0]          ;
-; N1        ; Point:inst10|nextC[0]          ;       ; 4.962 ; Fall       ; Point:inst10|nextC[0]          ;
-; U1        ; Point:inst10|nextC[0]          ;       ; 4.941 ; Fall       ; Point:inst10|nextC[0]          ;
-; U2        ; Point:inst10|nextC[0]          ;       ; 4.961 ; Fall       ; Point:inst10|nextC[0]          ;
-; W2        ; Point:inst10|nextC[0]          ;       ; 4.997 ; Fall       ; Point:inst10|nextC[0]          ;
-; c1        ; Point:inst10|nextC[0]          ; 4.807 ;       ; Fall       ; Point:inst10|nextC[0]          ;
-; c2        ; Point:inst10|nextC[0]          ; 4.840 ;       ; Fall       ; Point:inst10|nextC[0]          ;
-; d3        ; Point:inst10|nextC[0]          ; 4.944 ;       ; Fall       ; Point:inst10|nextC[0]          ;
-; e2        ; Point:inst10|nextC[0]          ; 4.933 ;       ; Fall       ; Point:inst10|nextC[0]          ;
-; AA1       ; cardNum:inst7|nextC[0]         ; 3.139 ;       ; Rise       ; cardNum:inst7|nextC[0]         ;
-; AA2       ; cardNum:inst7|nextC[0]         ; 3.166 ;       ; Rise       ; cardNum:inst7|nextC[0]         ;
-; G1        ; cardNum:inst7|nextC[0]         ; 2.877 ;       ; Rise       ; cardNum:inst7|nextC[0]         ;
-; G2        ; cardNum:inst7|nextC[0]         ;       ; 2.867 ; Rise       ; cardNum:inst7|nextC[0]         ;
-; L1        ; cardNum:inst7|nextC[0]         ;       ; 3.010 ; Rise       ; cardNum:inst7|nextC[0]         ;
-; L2        ; cardNum:inst7|nextC[0]         ;       ; 3.021 ; Rise       ; cardNum:inst7|nextC[0]         ;
-; N1        ; cardNum:inst7|nextC[0]         ; 3.059 ;       ; Rise       ; cardNum:inst7|nextC[0]         ;
-; U1        ; cardNum:inst7|nextC[0]         ; 3.036 ;       ; Rise       ; cardNum:inst7|nextC[0]         ;
-; U2        ; cardNum:inst7|nextC[0]         ; 3.027 ;       ; Rise       ; cardNum:inst7|nextC[0]         ;
-; W2        ; cardNum:inst7|nextC[0]         ; 3.061 ;       ; Rise       ; cardNum:inst7|nextC[0]         ;
-; c1        ; cardNum:inst7|nextC[0]         ;       ; 2.960 ; Rise       ; cardNum:inst7|nextC[0]         ;
-; c2        ; cardNum:inst7|nextC[0]         ;       ; 2.985 ; Rise       ; cardNum:inst7|nextC[0]         ;
-; d3        ; cardNum:inst7|nextC[0]         ;       ; 3.011 ; Rise       ; cardNum:inst7|nextC[0]         ;
-; e2        ; cardNum:inst7|nextC[0]         ;       ; 3.030 ; Rise       ; cardNum:inst7|nextC[0]         ;
-; AA1       ; cardNum:inst7|nextC[0]         ;       ; 3.399 ; Fall       ; cardNum:inst7|nextC[0]         ;
-; AA2       ; cardNum:inst7|nextC[0]         ;       ; 3.435 ; Fall       ; cardNum:inst7|nextC[0]         ;
-; G1        ; cardNum:inst7|nextC[0]         ;       ; 3.052 ; Fall       ; cardNum:inst7|nextC[0]         ;
-; G2        ; cardNum:inst7|nextC[0]         ; 3.072 ;       ; Fall       ; cardNum:inst7|nextC[0]         ;
-; L1        ; cardNum:inst7|nextC[0]         ; 3.235 ;       ; Fall       ; cardNum:inst7|nextC[0]         ;
-; L2        ; cardNum:inst7|nextC[0]         ; 3.248 ;       ; Fall       ; cardNum:inst7|nextC[0]         ;
-; N1        ; cardNum:inst7|nextC[0]         ;       ; 3.288 ; Fall       ; cardNum:inst7|nextC[0]         ;
-; U1        ; cardNum:inst7|nextC[0]         ;       ; 3.267 ; Fall       ; cardNum:inst7|nextC[0]         ;
-; U2        ; cardNum:inst7|nextC[0]         ;       ; 3.287 ; Fall       ; cardNum:inst7|nextC[0]         ;
-; W2        ; cardNum:inst7|nextC[0]         ;       ; 3.323 ; Fall       ; cardNum:inst7|nextC[0]         ;
-; c1        ; cardNum:inst7|nextC[0]         ; 3.133 ;       ; Fall       ; cardNum:inst7|nextC[0]         ;
-; c2        ; cardNum:inst7|nextC[0]         ; 3.166 ;       ; Fall       ; cardNum:inst7|nextC[0]         ;
-; d3        ; cardNum:inst7|nextC[0]         ; 3.270 ;       ; Fall       ; cardNum:inst7|nextC[0]         ;
-; e2        ; cardNum:inst7|nextC[0]         ; 3.259 ;       ; Fall       ; cardNum:inst7|nextC[0]         ;
-; AA1       ; clk_gen:inst23|div10_t:inst3|2 ; 3.953 ; 4.156 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; AA2       ; clk_gen:inst23|div10_t:inst3|2 ; 3.980 ; 4.192 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; G1        ; clk_gen:inst23|div10_t:inst3|2 ; 3.691 ; 3.809 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; G2        ; clk_gen:inst23|div10_t:inst3|2 ; 3.829 ; 3.681 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; L1        ; clk_gen:inst23|div10_t:inst3|2 ; 3.992 ; 3.824 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; L2        ; clk_gen:inst23|div10_t:inst3|2 ; 4.005 ; 3.835 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; N1        ; clk_gen:inst23|div10_t:inst3|2 ; 3.873 ; 4.045 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; U1        ; clk_gen:inst23|div10_t:inst3|2 ; 3.850 ; 4.024 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; U2        ; clk_gen:inst23|div10_t:inst3|2 ; 3.841 ; 4.044 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; W2        ; clk_gen:inst23|div10_t:inst3|2 ; 3.875 ; 4.080 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; a_ab7     ; clk_gen:inst23|div10_t:inst3|2 ; 4.526 ; 4.043 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; b_aa7     ; clk_gen:inst23|div10_t:inst3|2 ; 3.836 ; 3.583 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; c1        ; clk_gen:inst23|div10_t:inst3|2 ; 3.890 ; 3.774 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; c2        ; clk_gen:inst23|div10_t:inst3|2 ; 3.923 ; 3.799 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; c_ab6     ; clk_gen:inst23|div10_t:inst3|2 ; 4.790 ; 4.250 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; d3        ; clk_gen:inst23|div10_t:inst3|2 ; 4.027 ; 3.825 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; d_ab5     ; clk_gen:inst23|div10_t:inst3|2 ; 4.501 ; 4.074 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; de1       ; clk_gen:inst23|div10_t:inst3|2 ; 2.996 ; 3.347 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; de2       ; clk_gen:inst23|div10_t:inst3|2 ; 2.651 ; 2.836 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; de3       ; clk_gen:inst23|div10_t:inst3|2 ; 3.032 ; 3.371 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; e2        ; clk_gen:inst23|div10_t:inst3|2 ; 4.016 ; 3.844 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; e_aa9     ; clk_gen:inst23|div10_t:inst3|2 ; 4.447 ; 3.989 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; f_y9      ; clk_gen:inst23|div10_t:inst3|2 ; 3.848 ; 3.577 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
-; g_ab8     ; clk_gen:inst23|div10_t:inst3|2 ; 3.979 ; 4.367 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
+; a_ab7     ; clk_gen:inst23|div10_t:inst3|2 ; 3.233 ; 2.985 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
+; b_aa7     ; clk_gen:inst23|div10_t:inst3|2 ; 3.374 ; 3.095 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
+; c_ab6     ; clk_gen:inst23|div10_t:inst3|2 ; 3.320 ; 3.084 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
+; d_ab5     ; clk_gen:inst23|div10_t:inst3|2 ; 3.296 ; 3.074 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
+; de1       ; clk_gen:inst23|div10_t:inst3|2 ; 2.903 ; 3.175 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
+; e_aa9     ; clk_gen:inst23|div10_t:inst3|2 ; 3.015 ; 2.822 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
+; f_y9      ; clk_gen:inst23|div10_t:inst3|2 ; 2.991 ; 2.803 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
+; g_ab8     ; clk_gen:inst23|div10_t:inst3|2 ; 3.002 ; 3.235 ; Rise       ; clk_gen:inst23|div10_t:inst3|2 ;
 +-----------+--------------------------------+-------+-------+------------+--------------------------------+
 
 
@@ -1469,8 +705,6 @@ No synchronizer chains to report.
 +-----+--------------+-----------------+-----------------+
 ; Pin ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
 +-----+--------------+-----------------+-----------------+
-; b13 ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; ps3 ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; c13 ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; clk ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 +-----+--------------+-----------------+-----------------+
@@ -1613,19 +847,15 @@ No synchronizer chains to report.
 +--------------------------------+--------------------------------+----------+----------+----------+----------+
 ; From Clock                     ; To Clock                       ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +--------------------------------+--------------------------------+----------+----------+----------+----------+
-; cardNum:inst7|nextC[0]         ; cardNum:inst7|nextC[0]         ; 3009     ; 0        ; 0        ; 0        ;
-; clk                            ; clk                            ; 9        ; 0        ; 0        ; 0        ;
+; clk                            ; clk                            ; 10       ; 0        ; 0        ; 0        ;
 ; clk_gen:inst23|div10_t:inst|2  ; clk                            ; 2        ; 2        ; 0        ; 0        ;
-; clk_gen:inst23|div10_t:inst1|2 ; clk_gen:inst23|div10_t:inst1|2 ; 10       ; 0        ; 0        ; 0        ;
+; clk_gen:inst23|div10_t:inst1|2 ; clk_gen:inst23|div10_t:inst1|2 ; 9        ; 0        ; 0        ; 0        ;
 ; clk_gen:inst23|div10_t:inst2|2 ; clk_gen:inst23|div10_t:inst1|2 ; 2        ; 2        ; 0        ; 0        ;
-; clk_gen:inst23|div10_t:inst2|2 ; clk_gen:inst23|div10_t:inst2|2 ; 9        ; 0        ; 0        ; 0        ;
+; clk_gen:inst23|div10_t:inst2|2 ; clk_gen:inst23|div10_t:inst2|2 ; 10       ; 0        ; 0        ; 0        ;
 ; clk_gen:inst23|div10_t:inst3|2 ; clk_gen:inst23|div10_t:inst2|2 ; 2        ; 2        ; 0        ; 0        ;
-; cardNum:inst7|nextC[0]         ; clk_gen:inst23|div10_t:inst3|2 ; 1475     ; 1        ; 0        ; 0        ;
-; clk_gen:inst23|div10_t:inst3|2 ; clk_gen:inst23|div10_t:inst3|2 ; 3262     ; 0        ; 0        ; 0        ;
-; Point:inst10|nextC[0]          ; clk_gen:inst23|div10_t:inst3|2 ; 361      ; 1853     ; 0        ; 0        ;
+; clk_gen:inst23|div10_t:inst3|2 ; clk_gen:inst23|div10_t:inst3|2 ; 3038     ; 0        ; 0        ; 0        ;
 ; clk_gen:inst23|div10_t:inst1|2 ; clk_gen:inst23|div10_t:inst|2  ; 2        ; 2        ; 0        ; 0        ;
-; clk_gen:inst23|div10_t:inst|2  ; clk_gen:inst23|div10_t:inst|2  ; 10       ; 0        ; 0        ; 0        ;
-; Point:inst10|nextC[0]          ; Point:inst10|nextC[0]          ; 0        ; 0        ; 0        ; 3004     ;
+; clk_gen:inst23|div10_t:inst|2  ; clk_gen:inst23|div10_t:inst|2  ; 9        ; 0        ; 0        ; 0        ;
 +--------------------------------+--------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -1635,19 +865,15 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +--------------------------------+--------------------------------+----------+----------+----------+----------+
 ; From Clock                     ; To Clock                       ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +--------------------------------+--------------------------------+----------+----------+----------+----------+
-; cardNum:inst7|nextC[0]         ; cardNum:inst7|nextC[0]         ; 3009     ; 0        ; 0        ; 0        ;
-; clk                            ; clk                            ; 9        ; 0        ; 0        ; 0        ;
+; clk                            ; clk                            ; 10       ; 0        ; 0        ; 0        ;
 ; clk_gen:inst23|div10_t:inst|2  ; clk                            ; 2        ; 2        ; 0        ; 0        ;
-; clk_gen:inst23|div10_t:inst1|2 ; clk_gen:inst23|div10_t:inst1|2 ; 10       ; 0        ; 0        ; 0        ;
+; clk_gen:inst23|div10_t:inst1|2 ; clk_gen:inst23|div10_t:inst1|2 ; 9        ; 0        ; 0        ; 0        ;
 ; clk_gen:inst23|div10_t:inst2|2 ; clk_gen:inst23|div10_t:inst1|2 ; 2        ; 2        ; 0        ; 0        ;
-; clk_gen:inst23|div10_t:inst2|2 ; clk_gen:inst23|div10_t:inst2|2 ; 9        ; 0        ; 0        ; 0        ;
+; clk_gen:inst23|div10_t:inst2|2 ; clk_gen:inst23|div10_t:inst2|2 ; 10       ; 0        ; 0        ; 0        ;
 ; clk_gen:inst23|div10_t:inst3|2 ; clk_gen:inst23|div10_t:inst2|2 ; 2        ; 2        ; 0        ; 0        ;
-; cardNum:inst7|nextC[0]         ; clk_gen:inst23|div10_t:inst3|2 ; 1475     ; 1        ; 0        ; 0        ;
-; clk_gen:inst23|div10_t:inst3|2 ; clk_gen:inst23|div10_t:inst3|2 ; 3262     ; 0        ; 0        ; 0        ;
-; Point:inst10|nextC[0]          ; clk_gen:inst23|div10_t:inst3|2 ; 361      ; 1853     ; 0        ; 0        ;
+; clk_gen:inst23|div10_t:inst3|2 ; clk_gen:inst23|div10_t:inst3|2 ; 3038     ; 0        ; 0        ; 0        ;
 ; clk_gen:inst23|div10_t:inst1|2 ; clk_gen:inst23|div10_t:inst|2  ; 2        ; 2        ; 0        ; 0        ;
-; clk_gen:inst23|div10_t:inst|2  ; clk_gen:inst23|div10_t:inst|2  ; 10       ; 0        ; 0        ; 0        ;
-; Point:inst10|nextC[0]          ; Point:inst10|nextC[0]          ; 0        ; 0        ; 0        ; 3004     ;
+; clk_gen:inst23|div10_t:inst|2  ; clk_gen:inst23|div10_t:inst|2  ; 9        ; 0        ; 0        ; 0        ;
 +--------------------------------+--------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -1671,10 +897,10 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +---------------------------------+-------+------+
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
-; Unconstrained Input Ports       ; 2     ; 2    ;
-; Unconstrained Input Port Paths  ; 2     ; 2    ;
-; Unconstrained Output Ports      ; 24    ; 24   ;
-; Unconstrained Output Port Paths ; 241   ; 241  ;
+; Unconstrained Input Ports       ; 1     ; 1    ;
+; Unconstrained Input Port Paths  ; 1     ; 1    ;
+; Unconstrained Output Ports      ; 8     ; 8    ;
+; Unconstrained Output Port Paths ; 29    ; 29   ;
 +---------------------------------+-------+------+
 
 
@@ -1684,7 +910,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Wed Jun 22 02:30:02 2022
+    Info: Processing started: Wed Jun 22 02:44:16 2022
 Info: Command: quartus_sta final -c final
 Info: qsta_default_script.tcl version: #1
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
@@ -1698,163 +924,137 @@ Info (332105): Deriving Clocks
     Info (332105): create_clock -period 1.000 -name clk_gen:inst23|div10_t:inst1|2 clk_gen:inst23|div10_t:inst1|2
     Info (332105): create_clock -period 1.000 -name clk_gen:inst23|div10_t:inst|2 clk_gen:inst23|div10_t:inst|2
     Info (332105): create_clock -period 1.000 -name clk clk
-    Info (332105): create_clock -period 1.000 -name cardNum:inst7|nextC[0] cardNum:inst7|nextC[0]
-    Info (332105): create_clock -period 1.000 -name Point:inst10|nextC[0] Point:inst10|nextC[0]
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1100mV 85C Model
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -8.893
+Info (332146): Worst-case setup slack is -7.010
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -8.893            -209.954 clk_gen:inst23|div10_t:inst3|2 
-    Info (332119):    -7.611             -62.424 Point:inst10|nextC[0] 
-    Info (332119):    -6.843             -58.163 cardNum:inst7|nextC[0] 
-    Info (332119):    -1.618              -7.201 clk_gen:inst23|div10_t:inst1|2 
-    Info (332119):    -1.506              -5.268 clk_gen:inst23|div10_t:inst2|2 
-    Info (332119):    -1.212              -5.000 clk_gen:inst23|div10_t:inst|2 
-    Info (332119):    -0.683              -2.432 clk 
-Info (332146): Worst-case hold slack is -1.992
+    Info (332119):    -7.010             -66.986 clk_gen:inst23|div10_t:inst3|2 
+    Info (332119):    -1.659              -6.458 clk_gen:inst23|div10_t:inst2|2 
+    Info (332119):    -1.567              -5.925 clk_gen:inst23|div10_t:inst1|2 
+    Info (332119):    -1.226              -4.346 clk_gen:inst23|div10_t:inst|2 
+    Info (332119):    -0.796              -3.241 clk 
+Info (332146): Worst-case hold slack is -1.658
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.992              -3.200 clk 
-    Info (332119):    -1.031              -1.173 clk_gen:inst23|div10_t:inst3|2 
-    Info (332119):    -0.816              -1.470 clk_gen:inst23|div10_t:inst|2 
-    Info (332119):    -0.742              -1.375 clk_gen:inst23|div10_t:inst1|2 
-    Info (332119):    -0.520              -0.915 clk_gen:inst23|div10_t:inst2|2 
-    Info (332119):     0.596               0.000 cardNum:inst7|nextC[0] 
-    Info (332119):     0.695               0.000 Point:inst10|nextC[0] 
+    Info (332119):    -1.658              -2.961 clk 
+    Info (332119):    -0.869              -1.737 clk_gen:inst23|div10_t:inst|2 
+    Info (332119):    -0.855              -1.507 clk_gen:inst23|div10_t:inst1|2 
+    Info (332119):    -0.347              -0.680 clk_gen:inst23|div10_t:inst2|2 
+    Info (332119):     0.513               0.000 clk_gen:inst23|div10_t:inst3|2 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -0.724
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.724             -74.957 clk_gen:inst23|div10_t:inst3|2 
-    Info (332119):    -0.724             -17.969 Point:inst10|nextC[0] 
-    Info (332119):    -0.724             -17.089 cardNum:inst7|nextC[0] 
-    Info (332119):    -0.724              -5.688 clk_gen:inst23|div10_t:inst1|2 
-    Info (332119):    -0.724              -5.665 clk_gen:inst23|div10_t:inst|2 
-    Info (332119):    -0.724              -4.593 clk 
-    Info (332119):    -0.724              -4.420 clk_gen:inst23|div10_t:inst2|2 
+    Info (332119):    -0.724             -24.770 clk_gen:inst23|div10_t:inst3|2 
+    Info (332119):    -0.724              -5.656 clk 
+    Info (332119):    -0.724              -5.529 clk_gen:inst23|div10_t:inst2|2 
+    Info (332119):    -0.724              -4.790 clk_gen:inst23|div10_t:inst1|2 
+    Info (332119):    -0.724              -4.664 clk_gen:inst23|div10_t:inst|2 
 Info: Analyzing Slow 1100mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -9.287
+Info (332146): Worst-case setup slack is -7.445
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -9.287            -216.989 clk_gen:inst23|div10_t:inst3|2 
-    Info (332119):    -8.166             -65.460 Point:inst10|nextC[0] 
-    Info (332119):    -7.404             -61.462 cardNum:inst7|nextC[0] 
-    Info (332119):    -1.690              -7.123 clk_gen:inst23|div10_t:inst1|2 
-    Info (332119):    -1.523              -5.340 clk_gen:inst23|div10_t:inst2|2 
-    Info (332119):    -1.230              -4.848 clk_gen:inst23|div10_t:inst|2 
-    Info (332119):    -0.812              -2.871 clk 
-Info (332146): Worst-case hold slack is -2.040
+    Info (332119):    -7.445             -68.848 clk_gen:inst23|div10_t:inst3|2 
+    Info (332119):    -1.758              -6.698 clk_gen:inst23|div10_t:inst2|2 
+    Info (332119):    -1.601              -6.090 clk_gen:inst23|div10_t:inst1|2 
+    Info (332119):    -1.238              -4.300 clk_gen:inst23|div10_t:inst|2 
+    Info (332119):    -0.890              -3.693 clk 
+Info (332146): Worst-case hold slack is -1.637
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.040              -3.364 clk 
-    Info (332119):    -0.915              -1.109 clk_gen:inst23|div10_t:inst3|2 
-    Info (332119):    -0.690              -1.175 clk_gen:inst23|div10_t:inst|2 
-    Info (332119):    -0.496              -0.781 clk_gen:inst23|div10_t:inst2|2 
-    Info (332119):    -0.491              -0.883 clk_gen:inst23|div10_t:inst1|2 
-    Info (332119):     0.582               0.000 cardNum:inst7|nextC[0] 
-    Info (332119):     0.732               0.000 Point:inst10|nextC[0] 
+    Info (332119):    -1.637              -3.176 clk 
+    Info (332119):    -0.684              -1.366 clk_gen:inst23|div10_t:inst|2 
+    Info (332119):    -0.630              -1.087 clk_gen:inst23|div10_t:inst1|2 
+    Info (332119):    -0.227              -0.442 clk_gen:inst23|div10_t:inst2|2 
+    Info (332119):     0.554               0.000 clk_gen:inst23|div10_t:inst3|2 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -0.724
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.724             -75.982 clk_gen:inst23|div10_t:inst3|2 
-    Info (332119):    -0.724             -19.938 Point:inst10|nextC[0] 
-    Info (332119):    -0.724             -16.981 cardNum:inst7|nextC[0] 
-    Info (332119):    -0.724              -5.670 clk_gen:inst23|div10_t:inst1|2 
-    Info (332119):    -0.724              -5.635 clk_gen:inst23|div10_t:inst|2 
-    Info (332119):    -0.724              -4.683 clk 
-    Info (332119):    -0.724              -4.420 clk_gen:inst23|div10_t:inst2|2 
+    Info (332119):    -0.724             -24.719 clk_gen:inst23|div10_t:inst3|2 
+    Info (332119):    -0.724              -5.641 clk 
+    Info (332119):    -0.724              -5.527 clk_gen:inst23|div10_t:inst2|2 
+    Info (332119):    -0.724              -4.752 clk_gen:inst23|div10_t:inst1|2 
+    Info (332119):    -0.724              -4.608 clk_gen:inst23|div10_t:inst|2 
 Info: Analyzing Fast 1100mV 85C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -3.382
+Info (332146): Worst-case setup slack is -2.403
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.382             -69.336 clk_gen:inst23|div10_t:inst3|2 
-    Info (332119):    -2.381             -19.997 Point:inst10|nextC[0] 
-    Info (332119):    -2.296             -18.740 cardNum:inst7|nextC[0] 
-    Info (332119):    -0.823              -1.219 clk 
-    Info (332119):    -0.336              -1.324 clk_gen:inst23|div10_t:inst1|2 
-    Info (332119):    -0.327              -1.038 clk_gen:inst23|div10_t:inst2|2 
-    Info (332119):    -0.222              -0.645 clk_gen:inst23|div10_t:inst|2 
-Info (332146): Worst-case hold slack is -0.790
+    Info (332119):    -2.403             -20.027 clk_gen:inst23|div10_t:inst3|2 
+    Info (332119):    -0.762              -1.268 clk 
+    Info (332119):    -0.326              -1.072 clk_gen:inst23|div10_t:inst1|2 
+    Info (332119):    -0.305              -0.997 clk_gen:inst23|div10_t:inst2|2 
+    Info (332119):    -0.183              -0.610 clk_gen:inst23|div10_t:inst|2 
+Info (332146): Worst-case hold slack is -0.793
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.790              -1.559 clk 
-    Info (332119):    -0.749              -2.360 clk_gen:inst23|div10_t:inst3|2 
-    Info (332119):    -0.534              -1.046 clk_gen:inst23|div10_t:inst|2 
-    Info (332119):    -0.513              -0.983 clk_gen:inst23|div10_t:inst1|2 
-    Info (332119):    -0.405              -0.754 clk_gen:inst23|div10_t:inst2|2 
-    Info (332119):     0.188               0.000 Point:inst10|nextC[0] 
-    Info (332119):     0.227               0.000 cardNum:inst7|nextC[0] 
+    Info (332119):    -0.793              -1.515 clk 
+    Info (332119):    -0.609              -1.210 clk_gen:inst23|div10_t:inst|2 
+    Info (332119):    -0.586              -1.091 clk_gen:inst23|div10_t:inst1|2 
+    Info (332119):    -0.317              -0.633 clk_gen:inst23|div10_t:inst2|2 
+    Info (332119):     0.165               0.000 clk_gen:inst23|div10_t:inst3|2 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -0.497
+Info (332146): Worst-case minimum pulse width slack is -0.409
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.497              -0.916 clk 
-    Info (332119):    -0.146              -3.652 clk_gen:inst23|div10_t:inst3|2 
-    Info (332119):    -0.095              -0.990 Point:inst10|nextC[0] 
-    Info (332119):     0.021               0.000 cardNum:inst7|nextC[0] 
-    Info (332119):     0.090               0.000 clk_gen:inst23|div10_t:inst1|2 
-    Info (332119):     0.099               0.000 clk_gen:inst23|div10_t:inst|2 
-    Info (332119):     0.151               0.000 clk_gen:inst23|div10_t:inst2|2 
+    Info (332119):    -0.409              -0.827 clk 
+    Info (332119):     0.007               0.000 clk_gen:inst23|div10_t:inst|2 
+    Info (332119):     0.075               0.000 clk_gen:inst23|div10_t:inst1|2 
+    Info (332119):     0.100               0.000 clk_gen:inst23|div10_t:inst3|2 
+    Info (332119):     0.150               0.000 clk_gen:inst23|div10_t:inst2|2 
 Info: Analyzing Fast 1100mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -3.213
+Info (332146): Worst-case setup slack is -2.260
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.213             -63.954 clk_gen:inst23|div10_t:inst3|2 
-    Info (332119):    -2.260             -18.540 Point:inst10|nextC[0] 
-    Info (332119):    -2.149             -17.297 cardNum:inst7|nextC[0] 
-    Info (332119):    -0.742              -1.039 clk 
-    Info (332119):    -0.291              -1.055 clk_gen:inst23|div10_t:inst1|2 
-    Info (332119):    -0.272              -0.929 clk_gen:inst23|div10_t:inst2|2 
-    Info (332119):    -0.234              -0.554 clk_gen:inst23|div10_t:inst|2 
-Info (332146): Worst-case hold slack is -0.798
+    Info (332119):    -2.260             -18.325 clk_gen:inst23|div10_t:inst3|2 
+    Info (332119):    -0.647              -1.006 clk 
+    Info (332119):    -0.312              -0.910 clk_gen:inst23|div10_t:inst2|2 
+    Info (332119):    -0.273              -0.894 clk_gen:inst23|div10_t:inst1|2 
+    Info (332119):    -0.171              -0.523 clk_gen:inst23|div10_t:inst|2 
+Info (332146): Worst-case hold slack is -0.852
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.798              -1.568 clk 
-    Info (332119):    -0.717              -2.490 clk_gen:inst23|div10_t:inst3|2 
-    Info (332119):    -0.506              -0.984 clk_gen:inst23|div10_t:inst|2 
-    Info (332119):    -0.459              -0.886 clk_gen:inst23|div10_t:inst1|2 
-    Info (332119):    -0.396              -0.733 clk_gen:inst23|div10_t:inst2|2 
-    Info (332119):     0.173               0.000 Point:inst10|nextC[0] 
-    Info (332119):     0.202               0.000 cardNum:inst7|nextC[0] 
+    Info (332119):    -0.852              -1.581 clk 
+    Info (332119):    -0.569              -1.132 clk_gen:inst23|div10_t:inst|2 
+    Info (332119):    -0.526              -0.988 clk_gen:inst23|div10_t:inst1|2 
+    Info (332119):    -0.304              -0.607 clk_gen:inst23|div10_t:inst2|2 
+    Info (332119):     0.151               0.000 clk_gen:inst23|div10_t:inst3|2 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -0.482
+Info (332146): Worst-case minimum pulse width slack is -0.401
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.482              -0.902 clk 
-    Info (332119):    -0.096              -1.720 clk_gen:inst23|div10_t:inst3|2 
-    Info (332119):    -0.082              -0.780 Point:inst10|nextC[0] 
-    Info (332119):     0.039               0.000 cardNum:inst7|nextC[0] 
-    Info (332119):     0.100               0.000 clk_gen:inst23|div10_t:inst1|2 
-    Info (332119):     0.104               0.000 clk_gen:inst23|div10_t:inst|2 
-    Info (332119):     0.145               0.000 clk_gen:inst23|div10_t:inst2|2 
+    Info (332119):    -0.401              -0.833 clk 
+    Info (332119):     0.029               0.000 clk_gen:inst23|div10_t:inst|2 
+    Info (332119):     0.080               0.000 clk_gen:inst23|div10_t:inst1|2 
+    Info (332119):     0.111               0.000 clk_gen:inst23|div10_t:inst3|2 
+    Info (332119):     0.146               0.000 clk_gen:inst23|div10_t:inst2|2 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 5031 megabytes
-    Info: Processing ended: Wed Jun 22 02:30:07 2022
+    Info: Peak virtual memory: 4983 megabytes
+    Info: Processing ended: Wed Jun 22 02:44:21 2022
     Info: Elapsed time: 00:00:05
     Info: Total CPU time (on all processors): 00:00:05
 
