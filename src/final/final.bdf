@@ -1500,7 +1500,7 @@ applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 1672 -240 1872 -64)
+	(rect 1672 -256 1872 -80)
 	(text "vectorToBits" (rect 5 0 67 12)(font "Arial" ))
 	(text "inst21" (rect 8 160 37 172)(font "Arial" ))
 	(port
@@ -2409,23 +2409,23 @@ applicable agreement for further details.
 )
 (connector
 	(pt 1896 -32)
-	(pt 1896 -128)
+	(pt 1896 -144)
 )
 (connector
 	(pt 1912 -72)
-	(pt 1912 -144)
+	(pt 1912 -160)
 )
 (connector
 	(pt 1952 -184)
-	(pt 1952 -160)
+	(pt 1952 -176)
 )
 (connector
 	(pt 1936 -200)
-	(pt 1936 -176)
+	(pt 1936 -192)
 )
 (connector
 	(pt 1920 -216)
-	(pt 1920 -192)
+	(pt 1920 -208)
 )
 (connector
 	(pt 2016 -232)
@@ -2433,7 +2433,7 @@ applicable agreement for further details.
 )
 (connector
 	(pt 1872 -232)
-	(pt 1872 -208)
+	(pt 1872 -224)
 )
 (connector
 	(pt 1488 56)
@@ -2441,67 +2441,67 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(pt 1136 -208)
-	(pt 1672 -208)
+	(pt 1136 -224)
+	(pt 1672 -224)
 )
 (connector
 	(pt 1616 8)
-	(pt 1616 -176)
+	(pt 1616 -192)
 	(bus)
 )
 (connector
-	(text "<<__$DEF_ALIAS26904>>" (rect 1616 -192 1745 -180)(font "Arial" )(invisible))
-	(pt 1616 -176)
+	(text "<<__$DEF_ALIAS26904>>" (rect 1616 -208 1745 -196)(font "Arial" )(invisible))
+	(pt 1616 -192)
+	(pt 1672 -192)
+	(bus)
+)
+(connector
+	(pt 1920 -208)
+	(pt 1872 -208)
+)
+(connector
+	(pt 1936 -192)
+	(pt 1872 -192)
+)
+(connector
+	(pt 1952 -176)
+	(pt 1872 -176)
+)
+(connector
+	(pt 1912 -160)
+	(pt 1872 -160)
+)
+(connector
+	(pt 1896 -144)
+	(pt 1872 -144)
+)
+(connector
+	(text "inputLFSR[0..5]" (rect 1639 -237 1651 -160)(font "Arial" )(vertical))
+	(pt 1656 -256)
+	(pt 1656 -208)
+	(bus)
+)
+(connector
+	(pt 1656 -208)
+	(pt 1672 -208)
+	(bus)
+)
+(connector
+	(pt 1672 56)
 	(pt 1672 -176)
 	(bus)
 )
 (connector
-	(pt 1920 -192)
-	(pt 1872 -192)
-)
-(connector
-	(pt 1936 -176)
-	(pt 1872 -176)
-)
-(connector
-	(pt 1952 -160)
-	(pt 1872 -160)
-)
-(connector
-	(pt 1912 -144)
-	(pt 1872 -144)
-)
-(connector
-	(pt 1896 -128)
+	(pt 1872 8)
 	(pt 1872 -128)
 )
 (connector
-	(pt 1136 -208)
+	(pt 1136 -224)
 	(pt 1136 32)
 )
 (connector
 	(pt 1136 32)
 	(pt 1136 224)
-)
-(connector
-	(pt 1672 -160)
-	(pt 1672 56)
-	(bus)
-)
-(connector
-	(pt 1872 -112)
-	(pt 1872 8)
-)
-(connector
-	(text "inputLFSR[0..5]" (rect 1639 -237 1651 -160)(font "Arial" )(vertical))
-	(pt 1656 -192)
-	(pt 1656 -256)
-	(bus)
-)
-(connector
-	(pt 1656 -192)
-	(pt 1672 -192)
-	(bus)
 )
 (junction (pt 1112 208))
 (junction (pt 1456 192))

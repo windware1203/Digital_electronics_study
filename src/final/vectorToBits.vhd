@@ -24,13 +24,13 @@ begin
 	process(clk)
 	begin
 		if rising_edge(clk) then
-			ten <= inputLFSR/10;
+			ten <= inputLFSR rem 10;
 			temp <= inputLFSR mod 10;
 			
-			tenP <= inputPoints/10;
+			tenP <= inputPoints rem 10;
 			tempP <= inputPoints mod 10;
 			
-			tenMOM <= inputPointsMOM/10;
+			tenMOM <= inputPointsMOM rem 10;
 			tempMOM <= inputPointsMOM mod 10;
 			case de is
 				when "000" =>
