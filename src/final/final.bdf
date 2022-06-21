@@ -1500,7 +1500,7 @@ applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 1680 -216 1880 -40)
+	(rect 1680 -224 1880 -48)
 	(text "vectorToBits" (rect 5 0 67 12)(font "Arial" ))
 	(text "inst21" (rect 8 160 37 172)(font "Arial" ))
 	(port
@@ -1953,14 +1953,6 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(pt 424 32)
-	(pt 424 -80)
-)
-(connector
-	(pt 424 -80)
-	(pt 344 -80)
-)
-(connector
 	(pt 1448 400)
 	(pt 1424 400)
 )
@@ -2357,16 +2349,8 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(pt 424 32)
-	(pt 1136 32)
-)
-(connector
 	(pt -176 32)
 	(pt -96 32)
-)
-(connector
-	(pt -96 32)
-	(pt 424 32)
 )
 (connector
 	(pt -296 296)
@@ -2377,18 +2361,18 @@ applicable agreement for further details.
 	(pt -96 296)
 )
 (connector
-	(pt 1136 -184)
-	(pt 1680 -184)
+	(pt 1136 -192)
+	(pt 1680 -192)
 )
 (connector
-	(pt 1656 -168)
-	(pt 1680 -168)
+	(pt 1656 -176)
+	(pt 1680 -176)
 	(bus)
 )
 (connector
 	(text "inputLFSR[0..5]" (rect 1640 -236 1652 -159)(font "Arial" )(vertical))
 	(pt 1656 -256)
-	(pt 1656 -168)
+	(pt 1656 -176)
 	(bus)
 )
 (connector
@@ -2396,48 +2380,44 @@ applicable agreement for further details.
 	(pt 1880 8)
 )
 (connector
-	(pt 1880 8)
-	(pt 1880 -88)
-)
-(connector
 	(pt 1896 -32)
-	(pt 1896 -104)
+	(pt 1896 -112)
 )
 (connector
-	(pt 1896 -104)
-	(pt 1880 -104)
+	(pt 1896 -112)
+	(pt 1880 -112)
 )
 (connector
 	(pt 1912 -72)
-	(pt 1912 -120)
+	(pt 1912 -128)
 )
 (connector
-	(pt 1912 -120)
-	(pt 1880 -120)
+	(pt 1912 -128)
+	(pt 1880 -128)
 )
 (connector
 	(pt 1952 -184)
-	(pt 1952 -136)
+	(pt 1952 -144)
 )
 (connector
-	(pt 1952 -136)
-	(pt 1880 -136)
+	(pt 1952 -144)
+	(pt 1880 -144)
 )
 (connector
 	(pt 1936 -200)
-	(pt 1936 -152)
+	(pt 1936 -160)
 )
 (connector
-	(pt 1936 -152)
-	(pt 1880 -152)
+	(pt 1936 -160)
+	(pt 1880 -160)
 )
 (connector
 	(pt 1920 -216)
-	(pt 1920 -168)
+	(pt 1920 -176)
 )
 (connector
-	(pt 1920 -168)
-	(pt 1880 -168)
+	(pt 1920 -176)
+	(pt 1880 -176)
 )
 (connector
 	(pt 2016 -232)
@@ -2445,7 +2425,7 @@ applicable agreement for further details.
 )
 (connector
 	(pt 1880 -232)
-	(pt 1880 -184)
+	(pt 1880 -192)
 )
 (connector
 	(pt 1488 56)
@@ -2453,27 +2433,47 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(pt 1680 56)
-	(pt 1680 -136)
-	(bus)
-)
-(connector
 	(pt 1616 8)
-	(pt 1616 -152)
+	(pt 1616 -160)
 	(bus)
 )
 (connector
-	(pt 1616 -152)
-	(pt 1680 -152)
+	(pt 1616 -160)
+	(pt 1680 -160)
 	(bus)
 )
 (connector
-	(pt 1136 -184)
+	(pt 1680 56)
+	(pt 1680 -144)
+	(bus)
+)
+(connector
+	(pt 1880 8)
+	(pt 1880 -96)
+)
+(connector
+	(pt 1136 -192)
 	(pt 1136 32)
 )
 (connector
 	(pt 1136 32)
 	(pt 1136 224)
+)
+(connector
+	(pt 424 -96)
+	(pt 424 32)
+)
+(connector
+	(pt 424 -96)
+	(pt 344 -96)
+)
+(connector
+	(pt -96 32)
+	(pt 424 32)
+)
+(connector
+	(pt 424 32)
+	(pt 1136 32)
 )
 (junction (pt 1112 208))
 (junction (pt 1456 192))
