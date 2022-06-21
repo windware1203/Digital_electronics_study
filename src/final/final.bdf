@@ -2379,6 +2379,21 @@ applicable agreement for further details.
 	(pt 2016 -216)
 )
 (connector
+	(pt 1272 56)
+	(pt 1272 8)
+	(bus)
+)
+(connector
+	(pt 1272 8)
+	(pt 1616 8)
+	(bus)
+)
+(connector
+	(pt 1456 32)
+	(pt 1656 32)
+	(bus)
+)
+(connector
 	(pt 1944 8)
 	(pt 1872 8)
 )
@@ -2449,37 +2464,14 @@ applicable agreement for further details.
 	(pt 1872 -224)
 )
 (connector
-	(pt 1136 -224)
-	(pt 1136 32)
-)
-(connector
-	(pt 1136 32)
-	(pt 1136 224)
-)
-(connector
-	(pt 1272 56)
-	(pt 1272 8)
-	(bus)
-)
-(connector
-	(pt 1272 8)
-	(pt 1616 8)
-	(bus)
-)
-(connector
 	(pt 1616 8)
 	(pt 1616 -208)
 	(bus)
 )
 (connector
 	(text "<<__$DEF_ALIAS26904>>" (rect 1616 -224 1745 -212)(font "Arial" )(invisible))
-	(pt 1672 -208)
 	(pt 1616 -208)
-	(bus)
-)
-(connector
-	(pt 1456 32)
-	(pt 1656 32)
+	(pt 1672 -208)
 	(bus)
 )
 (connector
@@ -2491,6 +2483,14 @@ applicable agreement for further details.
 	(pt 1656 -192)
 	(pt 1672 -192)
 	(bus)
+)
+(connector
+	(pt 1136 -224)
+	(pt 1136 32)
+)
+(connector
+	(pt 1136 32)
+	(pt 1136 224)
 )
 (junction (pt 1112 208))
 (junction (pt 1456 192))

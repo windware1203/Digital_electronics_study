@@ -16,7 +16,7 @@
 // PROGRAM "Quartus II 64-Bit"
 // VERSION "Version 13.1.0 Build 162 10/23/2013 SJ Web Edition"
 
-// DATE "06/22/2022 02:04:46"
+// DATE "06/22/2022 02:16:56"
 
 // 
 // Device: Altera 5CEFA2F23C8 Package FBGA484
@@ -536,7 +536,7 @@ wire [0:2] \inst7|nextC ;
 wire [0:5] \inst21|temp ;
 wire [31:0] \inst12|tempInt ;
 wire [0:5] \inst10|nextC ;
-wire [0:5] \inst21|tenMOM ;
+wire [0:5] \inst21|tempMOM ;
 wire [0:5] \inst|outt ;
 wire [0:5] \inst4|nextC ;
 wire [0:2] \inst21|de ;
@@ -7846,7 +7846,7 @@ defparam \inst21|Mod2|auto_generated|divider|divider|StageOut[33]~5 .shared_arit
 // synopsys translate_on
 
 // Location: FF_X35_Y20_N56
-dffeas \inst21|tenMOM[2] (
+dffeas \inst21|tempMOM[2] (
 	.clk(\inst23|inst3|2~q ),
 	.d(\inst21|Mod2|auto_generated|divider|divider|StageOut[33]~5_combout ),
 	.asdata(vcc),
@@ -7857,11 +7857,11 @@ dffeas \inst21|tenMOM[2] (
 	.ena(vcc),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.q(\inst21|tenMOM [2]),
+	.q(\inst21|tempMOM [2]),
 	.prn(vcc));
 // synopsys translate_off
-defparam \inst21|tenMOM[2] .is_wysiwyg = "true";
-defparam \inst21|tenMOM[2] .power_up = "low";
+defparam \inst21|tempMOM[2] .is_wysiwyg = "true";
+defparam \inst21|tempMOM[2] .power_up = "low";
 // synopsys translate_on
 
 // Location: FF_X39_Y21_N47
@@ -8687,15 +8687,15 @@ defparam \inst21|tenP[2] .power_up = "low";
 // Location: LABCELL_X35_Y17_N12
 cyclonev_lcell_comb \inst21|Mux3~0 (
 // Equation(s):
-// \inst21|Mux3~0_combout  = ( \inst21|tenMOM [2] & ( \inst21|tenP [2] & ( ((!\inst21|a2~1_combout ) # (\inst21|a2~0_combout )) # (\inst21|temp [2]) ) ) ) # ( !\inst21|tenMOM [2] & ( \inst21|tenP [2] & ( ((\inst21|temp [2] & \inst21|a2~1_combout )) # 
-// (\inst21|a2~0_combout ) ) ) ) # ( \inst21|tenMOM [2] & ( !\inst21|tenP [2] & ( (!\inst21|a2~0_combout  & ((!\inst21|a2~1_combout ) # (\inst21|temp [2]))) ) ) ) # ( !\inst21|tenMOM [2] & ( !\inst21|tenP [2] & ( (\inst21|temp [2] & (!\inst21|a2~0_combout  & 
-// \inst21|a2~1_combout )) ) ) )
+// \inst21|Mux3~0_combout  = ( \inst21|tempMOM [2] & ( \inst21|tenP [2] & ( ((!\inst21|a2~1_combout ) # (\inst21|a2~0_combout )) # (\inst21|temp [2]) ) ) ) # ( !\inst21|tempMOM [2] & ( \inst21|tenP [2] & ( ((\inst21|temp [2] & \inst21|a2~1_combout )) # 
+// (\inst21|a2~0_combout ) ) ) ) # ( \inst21|tempMOM [2] & ( !\inst21|tenP [2] & ( (!\inst21|a2~0_combout  & ((!\inst21|a2~1_combout ) # (\inst21|temp [2]))) ) ) ) # ( !\inst21|tempMOM [2] & ( !\inst21|tenP [2] & ( (\inst21|temp [2] & (!\inst21|a2~0_combout  
+// & \inst21|a2~1_combout )) ) ) )
 
 	.dataa(gnd),
 	.datab(!\inst21|temp [2]),
 	.datac(!\inst21|a2~0_combout ),
 	.datad(!\inst21|a2~1_combout ),
-	.datae(!\inst21|tenMOM [2]),
+	.datae(!\inst21|tempMOM [2]),
 	.dataf(!\inst21|tenP [2]),
 	.datag(gnd),
 	.cin(gnd),
@@ -8755,7 +8755,7 @@ defparam \inst21|Mod2|auto_generated|divider|divider|StageOut[30]~0 .shared_arit
 // synopsys translate_on
 
 // Location: FF_X35_Y20_N4
-dffeas \inst21|tenMOM[5] (
+dffeas \inst21|tempMOM[5] (
 	.clk(\inst23|inst3|2~q ),
 	.d(\inst21|Mod2|auto_generated|divider|divider|StageOut[30]~0_combout ),
 	.asdata(vcc),
@@ -8766,11 +8766,11 @@ dffeas \inst21|tenMOM[5] (
 	.ena(vcc),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.q(\inst21|tenMOM [5]),
+	.q(\inst21|tempMOM [5]),
 	.prn(vcc));
 // synopsys translate_off
-defparam \inst21|tenMOM[5] .is_wysiwyg = "true";
-defparam \inst21|tenMOM[5] .power_up = "low";
+defparam \inst21|tempMOM[5] .is_wysiwyg = "true";
+defparam \inst21|tempMOM[5] .power_up = "low";
 // synopsys translate_on
 
 // Location: MLABCELL_X37_Y21_N3
@@ -8864,12 +8864,12 @@ defparam \inst21|tenP[5] .power_up = "low";
 // Location: LABCELL_X35_Y17_N30
 cyclonev_lcell_comb \inst21|Mux6~0 (
 // Equation(s):
-// \inst21|Mux6~0_combout  = ( \inst21|temp [5] & ( \inst21|tenP [5] & ( ((\inst21|a2~1_combout ) # (\inst21|a2~0_combout )) # (\inst21|tenMOM [5]) ) ) ) # ( !\inst21|temp [5] & ( \inst21|tenP [5] & ( ((\inst21|tenMOM [5] & !\inst21|a2~1_combout )) # 
-// (\inst21|a2~0_combout ) ) ) ) # ( \inst21|temp [5] & ( !\inst21|tenP [5] & ( (!\inst21|a2~0_combout  & ((\inst21|a2~1_combout ) # (\inst21|tenMOM [5]))) ) ) ) # ( !\inst21|temp [5] & ( !\inst21|tenP [5] & ( (\inst21|tenMOM [5] & (!\inst21|a2~0_combout  & 
-// !\inst21|a2~1_combout )) ) ) )
+// \inst21|Mux6~0_combout  = ( \inst21|temp [5] & ( \inst21|tenP [5] & ( ((\inst21|a2~1_combout ) # (\inst21|a2~0_combout )) # (\inst21|tempMOM [5]) ) ) ) # ( !\inst21|temp [5] & ( \inst21|tenP [5] & ( ((\inst21|tempMOM [5] & !\inst21|a2~1_combout )) # 
+// (\inst21|a2~0_combout ) ) ) ) # ( \inst21|temp [5] & ( !\inst21|tenP [5] & ( (!\inst21|a2~0_combout  & ((\inst21|a2~1_combout ) # (\inst21|tempMOM [5]))) ) ) ) # ( !\inst21|temp [5] & ( !\inst21|tenP [5] & ( (\inst21|tempMOM [5] & (!\inst21|a2~0_combout  
+// & !\inst21|a2~1_combout )) ) ) )
 
 	.dataa(gnd),
-	.datab(!\inst21|tenMOM [5]),
+	.datab(!\inst21|tempMOM [5]),
 	.datac(!\inst21|a2~0_combout ),
 	.datad(!\inst21|a2~1_combout ),
 	.datae(!\inst21|temp [5]),
@@ -9006,7 +9006,7 @@ defparam \inst21|Mod2|auto_generated|divider|divider|StageOut[32]~3 .shared_arit
 // synopsys translate_on
 
 // Location: FF_X35_Y20_N58
-dffeas \inst21|tenMOM[3] (
+dffeas \inst21|tempMOM[3] (
 	.clk(\inst23|inst3|2~q ),
 	.d(\inst21|Mod2|auto_generated|divider|divider|StageOut[32]~3_combout ),
 	.asdata(vcc),
@@ -9017,11 +9017,11 @@ dffeas \inst21|tenMOM[3] (
 	.ena(vcc),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.q(\inst21|tenMOM [3]),
+	.q(\inst21|tempMOM [3]),
 	.prn(vcc));
 // synopsys translate_off
-defparam \inst21|tenMOM[3] .is_wysiwyg = "true";
-defparam \inst21|tenMOM[3] .power_up = "low";
+defparam \inst21|tempMOM[3] .is_wysiwyg = "true";
+defparam \inst21|tempMOM[3] .power_up = "low";
 // synopsys translate_on
 
 // Location: LABCELL_X40_Y21_N0
@@ -9072,11 +9072,11 @@ defparam \inst21|tenP[3] .power_up = "low";
 // Location: LABCELL_X35_Y17_N18
 cyclonev_lcell_comb \inst21|Mux4~0 (
 // Equation(s):
-// \inst21|Mux4~0_combout  = ( \inst21|tenP [3] & ( ((!\inst21|a2~1_combout  & ((\inst21|tenMOM [3]))) # (\inst21|a2~1_combout  & (\inst21|temp [3]))) # (\inst21|a2~0_combout ) ) ) # ( !\inst21|tenP [3] & ( (!\inst21|a2~0_combout  & ((!\inst21|a2~1_combout  
-// & ((\inst21|tenMOM [3]))) # (\inst21|a2~1_combout  & (\inst21|temp [3])))) ) )
+// \inst21|Mux4~0_combout  = ( \inst21|tenP [3] & ( ((!\inst21|a2~1_combout  & ((\inst21|tempMOM [3]))) # (\inst21|a2~1_combout  & (\inst21|temp [3]))) # (\inst21|a2~0_combout ) ) ) # ( !\inst21|tenP [3] & ( (!\inst21|a2~0_combout  & ((!\inst21|a2~1_combout  
+// & ((\inst21|tempMOM [3]))) # (\inst21|a2~1_combout  & (\inst21|temp [3])))) ) )
 
 	.dataa(!\inst21|temp [3]),
-	.datab(!\inst21|tenMOM [3]),
+	.datab(!\inst21|tempMOM [3]),
 	.datac(!\inst21|a2~0_combout ),
 	.datad(!\inst21|a2~1_combout ),
 	.datae(!\inst21|tenP [3]),
@@ -9141,7 +9141,7 @@ defparam \inst21|Mod2|auto_generated|divider|divider|StageOut[31]~1 .shared_arit
 // synopsys translate_on
 
 // Location: FF_X35_Y20_N1
-dffeas \inst21|tenMOM[4] (
+dffeas \inst21|tempMOM[4] (
 	.clk(\inst23|inst3|2~q ),
 	.d(\inst21|Mod2|auto_generated|divider|divider|StageOut[31]~1_combout ),
 	.asdata(vcc),
@@ -9152,11 +9152,11 @@ dffeas \inst21|tenMOM[4] (
 	.ena(vcc),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.q(\inst21|tenMOM [4]),
+	.q(\inst21|tempMOM [4]),
 	.prn(vcc));
 // synopsys translate_off
-defparam \inst21|tenMOM[4] .is_wysiwyg = "true";
-defparam \inst21|tenMOM[4] .power_up = "low";
+defparam \inst21|tempMOM[4] .is_wysiwyg = "true";
+defparam \inst21|tempMOM[4] .power_up = "low";
 // synopsys translate_on
 
 // Location: MLABCELL_X37_Y21_N54
@@ -9254,12 +9254,12 @@ defparam \inst21|tenP[4] .power_up = "low";
 // Location: LABCELL_X35_Y17_N39
 cyclonev_lcell_comb \inst21|Mux5~0 (
 // Equation(s):
-// \inst21|Mux5~0_combout  = ( \inst21|temp [4] & ( \inst21|tenP [4] & ( ((\inst21|a2~0_combout ) # (\inst21|a2~1_combout )) # (\inst21|tenMOM [4]) ) ) ) # ( !\inst21|temp [4] & ( \inst21|tenP [4] & ( ((\inst21|tenMOM [4] & !\inst21|a2~1_combout )) # 
-// (\inst21|a2~0_combout ) ) ) ) # ( \inst21|temp [4] & ( !\inst21|tenP [4] & ( (!\inst21|a2~0_combout  & ((\inst21|a2~1_combout ) # (\inst21|tenMOM [4]))) ) ) ) # ( !\inst21|temp [4] & ( !\inst21|tenP [4] & ( (\inst21|tenMOM [4] & (!\inst21|a2~1_combout  & 
-// !\inst21|a2~0_combout )) ) ) )
+// \inst21|Mux5~0_combout  = ( \inst21|temp [4] & ( \inst21|tenP [4] & ( ((\inst21|a2~0_combout ) # (\inst21|a2~1_combout )) # (\inst21|tempMOM [4]) ) ) ) # ( !\inst21|temp [4] & ( \inst21|tenP [4] & ( ((\inst21|tempMOM [4] & !\inst21|a2~1_combout )) # 
+// (\inst21|a2~0_combout ) ) ) ) # ( \inst21|temp [4] & ( !\inst21|tenP [4] & ( (!\inst21|a2~0_combout  & ((\inst21|a2~1_combout ) # (\inst21|tempMOM [4]))) ) ) ) # ( !\inst21|temp [4] & ( !\inst21|tenP [4] & ( (\inst21|tempMOM [4] & (!\inst21|a2~1_combout  
+// & !\inst21|a2~0_combout )) ) ) )
 
 	.dataa(gnd),
-	.datab(!\inst21|tenMOM [4]),
+	.datab(!\inst21|tempMOM [4]),
 	.datac(!\inst21|a2~1_combout ),
 	.datad(!\inst21|a2~0_combout ),
 	.datae(!\inst21|temp [4]),

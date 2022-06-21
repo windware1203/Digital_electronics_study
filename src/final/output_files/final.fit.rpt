@@ -1,5 +1,5 @@
 Fitter report for final
-Wed Jun 22 02:04:32 2022
+Wed Jun 22 02:16:42 2022
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -63,7 +63,7 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------+
 ; Fitter Summary                                                               ;
 +---------------------------------+--------------------------------------------+
-; Fitter Status                   ; Successful - Wed Jun 22 02:04:32 2022      ;
+; Fitter Status                   ; Successful - Wed Jun 22 02:16:42 2022      ;
 ; Quartus II 64-Bit Version       ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                   ; final                                      ;
 ; Top-level Entity Name           ; final                                      ;
@@ -151,13 +151,13 @@ applicable agreement for further details.
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 8           ;
 ;                            ;             ;
-; Average used               ; 2.00        ;
+; Average used               ; 2.41        ;
 ; Maximum used               ; 8           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;  17.6%      ;
-;     Processors 5-8         ;  11.8%      ;
+;     Processors 2-4         ;  23.5%      ;
+;     Processors 5-8         ;  17.6%      ;
 +----------------------------+-------------+
 
 
@@ -1342,19 +1342,19 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; clk_gen:inst23|div10_t:inst3|2~0                                                                                                               ; 1       ;
 ; vectorToBits:inst21|Mux3~0                                                                                                                     ; 1       ;
 ; vectorToBits:inst21|temp[2]                                                                                                                    ; 1       ;
-; vectorToBits:inst21|tenMOM[2]                                                                                                                  ; 1       ;
+; vectorToBits:inst21|tempMOM[2]                                                                                                                 ; 1       ;
 ; vectorToBits:inst21|tenP[2]                                                                                                                    ; 1       ;
 ; vectorToBits:inst21|Mux4~0                                                                                                                     ; 1       ;
 ; vectorToBits:inst21|temp[3]                                                                                                                    ; 1       ;
-; vectorToBits:inst21|tenMOM[3]                                                                                                                  ; 1       ;
+; vectorToBits:inst21|tempMOM[3]                                                                                                                 ; 1       ;
 ; vectorToBits:inst21|tenP[3]                                                                                                                    ; 1       ;
 ; vectorToBits:inst21|Mux5~0                                                                                                                     ; 1       ;
 ; vectorToBits:inst21|temp[4]                                                                                                                    ; 1       ;
-; vectorToBits:inst21|tenMOM[4]                                                                                                                  ; 1       ;
+; vectorToBits:inst21|tempMOM[4]                                                                                                                 ; 1       ;
 ; vectorToBits:inst21|tenP[4]                                                                                                                    ; 1       ;
 ; vectorToBits:inst21|Mux6~0                                                                                                                     ; 1       ;
 ; vectorToBits:inst21|temp[5]                                                                                                                    ; 1       ;
-; vectorToBits:inst21|tenMOM[5]                                                                                                                  ; 1       ;
+; vectorToBits:inst21|tempMOM[5]                                                                                                                 ; 1       ;
 ; vectorToBits:inst21|tenP[5]                                                                                                                    ; 1       ;
 ; cardNum:inst7|Add0~1                                                                                                                           ; 1       ;
 ; cardNum:inst7|Add0~0                                                                                                                           ; 1       ;
@@ -1725,11 +1725,11 @@ This will disable optimization of problematic paths and expose them for further 
 +--------------------------------+--------------------------------+-------------------+
 ; clk_gen:inst23|div10_t:inst|2  ; clk_gen:inst23|div10_t:inst|2  ; 4.143             ;
 ; Point:inst10|nextC[0]          ; Point:inst10|nextC[0]          ; 2.964             ;
-; Point:inst10|nextC[1]          ; vectorToBits:inst21|tenMOM[3]  ; 1.456             ;
-; Point:inst10|nextC[2]          ; vectorToBits:inst21|tenMOM[3]  ; 1.456             ;
+; Point:inst10|nextC[1]          ; vectorToBits:inst21|tempMOM[3] ; 1.456             ;
+; Point:inst10|nextC[2]          ; vectorToBits:inst21|tempMOM[3] ; 1.456             ;
 ; lfsr:inst|outt[4]              ; vectorToBits:inst21|temp[4]    ; 1.428             ;
-; Point:inst10|nextC[4]          ; vectorToBits:inst21|tenMOM[2]  ; 1.243             ;
-; Point:inst10|nextC[3]          ; vectorToBits:inst21|tenMOM[2]  ; 1.243             ;
+; Point:inst10|nextC[4]          ; vectorToBits:inst21|tempMOM[2] ; 1.243             ;
+; Point:inst10|nextC[3]          ; vectorToBits:inst21|tempMOM[2] ; 1.243             ;
 ; cardNum:inst7|nextC[0]         ; cardNum:inst7|nextC[0]         ; 1.213             ;
 ; lfsr:inst|outt[2]              ; vectorToBits:inst21|temp[2]    ; 1.135             ;
 ; vectorToBits:inst21|de[0]      ; vectorToBits:inst21|de[1]      ; 1.082             ;
@@ -1765,10 +1765,10 @@ This will disable optimization of problematic paths and expose them for further 
 ; lfsr:inst|temp                 ; lfsr:inst|tempInt[5]           ; 0.450             ;
 ; debounce_g:inst35|1            ; e2                             ; 0.422             ;
 ; clk_gen:inst23|div10_t:inst|1  ; clk_gen:inst23|div10_t:inst|2  ; 0.387             ;
-; vectorToBits:inst21|tenMOM[2]  ; vectorToBits:inst21|a3         ; 0.375             ;
-; vectorToBits:inst21|tenMOM[3]  ; vectorToBits:inst21|a2         ; 0.375             ;
+; vectorToBits:inst21|tempMOM[2] ; vectorToBits:inst21|a3         ; 0.375             ;
+; vectorToBits:inst21|tempMOM[3] ; vectorToBits:inst21|a2         ; 0.375             ;
 ; clk_gen:inst23|div10_t:inst|5  ; clk_gen:inst23|div10_t:inst|2  ; 0.363             ;
-; vectorToBits:inst21|tenMOM[4]  ; vectorToBits:inst21|a1         ; 0.351             ;
+; vectorToBits:inst21|tempMOM[4] ; vectorToBits:inst21|a1         ; 0.351             ;
 ; Point:inst4|temp[5]            ; Point:inst4|nextC[0]           ; 0.331             ;
 ; clk_gen:inst23|div10_t:inst3|5 ; clk_gen:inst23|div10_t:inst3|1 ; 0.273             ;
 ; clk_gen:inst23|div10_t:inst|3  ; clk_gen:inst23|div10_t:inst|2  ; 0.272             ;
@@ -1784,7 +1784,7 @@ This will disable optimization of problematic paths and expose them for further 
 ; vectorToBits:inst21|tenP[3]    ; vectorToBits:inst21|a2         ; 0.099             ;
 ; vectorToBits:inst21|tenP[4]    ; vectorToBits:inst21|a1         ; 0.079             ;
 ; Point:inst4|temp[2]            ; vectorToBits:inst21|tenP[2]    ; 0.057             ;
-; Point:inst10|temp[4]           ; vectorToBits:inst21|tenMOM[2]  ; 0.044             ;
+; Point:inst10|temp[4]           ; vectorToBits:inst21|tempMOM[2] ; 0.044             ;
 ; lfsr_add:inst12|outt[5]        ; vectorToBits:inst21|temp[5]    ; 0.043             ;
 ; clk_gen:inst23|div10_t:inst1|1 ; clk_gen:inst23|div10_t:inst1|1 ; 0.014             ;
 +--------------------------------+--------------------------------+-------------------+
@@ -1825,7 +1825,7 @@ Info (170195): Router estimated average interconnect usage is 0% of the availabl
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:03
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (11888): Total time spent on timing analysis during the Fitter is 1.09 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 1.00 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
@@ -1833,9 +1833,9 @@ Info (334004): Delay annotation completed successfully
 Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:04
 Info (144001): Generated suppressed messages file C:/Users/User/Documents/GitHub/Digital_electronics_study/src/final/output_files/final.fit.smsg
 Info: Quartus II 64-Bit Fitter was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 6070 megabytes
-    Info: Processing ended: Wed Jun 22 02:04:32 2022
-    Info: Elapsed time: 00:00:17
+    Info: Peak virtual memory: 6074 megabytes
+    Info: Processing ended: Wed Jun 22 02:16:43 2022
+    Info: Elapsed time: 00:00:18
     Info: Total CPU time (on all processors): 00:00:26
 
 

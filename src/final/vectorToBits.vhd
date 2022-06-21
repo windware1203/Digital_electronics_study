@@ -67,10 +67,10 @@ begin
 			when "100" =>
 				
 				de <= "101";
-				a3 <= tenMOM(2);
-				a2 <= tenMOM(3);
-				a1 <= tenMOM(4);
-				a0 <= tenMOM(5);
+				a3 <= tempMOM(2);
+				a2 <= tempMOM(3);
+				a1 <= tempMOM(4);
+				a0 <= tempMOM(5);
 			
 			when others =>
 				
