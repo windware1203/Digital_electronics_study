@@ -33,7 +33,7 @@ begin
 			tenMOM <= inputPointsMOM/10;
 			tempMOM <= inputPointsMOM mod 10;
 			case de is
-			when "000" =>
+				when "000" =>
 				
 				de <= "001";
 				a3 <= tempP(2);
@@ -79,7 +79,7 @@ begin
 				a2 <= tenP(3);
 				a1 <= tenP(4);
 				a0 <= tenP(5);
-			end case;
+ 			end case;
 			
 			de3 <= de(0);
 			de2 <= de(1);
