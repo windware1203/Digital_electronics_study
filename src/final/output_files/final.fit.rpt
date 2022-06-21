@@ -1,5 +1,5 @@
 Fitter report for final
-Wed Jun 22 02:02:03 2022
+Wed Jun 22 02:04:32 2022
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -63,7 +63,7 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------+
 ; Fitter Summary                                                               ;
 +---------------------------------+--------------------------------------------+
-; Fitter Status                   ; Successful - Wed Jun 22 02:02:03 2022      ;
+; Fitter Status                   ; Successful - Wed Jun 22 02:04:32 2022      ;
 ; Quartus II 64-Bit Version       ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                   ; final                                      ;
 ; Top-level Entity Name           ; final                                      ;
@@ -71,7 +71,7 @@ applicable agreement for further details.
 ; Device                          ; 5CEFA2F23C8                                ;
 ; Timing Models                   ; Final                                      ;
 ; Logic utilization (in ALMs)     ; 136 / 9,430 ( 1 % )                        ;
-; Total registers                 ; 113                                        ;
+; Total registers                 ; 109                                        ;
 ; Total pins                      ; 29 / 224 ( 13 % )                          ;
 ; Total virtual pins              ; 0                                          ;
 ; Total block memory bits         ; 0 / 1,802,240 ( 0 % )                      ;
@@ -151,12 +151,13 @@ applicable agreement for further details.
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 8           ;
 ;                            ;             ;
-; Average used               ; 2.65        ;
+; Average used               ; 2.00        ;
 ; Maximum used               ; 8           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-8         ;  23.5%      ;
+;     Processors 2-4         ;  17.6%      ;
+;     Processors 5-8         ;  11.8%      ;
 +----------------------------+-------------+
 
 
@@ -199,20 +200,16 @@ applicable agreement for further details.
 ; Node                           ; Action     ; Operation                                         ; Reason                     ; Node Port ; Node Port Name ; Destination Node                         ; Destination Port ; Destination Port Name ;
 +--------------------------------+------------+---------------------------------------------------+----------------------------+-----------+----------------+------------------------------------------+------------------+-----------------------+
 ; clk~inputCLKENA0               ; Created    ; Placement                                         ; Fitter Periphery Placement ;           ;                ;                                          ;                  ;                       ;
-; clk_gen:inst23|div10_t:inst3|1 ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; clk_gen:inst23|div10_t:inst3|1~DUPLICATE ;                  ;                       ;
-; clk_gen:inst23|div10_t:inst3|5 ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; clk_gen:inst23|div10_t:inst3|5~DUPLICATE ;                  ;                       ;
+; Point:inst4|nextC[0]           ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; Point:inst4|nextC[0]~DUPLICATE           ;                  ;                       ;
+; Point:inst4|nextC[1]           ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; Point:inst4|nextC[1]~DUPLICATE           ;                  ;                       ;
+; Point:inst4|nextC[2]           ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; Point:inst4|nextC[2]~DUPLICATE           ;                  ;                       ;
+; clk_gen:inst23|div10_t:inst1|5 ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; clk_gen:inst23|div10_t:inst1|5~DUPLICATE ;                  ;                       ;
+; clk_gen:inst23|div10_t:inst2|5 ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; clk_gen:inst23|div10_t:inst2|5~DUPLICATE ;                  ;                       ;
 ; lfsr:inst|outt[0]              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; lfsr:inst|outt[0]~DUPLICATE              ;                  ;                       ;
-; lfsr:inst|outt[2]              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; lfsr:inst|outt[2]~DUPLICATE              ;                  ;                       ;
-; lfsr:inst|outt[3]              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; lfsr:inst|outt[3]~DUPLICATE              ;                  ;                       ;
-; lfsr:inst|temp                 ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; lfsr:inst|temp~DUPLICATE                 ;                  ;                       ;
+; lfsr:inst|outt[1]              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; lfsr:inst|outt[1]~DUPLICATE              ;                  ;                       ;
 ; lfsr:inst|tempInt[3]           ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; lfsr:inst|tempInt[3]~DUPLICATE           ;                  ;                       ;
-; lfsr:inst|tempInt[4]           ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; lfsr:inst|tempInt[4]~DUPLICATE           ;                  ;                       ;
 ; lfsr_add:inst12|outt[2]        ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; lfsr_add:inst12|outt[2]~DUPLICATE        ;                  ;                       ;
-; lfsr_add:inst12|tempInt[0]     ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; lfsr_add:inst12|tempInt[0]~DUPLICATE     ;                  ;                       ;
-; lfsr_add:inst12|tempInt[1]     ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; lfsr_add:inst12|tempInt[1]~DUPLICATE     ;                  ;                       ;
-; lfsr_add:inst12|tempInt[2]     ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; lfsr_add:inst12|tempInt[2]~DUPLICATE     ;                  ;                       ;
-; lfsr_add:inst12|tempInt[3]     ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; lfsr_add:inst12|tempInt[3]~DUPLICATE     ;                  ;                       ;
-; lfsr_add:inst12|tempInt[4]     ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; lfsr_add:inst12|tempInt[4]~DUPLICATE     ;                  ;                       ;
+; vectorToBits:inst21|de[1]      ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; vectorToBits:inst21|de[1]~DUPLICATE      ;                  ;                       ;
 +--------------------------------+------------+---------------------------------------------------+----------------------------+-----------+----------------+------------------------------------------+------------------+-----------------------+
 
 
@@ -264,12 +261,12 @@ The pin-out file can be found in C:/Users/User/Documents/GitHub/Digital_electron
 +-------------------------------------------------------------+---------------+-------+
 ; Logic utilization (ALMs needed / total ALMs on device)      ; 136 / 9,430   ; 1 %   ;
 ; ALMs needed [=A-B+C]                                        ; 136           ;       ;
-;     [A] ALMs used in final placement [=a+b+c+d]             ; 142 / 9,430   ; 2 %   ;
-;         [a] ALMs used for LUT logic and registers           ; 35            ;       ;
-;         [b] ALMs used for LUT logic                         ; 92            ;       ;
-;         [c] ALMs used for registers                         ; 15            ;       ;
+;     [A] ALMs used in final placement [=a+b+c+d]             ; 146 / 9,430   ; 2 %   ;
+;         [a] ALMs used for LUT logic and registers           ; 33            ;       ;
+;         [b] ALMs used for LUT logic                         ; 96            ;       ;
+;         [c] ALMs used for registers                         ; 17            ;       ;
 ;         [d] ALMs used for memory (up to half of total ALMs) ; 0             ;       ;
-;     [B] Estimate of ALMs recoverable by dense packing       ; 17 / 9,430    ; < 1 % ;
+;     [B] Estimate of ALMs recoverable by dense packing       ; 21 / 9,430    ; < 1 % ;
 ;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 11 / 9,430    ; < 1 % ;
 ;         [a] Due to location constrained logic               ; 0             ;       ;
 ;         [b] Due to LAB-wide signal conflicts                ; 11            ;       ;
@@ -278,8 +275,8 @@ The pin-out file can be found in C:/Users/User/Documents/GitHub/Digital_electron
 ;                                                             ;               ;       ;
 ; Difficulty packing design                                   ; Low           ;       ;
 ;                                                             ;               ;       ;
-; Total LABs:  partially or completely used                   ; 21 / 943      ; 2 %   ;
-;     -- Logic LABs                                           ; 21            ;       ;
+; Total LABs:  partially or completely used                   ; 24 / 943      ; 3 %   ;
+;     -- Logic LABs                                           ; 24            ;       ;
 ;     -- Memory LABs (up to half of total LABs)               ; 0             ;       ;
 ;                                                             ;               ;       ;
 ; Combinational ALUT usage for logic                          ; 239           ;       ;
@@ -288,14 +285,14 @@ The pin-out file can be found in C:/Users/User/Documents/GitHub/Digital_electron
 ;     -- 5 input functions                                    ; 23            ;       ;
 ;     -- 4 input functions                                    ; 34            ;       ;
 ;     -- <=3 input functions                                  ; 172           ;       ;
-; Combinational ALUT usage for route-throughs                 ; 14            ;       ;
-; Dedicated logic registers                                   ; 113           ;       ;
+; Combinational ALUT usage for route-throughs                 ; 20            ;       ;
+; Dedicated logic registers                                   ; 109           ;       ;
 ;     -- By type:                                             ;               ;       ;
 ;         -- Primary logic registers                          ; 99 / 18,860   ; < 1 % ;
-;         -- Secondary logic registers                        ; 14 / 18,860   ; < 1 % ;
+;         -- Secondary logic registers                        ; 10 / 18,860   ; < 1 % ;
 ;     -- By function:                                         ;               ;       ;
 ;         -- Design implementation registers                  ; 99            ;       ;
-;         -- Routing optimization registers                   ; 14            ;       ;
+;         -- Routing optimization registers                   ; 10            ;       ;
 ;                                                             ;               ;       ;
 ; Virtual pins                                                ; 0             ;       ;
 ; I/O pins                                                    ; 29 / 224      ; 13 %  ;
@@ -320,11 +317,11 @@ The pin-out file can be found in C:/Users/User/Documents/GitHub/Digital_electron
 ; Impedance control blocks                                    ; 0 / 3         ; 0 %   ;
 ; Hard Memory Controllers                                     ; 0 / 1         ; 0 %   ;
 ; Average interconnect usage (total/H/V)                      ; 0% / 0% / 0%  ;       ;
-; Peak interconnect usage (total/H/V)                         ; 1% / 1% / 1%  ;       ;
-; Maximum fan-out                                             ; 58            ;       ;
-; Highest non-global fan-out                                  ; 58            ;       ;
-; Total fan-out                                               ; 1040          ;       ;
-; Average fan-out                                             ; 2.45          ;       ;
+; Peak interconnect usage (total/H/V)                         ; 2% / 2% / 2%  ;       ;
+; Maximum fan-out                                             ; 62            ;       ;
+; Highest non-global fan-out                                  ; 62            ;       ;
+; Total fan-out                                               ; 1038          ;       ;
+; Average fan-out                                             ; 2.43          ;       ;
 +-------------------------------------------------------------+---------------+-------+
 
 
@@ -335,12 +332,12 @@ The pin-out file can be found in C:/Users/User/Documents/GitHub/Digital_electron
 +-------------------------------------------------------------+----------------------+--------------------------------+
 ; Logic utilization (ALMs needed / total ALMs on device)      ; 136 / 9430 ( 1 % )   ; 0 / 9430 ( 0 % )               ;
 ; ALMs needed [=A-B+C]                                        ; 136                  ; 0                              ;
-;     [A] ALMs used in final placement [=a+b+c+d]             ; 142 / 9430 ( 2 % )   ; 0 / 9430 ( 0 % )               ;
-;         [a] ALMs used for LUT logic and registers           ; 35                   ; 0                              ;
-;         [b] ALMs used for LUT logic                         ; 92                   ; 0                              ;
-;         [c] ALMs used for registers                         ; 15                   ; 0                              ;
+;     [A] ALMs used in final placement [=a+b+c+d]             ; 146 / 9430 ( 2 % )   ; 0 / 9430 ( 0 % )               ;
+;         [a] ALMs used for LUT logic and registers           ; 33                   ; 0                              ;
+;         [b] ALMs used for LUT logic                         ; 96                   ; 0                              ;
+;         [c] ALMs used for registers                         ; 17                   ; 0                              ;
 ;         [d] ALMs used for memory (up to half of total ALMs) ; 0                    ; 0                              ;
-;     [B] Estimate of ALMs recoverable by dense packing       ; 17 / 9430 ( < 1 % )  ; 0 / 9430 ( 0 % )               ;
+;     [B] Estimate of ALMs recoverable by dense packing       ; 21 / 9430 ( < 1 % )  ; 0 / 9430 ( 0 % )               ;
 ;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 11 / 9430 ( < 1 % )  ; 0 / 9430 ( 0 % )               ;
 ;         [a] Due to location constrained logic               ; 0                    ; 0                              ;
 ;         [b] Due to LAB-wide signal conflicts                ; 11                   ; 0                              ;
@@ -349,8 +346,8 @@ The pin-out file can be found in C:/Users/User/Documents/GitHub/Digital_electron
 ;                                                             ;                      ;                                ;
 ; Difficulty packing design                                   ; Low                  ; Low                            ;
 ;                                                             ;                      ;                                ;
-; Total LABs:  partially or completely used                   ; 21 / 943 ( 2 % )     ; 0 / 943 ( 0 % )                ;
-;     -- Logic LABs                                           ; 21                   ; 0                              ;
+; Total LABs:  partially or completely used                   ; 24 / 943 ( 3 % )     ; 0 / 943 ( 0 % )                ;
+;     -- Logic LABs                                           ; 24                   ; 0                              ;
 ;     -- Memory LABs (up to half of total LABs)               ; 0                    ; 0                              ;
 ;                                                             ;                      ;                                ;
 ; Combinational ALUT usage for logic                          ; 239                  ; 0                              ;
@@ -359,7 +356,7 @@ The pin-out file can be found in C:/Users/User/Documents/GitHub/Digital_electron
 ;     -- 5 input functions                                    ; 23                   ; 0                              ;
 ;     -- 4 input functions                                    ; 34                   ; 0                              ;
 ;     -- <=3 input functions                                  ; 172                  ; 0                              ;
-; Combinational ALUT usage for route-throughs                 ; 14                   ; 0                              ;
+; Combinational ALUT usage for route-throughs                 ; 20                   ; 0                              ;
 ; Memory ALUT usage                                           ; 0                    ; 0                              ;
 ;     -- 64-address deep                                      ; 0                    ; 0                              ;
 ;     -- 32-address deep                                      ; 0                    ; 0                              ;
@@ -367,10 +364,10 @@ The pin-out file can be found in C:/Users/User/Documents/GitHub/Digital_electron
 ; Dedicated logic registers                                   ; 0                    ; 0                              ;
 ;     -- By type:                                             ;                      ;                                ;
 ;         -- Primary logic registers                          ; 99 / 18860 ( < 1 % ) ; 0 / 18860 ( 0 % )              ;
-;         -- Secondary logic registers                        ; 14 / 18860 ( < 1 % ) ; 0 / 18860 ( 0 % )              ;
+;         -- Secondary logic registers                        ; 10 / 18860 ( < 1 % ) ; 0 / 18860 ( 0 % )              ;
 ;     -- By function:                                         ;                      ;                                ;
 ;         -- Design implementation registers                  ; 99                   ; 0                              ;
-;         -- Routing optimization registers                   ; 14                   ; 0                              ;
+;         -- Routing optimization registers                   ; 10                   ; 0                              ;
 ;                                                             ;                      ;                                ;
 ;                                                             ;                      ;                                ;
 ; Virtual pins                                                ; 0                    ; 0                              ;
@@ -387,8 +384,8 @@ The pin-out file can be found in C:/Users/User/Documents/GitHub/Digital_electron
 ;     -- Registered Output Connections                        ; 0                    ; 0                              ;
 ;                                                             ;                      ;                                ;
 ; Internal Connections                                        ;                      ;                                ;
-;     -- Total Connections                                    ; 1056                 ; 0                              ;
-;     -- Registered Connections                               ; 413                  ; 0                              ;
+;     -- Total Connections                                    ; 1054                 ; 0                              ;
+;     -- Registered Connections                               ; 420                  ; 0                              ;
 ;                                                             ;                      ;                                ;
 ; External Connections                                        ;                      ;                                ;
 ;     -- Top                                                  ; 0                    ; 0                              ;
@@ -974,43 +971,43 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +-------------------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+----------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                ; ALMs needed [=A-B+C] ; [A] ALMs used in final placement ; [B] Estimate of ALMs recoverable by dense packing ; [C] Estimate of ALMs unavailable ; ALMs used for memory ; Combinational ALUTs ; Dedicated Logic Registers ; I/O Registers ; Block Memory Bits ; M10Ks ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                        ; Library Name ;
 +-------------------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+----------------------------------------------------------------------------------------------------------------------------+--------------+
-; |final                                    ; 135.5 (2.0)          ; 141.5 (3.3)                      ; 16.5 (1.3)                                        ; 10.5 (0.0)                       ; 0.0 (0.0)            ; 239 (7)             ; 113 (0)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 29   ; 0            ; |final                                                                                                                     ; work         ;
-;    |Point:inst10|                         ; 5.0 (5.0)            ; 6.4 (6.4)                        ; 1.4 (1.4)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 12 (12)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |final|Point:inst10                                                                                                        ; work         ;
-;    |Point:inst4|                          ; 4.3 (4.3)            ; 4.7 (4.7)                        ; 0.4 (0.4)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 6 (6)               ; 12 (12)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |final|Point:inst4                                                                                                         ; work         ;
-;    |cardNum:inst13|                       ; 1.8 (1.8)            ; 2.8 (2.8)                        ; 1.0 (1.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 3 (3)               ; 3 (3)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |final|cardNum:inst13                                                                                                      ; work         ;
-;    |cardNum:inst7|                        ; 1.4 (1.4)            ; 3.0 (3.0)                        ; 1.6 (1.6)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 3 (3)               ; 3 (3)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |final|cardNum:inst7                                                                                                       ; work         ;
-;    |clk_gen:inst23|                       ; 19.5 (0.0)           ; 13.7 (0.0)                       ; 4.7 (0.0)                                         ; 10.5 (0.0)                       ; 0.0 (0.0)            ; 16 (0)              ; 18 (0)                    ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |final|clk_gen:inst23                                                                                                      ; work         ;
+; |final                                    ; 135.5 (2.0)          ; 145.5 (3.5)                      ; 20.5 (1.5)                                        ; 10.5 (0.0)                       ; 0.0 (0.0)            ; 239 (7)             ; 109 (0)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 29   ; 0            ; |final                                                                                                                     ; work         ;
+;    |Point:inst10|                         ; 5.0 (5.0)            ; 6.0 (6.0)                        ; 1.0 (1.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 12 (12)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |final|Point:inst10                                                                                                        ; work         ;
+;    |Point:inst4|                          ; 4.5 (4.5)            ; 6.1 (6.1)                        ; 1.6 (1.6)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 6 (6)               ; 15 (15)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |final|Point:inst4                                                                                                         ; work         ;
+;    |cardNum:inst13|                       ; 1.8 (1.8)            ; 2.5 (2.5)                        ; 0.8 (0.8)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 3 (3)               ; 3 (3)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |final|cardNum:inst13                                                                                                      ; work         ;
+;    |cardNum:inst7|                        ; 1.4 (1.4)            ; 2.8 (2.8)                        ; 1.4 (1.4)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 3 (3)               ; 3 (3)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |final|cardNum:inst7                                                                                                       ; work         ;
+;    |clk_gen:inst23|                       ; 19.5 (0.0)           ; 14.5 (0.0)                       ; 5.5 (0.0)                                         ; 10.5 (0.0)                       ; 0.0 (0.0)            ; 16 (0)              ; 18 (0)                    ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |final|clk_gen:inst23                                                                                                      ; work         ;
 ;       |div10_t:inst|                      ; 5.6 (5.6)            ; 2.5 (2.5)                        ; 0.5 (0.5)                                         ; 3.6 (3.6)                        ; 0.0 (0.0)            ; 4 (4)               ; 4 (4)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |final|clk_gen:inst23|div10_t:inst                                                                                         ; work         ;
-;       |div10_t:inst1|                     ; 5.0 (5.0)            ; 4.0 (4.0)                        ; 2.2 (2.2)                                         ; 3.2 (3.2)                        ; 0.0 (0.0)            ; 4 (4)               ; 4 (4)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |final|clk_gen:inst23|div10_t:inst1                                                                                        ; work         ;
-;       |div10_t:inst2|                     ; 6.4 (6.4)            ; 4.0 (4.0)                        ; 1.3 (1.3)                                         ; 3.7 (3.7)                        ; 0.0 (0.0)            ; 4 (4)               ; 4 (4)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |final|clk_gen:inst23|div10_t:inst2                                                                                        ; work         ;
-;       |div10_t:inst3|                     ; 2.5 (2.5)            ; 3.2 (3.2)                        ; 0.7 (0.7)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 4 (4)               ; 6 (6)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |final|clk_gen:inst23|div10_t:inst3                                                                                        ; work         ;
-;    |comparator8:inst1|                    ; 3.3 (3.3)            ; 3.7 (3.7)                        ; 0.3 (0.3)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 4 (4)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |final|comparator8:inst1                                                                                                   ; work         ;
-;    |debounce_g:inst33|                    ; 0.7 (0.7)            ; 0.8 (0.8)                        ; 0.2 (0.2)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 2 (2)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |final|debounce_g:inst33                                                                                                   ; work         ;
+;       |div10_t:inst1|                     ; 5.0 (5.0)            ; 4.0 (4.0)                        ; 2.2 (2.2)                                         ; 3.2 (3.2)                        ; 0.0 (0.0)            ; 4 (4)               ; 5 (5)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |final|clk_gen:inst23|div10_t:inst1                                                                                        ; work         ;
+;       |div10_t:inst2|                     ; 6.4 (6.4)            ; 4.0 (4.0)                        ; 1.3 (1.3)                                         ; 3.7 (3.7)                        ; 0.0 (0.0)            ; 4 (4)               ; 5 (5)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |final|clk_gen:inst23|div10_t:inst2                                                                                        ; work         ;
+;       |div10_t:inst3|                     ; 2.5 (2.5)            ; 4.0 (4.0)                        ; 1.5 (1.5)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 4 (4)               ; 4 (4)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |final|clk_gen:inst23|div10_t:inst3                                                                                        ; work         ;
+;    |comparator8:inst1|                    ; 2.7 (2.7)            ; 2.7 (2.7)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 4 (4)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |final|comparator8:inst1                                                                                                   ; work         ;
+;    |debounce_g:inst33|                    ; 0.7 (0.7)            ; 0.7 (0.7)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 2 (2)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |final|debounce_g:inst33                                                                                                   ; work         ;
 ;    |debounce_g:inst35|                    ; 0.8 (0.8)            ; 1.0 (1.0)                        ; 0.2 (0.2)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 2 (2)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |final|debounce_g:inst35                                                                                                   ; work         ;
-;    |lfsr:inst|                            ; 21.7 (6.0)           ; 23.0 (7.6)                       ; 1.3 (1.6)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 40 (6)              ; 19 (19)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |final|lfsr:inst                                                                                                           ; work         ;
-;       |lpm_divide:Mod0|                   ; 15.4 (0.0)           ; 15.4 (0.0)                       ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 34 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |final|lfsr:inst|lpm_divide:Mod0                                                                                           ; work         ;
-;          |lpm_divide_82m:auto_generated|  ; 15.4 (0.0)           ; 15.4 (0.0)                       ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 34 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |final|lfsr:inst|lpm_divide:Mod0|lpm_divide_82m:auto_generated                                                             ; work         ;
-;             |sign_div_unsign_bkh:divider| ; 15.4 (0.0)           ; 15.4 (0.0)                       ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 34 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |final|lfsr:inst|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider                                 ; work         ;
-;                |alt_u_div_sse:divider|    ; 15.4 (15.4)          ; 15.4 (15.4)                      ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 34 (34)             ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |final|lfsr:inst|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider           ; work         ;
-;    |lfsr_add:inst12|                      ; 22.3 (6.8)           ; 23.8 (8.1)                       ; 1.4 (1.2)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 41 (7)              ; 20 (20)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |final|lfsr_add:inst12                                                                                                     ; work         ;
-;       |lpm_divide:Mod0|                   ; 15.5 (0.0)           ; 15.7 (0.0)                       ; 0.2 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 34 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |final|lfsr_add:inst12|lpm_divide:Mod0                                                                                     ; work         ;
-;          |lpm_divide_82m:auto_generated|  ; 15.5 (0.0)           ; 15.7 (0.0)                       ; 0.2 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 34 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |final|lfsr_add:inst12|lpm_divide:Mod0|lpm_divide_82m:auto_generated                                                       ; work         ;
-;             |sign_div_unsign_bkh:divider| ; 15.5 (0.0)           ; 15.7 (0.0)                       ; 0.2 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 34 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |final|lfsr_add:inst12|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider                           ; work         ;
-;                |alt_u_div_sse:divider|    ; 15.5 (15.5)          ; 15.7 (15.7)                      ; 0.2 (0.2)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 34 (34)             ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |final|lfsr_add:inst12|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider     ; work         ;
-;    |seven:inst11|                         ; 3.3 (3.3)            ; 3.3 (3.3)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |final|seven:inst11                                                                                                        ; work         ;
-;    |vectorToBits:inst21|                  ; 49.4 (8.0)           ; 52.3 (10.3)                      ; 2.8 (2.2)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 105 (9)             ; 22 (22)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |final|vectorToBits:inst21                                                                                                 ; work         ;
-;       |lpm_divide:Mod0|                   ; 13.2 (0.0)           ; 13.2 (0.0)                       ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 32 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |final|vectorToBits:inst21|lpm_divide:Mod0                                                                                 ; work         ;
-;          |lpm_divide_82m:auto_generated|  ; 13.2 (0.0)           ; 13.2 (0.0)                       ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 32 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |final|vectorToBits:inst21|lpm_divide:Mod0|lpm_divide_82m:auto_generated                                                   ; work         ;
-;             |sign_div_unsign_bkh:divider| ; 13.2 (0.0)           ; 13.2 (0.0)                       ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 32 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |final|vectorToBits:inst21|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider                       ; work         ;
-;                |alt_u_div_sse:divider|    ; 13.2 (13.2)          ; 13.2 (13.2)                      ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 32 (32)             ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |final|vectorToBits:inst21|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider ; work         ;
-;       |lpm_divide:Mod1|                   ; 14.3 (0.0)           ; 14.3 (0.0)                       ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 32 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |final|vectorToBits:inst21|lpm_divide:Mod1                                                                                 ; work         ;
-;          |lpm_divide_82m:auto_generated|  ; 14.3 (0.0)           ; 14.3 (0.0)                       ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 32 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |final|vectorToBits:inst21|lpm_divide:Mod1|lpm_divide_82m:auto_generated                                                   ; work         ;
-;             |sign_div_unsign_bkh:divider| ; 14.3 (0.0)           ; 14.3 (0.0)                       ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 32 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |final|vectorToBits:inst21|lpm_divide:Mod1|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider                       ; work         ;
-;                |alt_u_div_sse:divider|    ; 14.3 (14.3)          ; 14.3 (14.3)                      ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 32 (32)             ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |final|vectorToBits:inst21|lpm_divide:Mod1|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider ; work         ;
-;       |lpm_divide:Mod2|                   ; 13.5 (0.0)           ; 14.4 (0.0)                       ; 0.9 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 32 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |final|vectorToBits:inst21|lpm_divide:Mod2                                                                                 ; work         ;
-;          |lpm_divide_82m:auto_generated|  ; 13.5 (0.0)           ; 14.4 (0.0)                       ; 0.9 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 32 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |final|vectorToBits:inst21|lpm_divide:Mod2|lpm_divide_82m:auto_generated                                                   ; work         ;
-;             |sign_div_unsign_bkh:divider| ; 13.5 (0.0)           ; 14.4 (0.0)                       ; 0.9 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 32 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |final|vectorToBits:inst21|lpm_divide:Mod2|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider                       ; work         ;
-;                |alt_u_div_sse:divider|    ; 13.5 (13.5)          ; 14.4 (14.4)                      ; 0.9 (0.9)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 32 (32)             ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |final|vectorToBits:inst21|lpm_divide:Mod2|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider ; work         ;
+;    |lfsr:inst|                            ; 21.7 (6.0)           ; 22.3 (6.7)                       ; 0.7 (0.7)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 40 (6)              ; 16 (16)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |final|lfsr:inst                                                                                                           ; work         ;
+;       |lpm_divide:Mod0|                   ; 15.6 (0.0)           ; 15.6 (0.0)                       ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 34 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |final|lfsr:inst|lpm_divide:Mod0                                                                                           ; work         ;
+;          |lpm_divide_82m:auto_generated|  ; 15.6 (0.0)           ; 15.6 (0.0)                       ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 34 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |final|lfsr:inst|lpm_divide:Mod0|lpm_divide_82m:auto_generated                                                             ; work         ;
+;             |sign_div_unsign_bkh:divider| ; 15.6 (0.0)           ; 15.6 (0.0)                       ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 34 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |final|lfsr:inst|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider                                 ; work         ;
+;                |alt_u_div_sse:divider|    ; 15.6 (15.6)          ; 15.6 (15.6)                      ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 34 (34)             ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |final|lfsr:inst|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider           ; work         ;
+;    |lfsr_add:inst12|                      ; 22.3 (6.8)           ; 24.6 (8.7)                       ; 2.2 (1.8)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 41 (7)              ; 15 (15)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |final|lfsr_add:inst12                                                                                                     ; work         ;
+;       |lpm_divide:Mod0|                   ; 15.5 (0.0)           ; 15.9 (0.0)                       ; 0.4 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 34 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |final|lfsr_add:inst12|lpm_divide:Mod0                                                                                     ; work         ;
+;          |lpm_divide_82m:auto_generated|  ; 15.5 (0.0)           ; 15.9 (0.0)                       ; 0.4 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 34 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |final|lfsr_add:inst12|lpm_divide:Mod0|lpm_divide_82m:auto_generated                                                       ; work         ;
+;             |sign_div_unsign_bkh:divider| ; 15.5 (0.0)           ; 15.9 (0.0)                       ; 0.4 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 34 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |final|lfsr_add:inst12|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider                           ; work         ;
+;                |alt_u_div_sse:divider|    ; 15.5 (15.5)          ; 15.9 (15.9)                      ; 0.4 (0.4)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 34 (34)             ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |final|lfsr_add:inst12|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider     ; work         ;
+;    |seven:inst11|                         ; 3.3 (3.3)            ; 3.5 (3.5)                        ; 0.2 (0.2)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |final|seven:inst11                                                                                                        ; work         ;
+;    |vectorToBits:inst21|                  ; 49.2 (8.3)           ; 55.3 (13.0)                      ; 6.2 (4.7)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 105 (9)             ; 23 (23)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |final|vectorToBits:inst21                                                                                                 ; work         ;
+;       |lpm_divide:Mod0|                   ; 14.5 (0.0)           ; 14.5 (0.0)                       ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 32 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |final|vectorToBits:inst21|lpm_divide:Mod0                                                                                 ; work         ;
+;          |lpm_divide_82m:auto_generated|  ; 14.5 (0.0)           ; 14.5 (0.0)                       ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 32 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |final|vectorToBits:inst21|lpm_divide:Mod0|lpm_divide_82m:auto_generated                                                   ; work         ;
+;             |sign_div_unsign_bkh:divider| ; 14.5 (0.0)           ; 14.5 (0.0)                       ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 32 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |final|vectorToBits:inst21|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider                       ; work         ;
+;                |alt_u_div_sse:divider|    ; 14.5 (14.5)          ; 14.5 (14.5)                      ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 32 (32)             ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |final|vectorToBits:inst21|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider ; work         ;
+;       |lpm_divide:Mod1|                   ; 12.8 (0.0)           ; 14.3 (0.0)                       ; 1.6 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 32 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |final|vectorToBits:inst21|lpm_divide:Mod1                                                                                 ; work         ;
+;          |lpm_divide_82m:auto_generated|  ; 12.8 (0.0)           ; 14.3 (0.0)                       ; 1.6 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 32 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |final|vectorToBits:inst21|lpm_divide:Mod1|lpm_divide_82m:auto_generated                                                   ; work         ;
+;             |sign_div_unsign_bkh:divider| ; 12.8 (0.0)           ; 14.3 (0.0)                       ; 1.6 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 32 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |final|vectorToBits:inst21|lpm_divide:Mod1|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider                       ; work         ;
+;                |alt_u_div_sse:divider|    ; 12.8 (12.8)          ; 14.3 (14.3)                      ; 1.6 (1.6)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 32 (32)             ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |final|vectorToBits:inst21|lpm_divide:Mod1|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider ; work         ;
+;       |lpm_divide:Mod2|                   ; 13.5 (0.0)           ; 13.5 (0.0)                       ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 32 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |final|vectorToBits:inst21|lpm_divide:Mod2                                                                                 ; work         ;
+;          |lpm_divide_82m:auto_generated|  ; 13.5 (0.0)           ; 13.5 (0.0)                       ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 32 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |final|vectorToBits:inst21|lpm_divide:Mod2|lpm_divide_82m:auto_generated                                                   ; work         ;
+;             |sign_div_unsign_bkh:divider| ; 13.5 (0.0)           ; 13.5 (0.0)                       ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 32 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |final|vectorToBits:inst21|lpm_divide:Mod2|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider                       ; work         ;
+;                |alt_u_div_sse:divider|    ; 13.5 (13.5)          ; 13.5 (13.5)                      ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 32 (32)             ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |final|vectorToBits:inst21|lpm_divide:Mod2|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider ; work         ;
 +-------------------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+----------------------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -1047,7 +1044,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; de3   ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
 ; e2    ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
 ; ps3   ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
-; c13   ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; c13   ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; clk   ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 +-------+----------+----+------+------+----+------+-------+--------+------------------------+--------------------------+
 
@@ -1061,29 +1058,29 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; ps3                                  ;                   ;         ;
 ;      - debounce_g:inst35|1           ; 1                 ; 0       ;
 ; c13                                  ;                   ;         ;
-;      - debounce_g:inst33|1~feeder    ; 0                 ; 0       ;
+;      - debounce_g:inst33|1           ; 1                 ; 0       ;
 ; clk                                  ;                   ;         ;
 ;      - clk_gen:inst23|div10_t:inst|2 ; 0                 ; 0       ;
 +--------------------------------------+-------------------+---------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Control Signals                                                                                                                                               ;
-+--------------------------------+----------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
-; Name                           ; Location             ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+--------------------------------+----------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
-; Point:inst10|temp[4]~0         ; LABCELL_X29_Y21_N45  ; 9       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; clk                            ; PIN_W16              ; 2       ; Clock        ; no     ; --                   ; --               ; --                        ;
-; clk                            ; PIN_W16              ; 3       ; Clock        ; yes    ; Global Clock         ; GCLK6            ; --                        ;
-; clk_gen:inst23|div10_t:inst1|2 ; FF_X35_Y17_N14       ; 6       ; Clock        ; no     ; --                   ; --               ; --                        ;
-; clk_gen:inst23|div10_t:inst2|2 ; FF_X35_Y17_N11       ; 8       ; Clock        ; no     ; --                   ; --               ; --                        ;
-; clk_gen:inst23|div10_t:inst3|2 ; FF_X32_Y21_N59       ; 58      ; Clock        ; no     ; --                   ; --               ; --                        ;
-; clk_gen:inst23|div10_t:inst|2  ; FF_X34_Y13_N44       ; 6       ; Clock        ; no     ; --                   ; --               ; --                        ;
-; inst15                         ; LABCELL_X29_Y21_N9   ; 20      ; Clock        ; no     ; --                   ; --               ; --                        ;
-; inst17~1                       ; LABCELL_X29_Y21_N24  ; 9       ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
-; inst6                          ; LABCELL_X29_Y21_N0   ; 10      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; inst9                          ; MLABCELL_X28_Y21_N12 ; 19      ; Clock        ; no     ; --                   ; --               ; --                        ;
-+--------------------------------+----------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Control Signals                                                                                                                                              ;
++--------------------------------+---------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
+; Name                           ; Location            ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++--------------------------------+---------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
+; Point:inst10|temp[4]~0         ; LABCELL_X35_Y19_N39 ; 9       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; clk                            ; PIN_W16             ; 2       ; Clock        ; no     ; --                   ; --               ; --                        ;
+; clk                            ; PIN_W16             ; 3       ; Clock        ; yes    ; Global Clock         ; GCLK6            ; --                        ;
+; clk_gen:inst23|div10_t:inst1|2 ; FF_X36_Y12_N41      ; 7       ; Clock        ; no     ; --                   ; --               ; --                        ;
+; clk_gen:inst23|div10_t:inst2|2 ; FF_X36_Y13_N20      ; 6       ; Clock        ; no     ; --                   ; --               ; --                        ;
+; clk_gen:inst23|div10_t:inst3|2 ; FF_X36_Y13_N14      ; 62      ; Clock        ; no     ; --                   ; --               ; --                        ;
+; clk_gen:inst23|div10_t:inst|2  ; FF_X37_Y13_N20      ; 7       ; Clock        ; no     ; --                   ; --               ; --                        ;
+; inst15                         ; LABCELL_X35_Y19_N0  ; 15      ; Clock        ; no     ; --                   ; --               ; --                        ;
+; inst17~1                       ; LABCELL_X35_Y19_N12 ; 9       ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; inst6                          ; LABCELL_X35_Y19_N48 ; 10      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; inst9                          ; LABCELL_X36_Y19_N24 ; 16      ; Clock        ; no     ; --                   ; --               ; --                        ;
++--------------------------------+---------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 
 
 +-------------------------------------------------------------------------------------------------+
@@ -1100,27 +1097,28 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------------------------------------------------------------------------------------------------------------------------+---------+
 ; Name                                                                                                                                           ; Fan-Out ;
 +------------------------------------------------------------------------------------------------------------------------------------------------+---------+
-; clk_gen:inst23|div10_t:inst3|2                                                                                                                 ; 58      ;
-; inst15                                                                                                                                         ; 20      ;
-; inst9                                                                                                                                          ; 19      ;
+; clk_gen:inst23|div10_t:inst3|2                                                                                                                 ; 62      ;
+; inst9                                                                                                                                          ; 16      ;
+; inst15                                                                                                                                         ; 15      ;
 ; comparator8:inst1|LessThan0~3                                                                                                                  ; 14      ;
 ; inst6                                                                                                                                          ; 10      ;
 ; lfsr_add:inst12|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|add_sub_3_result_int[4]~1      ; 10      ;
 ; lfsr:inst|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|add_sub_3_result_int[4]~1            ; 10      ;
 ; lfsr_add:inst12|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_5~1                         ; 10      ;
 ; lfsr:inst|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_5~1                               ; 10      ;
-; vectorToBits:inst21|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|add_sub_3_result_int[4]~1  ; 10      ;
 ; vectorToBits:inst21|lpm_divide:Mod2|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|add_sub_3_result_int[4]~1  ; 10      ;
+; vectorToBits:inst21|lpm_divide:Mod1|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|add_sub_3_result_int[4]~1  ; 10      ;
 ; Point:inst10|temp[4]~0                                                                                                                         ; 9       ;
 ; inst17~1                                                                                                                                       ; 9       ;
-; vectorToBits:inst21|lpm_divide:Mod1|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_4~1                     ; 9       ;
+; vectorToBits:inst21|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_4~1                     ; 9       ;
 ; lfsr_add:inst12|outt[1]                                                                                                                        ; 8       ;
-; clk_gen:inst23|div10_t:inst2|2                                                                                                                 ; 8       ;
 ; vectorToBits:inst21|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_5~1                     ; 8       ;
 ; vectorToBits:inst21|lpm_divide:Mod2|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_5~1                     ; 8       ;
 ; vectorToBits:inst21|lpm_divide:Mod1|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_5~1                     ; 8       ;
+; clk_gen:inst23|div10_t:inst|2                                                                                                                  ; 7       ;
 ; lfsr_add:inst12|outt[0]                                                                                                                        ; 7       ;
-; lfsr:inst|outt[1]                                                                                                                              ; 7       ;
+; clk_gen:inst23|div10_t:inst1|2                                                                                                                 ; 7       ;
+; lfsr:inst|outt[2]                                                                                                                              ; 7       ;
 ; lfsr_add:inst12|outt[3]                                                                                                                        ; 7       ;
 ; lfsr_add:inst12|outt[4]                                                                                                                        ; 7       ;
 ; lfsr:inst|outt[4]                                                                                                                              ; 7       ;
@@ -1128,107 +1126,101 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; vectorToBits:inst21|a2                                                                                                                         ; 7       ;
 ; vectorToBits:inst21|a1                                                                                                                         ; 7       ;
 ; vectorToBits:inst21|a0                                                                                                                         ; 7       ;
-; clk_gen:inst23|div10_t:inst|2                                                                                                                  ; 6       ;
+; lfsr:inst|outt[0]~DUPLICATE                                                                                                                    ; 6       ;
+; lfsr_add:inst12|tempInt[0]                                                                                                                     ; 6       ;
 ; lfsr:inst|tempInt[0]                                                                                                                           ; 6       ;
-; clk_gen:inst23|div10_t:inst1|2                                                                                                                 ; 6       ;
+; lfsr:inst|outt[3]                                                                                                                              ; 6       ;
+; clk_gen:inst23|div10_t:inst2|2                                                                                                                 ; 6       ;
 ; vectorToBits:inst21|de[2]                                                                                                                      ; 6       ;
-; vectorToBits:inst21|de[1]                                                                                                                      ; 6       ;
 ; vectorToBits:inst21|de[0]                                                                                                                      ; 6       ;
 ; Point:inst10|nextC[3]                                                                                                                          ; 6       ;
 ; Point:inst10|nextC[2]                                                                                                                          ; 6       ;
 ; Point:inst10|nextC[1]                                                                                                                          ; 6       ;
 ; Point:inst4|nextC[4]                                                                                                                           ; 6       ;
-; Point:inst4|nextC[2]                                                                                                                           ; 6       ;
-; Point:inst4|nextC[1]                                                                                                                           ; 6       ;
 ; lfsr_add:inst12|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_6~1                         ; 6       ;
 ; lfsr:inst|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_6~1                               ; 6       ;
+; Point:inst4|nextC[2]~DUPLICATE                                                                                                                 ; 5       ;
+; Point:inst4|nextC[1]~DUPLICATE                                                                                                                 ; 5       ;
+; lfsr_add:inst12|tempInt[1]                                                                                                                     ; 5       ;
 ; lfsr:inst|tempInt[1]                                                                                                                           ; 5       ;
-; lfsr_add:inst12|outt[2]                                                                                                                        ; 5       ;
-; lfsr:inst|outt[2]                                                                                                                              ; 5       ;
-; lfsr:inst|outt[3]                                                                                                                              ; 5       ;
 ; debounce_g:inst33|1                                                                                                                            ; 5       ;
 ; Point:inst10|nextC[4]                                                                                                                          ; 5       ;
 ; Point:inst10|nextC[0]                                                                                                                          ; 5       ;
 ; Point:inst4|nextC[3]                                                                                                                           ; 5       ;
 ; Point:inst4|nextC[5]                                                                                                                           ; 5       ;
 ; cardNum:inst7|nextC[2]                                                                                                                         ; 5       ;
-; lfsr_add:inst12|tempInt[1]~DUPLICATE                                                                                                           ; 4       ;
-; lfsr_add:inst12|tempInt[0]~DUPLICATE                                                                                                           ; 4       ;
 ; clk_gen:inst23|div10_t:inst|5                                                                                                                  ; 4       ;
-; clk_gen:inst23|div10_t:inst1|5                                                                                                                 ; 4       ;
+; lfsr_add:inst12|tempInt[2]                                                                                                                     ; 4       ;
 ; lfsr:inst|tempInt[2]                                                                                                                           ; 4       ;
-; clk_gen:inst23|div10_t:inst2|5                                                                                                                 ; 4       ;
-; lfsr:inst|outt[0]                                                                                                                              ; 4       ;
+; lfsr:inst|outt[1]                                                                                                                              ; 4       ;
+; lfsr_add:inst12|outt[2]                                                                                                                        ; 4       ;
 ; lfsr_add:inst12|outt[5]                                                                                                                        ; 4       ;
 ; lfsr:inst|outt[5]                                                                                                                              ; 4       ;
+; clk_gen:inst23|div10_t:inst3|5                                                                                                                 ; 4       ;
 ; vectorToBits:inst21|a2~1                                                                                                                       ; 4       ;
 ; vectorToBits:inst21|a2~0                                                                                                                       ; 4       ;
 ; debounce_g:inst33|2                                                                                                                            ; 4       ;
 ; Point:inst10|nextC[5]                                                                                                                          ; 4       ;
-; Point:inst4|nextC[0]                                                                                                                           ; 4       ;
 ; cardNum:inst13|nextC[2]                                                                                                                        ; 4       ;
-; vectorToBits:inst21|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_6~1                     ; 4       ;
+; vectorToBits:inst21|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_6~5                     ; 4       ;
 ; vectorToBits:inst21|lpm_divide:Mod2|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_6~1                     ; 4       ;
-; vectorToBits:inst21|lpm_divide:Mod1|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_6~5                     ; 4       ;
+; vectorToBits:inst21|lpm_divide:Mod1|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_6~1                     ; 4       ;
 ; cardNum:inst7|nextC[1]                                                                                                                         ; 4       ;
-; lfsr:inst|outt[0]~DUPLICATE                                                                                                                    ; 3       ;
-; clk_gen:inst23|div10_t:inst3|5~DUPLICATE                                                                                                       ; 3       ;
+; clk_gen:inst23|div10_t:inst1|5~DUPLICATE                                                                                                       ; 3       ;
+; lfsr:inst|outt[1]~DUPLICATE                                                                                                                    ; 3       ;
+; clk_gen:inst23|div10_t:inst2|5~DUPLICATE                                                                                                       ; 3       ;
+; lfsr_add:inst12|outt[2]~DUPLICATE                                                                                                              ; 3       ;
+; vectorToBits:inst21|de[1]~DUPLICATE                                                                                                            ; 3       ;
+; Point:inst4|nextC[0]~DUPLICATE                                                                                                                 ; 3       ;
 ; lfsr_add:inst12|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[21]~7                 ; 3       ;
 ; lfsr_add:inst12|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[21]~6                 ; 3       ;
 ; clk_gen:inst23|div10_t:inst|3                                                                                                                  ; 3       ;
 ; lfsr:inst|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[21]~7                       ; 3       ;
 ; lfsr:inst|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[21]~6                       ; 3       ;
 ; clk_gen:inst23|div10_t:inst1|3                                                                                                                 ; 3       ;
+; lfsr_add:inst12|tempInt[3]                                                                                                                     ; 3       ;
 ; clk_gen:inst23|div10_t:inst2|3                                                                                                                 ; 3       ;
-; vectorToBits:inst21|lpm_divide:Mod1|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[18]~2             ; 3       ;
+; vectorToBits:inst21|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[18]~2             ; 3       ;
 ; inst17~0                                                                                                                                       ; 3       ;
 ; lfsr_add:inst12|add                                                                                                                            ; 3       ;
 ; clk_gen:inst23|div10_t:inst3|3                                                                                                                 ; 3       ;
+; vectorToBits:inst21|de[1]                                                                                                                      ; 3       ;
 ; debounce_g:inst35|1                                                                                                                            ; 3       ;
 ; cardNum:inst13|nextC[1]                                                                                                                        ; 3       ;
 ; cardNum:inst7|nextC[0]                                                                                                                         ; 3       ;
-; lfsr_add:inst12|tempInt[3]~DUPLICATE                                                                                                           ; 2       ;
 ; lfsr:inst|tempInt[3]~DUPLICATE                                                                                                                 ; 2       ;
-; lfsr_add:inst12|tempInt[2]~DUPLICATE                                                                                                           ; 2       ;
-; lfsr_add:inst12|outt[2]~DUPLICATE                                                                                                              ; 2       ;
-; lfsr:inst|outt[2]~DUPLICATE                                                                                                                    ; 2       ;
-; clk_gen:inst23|div10_t:inst3|5~0                                                                                                               ; 2       ;
-; lfsr:inst|temp~0                                                                                                                               ; 2       ;
-; lfsr_add:inst12|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[34]~11                ; 2       ;
+; clk_gen:inst23|div10_t:inst1|5~0                                                                                                               ; 2       ;
+; clk_gen:inst23|div10_t:inst2|5~0                                                                                                               ; 2       ;
 ; lfsr_add:inst12|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[20]~10                ; 2       ;
 ; lfsr_add:inst12|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[20]~9                 ; 2       ;
 ; lfsr_add:inst12|temp                                                                                                                           ; 2       ;
 ; clk_gen:inst23|div10_t:inst|1                                                                                                                  ; 2       ;
-; lfsr:inst|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[34]~11                      ; 2       ;
 ; lfsr:inst|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[20]~10                      ; 2       ;
 ; lfsr:inst|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[20]~9                       ; 2       ;
-; lfsr_add:inst12|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[33]~5                 ; 2       ;
+; lfsr:inst|temp                                                                                                                                 ; 2       ;
 ; lfsr_add:inst12|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[19]~4                 ; 2       ;
 ; lfsr:inst|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[33]~5                       ; 2       ;
 ; lfsr:inst|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[19]~4                       ; 2       ;
-; lfsr_add:inst12|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[32]~3                 ; 2       ;
 ; lfsr_add:inst12|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[18]~2                 ; 2       ;
 ; lfsr:inst|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[18]~2                       ; 2       ;
-; lfsr_add:inst12|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[31]~1                 ; 2       ;
-; vectorToBits:inst21|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[21]~9             ; 2       ;
-; vectorToBits:inst21|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[21]~8             ; 2       ;
 ; vectorToBits:inst21|lpm_divide:Mod2|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[21]~9             ; 2       ;
 ; vectorToBits:inst21|lpm_divide:Mod2|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[21]~8             ; 2       ;
-; lfsr_add:inst12|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[30]~0                 ; 2       ;
+; vectorToBits:inst21|lpm_divide:Mod1|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[21]~9             ; 2       ;
+; vectorToBits:inst21|lpm_divide:Mod1|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[21]~8             ; 2       ;
+; lfsr_add:inst12|tempInt[4]                                                                                                                     ; 2       ;
+; lfsr:inst|Add0~4                                                                                                                               ; 2       ;
 ; clk_gen:inst23|div10_t:inst1|1                                                                                                                 ; 2       ;
 ; lfsr:inst|Add0~3                                                                                                                               ; 2       ;
+; lfsr:inst|tempInt[4]                                                                                                                           ; 2       ;
 ; lfsr_add:inst12|Add0~2                                                                                                                         ; 2       ;
-; lfsr:inst|Add0~2                                                                                                                               ; 2       ;
-; lfsr_add:inst12|tempInt[2]                                                                                                                     ; 2       ;
-; lfsr:inst|Add0~1                                                                                                                               ; 2       ;
-; lfsr_add:inst12|tempInt[0]                                                                                                                     ; 2       ;
 ; clk_gen:inst23|div10_t:inst2|1                                                                                                                 ; 2       ;
-; clk_gen:inst23|div10_t:inst3|1~0                                                                                                               ; 2       ;
-; vectorToBits:inst21|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[19]~4             ; 2       ;
+; vectorToBits:inst21|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[19]~3             ; 2       ;
 ; vectorToBits:inst21|lpm_divide:Mod2|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[19]~4             ; 2       ;
-; vectorToBits:inst21|lpm_divide:Mod1|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[19]~3             ; 2       ;
-; vectorToBits:inst21|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[18]~2             ; 2       ;
+; vectorToBits:inst21|lpm_divide:Mod1|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[19]~4             ; 2       ;
 ; vectorToBits:inst21|lpm_divide:Mod2|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[18]~2             ; 2       ;
+; vectorToBits:inst21|lpm_divide:Mod1|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[18]~2             ; 2       ;
+; vectorToBits:inst21|Mux1~0                                                                                                                     ; 2       ;
+; clk_gen:inst23|div10_t:inst3|1                                                                                                                 ; 2       ;
 ; debounce_g:inst35|2                                                                                                                            ; 2       ;
 ; lfsr_add:inst12|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_5~21                        ; 2       ;
 ; lfsr_add:inst12|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|add_sub_3_result_int[2]~17     ; 2       ;
@@ -1240,129 +1232,130 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; lfsr_add:inst12|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|add_sub_3_result_int[1]~9      ; 2       ;
 ; lfsr:inst|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_5~13                              ; 2       ;
 ; lfsr:inst|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|add_sub_3_result_int[1]~9            ; 2       ;
-; vectorToBits:inst21|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|add_sub_3_result_int[2]~17 ; 2       ;
-; vectorToBits:inst21|lpm_divide:Mod2|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|add_sub_3_result_int[2]~17 ; 2       ;
-; vectorToBits:inst21|lpm_divide:Mod1|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_4~21                    ; 2       ;
+; vectorToBits:inst21|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_4~21                    ; 2       ;
 ; lfsr_add:inst12|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_5~9                         ; 2       ;
 ; lfsr_add:inst12|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|add_sub_3_result_int[0]~5      ; 2       ;
 ; lfsr:inst|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_5~9                               ; 2       ;
 ; lfsr:inst|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|add_sub_3_result_int[0]~5            ; 2       ;
+; vectorToBits:inst21|lpm_divide:Mod2|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|add_sub_3_result_int[2]~17 ; 2       ;
+; vectorToBits:inst21|lpm_divide:Mod1|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|add_sub_3_result_int[2]~17 ; 2       ;
 ; lfsr_add:inst12|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_5~5                         ; 2       ;
 ; lfsr:inst|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_5~5                               ; 2       ;
 ; cardNum:inst13|nextC[0]                                                                                                                        ; 2       ;
-; vectorToBits:inst21|lpm_divide:Mod1|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_4~13                    ; 2       ;
+; vectorToBits:inst21|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_4~13                    ; 2       ;
 ; vectorToBits:inst21|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_5~13                    ; 2       ;
-; vectorToBits:inst21|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|add_sub_3_result_int[1]~9  ; 2       ;
+; vectorToBits:inst21|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_4~9                     ; 2       ;
 ; vectorToBits:inst21|lpm_divide:Mod2|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_5~13                    ; 2       ;
 ; vectorToBits:inst21|lpm_divide:Mod2|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|add_sub_3_result_int[1]~9  ; 2       ;
 ; vectorToBits:inst21|lpm_divide:Mod1|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_5~13                    ; 2       ;
-; vectorToBits:inst21|lpm_divide:Mod1|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_4~9                     ; 2       ;
+; vectorToBits:inst21|lpm_divide:Mod1|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|add_sub_3_result_int[1]~9  ; 2       ;
 ; vectorToBits:inst21|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_5~9                     ; 2       ;
-; vectorToBits:inst21|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|add_sub_3_result_int[0]~5  ; 2       ;
 ; vectorToBits:inst21|lpm_divide:Mod2|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_5~9                     ; 2       ;
 ; vectorToBits:inst21|lpm_divide:Mod2|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|add_sub_3_result_int[0]~5  ; 2       ;
 ; vectorToBits:inst21|lpm_divide:Mod1|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_5~9                     ; 2       ;
+; vectorToBits:inst21|lpm_divide:Mod1|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|add_sub_3_result_int[0]~5  ; 2       ;
 ; vectorToBits:inst21|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_5~5                     ; 2       ;
 ; vectorToBits:inst21|lpm_divide:Mod2|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_5~5                     ; 2       ;
 ; vectorToBits:inst21|lpm_divide:Mod1|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_5~5                     ; 2       ;
-; lfsr:inst|temp~DUPLICATE                                                                                                                       ; 1       ;
-; lfsr_add:inst12|tempInt[4]~DUPLICATE                                                                                                           ; 1       ;
-; lfsr:inst|tempInt[4]~DUPLICATE                                                                                                                 ; 1       ;
-; lfsr:inst|outt[3]~DUPLICATE                                                                                                                    ; 1       ;
-; clk_gen:inst23|div10_t:inst3|1~DUPLICATE                                                                                                       ; 1       ;
+; Point:inst4|temp[2]                                                                                                                            ; 2       ;
+; Point:inst4|temp[1]                                                                                                                            ; 2       ;
+; Point:inst4|temp[0]                                                                                                                            ; 2       ;
 ; clk~input                                                                                                                                      ; 1       ;
 ; c13~input                                                                                                                                      ; 1       ;
 ; ps3~input                                                                                                                                      ; 1       ;
 ; cardNum:inst7|nextC[2]~_wirecell                                                                                                               ; 1       ;
 ; cardNum:inst13|nextC[2]~_wirecell                                                                                                              ; 1       ;
 ; clk_gen:inst23|div10_t:inst|5~0                                                                                                                ; 1       ;
-; clk_gen:inst23|div10_t:inst1|5~0                                                                                                               ; 1       ;
-; clk_gen:inst23|div10_t:inst2|5~0                                                                                                               ; 1       ;
-; vectorToBits:inst21|lpm_divide:Mod1|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[32]~10            ; 1       ;
+; clk_gen:inst23|div10_t:inst3|5~0                                                                                                               ; 1       ;
+; vectorToBits:inst21|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[32]~10            ; 1       ;
 ; lfsr_add:inst12|temp~0                                                                                                                         ; 1       ;
 ; clk_gen:inst23|div10_t:inst|1~0                                                                                                                ; 1       ;
 ; clk_gen:inst23|div10_t:inst|3~0                                                                                                                ; 1       ;
+; lfsr:inst|temp~0                                                                                                                               ; 1       ;
 ; lfsr_add:inst12|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[19]~13                ; 1       ;
 ; lfsr_add:inst12|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[19]~12                ; 1       ;
 ; lfsr:inst|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[19]~13                      ; 1       ;
 ; lfsr:inst|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[19]~12                      ; 1       ;
-; vectorToBits:inst21|lpm_divide:Mod1|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[20]~9             ; 1       ;
-; vectorToBits:inst21|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[20]~11            ; 1       ;
-; vectorToBits:inst21|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[20]~10            ; 1       ;
+; vectorToBits:inst21|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[20]~9             ; 1       ;
+; vectorToBits:inst21|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[20]~8             ; 1       ;
+; vectorToBits:inst21|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[20]~7             ; 1       ;
 ; vectorToBits:inst21|lpm_divide:Mod2|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[20]~11            ; 1       ;
 ; vectorToBits:inst21|lpm_divide:Mod2|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[20]~10            ; 1       ;
-; vectorToBits:inst21|lpm_divide:Mod1|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[20]~8             ; 1       ;
-; vectorToBits:inst21|lpm_divide:Mod1|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[20]~7             ; 1       ;
+; vectorToBits:inst21|lpm_divide:Mod1|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[20]~11            ; 1       ;
+; vectorToBits:inst21|lpm_divide:Mod1|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[20]~10            ; 1       ;
 ; cardNum:inst13|Add0~1                                                                                                                          ; 1       ;
 ; cardNum:inst13|Add0~0                                                                                                                          ; 1       ;
+; lfsr_add:inst12|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[34]~11                ; 1       ;
 ; lfsr_add:inst12|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[35]~8                 ; 1       ;
 ; clk_gen:inst23|div10_t:inst|2~0                                                                                                                ; 1       ;
 ; clk_gen:inst23|div10_t:inst1|1~0                                                                                                               ; 1       ;
 ; clk_gen:inst23|div10_t:inst1|3~0                                                                                                               ; 1       ;
+; lfsr:inst|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[34]~11                      ; 1       ;
 ; lfsr:inst|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[35]~8                       ; 1       ;
-; lfsr:inst|temp                                                                                                                                 ; 1       ;
+; lfsr_add:inst12|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[33]~5                 ; 1       ;
+; lfsr_add:inst12|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[32]~3                 ; 1       ;
 ; lfsr:inst|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[32]~3                       ; 1       ;
+; lfsr_add:inst12|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[31]~1                 ; 1       ;
 ; lfsr:inst|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[31]~1                       ; 1       ;
-; vectorToBits:inst21|lpm_divide:Mod1|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[21]~6             ; 1       ;
-; vectorToBits:inst21|lpm_divide:Mod1|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[21]~5             ; 1       ;
+; vectorToBits:inst21|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[21]~6             ; 1       ;
+; vectorToBits:inst21|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[21]~5             ; 1       ;
+; lfsr_add:inst12|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[30]~0                 ; 1       ;
 ; lfsr:inst|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[30]~0                       ; 1       ;
 ; inst15~0                                                                                                                                       ; 1       ;
 ; lfsr_add:inst12|Add0~4                                                                                                                         ; 1       ;
 ; lfsr_add:inst12|Add0~3                                                                                                                         ; 1       ;
-; lfsr_add:inst12|tempInt[4]                                                                                                                     ; 1       ;
 ; lfsr_add:inst12|tempInt[5]                                                                                                                     ; 1       ;
-; lfsr:inst|Add0~4                                                                                                                               ; 1       ;
 ; clk_gen:inst23|div10_t:inst1|2~0                                                                                                               ; 1       ;
+; clk_gen:inst23|div10_t:inst1|5                                                                                                                 ; 1       ;
 ; clk_gen:inst23|div10_t:inst2|1~0                                                                                                               ; 1       ;
 ; clk_gen:inst23|div10_t:inst2|3~0                                                                                                               ; 1       ;
-; lfsr:inst|tempInt[4]                                                                                                                           ; 1       ;
 ; lfsr:inst|tempInt[5]                                                                                                                           ; 1       ;
-; vectorToBits:inst21|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[19]~7             ; 1       ;
-; vectorToBits:inst21|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[19]~6             ; 1       ;
+; lfsr:inst|Add0~2                                                                                                                               ; 1       ;
+; lfsr:inst|tempInt[3]                                                                                                                           ; 1       ;
 ; vectorToBits:inst21|lpm_divide:Mod2|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[19]~7             ; 1       ;
 ; vectorToBits:inst21|lpm_divide:Mod2|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[19]~6             ; 1       ;
-; lfsr_add:inst12|tempInt[3]                                                                                                                     ; 1       ;
-; lfsr:inst|tempInt[3]                                                                                                                           ; 1       ;
+; vectorToBits:inst21|lpm_divide:Mod1|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[19]~7             ; 1       ;
+; vectorToBits:inst21|lpm_divide:Mod1|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[19]~6             ; 1       ;
 ; lfsr_add:inst12|Add0~1                                                                                                                         ; 1       ;
+; lfsr:inst|Add0~1                                                                                                                               ; 1       ;
 ; lfsr_add:inst12|Add0~0                                                                                                                         ; 1       ;
-; lfsr_add:inst12|tempInt[1]                                                                                                                     ; 1       ;
 ; lfsr:inst|Add0~0                                                                                                                               ; 1       ;
 ; lfsr_add:inst12|add~0                                                                                                                          ; 1       ;
 ; clk_gen:inst23|div10_t:inst2|2~0                                                                                                               ; 1       ;
+; clk_gen:inst23|div10_t:inst2|5                                                                                                                 ; 1       ;
+; clk_gen:inst23|div10_t:inst3|1~0                                                                                                               ; 1       ;
 ; clk_gen:inst23|div10_t:inst3|3~0                                                                                                               ; 1       ;
-; vectorToBits:inst21|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[33]~5             ; 1       ;
+; lfsr:inst|outt[0]                                                                                                                              ; 1       ;
+; vectorToBits:inst21|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[33]~4             ; 1       ;
 ; vectorToBits:inst21|lpm_divide:Mod2|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[33]~5             ; 1       ;
-; vectorToBits:inst21|lpm_divide:Mod1|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[33]~4             ; 1       ;
-; vectorToBits:inst21|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[32]~3             ; 1       ;
+; vectorToBits:inst21|lpm_divide:Mod1|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[33]~5             ; 1       ;
 ; vectorToBits:inst21|lpm_divide:Mod2|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[32]~3             ; 1       ;
+; vectorToBits:inst21|lpm_divide:Mod1|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[32]~3             ; 1       ;
 ; vectorToBits:inst21|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[31]~1             ; 1       ;
 ; vectorToBits:inst21|lpm_divide:Mod2|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[31]~1             ; 1       ;
 ; vectorToBits:inst21|lpm_divide:Mod1|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[31]~1             ; 1       ;
 ; vectorToBits:inst21|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[30]~0             ; 1       ;
 ; vectorToBits:inst21|lpm_divide:Mod2|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[30]~0             ; 1       ;
 ; vectorToBits:inst21|Mux2~0                                                                                                                     ; 1       ;
-; vectorToBits:inst21|Mux1~0                                                                                                                     ; 1       ;
 ; vectorToBits:inst21|Mux0~0                                                                                                                     ; 1       ;
 ; vectorToBits:inst21|lpm_divide:Mod1|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[30]~0             ; 1       ;
 ; clk_gen:inst23|div10_t:inst3|2~0                                                                                                               ; 1       ;
-; clk_gen:inst23|div10_t:inst3|5                                                                                                                 ; 1       ;
-; clk_gen:inst23|div10_t:inst3|1                                                                                                                 ; 1       ;
 ; vectorToBits:inst21|Mux3~0                                                                                                                     ; 1       ;
-; vectorToBits:inst21|ten[2]                                                                                                                     ; 1       ;
+; vectorToBits:inst21|temp[2]                                                                                                                    ; 1       ;
 ; vectorToBits:inst21|tenMOM[2]                                                                                                                  ; 1       ;
-; vectorToBits:inst21|tempP[2]                                                                                                                   ; 1       ;
+; vectorToBits:inst21|tenP[2]                                                                                                                    ; 1       ;
 ; vectorToBits:inst21|Mux4~0                                                                                                                     ; 1       ;
-; vectorToBits:inst21|ten[3]                                                                                                                     ; 1       ;
+; vectorToBits:inst21|temp[3]                                                                                                                    ; 1       ;
 ; vectorToBits:inst21|tenMOM[3]                                                                                                                  ; 1       ;
-; vectorToBits:inst21|tempP[3]                                                                                                                   ; 1       ;
+; vectorToBits:inst21|tenP[3]                                                                                                                    ; 1       ;
 ; vectorToBits:inst21|Mux5~0                                                                                                                     ; 1       ;
-; vectorToBits:inst21|ten[4]                                                                                                                     ; 1       ;
+; vectorToBits:inst21|temp[4]                                                                                                                    ; 1       ;
 ; vectorToBits:inst21|tenMOM[4]                                                                                                                  ; 1       ;
-; vectorToBits:inst21|tempP[4]                                                                                                                   ; 1       ;
+; vectorToBits:inst21|tenP[4]                                                                                                                    ; 1       ;
 ; vectorToBits:inst21|Mux6~0                                                                                                                     ; 1       ;
-; vectorToBits:inst21|ten[5]                                                                                                                     ; 1       ;
+; vectorToBits:inst21|temp[5]                                                                                                                    ; 1       ;
 ; vectorToBits:inst21|tenMOM[5]                                                                                                                  ; 1       ;
-; vectorToBits:inst21|tempP[5]                                                                                                                   ; 1       ;
+; vectorToBits:inst21|tenP[5]                                                                                                                    ; 1       ;
 ; cardNum:inst7|Add0~1                                                                                                                           ; 1       ;
 ; cardNum:inst7|Add0~0                                                                                                                           ; 1       ;
 ; vectorToBits:inst21|de3                                                                                                                        ; 1       ;
@@ -1378,6 +1371,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; comparator8:inst1|LessThan0~2                                                                                                                  ; 1       ;
 ; comparator8:inst1|LessThan0~1                                                                                                                  ; 1       ;
 ; comparator8:inst1|LessThan0~0                                                                                                                  ; 1       ;
+; Point:inst4|nextC[2]                                                                                                                           ; 1       ;
+; Point:inst4|nextC[1]                                                                                                                           ; 1       ;
+; Point:inst4|nextC[0]                                                                                                                           ; 1       ;
 ; lfsr_add:inst12|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_5~26                        ; 1       ;
 ; lfsr:inst|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_5~26                              ; 1       ;
 ; lfsr_add:inst12|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_6~30                        ; 1       ;
@@ -1414,11 +1410,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; lfsr:inst|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_5~14                              ; 1       ;
 ; lfsr:inst|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|add_sub_3_result_int[1]~11           ; 1       ;
 ; lfsr:inst|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|add_sub_3_result_int[1]~10           ; 1       ;
-; vectorToBits:inst21|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|add_sub_3_result_int[2]~19 ; 1       ;
-; vectorToBits:inst21|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|add_sub_3_result_int[2]~18 ; 1       ;
-; vectorToBits:inst21|lpm_divide:Mod2|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|add_sub_3_result_int[2]~19 ; 1       ;
-; vectorToBits:inst21|lpm_divide:Mod2|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|add_sub_3_result_int[2]~18 ; 1       ;
-; vectorToBits:inst21|lpm_divide:Mod1|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_4~22                    ; 1       ;
+; vectorToBits:inst21|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_4~22                    ; 1       ;
 ; lfsr_add:inst12|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_6~14                        ; 1       ;
 ; lfsr_add:inst12|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_6~13                        ; 1       ;
 ; lfsr_add:inst12|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_5~10                        ; 1       ;
@@ -1429,33 +1421,37 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; lfsr:inst|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_5~10                              ; 1       ;
 ; lfsr:inst|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|add_sub_3_result_int[0]~7            ; 1       ;
 ; lfsr:inst|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|add_sub_3_result_int[0]~6            ; 1       ;
+; vectorToBits:inst21|lpm_divide:Mod2|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|add_sub_3_result_int[2]~19 ; 1       ;
+; vectorToBits:inst21|lpm_divide:Mod2|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|add_sub_3_result_int[2]~18 ; 1       ;
+; vectorToBits:inst21|lpm_divide:Mod1|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|add_sub_3_result_int[2]~19 ; 1       ;
+; vectorToBits:inst21|lpm_divide:Mod1|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|add_sub_3_result_int[2]~18 ; 1       ;
 ; vectorToBits:inst21|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_5~26                    ; 1       ;
 ; vectorToBits:inst21|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_5~25                    ; 1       ;
-; vectorToBits:inst21|lpm_divide:Mod2|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_5~26                    ; 1       ;
-; vectorToBits:inst21|lpm_divide:Mod2|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_5~25                    ; 1       ;
-; vectorToBits:inst21|lpm_divide:Mod1|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_5~26                    ; 1       ;
-; vectorToBits:inst21|lpm_divide:Mod1|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_5~25                    ; 1       ;
 ; lfsr_add:inst12|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_6~10                        ; 1       ;
 ; lfsr_add:inst12|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_6~9                         ; 1       ;
 ; lfsr_add:inst12|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_5~6                         ; 1       ;
 ; lfsr:inst|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_6~10                              ; 1       ;
 ; lfsr:inst|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_6~9                               ; 1       ;
 ; lfsr:inst|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_5~6                               ; 1       ;
+; vectorToBits:inst21|lpm_divide:Mod2|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_5~26                    ; 1       ;
+; vectorToBits:inst21|lpm_divide:Mod2|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_5~25                    ; 1       ;
+; vectorToBits:inst21|lpm_divide:Mod1|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_5~26                    ; 1       ;
+; vectorToBits:inst21|lpm_divide:Mod1|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_5~25                    ; 1       ;
 ; vectorToBits:inst21|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_6~30                    ; 1       ;
-; vectorToBits:inst21|lpm_divide:Mod2|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_6~30                    ; 1       ;
-; vectorToBits:inst21|lpm_divide:Mod1|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_6~30                    ; 1       ;
 ; lfsr_add:inst12|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_6~6                         ; 1       ;
 ; lfsr_add:inst12|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_6~5                         ; 1       ;
 ; lfsr:inst|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_6~6                               ; 1       ;
 ; lfsr:inst|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_6~5                               ; 1       ;
-; vectorToBits:inst21|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|add_sub_3_result_int[3]~15 ; 1       ;
-; vectorToBits:inst21|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|add_sub_3_result_int[3]~14 ; 1       ;
-; vectorToBits:inst21|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|add_sub_3_result_int[3]~13 ; 1       ;
+; vectorToBits:inst21|lpm_divide:Mod2|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_6~30                    ; 1       ;
+; vectorToBits:inst21|lpm_divide:Mod1|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_6~30                    ; 1       ;
+; vectorToBits:inst21|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_4~18                    ; 1       ;
+; vectorToBits:inst21|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_4~14                    ; 1       ;
 ; vectorToBits:inst21|lpm_divide:Mod2|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|add_sub_3_result_int[3]~15 ; 1       ;
 ; vectorToBits:inst21|lpm_divide:Mod2|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|add_sub_3_result_int[3]~14 ; 1       ;
 ; vectorToBits:inst21|lpm_divide:Mod2|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|add_sub_3_result_int[3]~13 ; 1       ;
-; vectorToBits:inst21|lpm_divide:Mod1|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_4~18                    ; 1       ;
-; vectorToBits:inst21|lpm_divide:Mod1|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_4~14                    ; 1       ;
+; vectorToBits:inst21|lpm_divide:Mod1|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|add_sub_3_result_int[3]~15 ; 1       ;
+; vectorToBits:inst21|lpm_divide:Mod1|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|add_sub_3_result_int[3]~14 ; 1       ;
+; vectorToBits:inst21|lpm_divide:Mod1|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|add_sub_3_result_int[3]~13 ; 1       ;
 ; vectorToBits:inst21|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_5~22                    ; 1       ;
 ; vectorToBits:inst21|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_5~18                    ; 1       ;
 ; vectorToBits:inst21|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_5~17                    ; 1       ;
@@ -1474,8 +1470,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; vectorToBits:inst21|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_6~18                    ; 1       ;
 ; vectorToBits:inst21|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_6~17                    ; 1       ;
 ; vectorToBits:inst21|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_5~14                    ; 1       ;
-; vectorToBits:inst21|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|add_sub_3_result_int[1]~11 ; 1       ;
-; vectorToBits:inst21|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|add_sub_3_result_int[1]~10 ; 1       ;
+; vectorToBits:inst21|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_4~10                    ; 1       ;
 ; vectorToBits:inst21|lpm_divide:Mod2|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_6~18                    ; 1       ;
 ; vectorToBits:inst21|lpm_divide:Mod2|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_6~17                    ; 1       ;
 ; vectorToBits:inst21|lpm_divide:Mod2|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_5~14                    ; 1       ;
@@ -1484,22 +1479,23 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; vectorToBits:inst21|lpm_divide:Mod1|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_6~18                    ; 1       ;
 ; vectorToBits:inst21|lpm_divide:Mod1|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_6~17                    ; 1       ;
 ; vectorToBits:inst21|lpm_divide:Mod1|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_5~14                    ; 1       ;
-; vectorToBits:inst21|lpm_divide:Mod1|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_4~10                    ; 1       ;
+; vectorToBits:inst21|lpm_divide:Mod1|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|add_sub_3_result_int[1]~11 ; 1       ;
+; vectorToBits:inst21|lpm_divide:Mod1|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|add_sub_3_result_int[1]~10 ; 1       ;
+; vectorToBits:inst21|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_5~10                    ; 1       ;
+; vectorToBits:inst21|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_4~6                     ; 1       ;
+; vectorToBits:inst21|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_4~5                     ; 1       ;
 ; vectorToBits:inst21|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_6~14                    ; 1       ;
 ; vectorToBits:inst21|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_6~13                    ; 1       ;
-; vectorToBits:inst21|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_5~10                    ; 1       ;
-; vectorToBits:inst21|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|add_sub_3_result_int[0]~7  ; 1       ;
-; vectorToBits:inst21|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|add_sub_3_result_int[0]~6  ; 1       ;
 ; vectorToBits:inst21|lpm_divide:Mod2|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_6~14                    ; 1       ;
 ; vectorToBits:inst21|lpm_divide:Mod2|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_6~13                    ; 1       ;
 ; vectorToBits:inst21|lpm_divide:Mod2|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_5~10                    ; 1       ;
 ; vectorToBits:inst21|lpm_divide:Mod2|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|add_sub_3_result_int[0]~7  ; 1       ;
 ; vectorToBits:inst21|lpm_divide:Mod2|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|add_sub_3_result_int[0]~6  ; 1       ;
-; vectorToBits:inst21|lpm_divide:Mod1|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_5~10                    ; 1       ;
-; vectorToBits:inst21|lpm_divide:Mod1|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_4~6                     ; 1       ;
-; vectorToBits:inst21|lpm_divide:Mod1|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_4~5                     ; 1       ;
 ; vectorToBits:inst21|lpm_divide:Mod1|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_6~14                    ; 1       ;
 ; vectorToBits:inst21|lpm_divide:Mod1|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_6~13                    ; 1       ;
+; vectorToBits:inst21|lpm_divide:Mod1|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_5~10                    ; 1       ;
+; vectorToBits:inst21|lpm_divide:Mod1|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|add_sub_3_result_int[0]~7  ; 1       ;
+; vectorToBits:inst21|lpm_divide:Mod1|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|add_sub_3_result_int[0]~6  ; 1       ;
 ; vectorToBits:inst21|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_6~10                    ; 1       ;
 ; vectorToBits:inst21|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_6~9                     ; 1       ;
 ; vectorToBits:inst21|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_5~6                     ; 1       ;
@@ -1509,12 +1505,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; vectorToBits:inst21|lpm_divide:Mod1|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_6~10                    ; 1       ;
 ; vectorToBits:inst21|lpm_divide:Mod1|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_6~9                     ; 1       ;
 ; vectorToBits:inst21|lpm_divide:Mod1|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_5~6                     ; 1       ;
-; vectorToBits:inst21|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_6~6                     ; 1       ;
-; vectorToBits:inst21|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_6~5                     ; 1       ;
+; vectorToBits:inst21|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_6~2                     ; 1       ;
+; vectorToBits:inst21|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_6~1                     ; 1       ;
 ; vectorToBits:inst21|lpm_divide:Mod2|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_6~6                     ; 1       ;
 ; vectorToBits:inst21|lpm_divide:Mod2|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_6~5                     ; 1       ;
-; vectorToBits:inst21|lpm_divide:Mod1|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_6~2                     ; 1       ;
-; vectorToBits:inst21|lpm_divide:Mod1|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_6~1                     ; 1       ;
+; vectorToBits:inst21|lpm_divide:Mod1|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_6~6                     ; 1       ;
+; vectorToBits:inst21|lpm_divide:Mod1|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_6~5                     ; 1       ;
 ; Point:inst10|Add0~22                                                                                                                           ; 1       ;
 ; Point:inst10|Add0~21                                                                                                                           ; 1       ;
 ; Point:inst10|Add0~18                                                                                                                           ; 1       ;
@@ -1546,9 +1542,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Point:inst4|temp[3]                                                                                                                            ; 1       ;
 ; Point:inst4|temp[4]                                                                                                                            ; 1       ;
 ; Point:inst4|temp[5]                                                                                                                            ; 1       ;
-; Point:inst4|temp[2]                                                                                                                            ; 1       ;
-; Point:inst4|temp[1]                                                                                                                            ; 1       ;
-; Point:inst4|temp[0]                                                                                                                            ; 1       ;
 +------------------------------------------------------------------------------------------------------------------------------------------------+---------+
 
 
@@ -1557,21 +1550,21 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------+-------------------------+
 ; Routing Resource Type        ; Usage                   ;
 +------------------------------+-------------------------+
-; Block interconnects          ; 368 / 140,056 ( < 1 % ) ;
-; C12 interconnects            ; 12 / 6,048 ( < 1 % )    ;
-; C2 interconnects             ; 105 / 54,648 ( < 1 % )  ;
-; C4 interconnects             ; 66 / 25,920 ( < 1 % )   ;
+; Block interconnects          ; 357 / 140,056 ( < 1 % ) ;
+; C12 interconnects            ; 11 / 6,048 ( < 1 % )    ;
+; C2 interconnects             ; 103 / 54,648 ( < 1 % )  ;
+; C4 interconnects             ; 67 / 25,920 ( < 1 % )   ;
 ; DQS bus muxes                ; 0 / 17 ( 0 % )          ;
 ; DQS-18 I/O buses             ; 0 / 17 ( 0 % )          ;
 ; DQS-9 I/O buses              ; 0 / 17 ( 0 % )          ;
-; Direct links                 ; 79 / 140,056 ( < 1 % )  ;
+; Direct links                 ; 91 / 140,056 ( < 1 % )  ;
 ; Global clocks                ; 1 / 16 ( 6 % )          ;
-; Local interconnects          ; 135 / 36,960 ( < 1 % )  ;
+; Local interconnects          ; 136 / 36,960 ( < 1 % )  ;
 ; Quadrant clocks              ; 0 / 88 ( 0 % )          ;
-; R14 interconnects            ; 17 / 5,984 ( < 1 % )    ;
-; R14/C12 interconnect drivers ; 27 / 9,504 ( < 1 % )    ;
-; R3 interconnects             ; 161 / 60,192 ( < 1 % )  ;
-; R6 interconnects             ; 171 / 127,072 ( < 1 % ) ;
+; R14 interconnects            ; 16 / 5,984 ( < 1 % )    ;
+; R14/C12 interconnect drivers ; 25 / 9,504 ( < 1 % )    ;
+; R3 interconnects             ; 171 / 60,192 ( < 1 % )  ;
+; R6 interconnects             ; 133 / 127,072 ( < 1 % ) ;
 ; Spine clocks                 ; 1 / 120 ( < 1 % )       ;
 ; Wire stub REs                ; 0 / 7,344 ( 0 % )       ;
 +------------------------------+-------------------------+
@@ -1707,19 +1700,20 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------+--------+
 
 
-+-------------------------------------------------------------------------------------+
-; Estimated Delay Added for Hold Timing Summary                                       ;
-+--------------------------------+--------------------------------+-------------------+
-; Source Clock(s)                ; Destination Clock(s)           ; Delay Added in ns ;
-+--------------------------------+--------------------------------+-------------------+
-; clk_gen:inst23|div10_t:inst3|2 ; clk_gen:inst23|div10_t:inst3|2 ; 22.8              ;
-; cardNum:inst7|nextC[0]         ; cardNum:inst7|nextC[0]         ; 9.2               ;
-; clk                            ; clk                            ; 7.9               ;
-; Point:inst10|nextC[0]          ; Point:inst10|nextC[0]          ; 3.4               ;
-; cardNum:inst7|nextC[0]         ; clk_gen:inst23|div10_t:inst3|2 ; 2.8               ;
-; clk_gen:inst23|div10_t:inst|2  ; clk_gen:inst23|div10_t:inst|2  ; 2.4               ;
-; clk_gen:inst23|div10_t:inst2|2 ; clk_gen:inst23|div10_t:inst2|2 ; 2.3               ;
-+--------------------------------+--------------------------------+-------------------+
++---------------------------------------------------------------------------------------------------+
+; Estimated Delay Added for Hold Timing Summary                                                     ;
++----------------------------------------------+--------------------------------+-------------------+
+; Source Clock(s)                              ; Destination Clock(s)           ; Delay Added in ns ;
++----------------------------------------------+--------------------------------+-------------------+
+; clk_gen:inst23|div10_t:inst3|2               ; clk_gen:inst23|div10_t:inst3|2 ; 37.5              ;
+; cardNum:inst7|nextC[0]                       ; cardNum:inst7|nextC[0]         ; 10.3              ;
+; clk                                          ; clk                            ; 8.1               ;
+; Point:inst10|nextC[0]                        ; Point:inst10|nextC[0]          ; 5.9               ;
+; cardNum:inst7|nextC[0]                       ; clk_gen:inst23|div10_t:inst3|2 ; 5.5               ;
+; cardNum:inst7|nextC[0],Point:inst10|nextC[0] ; clk_gen:inst23|div10_t:inst3|2 ; 2.4               ;
+; clk_gen:inst23|div10_t:inst2|2               ; clk_gen:inst23|div10_t:inst3|2 ; 1.9               ;
+; clk_gen:inst23|div10_t:inst|2                ; clk_gen:inst23|div10_t:inst|2  ; 1.7               ;
++----------------------------------------------+--------------------------------+-------------------+
 Note: For more information on problematic transfers, consider running the Fitter again with the Optimize hold timing option (Settings Menu) turned off.
 This will disable optimization of problematic paths and expose them for further analysis using the TimeQuest Timing Analyzer.
 
@@ -1729,79 +1723,72 @@ This will disable optimization of problematic paths and expose them for further 
 +--------------------------------+--------------------------------+-------------------+
 ; Source Register                ; Destination Register           ; Delay Added in ns ;
 +--------------------------------+--------------------------------+-------------------+
-; clk_gen:inst23|div10_t:inst|2  ; clk_gen:inst23|div10_t:inst|2  ; 4.047             ;
-; Point:inst10|nextC[0]          ; vectorToBits:inst21|tenMOM[4]  ; 1.468             ;
-; Point:inst10|nextC[1]          ; vectorToBits:inst21|tenMOM[3]  ; 1.395             ;
-; Point:inst10|nextC[2]          ; vectorToBits:inst21|tenMOM[3]  ; 1.395             ;
-; clk_gen:inst23|div10_t:inst1|2 ; clk_gen:inst23|div10_t:inst1|2 ; 1.162             ;
-; clk_gen:inst23|div10_t:inst3|2 ; clk_gen:inst23|div10_t:inst3|3 ; 1.135             ;
-; Point:inst4|nextC[5]           ; Point:inst4|nextC[0]           ; 0.950             ;
-; lfsr:inst|outt[4]              ; lfsr:inst|outt[0]              ; 0.943             ;
-; Point:inst10|nextC[3]          ; vectorToBits:inst21|tenMOM[3]  ; 0.929             ;
-; Point:inst10|nextC[5]          ; Point:inst10|nextC[0]          ; 0.924             ;
-; lfsr:inst|outt[5]              ; vectorToBits:inst21|tempP[5]   ; 0.899             ;
-; Point:inst10|nextC[4]          ; vectorToBits:inst21|tenMOM[2]  ; 0.873             ;
-; vectorToBits:inst21|de[0]      ; g_ab8                          ; 0.864             ;
-; vectorToBits:inst21|de[1]      ; g_ab8                          ; 0.839             ;
-; vectorToBits:inst21|de[2]      ; g_ab8                          ; 0.832             ;
-; lfsr:inst|tempInt[2]           ; lfsr:inst|outt[0]              ; 0.805             ;
-; lfsr:inst|outt[1]              ; lfsr:inst|tempInt[3]           ; 0.802             ;
-; lfsr:inst|tempInt[0]           ; lfsr:inst|outt[0]              ; 0.788             ;
-; lfsr:inst|temp                 ; lfsr:inst|tempInt[5]           ; 0.787             ;
-; lfsr:inst|tempInt[3]           ; lfsr:inst|outt[0]              ; 0.787             ;
-; lfsr:inst|tempInt[1]           ; lfsr:inst|outt[0]              ; 0.770             ;
-; lfsr_add:inst12|outt[4]        ; lfsr_add:inst12|tempInt[0]     ; 0.755             ;
-; cardNum:inst7|nextC[0]         ; cardNum:inst7|nextC[0]         ; 0.725             ;
-; lfsr:inst|tempInt[5]           ; lfsr:inst|outt[0]              ; 0.687             ;
-; lfsr_add:inst12|outt[2]        ; lfsr_add:inst12|tempInt[2]     ; 0.680             ;
-; Point:inst4|nextC[3]           ; vectorToBits:inst21|ten[3]     ; 0.630             ;
-; vectorToBits:inst21|ten[2]     ; vectorToBits:inst21|a3         ; 0.584             ;
-; vectorToBits:inst21|ten[3]     ; vectorToBits:inst21|a2         ; 0.565             ;
-; vectorToBits:inst21|ten[5]     ; g_ab8                          ; 0.565             ;
-; lfsr:inst|outt[0]              ; lfsr:inst|tempInt[4]           ; 0.563             ;
-; lfsr:inst|tempInt[4]           ; lfsr:inst|outt[0]              ; 0.499             ;
-; clk_gen:inst23|div10_t:inst2|2 ; clk_gen:inst23|div10_t:inst2|2 ; 0.391             ;
-; debounce_g:inst35|1            ; e2                             ; 0.370             ;
-; lfsr_add:inst12|temp           ; lfsr_add:inst12|tempInt[2]     ; 0.367             ;
-; lfsr_add:inst12|outt[1]        ; lfsr_add:inst12|tempInt[2]     ; 0.367             ;
-; lfsr_add:inst12|outt[0]        ; lfsr_add:inst12|tempInt[2]     ; 0.367             ;
-; lfsr:inst|outt[3]              ; lfsr:inst|tempInt[1]           ; 0.364             ;
-; lfsr:inst|outt[2]              ; vectorToBits:inst21|tempP[2]   ; 0.363             ;
-; lfsr_add:inst12|outt[3]        ; lfsr_add:inst12|tempInt[1]     ; 0.309             ;
-; cardNum:inst13|nextC[2]        ; cardNum:inst13|nextC[1]        ; 0.306             ;
-; Point:inst4|nextC[2]           ; vectorToBits:inst21|ten[2]     ; 0.302             ;
-; Point:inst4|nextC[0]           ; vectorToBits:inst21|ten[2]     ; 0.288             ;
-; Point:inst4|nextC[1]           ; vectorToBits:inst21|ten[2]     ; 0.288             ;
-; clk_gen:inst23|div10_t:inst|1  ; clk_gen:inst23|div10_t:inst|2  ; 0.283             ;
-; clk_gen:inst23|div10_t:inst1|5 ; clk_gen:inst23|div10_t:inst1|2 ; 0.262             ;
-; clk_gen:inst23|div10_t:inst|5  ; clk_gen:inst23|div10_t:inst|2  ; 0.258             ;
-; Point:inst4|nextC[4]           ; vectorToBits:inst21|ten[3]     ; 0.243             ;
-; debounce_g:inst33|1            ; e2                             ; 0.224             ;
-; clk_gen:inst23|div10_t:inst1|3 ; clk_gen:inst23|div10_t:inst1|2 ; 0.202             ;
-; clk_gen:inst23|div10_t:inst|3  ; clk_gen:inst23|div10_t:inst|2  ; 0.174             ;
-; cardNum:inst13|nextC[1]        ; cardNum:inst13|nextC[1]        ; 0.153             ;
-; lfsr_add:inst12|tempInt[0]     ; lfsr_add:inst12|outt[1]        ; 0.134             ;
-; lfsr_add:inst12|tempInt[3]     ; lfsr_add:inst12|outt[0]        ; 0.132             ;
-; lfsr_add:inst12|tempInt[2]     ; lfsr_add:inst12|outt[0]        ; 0.132             ;
-; vectorToBits:inst21|tenMOM[3]  ; vectorToBits:inst21|a2         ; 0.131             ;
-; vectorToBits:inst21|tempP[5]   ; g_ab8                          ; 0.121             ;
-; Point:inst4|temp[5]            ; Point:inst4|nextC[0]           ; 0.117             ;
-; vectorToBits:inst21|tenMOM[2]  ; vectorToBits:inst21|a3         ; 0.110             ;
-; vectorToBits:inst21|tenMOM[5]  ; g_ab8                          ; 0.105             ;
-; lfsr_add:inst12|tempInt[1]     ; lfsr_add:inst12|outt[1]        ; 0.094             ;
-; lfsr_add:inst12|tempInt[4]     ; lfsr_add:inst12|outt[1]        ; 0.082             ;
-; Point:inst4|temp[3]            ; vectorToBits:inst21|ten[3]     ; 0.076             ;
-; Point:inst10|temp[1]           ; vectorToBits:inst21|tenMOM[3]  ; 0.072             ;
-; clk_gen:inst23|div10_t:inst1|1 ; clk_gen:inst23|div10_t:inst1|2 ; 0.058             ;
-; Point:inst10|temp[5]           ; Point:inst10|nextC[0]          ; 0.048             ;
-; Point:inst4|temp[2]            ; vectorToBits:inst21|ten[2]     ; 0.021             ;
-; clk_gen:inst23|div10_t:inst3|5 ; clk_gen:inst23|div10_t:inst3|5 ; 0.020             ;
-; vectorToBits:inst21|tempP[3]   ; vectorToBits:inst21|a2         ; 0.019             ;
-; clk_gen:inst23|div10_t:inst3|3 ; clk_gen:inst23|div10_t:inst3|3 ; 0.018             ;
-; clk_gen:inst23|div10_t:inst3|1 ; clk_gen:inst23|div10_t:inst3|1 ; 0.016             ;
-; Point:inst4|temp[1]            ; vectorToBits:inst21|ten[2]     ; 0.011             ;
+; clk_gen:inst23|div10_t:inst|2  ; clk_gen:inst23|div10_t:inst|2  ; 4.143             ;
+; Point:inst10|nextC[0]          ; Point:inst10|nextC[0]          ; 2.964             ;
+; Point:inst10|nextC[1]          ; vectorToBits:inst21|tenMOM[3]  ; 1.456             ;
+; Point:inst10|nextC[2]          ; vectorToBits:inst21|tenMOM[3]  ; 1.456             ;
+; lfsr:inst|outt[4]              ; vectorToBits:inst21|temp[4]    ; 1.428             ;
+; Point:inst10|nextC[4]          ; vectorToBits:inst21|tenMOM[2]  ; 1.243             ;
+; Point:inst10|nextC[3]          ; vectorToBits:inst21|tenMOM[2]  ; 1.243             ;
+; cardNum:inst7|nextC[0]         ; cardNum:inst7|nextC[0]         ; 1.213             ;
+; lfsr:inst|outt[2]              ; vectorToBits:inst21|temp[2]    ; 1.135             ;
+; vectorToBits:inst21|de[0]      ; vectorToBits:inst21|de[1]      ; 1.082             ;
+; Point:inst4|nextC[4]           ; Point:inst4|nextC[0]           ; 1.052             ;
+; lfsr:inst|outt[3]              ; vectorToBits:inst21|temp[3]    ; 1.052             ;
+; Point:inst4|nextC[5]           ; Point:inst4|nextC[0]           ; 1.046             ;
+; lfsr:inst|outt[5]              ; vectorToBits:inst21|temp[5]    ; 0.919             ;
+; clk_gen:inst23|div10_t:inst1|2 ; clk_gen:inst23|div10_t:inst1|2 ; 0.855             ;
+; lfsr_add:inst12|tempInt[3]     ; lfsr_add:inst12|outt[2]        ; 0.796             ;
+; lfsr_add:inst12|tempInt[0]     ; lfsr_add:inst12|outt[2]        ; 0.790             ;
+; lfsr_add:inst12|tempInt[2]     ; lfsr_add:inst12|outt[2]        ; 0.788             ;
+; lfsr:inst|tempInt[0]           ; lfsr:inst|outt[0]              ; 0.755             ;
+; lfsr_add:inst12|tempInt[1]     ; lfsr_add:inst12|outt[2]        ; 0.751             ;
+; Point:inst10|nextC[5]          ; Point:inst10|nextC[0]          ; 0.734             ;
+; vectorToBits:inst21|de[1]      ; vectorToBits:inst21|a3         ; 0.728             ;
+; vectorToBits:inst21|de[2]      ; vectorToBits:inst21|a3         ; 0.728             ;
+; lfsr:inst|tempInt[1]           ; lfsr:inst|outt[0]              ; 0.716             ;
+; lfsr_add:inst12|outt[2]        ; lfsr_add:inst12|tempInt[2]     ; 0.694             ;
+; clk_gen:inst23|div10_t:inst3|2 ; vectorToBits:inst21|de[1]      ; 0.693             ;
+; lfsr_add:inst12|outt[1]        ; vectorToBits:inst21|temp[3]    ; 0.670             ;
+; lfsr_add:inst12|outt[0]        ; vectorToBits:inst21|temp[3]    ; 0.670             ;
+; lfsr_add:inst12|outt[3]        ; vectorToBits:inst21|temp[3]    ; 0.670             ;
+; lfsr:inst|outt[1]              ; vectorToBits:inst21|temp[3]    ; 0.670             ;
+; lfsr:inst|outt[0]              ; vectorToBits:inst21|temp[3]    ; 0.670             ;
+; Point:inst4|nextC[2]           ; vectorToBits:inst21|tenP[2]    ; 0.656             ;
+; Point:inst4|nextC[3]           ; vectorToBits:inst21|tenP[3]    ; 0.649             ;
+; lfsr_add:inst12|outt[4]        ; vectorToBits:inst21|temp[4]    ; 0.630             ;
+; lfsr:inst|tempInt[3]           ; lfsr:inst|outt[0]              ; 0.615             ;
+; clk_gen:inst23|div10_t:inst2|2 ; clk_gen:inst23|div10_t:inst2|3 ; 0.565             ;
+; lfsr_add:inst12|temp           ; lfsr_add:inst12|tempInt[5]     ; 0.538             ;
+; lfsr:inst|tempInt[2]           ; lfsr:inst|outt[0]              ; 0.533             ;
+; lfsr:inst|tempInt[4]           ; lfsr:inst|outt[1]              ; 0.515             ;
+; lfsr:inst|temp                 ; lfsr:inst|tempInt[5]           ; 0.450             ;
+; debounce_g:inst35|1            ; e2                             ; 0.422             ;
+; clk_gen:inst23|div10_t:inst|1  ; clk_gen:inst23|div10_t:inst|2  ; 0.387             ;
+; vectorToBits:inst21|tenMOM[2]  ; vectorToBits:inst21|a3         ; 0.375             ;
+; vectorToBits:inst21|tenMOM[3]  ; vectorToBits:inst21|a2         ; 0.375             ;
+; clk_gen:inst23|div10_t:inst|5  ; clk_gen:inst23|div10_t:inst|2  ; 0.363             ;
+; vectorToBits:inst21|tenMOM[4]  ; vectorToBits:inst21|a1         ; 0.351             ;
+; Point:inst4|temp[5]            ; Point:inst4|nextC[0]           ; 0.331             ;
+; clk_gen:inst23|div10_t:inst3|5 ; clk_gen:inst23|div10_t:inst3|1 ; 0.273             ;
+; clk_gen:inst23|div10_t:inst|3  ; clk_gen:inst23|div10_t:inst|2  ; 0.272             ;
+; Point:inst4|temp[4]            ; Point:inst4|nextC[0]           ; 0.247             ;
+; debounce_g:inst33|1            ; e2                             ; 0.226             ;
+; Point:inst4|nextC[0]           ; vectorToBits:inst21|tenP[2]    ; 0.214             ;
+; Point:inst4|nextC[1]           ; vectorToBits:inst21|tenP[2]    ; 0.214             ;
+; vectorToBits:inst21|temp[2]    ; vectorToBits:inst21|a3         ; 0.195             ;
+; vectorToBits:inst21|temp[4]    ; vectorToBits:inst21|a1         ; 0.180             ;
+; debounce_g:inst35|2            ; e2                             ; 0.141             ;
+; debounce_g:inst33|2            ; e2                             ; 0.141             ;
+; vectorToBits:inst21|tenP[2]    ; vectorToBits:inst21|a3         ; 0.099             ;
+; vectorToBits:inst21|tenP[3]    ; vectorToBits:inst21|a2         ; 0.099             ;
+; vectorToBits:inst21|tenP[4]    ; vectorToBits:inst21|a1         ; 0.079             ;
+; Point:inst4|temp[2]            ; vectorToBits:inst21|tenP[2]    ; 0.057             ;
+; Point:inst10|temp[4]           ; vectorToBits:inst21|tenMOM[2]  ; 0.044             ;
+; lfsr_add:inst12|outt[5]        ; vectorToBits:inst21|temp[5]    ; 0.043             ;
+; clk_gen:inst23|div10_t:inst1|1 ; clk_gen:inst23|div10_t:inst1|1 ; 0.014             ;
 +--------------------------------+--------------------------------+-------------------+
-Note: This table only shows the top 71 path(s) that have the largest delay added for hold.
+Note: This table only shows the top 64 path(s) that have the largest delay added for hold.
 
 
 +-----------------+
@@ -1834,22 +1821,22 @@ Info (170137): Fitter placement was successful
 Info (170192): Fitter placement operations ending: elapsed time is 00:00:01
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 1% of the available device resources in the region that extends from location X22_Y11 to location X32_Y22
+    Info (170196): Router estimated peak interconnect usage is 1% of the available device resources in the region that extends from location X33_Y11 to location X43_Y22
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:03
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (11888): Total time spent on timing analysis during the Fitter is 0.86 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 1.09 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:03
+Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:04
 Info (144001): Generated suppressed messages file C:/Users/User/Documents/GitHub/Digital_electronics_study/src/final/output_files/final.fit.smsg
 Info: Quartus II 64-Bit Fitter was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 6072 megabytes
-    Info: Processing ended: Wed Jun 22 02:02:04 2022
-    Info: Elapsed time: 00:00:18
-    Info: Total CPU time (on all processors): 00:00:25
+    Info: Peak virtual memory: 6070 megabytes
+    Info: Processing ended: Wed Jun 22 02:04:32 2022
+    Info: Elapsed time: 00:00:17
+    Info: Total CPU time (on all processors): 00:00:26
 
 
 +----------------------------+

@@ -1595,18 +1595,8 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(pt 1640 -256)
-	(pt 1656 -256)
-	(bus)
-)
-(connector
 	(pt -96 296)
 	(pt -96 32)
-)
-(connector
-	(pt 1616 8)
-	(pt 1272 8)
-	(bus)
 )
 (connector
 	(pt 656 104)
@@ -1856,11 +1846,6 @@ applicable agreement for further details.
 (connector
 	(pt 424 160)
 	(pt 776 160)
-)
-(connector
-	(pt 1272 8)
-	(pt 1272 56)
-	(bus)
 )
 (connector
 	(pt 1448 400)
@@ -2209,16 +2194,6 @@ applicable agreement for further details.
 	(pt 1136 888)
 )
 (connector
-	(pt 1640 32)
-	(pt 1456 32)
-	(bus)
-)
-(connector
-	(pt 1640 -256)
-	(pt 1640 32)
-	(bus)
-)
-(connector
 	(pt 1456 144)
 	(pt 1240 144)
 	(bus)
@@ -2425,17 +2400,6 @@ applicable agreement for further details.
 	(pt 1672 -224)
 )
 (connector
-	(pt 1616 8)
-	(pt 1616 -192)
-	(bus)
-)
-(connector
-	(text "<<__$DEF_ALIAS26904>>" (rect 1616 -208 1745 -196)(font "Arial" )(invisible))
-	(pt 1616 -192)
-	(pt 1672 -192)
-	(bus)
-)
-(connector
 	(pt 1920 -208)
 	(pt 1872 -208)
 )
@@ -2454,17 +2418,6 @@ applicable agreement for further details.
 (connector
 	(pt 1896 -144)
 	(pt 1872 -144)
-)
-(connector
-	(text "inputLFSR[0..5]" (rect 1639 -237 1651 -160)(font "Arial" )(vertical))
-	(pt 1656 -256)
-	(pt 1656 -208)
-	(bus)
-)
-(connector
-	(pt 1656 -208)
-	(pt 1672 -208)
-	(bus)
 )
 (connector
 	(pt 1672 56)
@@ -2502,6 +2455,42 @@ applicable agreement for further details.
 (connector
 	(pt 1136 32)
 	(pt 1136 224)
+)
+(connector
+	(pt 1272 56)
+	(pt 1272 8)
+	(bus)
+)
+(connector
+	(pt 1272 8)
+	(pt 1616 8)
+	(bus)
+)
+(connector
+	(pt 1616 8)
+	(pt 1616 -208)
+	(bus)
+)
+(connector
+	(text "<<__$DEF_ALIAS26904>>" (rect 1616 -224 1745 -212)(font "Arial" )(invisible))
+	(pt 1672 -208)
+	(pt 1616 -208)
+	(bus)
+)
+(connector
+	(pt 1456 32)
+	(pt 1656 32)
+	(bus)
+)
+(connector
+	(pt 1656 32)
+	(pt 1656 -192)
+	(bus)
+)
+(connector
+	(pt 1656 -192)
+	(pt 1672 -192)
+	(bus)
 )
 (junction (pt 1112 208))
 (junction (pt 1456 192))
