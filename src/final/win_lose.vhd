@@ -27,7 +27,7 @@ architecture dise of win_lose is
 begin
 	process (result_input)
 	begin
-		if result_input = '0' then--lose
+		if result_input = '1' then--lose
 			E2 <= '1';
 			D3 <= '1';
 			C2 <= '1';
