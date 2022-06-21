@@ -30,8 +30,8 @@ begin
 			tenP <= inputPoints/10;
 			tempP <= inputPoints mod 10;
 			
-			tenMOM <= inputPoints/10;
-			tempMOM <= inputPoints mod 10;
+			tenMOM <= inputPointsMOM/10;
+			tempMOM <= inputPointsMOM mod 10;
 			case de is
 			when "000" =>
 				
