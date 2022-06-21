@@ -33,44 +33,49 @@ begin
 			tenMOM <= inputPoints/10;
 			tempMOM <= inputPoints mod 10;
 			case de is
-			when "100" =>
-				a3 <= ten(2);
-				a2 <= ten(3);
-				a1 <= ten(4);
-				a0 <= ten(5);
-				de <= "000";
 			when "000" =>
-				a3 <= tenP(2);
-				a2 <= tenP(3);
-				a1 <= tenP(4);
-				a0 <= tenP(5);
-				de <= "010";
-			when "010" =>
-				a3 <= tenMOM(2);
-				a2 <= tenMOM(3);
-				a1 <= tenMOM(4);
-				a0 <= tenMOM(5);
-				de <= "100";	
-			when "101" =>
-				a3 <= temp(2);
-				a2 <= temp(3);
-				a1 <= temp(4);
-				a0 <= temp(5);
+				
 				de <= "001";
-			when "001" =>
 				a3 <= tempP(2);
 				a2 <= tempP(3);
 				a1 <= tempP(4);
 				a0 <= tempP(5);
+			when "001" =>
+				
 				de <= "011";
-			when "011" =>
 				a3 <= tenMOM(2);
 				a2 <= tenMOM(3);
 				a1 <= tenMOM(4);
 				a0 <= tenMOM(5);
-				de <= "101";
-			when others => 
+			when "010" =>
+				
 				de <= "100";
+				a3 <= tenMOM(2);
+				a2 <= tenMOM(3);
+				a1 <= tenMOM(4);
+				a0 <= tenMOM(5);
+			when "011" =>
+				
+				de <= "101";
+				a3 <= ten(2);
+				a2 <= ten(3);
+				a1 <= ten(4);
+				a0 <= ten(5);
+			when "100" =>
+				
+				de <= "000";
+				a3 <= temp(2);
+				a2 <= temp(3);
+				a1 <= temp(4);
+				a0 <= temp(5);
+			
+			when others =>
+				
+				de <= "000";
+				a3 <= tenP(2);
+				a2 <= tenP(3);
+				a1 <= tenP(4);
+				a0 <= tenP(5);
 			end case;
 			
 			de3 <= de(0);

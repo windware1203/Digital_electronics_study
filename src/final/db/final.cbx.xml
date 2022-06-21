@@ -2,8 +2,10 @@
 <LOG_ROOT>
 	<PROJECT NAME="final">
 		<CBX_INST_ENTRY INSTANCE_NAME="|final|lfsr:inst|lpm_divide:Mod0" CBX_FILE_NAME="lpm_divide_82m.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|final|vectorToBits:inst21|lpm_divide:Div1" CBX_FILE_NAME="lpm_divide_3am.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|final|vectorToBits:inst21|lpm_divide:Mod0" CBX_FILE_NAME="lpm_divide_82m.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|final|lfsr_add:inst12|lpm_divide:Mod0" CBX_FILE_NAME="lpm_divide_82m.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|final|vectorToBits:inst21|lpm_divide:Div0" CBX_FILE_NAME="lpm_divide_3am.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|final|vectorToBits:inst21|lpm_divide:Div1" CBX_FILE_NAME="lpm_divide_3am.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|final|vectorToBits:inst21|lpm_divide:Mod1" CBX_FILE_NAME="lpm_divide_82m.tdf"/>
 	</PROJECT>
 </LOG_ROOT>
