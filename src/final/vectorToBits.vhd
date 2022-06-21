@@ -5,7 +5,7 @@ USE IEEE.STD_LOGIC_UNSIGNED.ALL;
 
 entity vectorToBits is
 port (clk:	in std_logic;
-		inputLFSR: in unsigned(0 to 5);--inputPoints,inputPointsMOM
+		inputLFSR,inputPoints,inputPointsMOM: in unsigned(0 to 5);
 		a0,a1,a2,a3,de1,de2,de3: out std_logic);
 end vectorToBits;
 
@@ -24,14 +24,58 @@ begin
 	process(clk)
 	begin
 		if rising_edge(clk) then
-	
-	
-
-					a0 <= inputLFSR(2);
-					a1 <= inputLFSR(3);
-					a2 <= inputLFSR(4);
-					a3 <= inputLFSR(5);
-					de <= "000";
+			ten <= inputLFSR/10;
+			temp <= inputLFSR mod 10;
+			
+			tenP <= inputPoints/10;
+			tempP <= inputPoints mod 10;
+			
+			tenMOM <= inputPoints/10;
+			tempMOM <= inputPoints mod 10;
+			case de is
+			when "100" =>
+				a3 <= ten(2);
+				a2 <= ten(3);
+				a1 <= ten(4);
+				a0 <= ten(5);
+				de <= "000";
+			when "000" =>
+				a3 <= tenP(2);
+				a2 <= tenP(3);
+				a1 <= tenP(4);
+				a0 <= tenP(5);
+				de <= "010";
+			when "010" =>
+				a3 <= tenMOM(2);
+				a2 <= tenMOM(3);
+				a1 <= tenMOM(4);
+				a0 <= tenMOM(5);
+				de <= "100";	
+			when "101" =>
+				a3 <= temp(2);
+				a2 <= temp(3);
+				a1 <= temp(4);
+				a0 <= temp(5);
+				de <= "001";
+			when "001" =>
+				a3 <= tempP(2);
+				a2 <= tempP(3);
+				a1 <= tempP(4);
+				a0 <= tempP(5);
+				de <= "011";
+			when "011" =>
+				a3 <= tenMOM(2);
+				a2 <= tenMOM(3);
+				a1 <= tenMOM(4);
+				a0 <= tenMOM(5);
+				de <= "101";
+			when others => 
+				de <= "100";
+			end case;
+			
+			de3 <= de(0);
+			de2 <= de(1);
+			de1 <= de(2);
 		
 		end if;
 	

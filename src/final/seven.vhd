@@ -31,7 +31,7 @@ variable dout: std_logic_vector (0 to 6);
 begin
 
 case q is
-when "0000" => dout := "0000001";--0
+when "0000" => dout := "1111110";--0
 
 when "0001" => dout := "0110000";
 
