@@ -2,9 +2,9 @@
 n21 <= <VCC>
 d3 <= win_lose:inst2.D3
 clk => clk_gen:inst23.clock
-ps3 => inst24.IN0
-c13 => switch:inst5.C13
-b13 => switch:inst5.B13
+ps3 => debounce_g:inst35.Key_in
+c13 => debounce_g:inst33.Key_in
+b13 => debounce_g:inst34.Key_in
 c2 <= win_lose:inst2.C2
 c1 <= win_lose:inst2.C1
 L1 <= win_lose:inst2.L1
@@ -197,10 +197,31 @@ CLK => 1.CLK
 CLK => 2.CLK
 
 
+|final|debounce_g:inst35
+Key_out <= 16.DB_MAX_OUTPUT_PORT_TYPE
+CLK => 1.CLK
+CLK => 2.CLK
+Key_in => 1.DATAIN
+
+
 |final|switch:inst5
 C13 => Add.DATAIN
 B13 => ~NO_FANOUT~
 Add <= C13.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|debounce_g:inst33
+Key_out <= 16.DB_MAX_OUTPUT_PORT_TYPE
+CLK => 1.CLK
+CLK => 2.CLK
+Key_in => 1.DATAIN
+
+
+|final|debounce_g:inst34
+Key_out <= 16.DB_MAX_OUTPUT_PORT_TYPE
+CLK => 1.CLK
+CLK => 2.CLK
+Key_in => 1.DATAIN
 
 
 |final|lfsr:inst
