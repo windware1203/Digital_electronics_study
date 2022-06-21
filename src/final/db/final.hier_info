@@ -1,0 +1,31 @@
+|final
+o1 <= outt[0].DB_MAX_OUTPUT_PORT_TYPE
+pin_name1 => lfsr:lfsr.inSeed[0]
+pin_name2 => lfsr:lfsr.inSeed[1]
+pin_name3 => lfsr:lfsr.inSeed[2]
+pin_name4 => lfsr:lfsr.inSeed[3]
+pin_name5 => lfsr:lfsr.inSeed[4]
+pin_name6 => lfsr:lfsr.inSeed[5]
+o2 <= outt[1].DB_MAX_OUTPUT_PORT_TYPE
+o3 <= outt[2].DB_MAX_OUTPUT_PORT_TYPE
+o4 <= outt[3].DB_MAX_OUTPUT_PORT_TYPE
+o5 <= outt[4].DB_MAX_OUTPUT_PORT_TYPE
+o6 <= outt[5].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|lfsr:lfsr
+inSeed[5] => temp.IN0
+inSeed[4] => temp.IN1
+inSeed[4] => outt[5].DATAIN
+inSeed[3] => outt[4].DATAIN
+inSeed[2] => outt[3].DATAIN
+inSeed[1] => outt[2].DATAIN
+inSeed[0] => outt[1].DATAIN
+outt[5] <= inSeed[4].DB_MAX_OUTPUT_PORT_TYPE
+outt[4] <= inSeed[3].DB_MAX_OUTPUT_PORT_TYPE
+outt[3] <= inSeed[2].DB_MAX_OUTPUT_PORT_TYPE
+outt[2] <= inSeed[1].DB_MAX_OUTPUT_PORT_TYPE
+outt[1] <= inSeed[0].DB_MAX_OUTPUT_PORT_TYPE
+outt[0] <= temp.DB_MAX_OUTPUT_PORT_TYPE
+
+

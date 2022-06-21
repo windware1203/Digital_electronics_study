@@ -1,0 +1,12 @@
+|cardNum
+nowC[2] => Add0.IN6
+nowC[1] => Add0.IN5
+nowC[0] => Add0.IN4
+clk => nextC[2]~reg0.CLK
+clk => nextC[1]~reg0.CLK
+clk => nextC[0]~reg0.CLK
+nextC[2] <= nextC[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nextC[1] <= nextC[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nextC[0] <= nextC[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
