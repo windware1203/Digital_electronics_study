@@ -26,7 +26,7 @@ q<=a3&a2&a1&a0;
 
 process(q)
 
-variable dout: std_logic_vector (6 downto 0);
+variable dout: std_logic_vector (0 to 6);
 
 begin
 

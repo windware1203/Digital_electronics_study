@@ -1,5 +1,5 @@
 Analysis & Synthesis report for final
-Wed Jun 22 00:11:39 2022
+Wed Jun 22 00:18:10 2022
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -16,8 +16,11 @@ Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
   8. Registers Removed During Synthesis
   9. Removed Registers Triggering Further Register Optimizations
  10. General Register Statistics
- 11. Elapsed Time Per Partition
- 12. Analysis & Synthesis Messages
+ 11. Inverted Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Parameter Settings for Inferred Entity Instance: lfsr:inst|lpm_divide:Mod0
+ 14. Elapsed Time Per Partition
+ 15. Analysis & Synthesis Messages
 
 
 
@@ -43,13 +46,13 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                 ;
 +---------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed Jun 22 00:11:39 2022      ;
+; Analysis & Synthesis Status     ; Successful - Wed Jun 22 00:18:10 2022      ;
 ; Quartus II 64-Bit Version       ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                   ; final                                      ;
 ; Top-level Entity Name           ; final                                      ;
 ; Family                          ; Cyclone V                                  ;
 ; Logic utilization (in ALMs)     ; N/A                                        ;
-; Total registers                 ; 0                                          ;
+; Total registers                 ; 44                                         ;
 ; Total pins                      ; 29                                         ;
 ; Total virtual pins              ; 0                                          ;
 ; Total block memory bits         ; 0                                          ;
@@ -167,113 +170,103 @@ applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                              ;
-+----------------------------------+-----------------+------------------------------------------+-------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                                ; File Name with Absolute Path                                                              ; Library ;
-+----------------------------------+-----------------+------------------------------------------+-------------------------------------------------------------------------------------------+---------+
-; final.bdf                        ; yes             ; User Block Diagram/Schematic File        ; C:/Users/User/Documents/GitHub/Digital_electronics_study/src/final/final.bdf              ;         ;
-; pointsMemory/Point.vhd           ; yes             ; User VHDL File                           ; C:/Users/User/Documents/GitHub/Digital_electronics_study/src/final/pointsMemory/Point.vhd ;         ;
-; vectorToBits.vhd                 ; yes             ; User VHDL File                           ; C:/Users/User/Documents/GitHub/Digital_electronics_study/src/final/vectorToBits.vhd       ;         ;
-; win_lose.vhd                     ; yes             ; Auto-Found VHDL File                     ; C:/Users/User/Documents/GitHub/Digital_electronics_study/src/final/win_lose.vhd           ;         ;
-; comparator8.vhd                  ; yes             ; Auto-Found VHDL File                     ; C:/Users/User/Documents/GitHub/Digital_electronics_study/src/final/comparator8.vhd        ;         ;
-; bits8_comp.vhd                   ; yes             ; Auto-Found VHDL File                     ; C:/Users/User/Documents/GitHub/Digital_electronics_study/src/final/bits8_comp.vhd         ;         ;
-; clk_gen.bdf                      ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/User/Documents/GitHub/Digital_electronics_study/src/final/clk_gen.bdf            ;         ;
-; div10_t.bdf                      ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/User/Documents/GitHub/Digital_electronics_study/src/final/div10_t.bdf            ;         ;
-; switch.vhd                       ; yes             ; Auto-Found VHDL File                     ; C:/Users/User/Documents/GitHub/Digital_electronics_study/src/final/switch.vhd             ;         ;
-; lfsr.vhd                         ; yes             ; Auto-Found VHDL File                     ; C:/Users/User/Documents/GitHub/Digital_electronics_study/src/final/lfsr.vhd               ;         ;
-; cardnum.vhd                      ; yes             ; Auto-Found VHDL File                     ; C:/Users/User/Documents/GitHub/Digital_electronics_study/src/final/cardnum.vhd            ;         ;
-; bits8_comp_b.vhd                 ; yes             ; Auto-Found VHDL File                     ; C:/Users/User/Documents/GitHub/Digital_electronics_study/src/final/bits8_comp_b.vhd       ;         ;
-; over11.vhd                       ; yes             ; Auto-Found VHDL File                     ; C:/Users/User/Documents/GitHub/Digital_electronics_study/src/final/over11.vhd             ;         ;
-; lfsr_add.vhd                     ; yes             ; Auto-Found VHDL File                     ; C:/Users/User/Documents/GitHub/Digital_electronics_study/src/final/lfsr_add.vhd           ;         ;
-; seven.vhd                        ; yes             ; Auto-Found VHDL File                     ; C:/Users/User/Documents/GitHub/Digital_electronics_study/src/final/seven.vhd              ;         ;
-+----------------------------------+-----------------+------------------------------------------+-------------------------------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                  ;
++----------------------------------+-----------------+------------------------------------------+-----------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                                ; File Name with Absolute Path                                                                  ; Library ;
++----------------------------------+-----------------+------------------------------------------+-----------------------------------------------------------------------------------------------+---------+
+; final.bdf                        ; yes             ; User Block Diagram/Schematic File        ; C:/Users/User/Documents/GitHub/Digital_electronics_study/src/final/final.bdf                  ;         ;
+; pointsMemory/Point.vhd           ; yes             ; User VHDL File                           ; C:/Users/User/Documents/GitHub/Digital_electronics_study/src/final/pointsMemory/Point.vhd     ;         ;
+; vectorToBits.vhd                 ; yes             ; User VHDL File                           ; C:/Users/User/Documents/GitHub/Digital_electronics_study/src/final/vectorToBits.vhd           ;         ;
+; win_lose.vhd                     ; yes             ; Auto-Found VHDL File                     ; C:/Users/User/Documents/GitHub/Digital_electronics_study/src/final/win_lose.vhd               ;         ;
+; comparator8.vhd                  ; yes             ; Auto-Found VHDL File                     ; C:/Users/User/Documents/GitHub/Digital_electronics_study/src/final/comparator8.vhd            ;         ;
+; bits8_comp.vhd                   ; yes             ; Auto-Found VHDL File                     ; C:/Users/User/Documents/GitHub/Digital_electronics_study/src/final/bits8_comp.vhd             ;         ;
+; clk_gen.bdf                      ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/User/Documents/GitHub/Digital_electronics_study/src/final/clk_gen.bdf                ;         ;
+; div10_t.bdf                      ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/User/Documents/GitHub/Digital_electronics_study/src/final/div10_t.bdf                ;         ;
+; switch.vhd                       ; yes             ; Auto-Found VHDL File                     ; C:/Users/User/Documents/GitHub/Digital_electronics_study/src/final/switch.vhd                 ;         ;
+; lfsr.vhd                         ; yes             ; Auto-Found VHDL File                     ; C:/Users/User/Documents/GitHub/Digital_electronics_study/src/final/lfsr.vhd                   ;         ;
+; cardnum.vhd                      ; yes             ; Auto-Found VHDL File                     ; C:/Users/User/Documents/GitHub/Digital_electronics_study/src/final/cardnum.vhd                ;         ;
+; bits8_comp_b.vhd                 ; yes             ; Auto-Found VHDL File                     ; C:/Users/User/Documents/GitHub/Digital_electronics_study/src/final/bits8_comp_b.vhd           ;         ;
+; over11.vhd                       ; yes             ; Auto-Found VHDL File                     ; C:/Users/User/Documents/GitHub/Digital_electronics_study/src/final/over11.vhd                 ;         ;
+; lfsr_add.vhd                     ; yes             ; Auto-Found VHDL File                     ; C:/Users/User/Documents/GitHub/Digital_electronics_study/src/final/lfsr_add.vhd               ;         ;
+; seven.vhd                        ; yes             ; Auto-Found VHDL File                     ; C:/Users/User/Documents/GitHub/Digital_electronics_study/src/final/seven.vhd                  ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                             ; c:/altera/13.1/quartus/libraries/megafunctions/lpm_divide.tdf                                 ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                             ; c:/altera/13.1/quartus/libraries/megafunctions/abs_divider.inc                                ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                             ; c:/altera/13.1/quartus/libraries/megafunctions/sign_div_unsign.inc                            ;         ;
+; aglobal131.inc                   ; yes             ; Megafunction                             ; c:/altera/13.1/quartus/libraries/megafunctions/aglobal131.inc                                 ;         ;
+; db/lpm_divide_82m.tdf            ; yes             ; Auto-Generated Megafunction              ; C:/Users/User/Documents/GitHub/Digital_electronics_study/src/final/db/lpm_divide_82m.tdf      ;         ;
+; db/sign_div_unsign_bkh.tdf       ; yes             ; Auto-Generated Megafunction              ; C:/Users/User/Documents/GitHub/Digital_electronics_study/src/final/db/sign_div_unsign_bkh.tdf ;         ;
+; db/alt_u_div_sse.tdf             ; yes             ; Auto-Generated Megafunction              ; C:/Users/User/Documents/GitHub/Digital_electronics_study/src/final/db/alt_u_div_sse.tdf       ;         ;
++----------------------------------+-----------------+------------------------------------------+-----------------------------------------------------------------------------------------------+---------+
 
 
-+----------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary              ;
-+---------------------------------------------+------------+
-; Resource                                    ; Usage      ;
-+---------------------------------------------+------------+
-; Estimate of Logic utilization (ALMs needed) ; 0          ;
-;                                             ;            ;
-; Combinational ALUT usage for logic          ; 0          ;
-;     -- 7 input functions                    ; 0          ;
-;     -- 6 input functions                    ; 0          ;
-;     -- 5 input functions                    ; 0          ;
-;     -- 4 input functions                    ; 0          ;
-;     -- <=3 input functions                  ; 0          ;
-;                                             ;            ;
-; Dedicated logic registers                   ; 0          ;
-;                                             ;            ;
-; I/O pins                                    ; 29         ;
-; Total DSP Blocks                            ; 0          ;
-; Maximum fan-out node                        ; n21~output ;
-; Maximum fan-out                             ; 1          ;
-; Total fan-out                               ; 29         ;
-; Average fan-out                             ; 0.50       ;
-+---------------------------------------------+------------+
++------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                  ;
++---------------------------------------------+--------------------------------+
+; Resource                                    ; Usage                          ;
++---------------------------------------------+--------------------------------+
+; Estimate of Logic utilization (ALMs needed) ; 40                             ;
+;                                             ;                                ;
+; Combinational ALUT usage for logic          ; 76                             ;
+;     -- 7 input functions                    ; 0                              ;
+;     -- 6 input functions                    ; 3                              ;
+;     -- 5 input functions                    ; 5                              ;
+;     -- 4 input functions                    ; 15                             ;
+;     -- <=3 input functions                  ; 53                             ;
+;                                             ;                                ;
+; Dedicated logic registers                   ; 44                             ;
+;                                             ;                                ;
+; I/O pins                                    ; 29                             ;
+; Total DSP Blocks                            ; 0                              ;
+; Maximum fan-out node                        ; clk_gen:inst23|div10_t:inst4|2 ;
+; Maximum fan-out                             ; 13                             ;
+; Total fan-out                               ; 358                            ;
+; Average fan-out                             ; 2.01                           ;
++---------------------------------------------+--------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                       ;
-+----------------------------+-------------------+--------------+-------------------+------------+------+--------------+---------------------+--------------+
-; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
-+----------------------------+-------------------+--------------+-------------------+------------+------+--------------+---------------------+--------------+
-; |final                     ; 0 (0)             ; 0 (0)        ; 0                 ; 0          ; 29   ; 0            ; |final              ; work         ;
-+----------------------------+-------------------+--------------+-------------------+------------+------+--------------+---------------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                   ;
++-------------------------------------------+-------------------+--------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                              ; Library Name ;
++-------------------------------------------+-------------------+--------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------------------------+--------------+
+; |final                                    ; 76 (2)            ; 44 (0)       ; 0                 ; 0          ; 29   ; 0            ; |final                                                                                                           ; work         ;
+;    |Point:inst4|                          ; 4 (4)             ; 4 (4)        ; 0                 ; 0          ; 0    ; 0            ; |final|Point:inst4                                                                                               ; work         ;
+;    |cardNum:inst7|                        ; 3 (3)             ; 3 (3)        ; 0                 ; 0          ; 0    ; 0            ; |final|cardNum:inst7                                                                                             ; work         ;
+;    |clk_gen:inst23|                       ; 20 (0)            ; 20 (0)       ; 0                 ; 0          ; 0    ; 0            ; |final|clk_gen:inst23                                                                                            ; work         ;
+;       |div10_t:inst1|                     ; 4 (4)             ; 4 (4)        ; 0                 ; 0          ; 0    ; 0            ; |final|clk_gen:inst23|div10_t:inst1                                                                              ; work         ;
+;       |div10_t:inst2|                     ; 4 (4)             ; 4 (4)        ; 0                 ; 0          ; 0    ; 0            ; |final|clk_gen:inst23|div10_t:inst2                                                                              ; work         ;
+;       |div10_t:inst3|                     ; 4 (4)             ; 4 (4)        ; 0                 ; 0          ; 0    ; 0            ; |final|clk_gen:inst23|div10_t:inst3                                                                              ; work         ;
+;       |div10_t:inst4|                     ; 4 (4)             ; 4 (4)        ; 0                 ; 0          ; 0    ; 0            ; |final|clk_gen:inst23|div10_t:inst4                                                                              ; work         ;
+;       |div10_t:inst|                      ; 4 (4)             ; 4 (4)        ; 0                 ; 0          ; 0    ; 0            ; |final|clk_gen:inst23|div10_t:inst                                                                               ; work         ;
+;    |lfsr:inst|                            ; 40 (6)            ; 13 (13)      ; 0                 ; 0          ; 0    ; 0            ; |final|lfsr:inst                                                                                                 ; work         ;
+;       |lpm_divide:Mod0|                   ; 34 (0)            ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |final|lfsr:inst|lpm_divide:Mod0                                                                                 ; work         ;
+;          |lpm_divide_82m:auto_generated|  ; 34 (0)            ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |final|lfsr:inst|lpm_divide:Mod0|lpm_divide_82m:auto_generated                                                   ; work         ;
+;             |sign_div_unsign_bkh:divider| ; 34 (0)            ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |final|lfsr:inst|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider                       ; work         ;
+;                |alt_u_div_sse:divider|    ; 34 (34)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |final|lfsr:inst|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider ; work         ;
+;    |seven:inst11|                         ; 7 (7)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |final|seven:inst11                                                                                              ; work         ;
+;    |vectorToBits:inst21|                  ; 0 (0)             ; 4 (4)        ; 0                 ; 0          ; 0    ; 0            ; |final|vectorToBits:inst21                                                                                       ; work         ;
++-------------------------------------------+-------------------+--------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+---------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                              ;
-+----------------------------------------+----------------------------------------+
-; Register name                          ; Reason for Removal                     ;
-+----------------------------------------+----------------------------------------+
-; vectorToBits:inst21|a0                 ; Stuck at VCC due to stuck port data_in ;
-; vectorToBits:inst21|a1                 ; Stuck at GND due to stuck port data_in ;
-; vectorToBits:inst21|a2                 ; Stuck at GND due to stuck port data_in ;
-; vectorToBits:inst21|a3                 ; Stuck at VCC due to stuck port data_in ;
-; clk_gen:inst23|div10_t:inst4|2         ; Lost fanout                            ;
-; clk_gen:inst23|div10_t:inst4|5         ; Lost fanout                            ;
-; clk_gen:inst23|div10_t:inst4|3         ; Lost fanout                            ;
-; clk_gen:inst23|div10_t:inst4|1         ; Lost fanout                            ;
-; clk_gen:inst23|div10_t:inst|2          ; Lost fanout                            ;
-; clk_gen:inst23|div10_t:inst|5          ; Lost fanout                            ;
-; clk_gen:inst23|div10_t:inst|3          ; Lost fanout                            ;
-; clk_gen:inst23|div10_t:inst|1          ; Lost fanout                            ;
-; clk_gen:inst23|div10_t:inst1|2         ; Lost fanout                            ;
-; clk_gen:inst23|div10_t:inst1|5         ; Lost fanout                            ;
-; clk_gen:inst23|div10_t:inst1|3         ; Lost fanout                            ;
-; clk_gen:inst23|div10_t:inst1|1         ; Lost fanout                            ;
-; clk_gen:inst23|div10_t:inst2|2         ; Lost fanout                            ;
-; clk_gen:inst23|div10_t:inst2|5         ; Lost fanout                            ;
-; clk_gen:inst23|div10_t:inst2|3         ; Lost fanout                            ;
-; clk_gen:inst23|div10_t:inst2|1         ; Lost fanout                            ;
-; clk_gen:inst23|div10_t:inst3|2         ; Lost fanout                            ;
-; clk_gen:inst23|div10_t:inst3|5         ; Lost fanout                            ;
-; clk_gen:inst23|div10_t:inst3|3         ; Lost fanout                            ;
-; clk_gen:inst23|div10_t:inst3|1         ; Lost fanout                            ;
-; Total Number of Removed Registers = 24 ;                                        ;
-+----------------------------------------+----------------------------------------+
++------------------------------------------------------------+
+; Registers Removed During Synthesis                         ;
++---------------------------------------+--------------------+
+; Register name                         ; Reason for Removal ;
++---------------------------------------+--------------------+
+; Point:inst4|nextC[0,1]                ; Lost fanout        ;
+; Total Number of Removed Registers = 2 ;                    ;
++---------------------------------------+--------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                  ;
-+--------------------------------+---------------------------+-----------------------------------------------------------------+
-; Register name                  ; Reason for Removal        ; Registers Removed due to This Register                          ;
-+--------------------------------+---------------------------+-----------------------------------------------------------------+
-; vectorToBits:inst21|a0         ; Stuck at VCC              ; clk_gen:inst23|div10_t:inst4|2, clk_gen:inst23|div10_t:inst4|5, ;
-;                                ; due to stuck port data_in ; clk_gen:inst23|div10_t:inst4|3, clk_gen:inst23|div10_t:inst4|1, ;
-;                                ;                           ; clk_gen:inst23|div10_t:inst3|2, clk_gen:inst23|div10_t:inst3|5, ;
-;                                ;                           ; clk_gen:inst23|div10_t:inst3|3, clk_gen:inst23|div10_t:inst3|1  ;
-; clk_gen:inst23|div10_t:inst|2  ; Lost Fanouts              ; clk_gen:inst23|div10_t:inst|5, clk_gen:inst23|div10_t:inst|3,   ;
-;                                ;                           ; clk_gen:inst23|div10_t:inst|1                                   ;
-; clk_gen:inst23|div10_t:inst1|2 ; Lost Fanouts              ; clk_gen:inst23|div10_t:inst1|5, clk_gen:inst23|div10_t:inst1|3, ;
-;                                ;                           ; clk_gen:inst23|div10_t:inst1|1                                  ;
-; clk_gen:inst23|div10_t:inst2|2 ; Lost Fanouts              ; clk_gen:inst23|div10_t:inst2|5, clk_gen:inst23|div10_t:inst2|3, ;
-;                                ;                           ; clk_gen:inst23|div10_t:inst2|1                                  ;
-+--------------------------------+---------------------------+-----------------------------------------------------------------+
++------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                        ;
++----------------------+--------------------+----------------------------------------+
+; Register name        ; Reason for Removal ; Registers Removed due to This Register ;
++----------------------+--------------------+----------------------------------------+
+; Point:inst4|nextC[0] ; Lost Fanouts       ; Point:inst4|nextC[1]                   ;
++----------------------+--------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -281,14 +274,56 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 0     ;
+; Total registers                              ; 44    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 7     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; lfsr:inst|tempInt[0]                   ; 6       ;
+; Total number of inverted registers = 1 ;         ;
++----------------------------------------+---------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------+
+; 3:1                ; 9 bits    ; 18 LEs        ; 0 LEs                ; 18 LEs                 ; Yes        ; |final|Point:inst4|nextC[5] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------+
+
+
++----------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lfsr:inst|lpm_divide:Mod0 ;
++------------------------+----------------+----------------------------------+
+; Parameter Name         ; Value          ; Type                             ;
++------------------------+----------------+----------------------------------+
+; LPM_WIDTHN             ; 6              ; Untyped                          ;
+; LPM_WIDTHD             ; 6              ; Untyped                          ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                          ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                          ;
+; LPM_PIPELINE           ; 0              ; Untyped                          ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                          ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                          ;
+; CBXI_PARAMETER         ; lpm_divide_82m ; Untyped                          ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                          ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                          ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                       ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                     ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                     ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                   ;
++------------------------+----------------+----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +-------------------------------+
@@ -306,7 +341,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Wed Jun 22 00:11:38 2022
+    Info: Processing started: Wed Jun 22 00:18:08 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off final -c final
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file final.bdf
@@ -319,8 +354,6 @@ Info (12021): Found 2 design units, including 1 entities, in source file vectort
     Info (12023): Found entity 1: vectorToBits
 Info (12127): Elaborating entity "final" for the top level hierarchy
 Warning (275011): Block or symbol "seven" of instance "inst11" overlaps another block or symbol
-Warning (275011): Block or symbol "GND" of instance "inst30" overlaps another block or symbol
-Warning (275011): Block or symbol "GND" of instance "inst34" overlaps another block or symbol
 Warning (275008): Primitive "OR2" of instance "inst22" not used
 Warning (12125): Using design file win_lose.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
     Info (12022): Found design unit 1: win_lose-dise
@@ -404,6 +437,20 @@ Warning (10541): VHDL Signal Declaration warning at vectorToBits.vhd(9): used im
 Warning (10541): VHDL Signal Declaration warning at vectorToBits.vhd(9): used implicit default value for signal "de2" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
 Warning (10541): VHDL Signal Declaration warning at vectorToBits.vhd(9): used implicit default value for signal "de3" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
 Warning (10036): Verilog HDL or VHDL warning at vectorToBits.vhd(22): object "de" assigned a value but never read
+Info (278001): Inferred 1 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "lfsr:inst|Mod0"
+Info (12130): Elaborated megafunction instantiation "lfsr:inst|lpm_divide:Mod0"
+Info (12133): Instantiated megafunction "lfsr:inst|lpm_divide:Mod0" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTHN" = "6"
+    Info (12134): Parameter "LPM_WIDTHD" = "6"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_82m.tdf
+    Info (12023): Found entity 1: lpm_divide_82m
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_bkh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_bkh
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_sse.tdf
+    Info (12023): Found entity 1: alt_u_div_sse
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "n21" is stuck at VCC
     Warning (13410): Pin "d3" is stuck at VCC
@@ -419,32 +466,24 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "AA1" is stuck at VCC
     Warning (13410): Pin "W2" is stuck at VCC
     Warning (13410): Pin "U1" is stuck at VCC
-    Warning (13410): Pin "a_ab7" is stuck at VCC
-    Warning (13410): Pin "b_aa7" is stuck at VCC
-    Warning (13410): Pin "c_ab6" is stuck at GND
-    Warning (13410): Pin "d_ab5" is stuck at VCC
-    Warning (13410): Pin "e_aa9" is stuck at VCC
-    Warning (13410): Pin "f_y9" is stuck at VCC
-    Warning (13410): Pin "g_ab8" is stuck at VCC
     Warning (13410): Pin "de1" is stuck at GND
     Warning (13410): Pin "de2" is stuck at GND
     Warning (13410): Pin "de3" is stuck at GND
     Warning (13410): Pin "e2" is stuck at VCC
-Info (17049): 20 registers lost all their fanouts during netlist optimizations.
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 2 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 4 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "clk"
-    Warning (15610): No output dependent on input pin "ps3"
-    Warning (15610): No output dependent on input pin "c13"
+Warning (21074): Design contains 1 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "b13"
-Info (21057): Implemented 29 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 110 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 4 input pins
     Info (21059): Implemented 25 output pins
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 67 warnings
-    Info: Peak virtual memory: 4700 megabytes
-    Info: Processing ended: Wed Jun 22 00:11:39 2022
-    Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:01
+    Info (21061): Implemented 81 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 55 warnings
+    Info: Peak virtual memory: 4751 megabytes
+    Info: Processing ended: Wed Jun 22 00:18:10 2022
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
 
 
