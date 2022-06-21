@@ -43,31 +43,34 @@ begin
 			when "001" =>
 				
 				de <= "010";
-				a3 <= tenMOM(2);
-				a2 <= tenMOM(3);
-				a1 <= tenMOM(4);
-				a0 <= tenMOM(5);
-			when "010" =>
-				
-				de <= "011";
-				a3 <= tenMOM(2);
-				a2 <= tenMOM(3);
-				a1 <= tenMOM(4);
-				a0 <= tenMOM(5);
-			when "011" =>
-				
-				de <= "100";
 				a3 <= ten(2);
 				a2 <= ten(3);
 				a1 <= ten(4);
 				a0 <= ten(5);
-			when "100" =>
 				
-				de <= "101";
+				
+			when "010" =>
+				
+				de <= "011";
 				a3 <= temp(2);
 				a2 <= temp(3);
 				a1 <= temp(4);
 				a0 <= temp(5);
+				
+			when "011" =>
+				
+				de <= "100";
+				a3 <= tenMOM(2);
+				a2 <= tenMOM(3);
+				a1 <= tenMOM(4);
+				a0 <= tenMOM(5);
+			when "100" =>
+				
+				de <= "101";
+				a3 <= tenMOM(2);
+				a2 <= tenMOM(3);
+				a1 <= tenMOM(4);
+				a0 <= tenMOM(5);
 			
 			when others =>
 				
