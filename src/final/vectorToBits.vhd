@@ -72,9 +72,14 @@ begin
 				a1 <= tempMOM(4);
 				a0 <= tempMOM(5);
 			
-			when others =>
+			when "101" =>
 				
 				de <= "000";
+				a3 <= tenP(2);
+				a2 <= tenP(3);
+				a1 <= tenP(4);
+				a0 <= tenP(5);
+			when others =>
 				a3 <= tenP(2);
 				a2 <= tenP(3);
 				a1 <= tenP(4);

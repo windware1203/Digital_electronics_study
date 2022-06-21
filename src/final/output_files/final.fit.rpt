@@ -1,5 +1,5 @@
 Fitter report for final
-Wed Jun 22 02:16:42 2022
+Wed Jun 22 02:24:03 2022
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -63,7 +63,7 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------+
 ; Fitter Summary                                                               ;
 +---------------------------------+--------------------------------------------+
-; Fitter Status                   ; Successful - Wed Jun 22 02:16:42 2022      ;
+; Fitter Status                   ; Successful - Wed Jun 22 02:24:03 2022      ;
 ; Quartus II 64-Bit Version       ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                   ; final                                      ;
 ; Top-level Entity Name           ; final                                      ;
@@ -71,7 +71,7 @@ applicable agreement for further details.
 ; Device                          ; 5CEFA2F23C8                                ;
 ; Timing Models                   ; Final                                      ;
 ; Logic utilization (in ALMs)     ; 136 / 9,430 ( 1 % )                        ;
-; Total registers                 ; 109                                        ;
+; Total registers                 ; 110                                        ;
 ; Total pins                      ; 29 / 224 ( 13 % )                          ;
 ; Total virtual pins              ; 0                                          ;
 ; Total block memory bits         ; 0 / 1,802,240 ( 0 % )                      ;
@@ -151,13 +151,13 @@ applicable agreement for further details.
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 8           ;
 ;                            ;             ;
-; Average used               ; 2.41        ;
+; Average used               ; 1.18        ;
 ; Maximum used               ; 8           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;  23.5%      ;
-;     Processors 5-8         ;  17.6%      ;
+;     Processors 2-4         ;   5.9%      ;
+;     Processors 5-8         ; < 0.1%      ;
 +----------------------------+-------------+
 
 
@@ -207,9 +207,10 @@ applicable agreement for further details.
 ; clk_gen:inst23|div10_t:inst2|5 ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; clk_gen:inst23|div10_t:inst2|5~DUPLICATE ;                  ;                       ;
 ; lfsr:inst|outt[0]              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; lfsr:inst|outt[0]~DUPLICATE              ;                  ;                       ;
 ; lfsr:inst|outt[1]              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; lfsr:inst|outt[1]~DUPLICATE              ;                  ;                       ;
-; lfsr:inst|tempInt[3]           ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; lfsr:inst|tempInt[3]~DUPLICATE           ;                  ;                       ;
 ; lfsr_add:inst12|outt[2]        ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; lfsr_add:inst12|outt[2]~DUPLICATE        ;                  ;                       ;
+; vectorToBits:inst21|de[0]      ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; vectorToBits:inst21|de[0]~DUPLICATE      ;                  ;                       ;
 ; vectorToBits:inst21|de[1]      ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; vectorToBits:inst21|de[1]~DUPLICATE      ;                  ;                       ;
+; vectorToBits:inst21|de[2]      ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; vectorToBits:inst21|de[2]~DUPLICATE      ;                  ;                       ;
 +--------------------------------+------------+---------------------------------------------------+----------------------------+-----------+----------------+------------------------------------------+------------------+-----------------------+
 
 
@@ -285,14 +286,14 @@ The pin-out file can be found in C:/Users/User/Documents/GitHub/Digital_electron
 ;     -- 5 input functions                                    ; 23            ;       ;
 ;     -- 4 input functions                                    ; 34            ;       ;
 ;     -- <=3 input functions                                  ; 172           ;       ;
-; Combinational ALUT usage for route-throughs                 ; 20            ;       ;
-; Dedicated logic registers                                   ; 109           ;       ;
+; Combinational ALUT usage for route-throughs                 ; 18            ;       ;
+; Dedicated logic registers                                   ; 110           ;       ;
 ;     -- By type:                                             ;               ;       ;
 ;         -- Primary logic registers                          ; 99 / 18,860   ; < 1 % ;
-;         -- Secondary logic registers                        ; 10 / 18,860   ; < 1 % ;
+;         -- Secondary logic registers                        ; 11 / 18,860   ; < 1 % ;
 ;     -- By function:                                         ;               ;       ;
 ;         -- Design implementation registers                  ; 99            ;       ;
-;         -- Routing optimization registers                   ; 10            ;       ;
+;         -- Routing optimization registers                   ; 11            ;       ;
 ;                                                             ;               ;       ;
 ; Virtual pins                                                ; 0             ;       ;
 ; I/O pins                                                    ; 29 / 224      ; 13 %  ;
@@ -318,10 +319,10 @@ The pin-out file can be found in C:/Users/User/Documents/GitHub/Digital_electron
 ; Hard Memory Controllers                                     ; 0 / 1         ; 0 %   ;
 ; Average interconnect usage (total/H/V)                      ; 0% / 0% / 0%  ;       ;
 ; Peak interconnect usage (total/H/V)                         ; 2% / 2% / 2%  ;       ;
-; Maximum fan-out                                             ; 62            ;       ;
-; Highest non-global fan-out                                  ; 62            ;       ;
+; Maximum fan-out                                             ; 64            ;       ;
+; Highest non-global fan-out                                  ; 64            ;       ;
 ; Total fan-out                                               ; 1038          ;       ;
-; Average fan-out                                             ; 2.43          ;       ;
+; Average fan-out                                             ; 2.44          ;       ;
 +-------------------------------------------------------------+---------------+-------+
 
 
@@ -356,7 +357,7 @@ The pin-out file can be found in C:/Users/User/Documents/GitHub/Digital_electron
 ;     -- 5 input functions                                    ; 23                   ; 0                              ;
 ;     -- 4 input functions                                    ; 34                   ; 0                              ;
 ;     -- <=3 input functions                                  ; 172                  ; 0                              ;
-; Combinational ALUT usage for route-throughs                 ; 20                   ; 0                              ;
+; Combinational ALUT usage for route-throughs                 ; 18                   ; 0                              ;
 ; Memory ALUT usage                                           ; 0                    ; 0                              ;
 ;     -- 64-address deep                                      ; 0                    ; 0                              ;
 ;     -- 32-address deep                                      ; 0                    ; 0                              ;
@@ -364,10 +365,10 @@ The pin-out file can be found in C:/Users/User/Documents/GitHub/Digital_electron
 ; Dedicated logic registers                                   ; 0                    ; 0                              ;
 ;     -- By type:                                             ;                      ;                                ;
 ;         -- Primary logic registers                          ; 99 / 18860 ( < 1 % ) ; 0 / 18860 ( 0 % )              ;
-;         -- Secondary logic registers                        ; 10 / 18860 ( < 1 % ) ; 0 / 18860 ( 0 % )              ;
+;         -- Secondary logic registers                        ; 11 / 18860 ( < 1 % ) ; 0 / 18860 ( 0 % )              ;
 ;     -- By function:                                         ;                      ;                                ;
 ;         -- Design implementation registers                  ; 99                   ; 0                              ;
-;         -- Routing optimization registers                   ; 10                   ; 0                              ;
+;         -- Routing optimization registers                   ; 11                   ; 0                              ;
 ;                                                             ;                      ;                                ;
 ;                                                             ;                      ;                                ;
 ; Virtual pins                                                ; 0                    ; 0                              ;
@@ -385,7 +386,7 @@ The pin-out file can be found in C:/Users/User/Documents/GitHub/Digital_electron
 ;                                                             ;                      ;                                ;
 ; Internal Connections                                        ;                      ;                                ;
 ;     -- Total Connections                                    ; 1054                 ; 0                              ;
-;     -- Registered Connections                               ; 420                  ; 0                              ;
+;     -- Registered Connections                               ; 422                  ; 0                              ;
 ;                                                             ;                      ;                                ;
 ; External Connections                                        ;                      ;                                ;
 ;     -- Top                                                  ; 0                    ; 0                              ;
@@ -971,7 +972,7 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +-------------------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+----------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                ; ALMs needed [=A-B+C] ; [A] ALMs used in final placement ; [B] Estimate of ALMs recoverable by dense packing ; [C] Estimate of ALMs unavailable ; ALMs used for memory ; Combinational ALUTs ; Dedicated Logic Registers ; I/O Registers ; Block Memory Bits ; M10Ks ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                        ; Library Name ;
 +-------------------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+----------------------------------------------------------------------------------------------------------------------------+--------------+
-; |final                                    ; 135.5 (2.0)          ; 145.5 (3.5)                      ; 20.5 (1.5)                                        ; 10.5 (0.0)                       ; 0.0 (0.0)            ; 239 (7)             ; 109 (0)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 29   ; 0            ; |final                                                                                                                     ; work         ;
+; |final                                    ; 135.5 (2.0)          ; 145.5 (3.5)                      ; 20.5 (1.5)                                        ; 10.5 (0.0)                       ; 0.0 (0.0)            ; 239 (7)             ; 110 (0)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 29   ; 0            ; |final                                                                                                                     ; work         ;
 ;    |Point:inst10|                         ; 5.0 (5.0)            ; 6.0 (6.0)                        ; 1.0 (1.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 12 (12)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |final|Point:inst10                                                                                                        ; work         ;
 ;    |Point:inst4|                          ; 4.5 (4.5)            ; 6.1 (6.1)                        ; 1.6 (1.6)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 6 (6)               ; 15 (15)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |final|Point:inst4                                                                                                         ; work         ;
 ;    |cardNum:inst13|                       ; 1.8 (1.8)            ; 2.5 (2.5)                        ; 0.8 (0.8)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 3 (3)               ; 3 (3)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |final|cardNum:inst13                                                                                                      ; work         ;
@@ -984,18 +985,18 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 ;    |comparator8:inst1|                    ; 2.7 (2.7)            ; 2.7 (2.7)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 4 (4)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |final|comparator8:inst1                                                                                                   ; work         ;
 ;    |debounce_g:inst33|                    ; 0.7 (0.7)            ; 0.7 (0.7)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 2 (2)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |final|debounce_g:inst33                                                                                                   ; work         ;
 ;    |debounce_g:inst35|                    ; 0.8 (0.8)            ; 1.0 (1.0)                        ; 0.2 (0.2)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 2 (2)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |final|debounce_g:inst35                                                                                                   ; work         ;
-;    |lfsr:inst|                            ; 21.7 (6.0)           ; 22.3 (6.7)                       ; 0.7 (0.7)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 40 (6)              ; 16 (16)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |final|lfsr:inst                                                                                                           ; work         ;
-;       |lpm_divide:Mod0|                   ; 15.6 (0.0)           ; 15.6 (0.0)                       ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 34 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |final|lfsr:inst|lpm_divide:Mod0                                                                                           ; work         ;
-;          |lpm_divide_82m:auto_generated|  ; 15.6 (0.0)           ; 15.6 (0.0)                       ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 34 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |final|lfsr:inst|lpm_divide:Mod0|lpm_divide_82m:auto_generated                                                             ; work         ;
-;             |sign_div_unsign_bkh:divider| ; 15.6 (0.0)           ; 15.6 (0.0)                       ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 34 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |final|lfsr:inst|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider                                 ; work         ;
-;                |alt_u_div_sse:divider|    ; 15.6 (15.6)          ; 15.6 (15.6)                      ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 34 (34)             ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |final|lfsr:inst|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider           ; work         ;
+;    |lfsr:inst|                            ; 21.7 (6.0)           ; 22.3 (6.6)                       ; 0.7 (0.6)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 40 (6)              ; 15 (15)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |final|lfsr:inst                                                                                                           ; work         ;
+;       |lpm_divide:Mod0|                   ; 15.7 (0.0)           ; 15.7 (0.0)                       ; 0.1 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 34 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |final|lfsr:inst|lpm_divide:Mod0                                                                                           ; work         ;
+;          |lpm_divide_82m:auto_generated|  ; 15.7 (0.0)           ; 15.7 (0.0)                       ; 0.1 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 34 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |final|lfsr:inst|lpm_divide:Mod0|lpm_divide_82m:auto_generated                                                             ; work         ;
+;             |sign_div_unsign_bkh:divider| ; 15.7 (0.0)           ; 15.7 (0.0)                       ; 0.1 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 34 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |final|lfsr:inst|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider                                 ; work         ;
+;                |alt_u_div_sse:divider|    ; 15.7 (15.7)          ; 15.7 (15.7)                      ; 0.1 (0.1)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 34 (34)             ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |final|lfsr:inst|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider           ; work         ;
 ;    |lfsr_add:inst12|                      ; 22.3 (6.8)           ; 24.6 (8.7)                       ; 2.2 (1.8)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 41 (7)              ; 15 (15)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |final|lfsr_add:inst12                                                                                                     ; work         ;
 ;       |lpm_divide:Mod0|                   ; 15.5 (0.0)           ; 15.9 (0.0)                       ; 0.4 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 34 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |final|lfsr_add:inst12|lpm_divide:Mod0                                                                                     ; work         ;
 ;          |lpm_divide_82m:auto_generated|  ; 15.5 (0.0)           ; 15.9 (0.0)                       ; 0.4 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 34 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |final|lfsr_add:inst12|lpm_divide:Mod0|lpm_divide_82m:auto_generated                                                       ; work         ;
 ;             |sign_div_unsign_bkh:divider| ; 15.5 (0.0)           ; 15.9 (0.0)                       ; 0.4 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 34 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |final|lfsr_add:inst12|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider                           ; work         ;
 ;                |alt_u_div_sse:divider|    ; 15.5 (15.5)          ; 15.9 (15.9)                      ; 0.4 (0.4)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 34 (34)             ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |final|lfsr_add:inst12|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider     ; work         ;
 ;    |seven:inst11|                         ; 3.3 (3.3)            ; 3.5 (3.5)                        ; 0.2 (0.2)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |final|seven:inst11                                                                                                        ; work         ;
-;    |vectorToBits:inst21|                  ; 49.2 (8.3)           ; 55.3 (13.0)                      ; 6.2 (4.7)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 105 (9)             ; 23 (23)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |final|vectorToBits:inst21                                                                                                 ; work         ;
+;    |vectorToBits:inst21|                  ; 49.2 (8.3)           ; 55.3 (13.0)                      ; 6.2 (4.7)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 105 (9)             ; 25 (25)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |final|vectorToBits:inst21                                                                                                 ; work         ;
 ;       |lpm_divide:Mod0|                   ; 14.5 (0.0)           ; 14.5 (0.0)                       ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 32 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |final|vectorToBits:inst21|lpm_divide:Mod0                                                                                 ; work         ;
 ;          |lpm_divide_82m:auto_generated|  ; 14.5 (0.0)           ; 14.5 (0.0)                       ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 32 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |final|vectorToBits:inst21|lpm_divide:Mod0|lpm_divide_82m:auto_generated                                                   ; work         ;
 ;             |sign_div_unsign_bkh:divider| ; 14.5 (0.0)           ; 14.5 (0.0)                       ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 32 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |final|vectorToBits:inst21|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider                       ; work         ;
@@ -1069,17 +1070,17 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------------------+---------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 ; Name                           ; Location            ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +--------------------------------+---------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
-; Point:inst10|temp[4]~0         ; LABCELL_X35_Y19_N39 ; 9       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; Point:inst10|temp[4]~0         ; LABCELL_X35_Y19_N27 ; 9       ; Clock enable ; no     ; --                   ; --               ; --                        ;
 ; clk                            ; PIN_W16             ; 2       ; Clock        ; no     ; --                   ; --               ; --                        ;
 ; clk                            ; PIN_W16             ; 3       ; Clock        ; yes    ; Global Clock         ; GCLK6            ; --                        ;
 ; clk_gen:inst23|div10_t:inst1|2 ; FF_X36_Y12_N41      ; 7       ; Clock        ; no     ; --                   ; --               ; --                        ;
 ; clk_gen:inst23|div10_t:inst2|2 ; FF_X36_Y13_N20      ; 6       ; Clock        ; no     ; --                   ; --               ; --                        ;
-; clk_gen:inst23|div10_t:inst3|2 ; FF_X36_Y13_N14      ; 62      ; Clock        ; no     ; --                   ; --               ; --                        ;
+; clk_gen:inst23|div10_t:inst3|2 ; FF_X36_Y13_N14      ; 64      ; Clock        ; no     ; --                   ; --               ; --                        ;
 ; clk_gen:inst23|div10_t:inst|2  ; FF_X37_Y13_N20      ; 7       ; Clock        ; no     ; --                   ; --               ; --                        ;
 ; inst15                         ; LABCELL_X35_Y19_N0  ; 15      ; Clock        ; no     ; --                   ; --               ; --                        ;
 ; inst17~1                       ; LABCELL_X35_Y19_N12 ; 9       ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
 ; inst6                          ; LABCELL_X35_Y19_N48 ; 10      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; inst9                          ; LABCELL_X36_Y19_N24 ; 16      ; Clock        ; no     ; --                   ; --               ; --                        ;
+; inst9                          ; LABCELL_X36_Y19_N24 ; 15      ; Clock        ; no     ; --                   ; --               ; --                        ;
 +--------------------------------+---------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 
 
@@ -1097,8 +1098,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------------------------------------------------------------------------------------------------------------------------+---------+
 ; Name                                                                                                                                           ; Fan-Out ;
 +------------------------------------------------------------------------------------------------------------------------------------------------+---------+
-; clk_gen:inst23|div10_t:inst3|2                                                                                                                 ; 62      ;
-; inst9                                                                                                                                          ; 16      ;
+; clk_gen:inst23|div10_t:inst3|2                                                                                                                 ; 64      ;
+; inst9                                                                                                                                          ; 15      ;
 ; inst15                                                                                                                                         ; 15      ;
 ; comparator8:inst1|LessThan0~3                                                                                                                  ; 14      ;
 ; inst6                                                                                                                                          ; 10      ;
@@ -1126,21 +1127,16 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; vectorToBits:inst21|a2                                                                                                                         ; 7       ;
 ; vectorToBits:inst21|a1                                                                                                                         ; 7       ;
 ; vectorToBits:inst21|a0                                                                                                                         ; 7       ;
-; lfsr:inst|outt[0]~DUPLICATE                                                                                                                    ; 6       ;
 ; lfsr_add:inst12|tempInt[0]                                                                                                                     ; 6       ;
 ; lfsr:inst|tempInt[0]                                                                                                                           ; 6       ;
 ; lfsr:inst|outt[3]                                                                                                                              ; 6       ;
 ; clk_gen:inst23|div10_t:inst2|2                                                                                                                 ; 6       ;
-; vectorToBits:inst21|de[2]                                                                                                                      ; 6       ;
-; vectorToBits:inst21|de[0]                                                                                                                      ; 6       ;
 ; Point:inst10|nextC[3]                                                                                                                          ; 6       ;
 ; Point:inst10|nextC[2]                                                                                                                          ; 6       ;
 ; Point:inst10|nextC[1]                                                                                                                          ; 6       ;
 ; Point:inst4|nextC[4]                                                                                                                           ; 6       ;
 ; lfsr_add:inst12|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_6~1                         ; 6       ;
 ; lfsr:inst|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_6~1                               ; 6       ;
-; Point:inst4|nextC[2]~DUPLICATE                                                                                                                 ; 5       ;
-; Point:inst4|nextC[1]~DUPLICATE                                                                                                                 ; 5       ;
 ; lfsr_add:inst12|tempInt[1]                                                                                                                     ; 5       ;
 ; lfsr:inst|tempInt[1]                                                                                                                           ; 5       ;
 ; debounce_g:inst33|1                                                                                                                            ; 5       ;
@@ -1149,10 +1145,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Point:inst4|nextC[3]                                                                                                                           ; 5       ;
 ; Point:inst4|nextC[5]                                                                                                                           ; 5       ;
 ; cardNum:inst7|nextC[2]                                                                                                                         ; 5       ;
+; vectorToBits:inst21|de[0]~DUPLICATE                                                                                                            ; 4       ;
+; Point:inst4|nextC[1]~DUPLICATE                                                                                                                 ; 4       ;
 ; clk_gen:inst23|div10_t:inst|5                                                                                                                  ; 4       ;
 ; lfsr_add:inst12|tempInt[2]                                                                                                                     ; 4       ;
 ; lfsr:inst|tempInt[2]                                                                                                                           ; 4       ;
 ; lfsr:inst|outt[1]                                                                                                                              ; 4       ;
+; lfsr:inst|outt[0]                                                                                                                              ; 4       ;
 ; lfsr_add:inst12|outt[2]                                                                                                                        ; 4       ;
 ; lfsr_add:inst12|outt[5]                                                                                                                        ; 4       ;
 ; lfsr:inst|outt[5]                                                                                                                              ; 4       ;
@@ -1169,8 +1168,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; clk_gen:inst23|div10_t:inst1|5~DUPLICATE                                                                                                       ; 3       ;
 ; lfsr:inst|outt[1]~DUPLICATE                                                                                                                    ; 3       ;
 ; clk_gen:inst23|div10_t:inst2|5~DUPLICATE                                                                                                       ; 3       ;
+; lfsr:inst|outt[0]~DUPLICATE                                                                                                                    ; 3       ;
 ; lfsr_add:inst12|outt[2]~DUPLICATE                                                                                                              ; 3       ;
+; vectorToBits:inst21|de[2]~DUPLICATE                                                                                                            ; 3       ;
 ; vectorToBits:inst21|de[1]~DUPLICATE                                                                                                            ; 3       ;
+; Point:inst4|nextC[2]~DUPLICATE                                                                                                                 ; 3       ;
 ; Point:inst4|nextC[0]~DUPLICATE                                                                                                                 ; 3       ;
 ; lfsr_add:inst12|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[21]~7                 ; 3       ;
 ; lfsr_add:inst12|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[21]~6                 ; 3       ;
@@ -1179,16 +1181,18 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; lfsr:inst|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[21]~6                       ; 3       ;
 ; clk_gen:inst23|div10_t:inst1|3                                                                                                                 ; 3       ;
 ; lfsr_add:inst12|tempInt[3]                                                                                                                     ; 3       ;
+; lfsr:inst|tempInt[3]                                                                                                                           ; 3       ;
 ; clk_gen:inst23|div10_t:inst2|3                                                                                                                 ; 3       ;
 ; vectorToBits:inst21|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[18]~2             ; 3       ;
 ; inst17~0                                                                                                                                       ; 3       ;
 ; lfsr_add:inst12|add                                                                                                                            ; 3       ;
 ; clk_gen:inst23|div10_t:inst3|3                                                                                                                 ; 3       ;
+; vectorToBits:inst21|de[2]                                                                                                                      ; 3       ;
 ; vectorToBits:inst21|de[1]                                                                                                                      ; 3       ;
 ; debounce_g:inst35|1                                                                                                                            ; 3       ;
+; Point:inst4|nextC[2]                                                                                                                           ; 3       ;
 ; cardNum:inst13|nextC[1]                                                                                                                        ; 3       ;
 ; cardNum:inst7|nextC[0]                                                                                                                         ; 3       ;
-; lfsr:inst|tempInt[3]~DUPLICATE                                                                                                                 ; 2       ;
 ; clk_gen:inst23|div10_t:inst1|5~0                                                                                                               ; 2       ;
 ; clk_gen:inst23|div10_t:inst2|5~0                                                                                                               ; 2       ;
 ; lfsr_add:inst12|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[20]~10                ; 2       ;
@@ -1199,7 +1203,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; lfsr:inst|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[20]~9                       ; 2       ;
 ; lfsr:inst|temp                                                                                                                                 ; 2       ;
 ; lfsr_add:inst12|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[19]~4                 ; 2       ;
-; lfsr:inst|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[33]~5                       ; 2       ;
 ; lfsr:inst|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[19]~4                       ; 2       ;
 ; lfsr_add:inst12|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[18]~2                 ; 2       ;
 ; lfsr:inst|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[18]~2                       ; 2       ;
@@ -1219,9 +1222,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; vectorToBits:inst21|lpm_divide:Mod1|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[19]~4             ; 2       ;
 ; vectorToBits:inst21|lpm_divide:Mod2|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[18]~2             ; 2       ;
 ; vectorToBits:inst21|lpm_divide:Mod1|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[18]~2             ; 2       ;
-; vectorToBits:inst21|Mux1~0                                                                                                                     ; 2       ;
+; vectorToBits:inst21|Mux2~0                                                                                                                     ; 2       ;
+; vectorToBits:inst21|de[1]~0                                                                                                                    ; 2       ;
+; vectorToBits:inst21|Mux0~0                                                                                                                     ; 2       ;
 ; clk_gen:inst23|div10_t:inst3|1                                                                                                                 ; 2       ;
+; vectorToBits:inst21|de[0]                                                                                                                      ; 2       ;
 ; debounce_g:inst35|2                                                                                                                            ; 2       ;
+; Point:inst4|nextC[1]                                                                                                                           ; 2       ;
 ; lfsr_add:inst12|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_5~21                        ; 2       ;
 ; lfsr_add:inst12|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|add_sub_3_result_int[2]~17     ; 2       ;
 ; lfsr_add:inst12|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_5~17                        ; 2       ;
@@ -1293,6 +1300,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; lfsr:inst|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[34]~11                      ; 1       ;
 ; lfsr:inst|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[35]~8                       ; 1       ;
 ; lfsr_add:inst12|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[33]~5                 ; 1       ;
+; lfsr:inst|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[33]~5                       ; 1       ;
 ; lfsr_add:inst12|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[32]~3                 ; 1       ;
 ; lfsr:inst|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[32]~3                       ; 1       ;
 ; lfsr_add:inst12|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[31]~1                 ; 1       ;
@@ -1311,7 +1319,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; clk_gen:inst23|div10_t:inst2|3~0                                                                                                               ; 1       ;
 ; lfsr:inst|tempInt[5]                                                                                                                           ; 1       ;
 ; lfsr:inst|Add0~2                                                                                                                               ; 1       ;
-; lfsr:inst|tempInt[3]                                                                                                                           ; 1       ;
 ; vectorToBits:inst21|lpm_divide:Mod2|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[19]~7             ; 1       ;
 ; vectorToBits:inst21|lpm_divide:Mod2|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[19]~6             ; 1       ;
 ; vectorToBits:inst21|lpm_divide:Mod1|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[19]~7             ; 1       ;
@@ -1325,7 +1332,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; clk_gen:inst23|div10_t:inst2|5                                                                                                                 ; 1       ;
 ; clk_gen:inst23|div10_t:inst3|1~0                                                                                                               ; 1       ;
 ; clk_gen:inst23|div10_t:inst3|3~0                                                                                                               ; 1       ;
-; lfsr:inst|outt[0]                                                                                                                              ; 1       ;
 ; vectorToBits:inst21|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[33]~4             ; 1       ;
 ; vectorToBits:inst21|lpm_divide:Mod2|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[33]~5             ; 1       ;
 ; vectorToBits:inst21|lpm_divide:Mod1|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[33]~5             ; 1       ;
@@ -1336,8 +1342,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; vectorToBits:inst21|lpm_divide:Mod1|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[31]~1             ; 1       ;
 ; vectorToBits:inst21|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[30]~0             ; 1       ;
 ; vectorToBits:inst21|lpm_divide:Mod2|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[30]~0             ; 1       ;
-; vectorToBits:inst21|Mux2~0                                                                                                                     ; 1       ;
-; vectorToBits:inst21|Mux0~0                                                                                                                     ; 1       ;
 ; vectorToBits:inst21|lpm_divide:Mod1|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|StageOut[30]~0             ; 1       ;
 ; clk_gen:inst23|div10_t:inst3|2~0                                                                                                               ; 1       ;
 ; vectorToBits:inst21|Mux3~0                                                                                                                     ; 1       ;
@@ -1371,8 +1375,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; comparator8:inst1|LessThan0~2                                                                                                                  ; 1       ;
 ; comparator8:inst1|LessThan0~1                                                                                                                  ; 1       ;
 ; comparator8:inst1|LessThan0~0                                                                                                                  ; 1       ;
-; Point:inst4|nextC[2]                                                                                                                           ; 1       ;
-; Point:inst4|nextC[1]                                                                                                                           ; 1       ;
 ; Point:inst4|nextC[0]                                                                                                                           ; 1       ;
 ; lfsr_add:inst12|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_5~26                        ; 1       ;
 ; lfsr:inst|lpm_divide:Mod0|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider|op_5~26                              ; 1       ;
@@ -1550,21 +1552,21 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------+-------------------------+
 ; Routing Resource Type        ; Usage                   ;
 +------------------------------+-------------------------+
-; Block interconnects          ; 357 / 140,056 ( < 1 % ) ;
+; Block interconnects          ; 350 / 140,056 ( < 1 % ) ;
 ; C12 interconnects            ; 11 / 6,048 ( < 1 % )    ;
-; C2 interconnects             ; 103 / 54,648 ( < 1 % )  ;
-; C4 interconnects             ; 67 / 25,920 ( < 1 % )   ;
+; C2 interconnects             ; 102 / 54,648 ( < 1 % )  ;
+; C4 interconnects             ; 73 / 25,920 ( < 1 % )   ;
 ; DQS bus muxes                ; 0 / 17 ( 0 % )          ;
 ; DQS-18 I/O buses             ; 0 / 17 ( 0 % )          ;
 ; DQS-9 I/O buses              ; 0 / 17 ( 0 % )          ;
-; Direct links                 ; 91 / 140,056 ( < 1 % )  ;
+; Direct links                 ; 90 / 140,056 ( < 1 % )  ;
 ; Global clocks                ; 1 / 16 ( 6 % )          ;
-; Local interconnects          ; 136 / 36,960 ( < 1 % )  ;
+; Local interconnects          ; 138 / 36,960 ( < 1 % )  ;
 ; Quadrant clocks              ; 0 / 88 ( 0 % )          ;
 ; R14 interconnects            ; 16 / 5,984 ( < 1 % )    ;
 ; R14/C12 interconnect drivers ; 25 / 9,504 ( < 1 % )    ;
-; R3 interconnects             ; 171 / 60,192 ( < 1 % )  ;
-; R6 interconnects             ; 133 / 127,072 ( < 1 % ) ;
+; R3 interconnects             ; 174 / 60,192 ( < 1 % )  ;
+; R6 interconnects             ; 131 / 127,072 ( < 1 % ) ;
 ; Spine clocks                 ; 1 / 120 ( < 1 % )       ;
 ; Wire stub REs                ; 0 / 7,344 ( 0 % )       ;
 +------------------------------+-------------------------+
@@ -1732,7 +1734,7 @@ This will disable optimization of problematic paths and expose them for further 
 ; Point:inst10|nextC[3]          ; vectorToBits:inst21|tempMOM[2] ; 1.243             ;
 ; cardNum:inst7|nextC[0]         ; cardNum:inst7|nextC[0]         ; 1.213             ;
 ; lfsr:inst|outt[2]              ; vectorToBits:inst21|temp[2]    ; 1.135             ;
-; vectorToBits:inst21|de[0]      ; vectorToBits:inst21|de[1]      ; 1.082             ;
+; vectorToBits:inst21|de[0]      ; vectorToBits:inst21|de[1]      ; 1.084             ;
 ; Point:inst4|nextC[4]           ; Point:inst4|nextC[0]           ; 1.052             ;
 ; lfsr:inst|outt[3]              ; vectorToBits:inst21|temp[3]    ; 1.052             ;
 ; Point:inst4|nextC[5]           ; Point:inst4|nextC[0]           ; 1.046             ;
@@ -1825,16 +1827,16 @@ Info (170195): Router estimated average interconnect usage is 0% of the availabl
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:03
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (11888): Total time spent on timing analysis during the Fitter is 1.00 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.92 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:04
+Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:03
 Info (144001): Generated suppressed messages file C:/Users/User/Documents/GitHub/Digital_electronics_study/src/final/output_files/final.fit.smsg
 Info: Quartus II 64-Bit Fitter was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 6074 megabytes
-    Info: Processing ended: Wed Jun 22 02:16:43 2022
+    Info: Peak virtual memory: 6066 megabytes
+    Info: Processing ended: Wed Jun 22 02:24:04 2022
     Info: Elapsed time: 00:00:18
     Info: Total CPU time (on all processors): 00:00:26
 
