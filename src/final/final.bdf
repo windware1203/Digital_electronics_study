@@ -1943,14 +1943,6 @@ applicable agreement for further details.
 	(pt 1136 32)
 )
 (connector
-	(pt 424 32)
-	(pt 424 -96)
-)
-(connector
-	(pt 424 -96)
-	(pt 344 -96)
-)
-(connector
 	(pt 512 120)
 	(pt 488 120)
 )
@@ -2142,6 +2134,14 @@ applicable agreement for further details.
 	(pt 1640 -256)
 	(pt 1656 -256)
 	(bus)
+)
+(connector
+	(pt 424 -80)
+	(pt 424 32)
+)
+(connector
+	(pt 424 -80)
+	(pt 344 -80)
 )
 (junction (pt 1112 208))
 (junction (pt 1456 192))

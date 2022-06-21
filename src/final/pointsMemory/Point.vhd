@@ -14,7 +14,7 @@ entity Point is
 end entity Point;
  
 architecture Main of Point is
-
+signal temp: unsigned(0 to 5):="000000";
 
 begin
 	
@@ -23,10 +23,12 @@ begin
 	begin
 		if rising_edge(clk) then
 			if add = '1'then
-				nextC <= old+newer;	
+				temp <= old+newer;	
 			elsif reset = '1' then
-				nextC <= "000000";
+				temp <= "000000";
 				end if;
+
+			nextC <= temp;
 		end if;
 	
 	end process;

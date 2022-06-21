@@ -1,5 +1,5 @@
 Analysis & Synthesis report for final
-Wed Jun 22 00:18:10 2022
+Wed Jun 22 00:23:45 2022
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -46,13 +46,13 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                 ;
 +---------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed Jun 22 00:18:10 2022      ;
+; Analysis & Synthesis Status     ; Successful - Wed Jun 22 00:23:45 2022      ;
 ; Quartus II 64-Bit Version       ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                   ; final                                      ;
 ; Top-level Entity Name           ; final                                      ;
 ; Family                          ; Cyclone V                                  ;
 ; Logic utilization (in ALMs)     ; N/A                                        ;
-; Total registers                 ; 44                                         ;
+; Total registers                 ; 52                                         ;
 ; Total pins                      ; 29                                         ;
 ; Total virtual pins              ; 0                                          ;
 ; Total block memory bits         ; 0                                          ;
@@ -205,23 +205,23 @@ applicable agreement for further details.
 +---------------------------------------------+--------------------------------+
 ; Resource                                    ; Usage                          ;
 +---------------------------------------------+--------------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 40                             ;
+; Estimate of Logic utilization (ALMs needed) ; 43                             ;
 ;                                             ;                                ;
-; Combinational ALUT usage for logic          ; 76                             ;
+; Combinational ALUT usage for logic          ; 80                             ;
 ;     -- 7 input functions                    ; 0                              ;
 ;     -- 6 input functions                    ; 3                              ;
 ;     -- 5 input functions                    ; 5                              ;
-;     -- 4 input functions                    ; 15                             ;
-;     -- <=3 input functions                  ; 53                             ;
+;     -- 4 input functions                    ; 16                             ;
+;     -- <=3 input functions                  ; 56                             ;
 ;                                             ;                                ;
-; Dedicated logic registers                   ; 44                             ;
+; Dedicated logic registers                   ; 52                             ;
 ;                                             ;                                ;
 ; I/O pins                                    ; 29                             ;
 ; Total DSP Blocks                            ; 0                              ;
-; Maximum fan-out node                        ; clk_gen:inst23|div10_t:inst4|2 ;
-; Maximum fan-out                             ; 13                             ;
-; Total fan-out                               ; 358                            ;
-; Average fan-out                             ; 2.01                           ;
+; Maximum fan-out node                        ; clk_gen:inst23|div10_t:inst5|2 ;
+; Maximum fan-out                             ; 17                             ;
+; Total fan-out                               ; 385                            ;
+; Average fan-out                             ; 2.03                           ;
 +---------------------------------------------+--------------------------------+
 
 
@@ -230,14 +230,15 @@ applicable agreement for further details.
 +-------------------------------------------+-------------------+--------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                              ; Library Name ;
 +-------------------------------------------+-------------------+--------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------------------------+--------------+
-; |final                                    ; 76 (2)            ; 44 (0)       ; 0                 ; 0          ; 29   ; 0            ; |final                                                                                                           ; work         ;
-;    |Point:inst4|                          ; 4 (4)             ; 4 (4)        ; 0                 ; 0          ; 0    ; 0            ; |final|Point:inst4                                                                                               ; work         ;
+; |final                                    ; 80 (2)            ; 52 (0)       ; 0                 ; 0          ; 29   ; 0            ; |final                                                                                                           ; work         ;
+;    |Point:inst4|                          ; 4 (4)             ; 8 (8)        ; 0                 ; 0          ; 0    ; 0            ; |final|Point:inst4                                                                                               ; work         ;
 ;    |cardNum:inst7|                        ; 3 (3)             ; 3 (3)        ; 0                 ; 0          ; 0    ; 0            ; |final|cardNum:inst7                                                                                             ; work         ;
-;    |clk_gen:inst23|                       ; 20 (0)            ; 20 (0)       ; 0                 ; 0          ; 0    ; 0            ; |final|clk_gen:inst23                                                                                            ; work         ;
+;    |clk_gen:inst23|                       ; 24 (0)            ; 24 (0)       ; 0                 ; 0          ; 0    ; 0            ; |final|clk_gen:inst23                                                                                            ; work         ;
 ;       |div10_t:inst1|                     ; 4 (4)             ; 4 (4)        ; 0                 ; 0          ; 0    ; 0            ; |final|clk_gen:inst23|div10_t:inst1                                                                              ; work         ;
 ;       |div10_t:inst2|                     ; 4 (4)             ; 4 (4)        ; 0                 ; 0          ; 0    ; 0            ; |final|clk_gen:inst23|div10_t:inst2                                                                              ; work         ;
 ;       |div10_t:inst3|                     ; 4 (4)             ; 4 (4)        ; 0                 ; 0          ; 0    ; 0            ; |final|clk_gen:inst23|div10_t:inst3                                                                              ; work         ;
 ;       |div10_t:inst4|                     ; 4 (4)             ; 4 (4)        ; 0                 ; 0          ; 0    ; 0            ; |final|clk_gen:inst23|div10_t:inst4                                                                              ; work         ;
+;       |div10_t:inst5|                     ; 4 (4)             ; 4 (4)        ; 0                 ; 0          ; 0    ; 0            ; |final|clk_gen:inst23|div10_t:inst5                                                                              ; work         ;
 ;       |div10_t:inst|                      ; 4 (4)             ; 4 (4)        ; 0                 ; 0          ; 0    ; 0            ; |final|clk_gen:inst23|div10_t:inst                                                                               ; work         ;
 ;    |lfsr:inst|                            ; 40 (6)            ; 13 (13)      ; 0                 ; 0          ; 0    ; 0            ; |final|lfsr:inst                                                                                                 ; work         ;
 ;       |lpm_divide:Mod0|                   ; 34 (0)            ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |final|lfsr:inst|lpm_divide:Mod0                                                                                 ; work         ;
@@ -256,7 +257,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Register name                         ; Reason for Removal ;
 +---------------------------------------+--------------------+
 ; Point:inst4|nextC[0,1]                ; Lost fanout        ;
-; Total Number of Removed Registers = 2 ;                    ;
+; Point:inst4|temp[0,1]                 ; Lost fanout        ;
+; Total Number of Removed Registers = 4 ;                    ;
 +---------------------------------------+--------------------+
 
 
@@ -265,7 +267,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------+--------------------+----------------------------------------+
 ; Register name        ; Reason for Removal ; Registers Removed due to This Register ;
 +----------------------+--------------------+----------------------------------------+
-; Point:inst4|nextC[0] ; Lost Fanouts       ; Point:inst4|nextC[1]                   ;
+; Point:inst4|nextC[0] ; Lost Fanouts       ; Point:inst4|temp[0]                    ;
+; Point:inst4|nextC[1] ; Lost Fanouts       ; Point:inst4|temp[1]                    ;
 +----------------------+--------------------+----------------------------------------+
 
 
@@ -274,7 +277,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 44    ;
+; Total registers                              ; 52    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -294,13 +297,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------+---------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                            ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output  ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------+
-; 3:1                ; 9 bits    ; 18 LEs        ; 0 LEs                ; 18 LEs                 ; Yes        ; |final|Point:inst4|nextC[5] ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 3:1                ; 9 bits    ; 18 LEs        ; 0 LEs                ; 18 LEs                 ; Yes        ; |final|Point:inst4|temp[5] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 
 
 +----------------------------------------------------------------------------+
@@ -341,7 +344,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Wed Jun 22 00:18:08 2022
+    Info: Processing started: Wed Jun 22 00:23:43 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off final -c final
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file final.bdf
@@ -471,18 +474,18 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "de3" is stuck at GND
     Warning (13410): Pin "e2" is stuck at VCC
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 2 registers lost all their fanouts during netlist optimizations.
+Info (17049): 4 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "b13"
-Info (21057): Implemented 110 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 118 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 4 input pins
     Info (21059): Implemented 25 output pins
-    Info (21061): Implemented 81 logic cells
+    Info (21061): Implemented 89 logic cells
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 55 warnings
-    Info: Peak virtual memory: 4751 megabytes
-    Info: Processing ended: Wed Jun 22 00:18:10 2022
+    Info: Peak virtual memory: 4740 megabytes
+    Info: Processing ended: Wed Jun 22 00:23:45 2022
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 
