@@ -5,85 +5,35 @@ USE IEEE.STD_LOGIC_UNSIGNED.ALL;
 
 entity vectorToBits is
 port (clk:	in std_logic;
-		inputLFSR,inputPoints,inputPointsMOM: in unsigned(0 to 5);
+		inputA,inputB: in unsigned(0 to 5);
 		a0,a1,a2,a3,de1,de2,de3: out std_logic);
 end vectorToBits;
 
 architecture main of vectorToBits is
 
-	signal temp: unsigned(0 to 5):="000000";
-	signal ten : unsigned(0 to 5):="000000";
 	
-	signal tempP: unsigned(0 to 5):="000000";
-	signal tenP : unsigned(0 to 5):="000000";
-	
-	signal tempMOM: unsigned(0 to 5):="000000";
-	signal tenMOM : unsigned(0 to 5):="000000";
 	signal de  : unsigned(0 to 2):="000";
 begin
 	process(clk)
 	begin
 		if rising_edge(clk) then
-			ten <= inputLFSR rem 10;
-			temp <= inputLFSR mod 10;
 			
-			tenP <= inputPoints rem 10;
-			tempP <= inputPoints mod 10;
-			
-			tenMOM <= inputPointsMOM rem 10;
-			tempMOM <= inputPointsMOM mod 10;
 			case de is
 				when "000" =>
-				
-				de <= "001";
-				a3 <= tempP(2);
-				a2 <= tempP(3);
-				a1 <= tempP(4);
-				a0 <= tempP(5);
-			when "001" =>
-				
-				de <= "010";
-				a3 <= ten(2);
-				a2 <= ten(3);
-				a1 <= ten(4);
-				a0 <= ten(5);
-				
-				
-			when "010" =>
-				
-				de <= "011";
-				a3 <= temp(2);
-				a2 <= temp(3);
-				a1 <= temp(4);
-				a0 <= temp(5);
-				
-			when "011" =>
-				
-				de <= "100";
-				a3 <= tenMOM(2);
-				a2 <= tenMOM(3);
-				a1 <= tenMOM(4);
-				a0 <= tenMOM(5);
-			when "100" =>
-				
-				de <= "101";
-				a3 <= tempMOM(2);
-				a2 <= tempMOM(3);
-				a1 <= tempMOM(4);
-				a0 <= tempMOM(5);
-			
-			when "101" =>
-				
-				de <= "000";
-				a3 <= tenP(2);
-				a2 <= tenP(3);
-				a1 <= tenP(4);
-				a0 <= tenP(5);
-			when others =>
-				a3 <= tenP(2);
-				a2 <= tenP(3);
-				a1 <= tenP(4);
-				a0 <= tenP(5);
+					de <= "001";
+					a3 <= inputA(2);
+					a2 <= inputA(3);
+					a1 <= inputA(4);
+					a0 <= inputA(5);
+				when "001" =>
+					de <= "000";
+					a3 <= inputB(2);
+					a2 <= inputB(3);
+					a1 <= inputB(4);
+					a0 <= inputB(5);
+				when others =>
+					de <= "000";
+
  			end case;
 			
 			de3 <= de(0);

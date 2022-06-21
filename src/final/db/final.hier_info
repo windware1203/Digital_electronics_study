@@ -2,9 +2,7 @@
 n21 <= <VCC>
 d3 <= win_lose:inst2.D3
 clk => clk_gen:inst23.clock
-ps3 => debounce_g:inst35.Key_in
 c13 => debounce_g:inst33.Key_in
-b13 => debounce_g:inst34.Key_in
 c2 <= win_lose:inst2.C2
 c1 <= win_lose:inst2.C1
 L1 <= win_lose:inst2.L1
@@ -77,73 +75,46 @@ b[5] => LessThan0.IN7
 playerWin <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|final|bits8_comp:inst8
-a[0] => LessThan0.IN12
-a[0] => Q.DATAA
-a[1] => LessThan0.IN11
-a[1] => Q.DATAA
-a[2] => LessThan0.IN10
-a[2] => Q.DATAA
-a[3] => LessThan0.IN9
-a[3] => Q.DATAA
-a[4] => LessThan0.IN8
-a[4] => Q.DATAA
-a[5] => LessThan0.IN7
-a[5] => Q.DATAA
-nofc[0] => Equal0.IN5
-nofc[1] => Equal0.IN4
-nofc[2] => Equal0.IN3
-Q[0] <= Q.DB_MAX_OUTPUT_PORT_TYPE
-Q[1] <= Q.DB_MAX_OUTPUT_PORT_TYPE
-Q[2] <= Q.DB_MAX_OUTPUT_PORT_TYPE
-Q[3] <= Q.DB_MAX_OUTPUT_PORT_TYPE
-Q[4] <= Q.DB_MAX_OUTPUT_PORT_TYPE
-Q[5] <= Q.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|final|Point:inst4
-old[5] => Add0.IN6
-old[4] => Add0.IN5
-old[3] => Add0.IN4
-old[2] => Add0.IN3
-old[1] => Add0.IN2
-old[0] => Add0.IN1
-newer[5] => Add0.IN12
-newer[4] => Add0.IN11
-newer[3] => Add0.IN10
-newer[2] => Add0.IN9
-newer[1] => Add0.IN8
-newer[0] => Add0.IN7
-clk => nextC[5]~reg0.CLK
-clk => nextC[4]~reg0.CLK
-clk => nextC[3]~reg0.CLK
-clk => nextC[2]~reg0.CLK
-clk => nextC[1]~reg0.CLK
-clk => nextC[0]~reg0.CLK
-clk => temp[5].CLK
-clk => temp[4].CLK
-clk => temp[3].CLK
-clk => temp[2].CLK
-clk => temp[1].CLK
-clk => temp[0].CLK
-add => temp.OUTPUTSELECT
-add => temp.OUTPUTSELECT
-add => temp.OUTPUTSELECT
-add => temp.OUTPUTSELECT
-add => temp.OUTPUTSELECT
-add => temp.OUTPUTSELECT
-reset => temp.OUTPUTSELECT
-reset => temp.OUTPUTSELECT
-reset => temp.OUTPUTSELECT
-reset => temp.OUTPUTSELECT
-reset => temp.OUTPUTSELECT
-reset => temp.OUTPUTSELECT
-nextC[5] <= nextC[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-nextC[4] <= nextC[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-nextC[3] <= nextC[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-nextC[2] <= nextC[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-nextC[1] <= nextC[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-nextC[0] <= nextC[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+|final|lfsr:inst
+clk => outt[5]~reg0.CLK
+clk => outt[4]~reg0.CLK
+clk => outt[3]~reg0.CLK
+clk => outt[2]~reg0.CLK
+clk => outt[1]~reg0.CLK
+clk => outt[0]~reg0.CLK
+clk => tempInt[0].CLK
+clk => tempInt[1].CLK
+clk => tempInt[2].CLK
+clk => tempInt[3].CLK
+clk => tempInt[4].CLK
+clk => tempInt[5].CLK
+clk => temp.CLK
+input => temp.ENA
+input => tempInt[5].ENA
+input => tempInt[4].ENA
+input => tempInt[3].ENA
+input => tempInt[2].ENA
+input => tempInt[1].ENA
+input => tempInt[0].ENA
+input => outt[0]~reg0.ENA
+input => outt[1]~reg0.ENA
+input => outt[2]~reg0.ENA
+input => outt[3]~reg0.ENA
+input => outt[4]~reg0.ENA
+input => outt[5]~reg0.ENA
+inSeed[5] => temp.IN0
+inSeed[4] => temp.IN1
+inSeed[4] => Mod0.IN10
+inSeed[3] => Mod0.IN9
+inSeed[2] => Mod0.IN8
+inSeed[1] => Mod0.IN7
+inSeed[0] => Mod0.IN6
+outt[5] <= outt[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+outt[4] <= outt[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+outt[3] <= outt[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+outt[2] <= outt[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+outt[1] <= outt[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+outt[0] <= outt[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |final|clk_gen:inst23
@@ -210,19 +181,6 @@ CLK => 1.CLK
 CLK => 2.CLK
 
 
-|final|debounce_g:inst35
-Key_out <= 16.DB_MAX_OUTPUT_PORT_TYPE
-CLK => 1.CLK
-CLK => 2.CLK
-Key_in => 1.DATAIN
-
-
-|final|switch:inst5
-C13 => Add.DATAIN
-B13 => ~NO_FANOUT~
-Add <= C13.DB_MAX_OUTPUT_PORT_TYPE
-
-
 |final|debounce_g:inst33
 Key_out <= 16.DB_MAX_OUTPUT_PORT_TYPE
 CLK => 1.CLK
@@ -230,14 +188,7 @@ CLK => 2.CLK
 Key_in => 1.DATAIN
 
 
-|final|debounce_g:inst34
-Key_out <= 16.DB_MAX_OUTPUT_PORT_TYPE
-CLK => 1.CLK
-CLK => 2.CLK
-Key_in => 1.DATAIN
-
-
-|final|lfsr:inst
+|final|lfsr:inst37
 clk => outt[5]~reg0.CLK
 clk => outt[4]~reg0.CLK
 clk => outt[3]~reg0.CLK
@@ -251,6 +202,19 @@ clk => tempInt[3].CLK
 clk => tempInt[4].CLK
 clk => tempInt[5].CLK
 clk => temp.CLK
+input => temp.ENA
+input => tempInt[5].ENA
+input => tempInt[4].ENA
+input => tempInt[3].ENA
+input => tempInt[2].ENA
+input => tempInt[1].ENA
+input => tempInt[0].ENA
+input => outt[0]~reg0.ENA
+input => outt[1]~reg0.ENA
+input => outt[2]~reg0.ENA
+input => outt[3]~reg0.ENA
+input => outt[4]~reg0.ENA
+input => outt[5]~reg0.ENA
 inSeed[5] => temp.IN0
 inSeed[4] => temp.IN1
 inSeed[4] => Mod0.IN10
@@ -264,147 +228,6 @@ outt[3] <= outt[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 outt[2] <= outt[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 outt[1] <= outt[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 outt[0] <= outt[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|final|cardNum:inst7
-nowC[2] => Add0.IN6
-nowC[1] => Add0.IN5
-nowC[0] => Add0.IN4
-clk => nextC[2]~reg0.CLK
-clk => nextC[1]~reg0.CLK
-clk => nextC[0]~reg0.CLK
-add => nextC.OUTPUTSELECT
-add => nextC.OUTPUTSELECT
-add => nextC.OUTPUTSELECT
-reset => nextC.OUTPUTSELECT
-reset => nextC.OUTPUTSELECT
-reset => nextC.OUTPUTSELECT
-nextC[2] <= nextC[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-nextC[1] <= nextC[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-nextC[0] <= nextC[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-five <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|final|bits8_comp_b:inst20
-b[0] => LessThan0.IN12
-b[1] => LessThan0.IN11
-b[2] => LessThan0.IN10
-b[3] => LessThan0.IN9
-b[4] => LessThan0.IN8
-b[5] => LessThan0.IN7
-Q[0] <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
-Q[1] <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
-Q[2] <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
-Q[3] <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
-Q[4] <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
-Q[5] <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|final|Point:inst10
-old[5] => Add0.IN6
-old[4] => Add0.IN5
-old[3] => Add0.IN4
-old[2] => Add0.IN3
-old[1] => Add0.IN2
-old[0] => Add0.IN1
-newer[5] => Add0.IN12
-newer[4] => Add0.IN11
-newer[3] => Add0.IN10
-newer[2] => Add0.IN9
-newer[1] => Add0.IN8
-newer[0] => Add0.IN7
-clk => nextC[5]~reg0.CLK
-clk => nextC[4]~reg0.CLK
-clk => nextC[3]~reg0.CLK
-clk => nextC[2]~reg0.CLK
-clk => nextC[1]~reg0.CLK
-clk => nextC[0]~reg0.CLK
-clk => temp[5].CLK
-clk => temp[4].CLK
-clk => temp[3].CLK
-clk => temp[2].CLK
-clk => temp[1].CLK
-clk => temp[0].CLK
-add => temp.OUTPUTSELECT
-add => temp.OUTPUTSELECT
-add => temp.OUTPUTSELECT
-add => temp.OUTPUTSELECT
-add => temp.OUTPUTSELECT
-add => temp.OUTPUTSELECT
-reset => temp.OUTPUTSELECT
-reset => temp.OUTPUTSELECT
-reset => temp.OUTPUTSELECT
-reset => temp.OUTPUTSELECT
-reset => temp.OUTPUTSELECT
-reset => temp.OUTPUTSELECT
-nextC[5] <= nextC[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-nextC[4] <= nextC[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-nextC[3] <= nextC[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-nextC[2] <= nextC[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-nextC[1] <= nextC[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-nextC[0] <= nextC[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|final|over11:inst18
-x[0] => LessThan0.IN12
-x[1] => LessThan0.IN11
-x[2] => LessThan0.IN10
-x[3] => LessThan0.IN9
-x[4] => LessThan0.IN8
-x[5] => LessThan0.IN7
-y <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|final|lfsr_add:inst12
-clk => add~reg0.CLK
-clk => outt[5]~reg0.CLK
-clk => outt[4]~reg0.CLK
-clk => outt[3]~reg0.CLK
-clk => outt[2]~reg0.CLK
-clk => outt[1]~reg0.CLK
-clk => outt[0]~reg0.CLK
-clk => tempInt[0].CLK
-clk => tempInt[1].CLK
-clk => tempInt[2].CLK
-clk => tempInt[3].CLK
-clk => tempInt[4].CLK
-clk => tempInt[5].CLK
-clk => temp.CLK
-add <= add~reg0.DB_MAX_OUTPUT_PORT_TYPE
-inSeed[5] => temp.IN0
-inSeed[4] => temp.IN1
-inSeed[4] => Mod0.IN10
-inSeed[3] => Mod0.IN9
-inSeed[3] => add.IN0
-inSeed[2] => Mod0.IN8
-inSeed[1] => Mod0.IN7
-inSeed[1] => add.IN1
-inSeed[0] => Mod0.IN6
-outt[5] <= outt[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-outt[4] <= outt[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-outt[3] <= outt[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-outt[2] <= outt[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-outt[1] <= outt[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-outt[0] <= outt[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|final|cardNum:inst13
-nowC[2] => Add0.IN6
-nowC[1] => Add0.IN5
-nowC[0] => Add0.IN4
-clk => nextC[2]~reg0.CLK
-clk => nextC[1]~reg0.CLK
-clk => nextC[0]~reg0.CLK
-add => nextC.OUTPUTSELECT
-add => nextC.OUTPUTSELECT
-add => nextC.OUTPUTSELECT
-reset => nextC.OUTPUTSELECT
-reset => nextC.OUTPUTSELECT
-reset => nextC.OUTPUTSELECT
-nextC[2] <= nextC[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-nextC[1] <= nextC[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-nextC[0] <= nextC[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-five <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |final|seven:inst11
@@ -456,48 +279,18 @@ clk => a3~reg0.CLK
 clk => de[2].CLK
 clk => de[1].CLK
 clk => de[0].CLK
-clk => tempMOM[5].CLK
-clk => tempMOM[4].CLK
-clk => tempMOM[3].CLK
-clk => tempMOM[2].CLK
-clk => tenMOM[5].CLK
-clk => tenMOM[4].CLK
-clk => tenMOM[3].CLK
-clk => tenMOM[2].CLK
-clk => tempP[5].CLK
-clk => tempP[4].CLK
-clk => tempP[3].CLK
-clk => tempP[2].CLK
-clk => tenP[5].CLK
-clk => tenP[4].CLK
-clk => tenP[3].CLK
-clk => tenP[2].CLK
-clk => temp[5].CLK
-clk => temp[4].CLK
-clk => temp[3].CLK
-clk => temp[2].CLK
-clk => ten[5].CLK
-clk => ten[4].CLK
-clk => ten[3].CLK
-clk => ten[2].CLK
-inputLFSR[5] => Mod0.IN11
-inputLFSR[4] => Mod0.IN10
-inputLFSR[3] => Mod0.IN9
-inputLFSR[2] => Mod0.IN8
-inputLFSR[1] => Mod0.IN7
-inputLFSR[0] => Mod0.IN6
-inputPoints[5] => Mod1.IN11
-inputPoints[4] => Mod1.IN10
-inputPoints[3] => Mod1.IN9
-inputPoints[2] => Mod1.IN8
-inputPoints[1] => Mod1.IN7
-inputPoints[0] => Mod1.IN6
-inputPointsMOM[5] => Mod2.IN11
-inputPointsMOM[4] => Mod2.IN10
-inputPointsMOM[3] => Mod2.IN9
-inputPointsMOM[2] => Mod2.IN8
-inputPointsMOM[1] => Mod2.IN7
-inputPointsMOM[0] => Mod2.IN6
+inputA[5] => Mux4.IN0
+inputA[4] => Mux3.IN0
+inputA[3] => Mux2.IN0
+inputA[2] => Mux1.IN0
+inputA[1] => ~NO_FANOUT~
+inputA[0] => ~NO_FANOUT~
+inputB[5] => Mux4.IN1
+inputB[4] => Mux3.IN1
+inputB[3] => Mux2.IN1
+inputB[2] => Mux1.IN1
+inputB[1] => ~NO_FANOUT~
+inputB[0] => ~NO_FANOUT~
 a0 <= a0~reg0.DB_MAX_OUTPUT_PORT_TYPE
 a1 <= a1~reg0.DB_MAX_OUTPUT_PORT_TYPE
 a2 <= a2~reg0.DB_MAX_OUTPUT_PORT_TYPE

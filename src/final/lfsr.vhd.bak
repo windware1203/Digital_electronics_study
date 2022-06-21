@@ -5,7 +5,7 @@ use ieee.std_logic_unsigned.all;
 
 entity lfsr is
   port (
-		clk,input	:	in 	std_logic;
+		clk	:	in 	std_logic;
 		signal inSeed:	in 	unsigned(0 to 5);
 		--output:	out	std_logic_vector(0 to 5)
 		signal outt:	out 	unsigned(0 to 5)
@@ -21,11 +21,9 @@ begin
 	process(clk)
 	begin
 		if rising_edge(clk) then
-			if input = '1' then
 			temp <= (inSeed(4) xor inSeed(5));
 			tempInt <= to_integer(unsigned(temp & inSeed(0 to 4))) mod 10;
 			outt <= to_unsigned(tempInt,6 )+1;
-			end if;
 		end if;
 	
 	end process;
