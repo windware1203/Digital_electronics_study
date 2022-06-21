@@ -879,7 +879,7 @@ applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 696 288 880 400)
+	(rect 696 272 880 384)
 	(text "lfsr" (rect 5 0 21 12)(font "Arial" ))
 	(text "inst37" (rect 8 96 37 108)(font "Arial" ))
 	(port
@@ -1169,37 +1169,12 @@ applicable agreement for further details.
 	(pt 664 176)
 )
 (connector
-	(pt 696 416)
-	(pt 696 352)
-	(bus)
-)
-(connector
-	(pt 880 320)
-	(pt 936 320)
-	(bus)
-)
-(connector
-	(pt 696 416)
-	(pt 936 416)
-	(bus)
-)
-(connector
 	(pt 688 32)
 	(pt 688 160)
 )
 (connector
 	(pt 696 256)
 	(pt 936 256)
-	(bus)
-)
-(connector
-	(pt 936 416)
-	(pt 936 368)
-	(bus)
-)
-(connector
-	(pt 936 368)
-	(pt 936 320)
 	(bus)
 )
 (connector
@@ -1370,16 +1345,36 @@ applicable agreement for further details.
 	(pt 384 208)
 )
 (connector
-	(pt 408 320)
-	(pt 408 208)
+	(pt 936 304)
+	(pt 880 304)
+	(bus)
 )
 (connector
-	(pt 408 320)
+	(pt 936 416)
+	(pt 696 416)
+	(bus)
+)
+(connector
+	(pt 408 208)
+	(pt 408 304)
+)
+(connector
+	(pt 408 304)
+	(pt 696 304)
+)
+(connector
+	(pt 664 320)
 	(pt 696 320)
 )
 (connector
-	(pt 664 336)
-	(pt 696 336)
+	(pt 936 304)
+	(pt 936 368)
+	(bus)
+)
+(connector
+	(pt 936 368)
+	(pt 936 416)
+	(bus)
 )
 (connector
 	(pt 664 112)
@@ -1387,7 +1382,12 @@ applicable agreement for further details.
 )
 (connector
 	(pt 664 176)
-	(pt 664 336)
+	(pt 664 320)
+)
+(connector
+	(pt 696 336)
+	(pt 696 416)
+	(bus)
 )
 (junction (pt 688 32))
 (junction (pt 936 256))
