@@ -27,10 +27,10 @@ begin
 	
 	
 
-					a0 <= inputLFSR(1);
-					a1 <= inputLFSR(2);
-					a2 <= inputLFSR(3);
-					a3 <= inputLFSR(4);
+					a0 <= inputLFSR(2);
+					a1 <= inputLFSR(3);
+					a2 <= inputLFSR(4);
+					a3 <= inputLFSR(5);
 					de <= "000";
 		
 		end if;
