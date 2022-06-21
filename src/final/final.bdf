@@ -2023,80 +2023,12 @@ applicable agreement for further details.
 	(pt 2144 680)
 )
 (connector
-	(pt 2120 -224)
-	(pt 2120 -232)
-)
-(connector
-	(pt 2120 -232)
-	(pt 2128 -232)
-)
-(connector
-	(pt 2120 -208)
-	(pt 2120 -216)
-)
-(connector
-	(pt 2120 -216)
-	(pt 2128 -216)
-)
-(connector
-	(pt 2120 -192)
-	(pt 2120 -200)
-)
-(connector
-	(pt 2120 -200)
-	(pt 2128 -200)
-)
-(connector
-	(pt 2120 -176)
-	(pt 2120 -184)
-)
-(connector
-	(pt 2120 -184)
-	(pt 2128 -184)
-)
-(connector
-	(pt 2120 -160)
-	(pt 2120 -168)
-)
-(connector
-	(pt 2120 -168)
-	(pt 2128 -168)
-)
-(connector
-	(pt 2120 -144)
-	(pt 2120 -152)
-)
-(connector
-	(pt 2120 -152)
-	(pt 2128 -152)
-)
-(connector
-	(pt 2120 -128)
-	(pt 2120 -136)
-)
-(connector
-	(pt 2120 -136)
-	(pt 2128 -136)
-)
-(connector
 	(pt 1896 -32)
 	(pt 1936 -32)
 )
 (connector
 	(pt 1912 -72)
 	(pt 1936 -72)
-)
-(connector
-	(pt 1952 -184)
-	(pt 2016 -184)
-)
-(connector
-	(pt 1936 -200)
-	(pt 2016 -200)
-)
-(connector
-	(pt 1920 -216)
-	(pt 2016 -216)
 )
 (connector
 	(pt 656 104)
@@ -2404,6 +2336,74 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
+	(pt 2120 -224)
+	(pt 2120 -232)
+)
+(connector
+	(pt 2120 -232)
+	(pt 2128 -232)
+)
+(connector
+	(pt 2120 -208)
+	(pt 2120 -216)
+)
+(connector
+	(pt 2120 -216)
+	(pt 2128 -216)
+)
+(connector
+	(pt 2120 -192)
+	(pt 2120 -200)
+)
+(connector
+	(pt 2120 -200)
+	(pt 2128 -200)
+)
+(connector
+	(pt 2120 -176)
+	(pt 2120 -184)
+)
+(connector
+	(pt 2120 -184)
+	(pt 2128 -184)
+)
+(connector
+	(pt 2120 -160)
+	(pt 2120 -168)
+)
+(connector
+	(pt 2120 -168)
+	(pt 2128 -168)
+)
+(connector
+	(pt 2120 -144)
+	(pt 2120 -152)
+)
+(connector
+	(pt 2120 -152)
+	(pt 2128 -152)
+)
+(connector
+	(pt 2120 -128)
+	(pt 2120 -136)
+)
+(connector
+	(pt 2120 -136)
+	(pt 2128 -136)
+)
+(connector
+	(pt 1952 -184)
+	(pt 2016 -184)
+)
+(connector
+	(pt 1936 -200)
+	(pt 2016 -200)
+)
+(connector
+	(pt 1920 -216)
+	(pt 2016 -216)
+)
+(connector
 	(pt 1944 8)
 	(pt 1872 8)
 )
@@ -2414,26 +2414,6 @@ applicable agreement for further details.
 (connector
 	(pt 1912 -72)
 	(pt 1912 -160)
-)
-(connector
-	(pt 1952 -184)
-	(pt 1952 -176)
-)
-(connector
-	(pt 1936 -200)
-	(pt 1936 -192)
-)
-(connector
-	(pt 1920 -216)
-	(pt 1920 -208)
-)
-(connector
-	(pt 2016 -232)
-	(pt 1872 -232)
-)
-(connector
-	(pt 1872 -232)
-	(pt 1872 -224)
 )
 (connector
 	(pt 1488 56)
@@ -2494,6 +2474,26 @@ applicable agreement for further details.
 (connector
 	(pt 1872 8)
 	(pt 1872 -128)
+)
+(connector
+	(pt 1952 -184)
+	(pt 1952 -176)
+)
+(connector
+	(pt 1936 -200)
+	(pt 1936 -192)
+)
+(connector
+	(pt 1920 -216)
+	(pt 1920 -208)
+)
+(connector
+	(pt 2016 -232)
+	(pt 1872 -232)
+)
+(connector
+	(pt 1872 -232)
+	(pt 1872 -224)
 )
 (connector
 	(pt 1136 -224)
