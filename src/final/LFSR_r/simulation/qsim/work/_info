@@ -4,11 +4,11 @@ K3
 cModel Technology
 Z0 dC:\Users\User\Documents\GitHub\Digital_electronics_study\src\LFSR_r\simulation\qsim
 vlfsr
-Z1 !s100 BA??QW_9L@^<E7IcmzOBi0
-Z2 I?hLolhS`?7]_][SenTZ093
-Z3 VZAam>hMlJSPlQE9H1bPA21
-Z4 dC:\Users\User\Documents\GitHub\Digital_electronics_study\src\LFSR_r\simulation\qsim
-Z5 w1655224245
+Z1 !s100 mScL34]i5Z;6_PBzYRK]02
+Z2 IeYZ4ZF:mk>MYjmcDc0VA@1
+Z3 VT`k>dYfRKS7:IUk[m?JCU3
+Z4 dC:\Users\User\Documents\GitHub\Digital_electronics_study\src\final\LFSR_r\simulation\qsim
+Z5 w1655802582
 Z6 8lfsr.vo
 Z7 Flfsr.vo
 L0 31
@@ -19,63 +19,63 @@ Z9 !s90 -work|work|lfsr.vo|
 Z10 o-work work -O0
 !i10b 1
 !s85 0
-Z11 !s108 1655224246.021000
+Z11 !s108 1655802582.988000
 Z12 !s107 lfsr.vo|
 !s101 -O0
 vlfsr_vlg_check_tst
 !i10b 1
-Z13 !s100 P=@U[hdhG4D]NXX9`fJ9A1
-Z14 I=`FVVTjzZnUcBgKP74<o91
-Z15 V;oH7j_jDllbS1PO`34YRH0
+!s100 z6:TABk]nkdlR2^PTX0WR2
+IPVFmV:hD=QHUG9Y3ac_iZ3
+Z13 V;oH7j_jDllbS1PO`34YRH0
 R4
-Z16 w1655224244
-Z17 8Waveform3.vwf.vt
-Z18 FWaveform3.vwf.vt
-L0 57
+Z14 w1655802581
+Z15 8Waveform4.vwf.vt
+Z16 FWaveform4.vwf.vt
+L0 59
 R8
 r1
 !s85 0
 31
-Z19 !s108 1655224246.065000
-Z20 !s107 Waveform3.vwf.vt|
-Z21 !s90 -work|work|Waveform3.vwf.vt|
+Z17 !s108 1655802583.031000
+Z18 !s107 Waveform4.vwf.vt|
+Z19 !s90 -work|work|Waveform4.vwf.vt|
 !s101 -O0
 R10
 vlfsr_vlg_sample_tst
 !i10b 1
-Z22 !s100 ei0C8AEcb1NKkOU9lJFzQ3
-Z23 ID0_J?m_W=kBg1MkXKZdL@2
-Z24 Ve^F4_0Ce=5A2eOog24fb?3
+!s100 k0fR0K_KURaoAhU><hYj`1
+I7aiLJ:Yl93;oJN85?bicj3
+Z20 Vb;CVZUAhT9EYFea[dEBcz3
 R4
+R14
+R15
 R16
-R17
-R18
 L0 29
 R8
 r1
 !s85 0
 31
+R17
+R18
 R19
-R20
-R21
 !s101 -O0
 R10
 vlfsr_vlg_vec_tst
 !i10b 1
-Z25 !s100 XN;1miT4A_Mmd1MQQ]nKX0
-Z26 I@_amG`GH=C?;EOc`KnM1L3
-Z27 V8=T7z8Y]O5YgE;zKgl9BI2
+!s100 X>fIcCDcnf>4`gCJF<8C52
+IG^k_02P8?JBRMNcP3Z09Y1
+Z21 V8=T7z8Y]O5YgE;zKgl9BI2
 R4
+R14
+R15
 R16
-R17
-R18
-Z28 L0 241
+L0 243
 R8
 r1
 !s85 0
 31
+R17
+R18
 R19
-R20
-R21
 !s101 -O0
 R10

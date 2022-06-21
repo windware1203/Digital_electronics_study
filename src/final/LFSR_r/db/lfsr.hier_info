@@ -1,16 +1,29 @@
 |lfsr
+clk => outt[5]~reg0.CLK
+clk => outt[4]~reg0.CLK
+clk => outt[3]~reg0.CLK
+clk => outt[2]~reg0.CLK
+clk => outt[1]~reg0.CLK
+clk => outt[0]~reg0.CLK
+clk => tempInt[0].CLK
+clk => tempInt[1].CLK
+clk => tempInt[2].CLK
+clk => tempInt[3].CLK
+clk => tempInt[4].CLK
+clk => tempInt[5].CLK
+clk => temp.CLK
 inSeed[5] => temp.IN0
 inSeed[4] => temp.IN1
-inSeed[4] => outt[5].DATAIN
-inSeed[3] => outt[4].DATAIN
-inSeed[2] => outt[3].DATAIN
-inSeed[1] => outt[2].DATAIN
-inSeed[0] => outt[1].DATAIN
-outt[5] <= inSeed[4].DB_MAX_OUTPUT_PORT_TYPE
-outt[4] <= inSeed[3].DB_MAX_OUTPUT_PORT_TYPE
-outt[3] <= inSeed[2].DB_MAX_OUTPUT_PORT_TYPE
-outt[2] <= inSeed[1].DB_MAX_OUTPUT_PORT_TYPE
-outt[1] <= inSeed[0].DB_MAX_OUTPUT_PORT_TYPE
-outt[0] <= temp.DB_MAX_OUTPUT_PORT_TYPE
+inSeed[4] => Mod0.IN10
+inSeed[3] => Mod0.IN9
+inSeed[2] => Mod0.IN8
+inSeed[1] => Mod0.IN7
+inSeed[0] => Mod0.IN6
+outt[5] <= outt[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+outt[4] <= outt[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+outt[3] <= outt[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+outt[2] <= outt[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+outt[1] <= outt[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+outt[0] <= outt[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 

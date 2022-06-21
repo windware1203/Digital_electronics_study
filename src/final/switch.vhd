@@ -8,8 +8,7 @@ entity switch is
 		--不加牌PS2
 		B13 : in std_logic;
 		
-		Add : out std_logic;
-		Nadd : out std_logic
+		Add : out std_logic
 	);
 end switch;
 
@@ -23,12 +22,6 @@ begin
 		else
 			Add <= '0';
 		end if;
-		
-		if B13 = '1' then
-			Nadd <= '1';
-		else
-			Nadd <= '0';
-		end if;
-		
+
 	end process;
 end addcard;

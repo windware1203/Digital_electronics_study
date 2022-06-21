@@ -4,9 +4,9 @@ USE IEEE.STD_LOGIC_UNSIGNED.ALL;
 USE IEEE.STD_LOGIC_arith.ALL;
 
 entity bits8_comp is
-port (a: in std_logic_vector(7 downto 0);
+port (a: in std_logic_vector(5 downto 0);
 		nofc: in std_logic_vector(2 downto 0);
-		Q: out std_logic_vector(7 downto 0));
+		Q: out std_logic_vector(5 downto 0));
 end bits8_comp;
 
 architecture comp of bits8_comp is
@@ -17,12 +17,12 @@ begin
 
 				if (a<"10101") then
 					if ( nofc = "101") then
-						Q <= "11111111";
+						Q <= "111111";
 					else
 						Q <= a;
 					end if;
 				else
-					Q <= "00000000";
+					Q <= "000000";
 					
 				end if;
 

@@ -1,31 +1,413 @@
 |final
-o1 <= outt[0].DB_MAX_OUTPUT_PORT_TYPE
-pin_name1 => lfsr:lfsr.inSeed[0]
-pin_name2 => lfsr:lfsr.inSeed[1]
-pin_name3 => lfsr:lfsr.inSeed[2]
-pin_name4 => lfsr:lfsr.inSeed[3]
-pin_name5 => lfsr:lfsr.inSeed[4]
-pin_name6 => lfsr:lfsr.inSeed[5]
-o2 <= outt[1].DB_MAX_OUTPUT_PORT_TYPE
-o3 <= outt[2].DB_MAX_OUTPUT_PORT_TYPE
-o4 <= outt[3].DB_MAX_OUTPUT_PORT_TYPE
-o5 <= outt[4].DB_MAX_OUTPUT_PORT_TYPE
-o6 <= outt[5].DB_MAX_OUTPUT_PORT_TYPE
+n21 <= <VCC>
+e1 <= win_lose:inst2.E2
+clk => Point:inst4.clk
+clk => cardNum:inst7.clk
+clk => vectorToBits:inst21.clk
+ps3 => inst6.IN0
+ps3 => Point:inst4.reset
+ps3 => cardNum:inst7.reset
+ps3 => cardNum:inst13.add
+ps3 => Point:inst10.add
+c13 => switch:inst5.C13
+b13 => switch:inst5.B13
+d3 <= win_lose:inst2.D3
+c2 <= win_lose:inst2.C2
+c1 <= win_lose:inst2.C1
+L1 <= win_lose:inst2.L1
+L2 <= win_lose:inst2.L2
+G2 <= win_lose:inst2.G2
+G1 <= win_lose:inst2.G1
+U2 <= win_lose:inst2.U2
+N1 <= win_lose:inst2.N1
+AA2 <= win_lose:inst2.AA2
+AA1 <= win_lose:inst2.AA1
+W2 <= win_lose:inst2.W2
+U1 <= win_lose:inst2.U1
+a_ab7 <= seven:inst11.a
+b_aa7 <= seven:inst11.b
+c_ab6 <= seven:inst11.c
+d_ab5 <= seven:inst11.d
+e_aa9 <= seven:inst11.e
+f_y9 <= seven:inst11.f
+g_ab8 <= seven:inst11.g
+de1 <= vectorToBits:inst21.de1
+de2 <= vectorToBits:inst21.de2
+de3 <= vectorToBits:inst21.de3
 
 
-|final|lfsr:lfsr
+|final|win_lose:inst2
+result_input => ~NO_FANOUT~
+E2 <= <VCC>
+D3 <= <VCC>
+C2 <= <VCC>
+C1 <= <VCC>
+L2 <= <VCC>
+L1 <= <VCC>
+G2 <= <VCC>
+G1 <= <VCC>
+U2 <= <VCC>
+N1 <= <VCC>
+AA2 <= <VCC>
+AA1 <= <VCC>
+W2 <= <VCC>
+U1 <= <VCC>
+
+
+|final|comparator8:inst1
+a[0] => LessThan0.IN6
+a[1] => LessThan0.IN5
+a[2] => LessThan0.IN4
+a[3] => LessThan0.IN3
+a[4] => LessThan0.IN2
+a[5] => LessThan0.IN1
+b[0] => LessThan0.IN12
+b[1] => LessThan0.IN11
+b[2] => LessThan0.IN10
+b[3] => LessThan0.IN9
+b[4] => LessThan0.IN8
+b[5] => LessThan0.IN7
+playerWin <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|bits8_comp:inst8
+a[0] => LessThan0.IN12
+a[0] => Q.DATAA
+a[1] => LessThan0.IN11
+a[1] => Q.DATAA
+a[2] => LessThan0.IN10
+a[2] => Q.DATAA
+a[3] => LessThan0.IN9
+a[3] => Q.DATAA
+a[4] => LessThan0.IN8
+a[4] => Q.DATAA
+a[5] => LessThan0.IN7
+a[5] => Q.DATAA
+nofc[0] => Equal0.IN5
+nofc[1] => Equal0.IN4
+nofc[2] => Equal0.IN3
+Q[0] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[5] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|Point:inst4
+old[5] => Add0.IN6
+old[4] => Add0.IN5
+old[3] => Add0.IN4
+old[2] => Add0.IN3
+old[1] => Add0.IN2
+old[0] => Add0.IN1
+newer[5] => Add0.IN12
+newer[4] => Add0.IN11
+newer[3] => Add0.IN10
+newer[2] => Add0.IN9
+newer[1] => Add0.IN8
+newer[0] => Add0.IN7
+clk => nextC[5]~reg0.CLK
+clk => nextC[4]~reg0.CLK
+clk => nextC[3]~reg0.CLK
+clk => nextC[2]~reg0.CLK
+clk => nextC[1]~reg0.CLK
+clk => nextC[0]~reg0.CLK
+add => nextC.OUTPUTSELECT
+add => nextC.OUTPUTSELECT
+add => nextC.OUTPUTSELECT
+add => nextC.OUTPUTSELECT
+add => nextC.OUTPUTSELECT
+add => nextC.OUTPUTSELECT
+reset => nextC.OUTPUTSELECT
+reset => nextC.OUTPUTSELECT
+reset => nextC.OUTPUTSELECT
+reset => nextC.OUTPUTSELECT
+reset => nextC.OUTPUTSELECT
+reset => nextC.OUTPUTSELECT
+nextC[5] <= nextC[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nextC[4] <= nextC[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nextC[3] <= nextC[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nextC[2] <= nextC[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nextC[1] <= nextC[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nextC[0] <= nextC[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|switch:inst5
+C13 => Add.DATAIN
+B13 => ~NO_FANOUT~
+Add <= C13.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|lfsr:inst
+clk => outt[5]~reg0.CLK
+clk => outt[4]~reg0.CLK
+clk => outt[3]~reg0.CLK
+clk => outt[2]~reg0.CLK
+clk => outt[1]~reg0.CLK
+clk => outt[0]~reg0.CLK
+clk => tempInt[0].CLK
+clk => tempInt[1].CLK
+clk => tempInt[2].CLK
+clk => tempInt[3].CLK
+clk => tempInt[4].CLK
+clk => tempInt[5].CLK
+clk => temp.CLK
 inSeed[5] => temp.IN0
 inSeed[4] => temp.IN1
-inSeed[4] => outt[5].DATAIN
-inSeed[3] => outt[4].DATAIN
-inSeed[2] => outt[3].DATAIN
-inSeed[1] => outt[2].DATAIN
-inSeed[0] => outt[1].DATAIN
-outt[5] <= inSeed[4].DB_MAX_OUTPUT_PORT_TYPE
-outt[4] <= inSeed[3].DB_MAX_OUTPUT_PORT_TYPE
-outt[3] <= inSeed[2].DB_MAX_OUTPUT_PORT_TYPE
-outt[2] <= inSeed[1].DB_MAX_OUTPUT_PORT_TYPE
-outt[1] <= inSeed[0].DB_MAX_OUTPUT_PORT_TYPE
-outt[0] <= temp.DB_MAX_OUTPUT_PORT_TYPE
+inSeed[4] => Mod0.IN10
+inSeed[3] => Mod0.IN9
+inSeed[2] => Mod0.IN8
+inSeed[1] => Mod0.IN7
+inSeed[0] => Mod0.IN6
+outt[5] <= outt[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+outt[4] <= outt[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+outt[3] <= outt[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+outt[2] <= outt[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+outt[1] <= outt[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+outt[0] <= outt[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|cardNum:inst7
+nowC[2] => Add0.IN6
+nowC[1] => Add0.IN5
+nowC[0] => Add0.IN4
+clk => nextC[2]~reg0.CLK
+clk => nextC[1]~reg0.CLK
+clk => nextC[0]~reg0.CLK
+add => nextC.OUTPUTSELECT
+add => nextC.OUTPUTSELECT
+add => nextC.OUTPUTSELECT
+reset => nextC.OUTPUTSELECT
+reset => nextC.OUTPUTSELECT
+reset => nextC.OUTPUTSELECT
+nextC[2] <= nextC[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nextC[1] <= nextC[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nextC[0] <= nextC[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+five <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|bits8_comp_b:inst20
+b[0] => LessThan0.IN12
+b[1] => LessThan0.IN11
+b[2] => LessThan0.IN10
+b[3] => LessThan0.IN9
+b[4] => LessThan0.IN8
+b[5] => LessThan0.IN7
+Q[0] <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
+Q[5] <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|Point:inst10
+old[5] => Add0.IN6
+old[4] => Add0.IN5
+old[3] => Add0.IN4
+old[2] => Add0.IN3
+old[1] => Add0.IN2
+old[0] => Add0.IN1
+newer[5] => Add0.IN12
+newer[4] => Add0.IN11
+newer[3] => Add0.IN10
+newer[2] => Add0.IN9
+newer[1] => Add0.IN8
+newer[0] => Add0.IN7
+clk => nextC[5]~reg0.CLK
+clk => nextC[4]~reg0.CLK
+clk => nextC[3]~reg0.CLK
+clk => nextC[2]~reg0.CLK
+clk => nextC[1]~reg0.CLK
+clk => nextC[0]~reg0.CLK
+add => nextC.OUTPUTSELECT
+add => nextC.OUTPUTSELECT
+add => nextC.OUTPUTSELECT
+add => nextC.OUTPUTSELECT
+add => nextC.OUTPUTSELECT
+add => nextC.OUTPUTSELECT
+reset => nextC.OUTPUTSELECT
+reset => nextC.OUTPUTSELECT
+reset => nextC.OUTPUTSELECT
+reset => nextC.OUTPUTSELECT
+reset => nextC.OUTPUTSELECT
+reset => nextC.OUTPUTSELECT
+nextC[5] <= nextC[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nextC[4] <= nextC[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nextC[3] <= nextC[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nextC[2] <= nextC[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nextC[1] <= nextC[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nextC[0] <= nextC[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|over11:inst18
+x[0] => LessThan0.IN12
+x[1] => LessThan0.IN11
+x[2] => LessThan0.IN10
+x[3] => LessThan0.IN9
+x[4] => LessThan0.IN8
+x[5] => LessThan0.IN7
+y <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|lfsr_add:inst12
+clk => add~reg0.CLK
+clk => outt[5]~reg0.CLK
+clk => outt[4]~reg0.CLK
+clk => outt[3]~reg0.CLK
+clk => outt[2]~reg0.CLK
+clk => outt[1]~reg0.CLK
+clk => outt[0]~reg0.CLK
+clk => tempInt[0].CLK
+clk => tempInt[1].CLK
+clk => tempInt[2].CLK
+clk => tempInt[3].CLK
+clk => tempInt[4].CLK
+clk => tempInt[5].CLK
+clk => temp.CLK
+add <= add~reg0.DB_MAX_OUTPUT_PORT_TYPE
+inSeed[5] => temp.IN0
+inSeed[4] => temp.IN1
+inSeed[4] => Mod0.IN10
+inSeed[3] => Mod0.IN9
+inSeed[3] => add.IN0
+inSeed[2] => Mod0.IN8
+inSeed[1] => Mod0.IN7
+inSeed[1] => add.IN1
+inSeed[0] => Mod0.IN6
+outt[5] <= outt[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+outt[4] <= outt[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+outt[3] <= outt[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+outt[2] <= outt[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+outt[1] <= outt[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+outt[0] <= outt[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|cardNum:inst13
+nowC[2] => Add0.IN6
+nowC[1] => Add0.IN5
+nowC[0] => Add0.IN4
+clk => nextC[2]~reg0.CLK
+clk => nextC[1]~reg0.CLK
+clk => nextC[0]~reg0.CLK
+add => nextC.OUTPUTSELECT
+add => nextC.OUTPUTSELECT
+add => nextC.OUTPUTSELECT
+reset => nextC.OUTPUTSELECT
+reset => nextC.OUTPUTSELECT
+reset => nextC.OUTPUTSELECT
+nextC[2] <= nextC[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nextC[1] <= nextC[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nextC[0] <= nextC[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+five <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|seven:inst11
+a0 => Mux0.IN19
+a0 => Mux1.IN19
+a0 => Mux2.IN19
+a0 => Mux3.IN19
+a0 => Mux4.IN19
+a0 => Mux5.IN19
+a0 => Mux6.IN19
+a1 => Mux0.IN18
+a1 => Mux1.IN18
+a1 => Mux2.IN18
+a1 => Mux3.IN18
+a1 => Mux4.IN18
+a1 => Mux5.IN18
+a1 => Mux6.IN18
+a2 => Mux0.IN17
+a2 => Mux1.IN17
+a2 => Mux2.IN17
+a2 => Mux3.IN17
+a2 => Mux4.IN17
+a2 => Mux5.IN17
+a2 => Mux6.IN17
+a3 => Mux0.IN16
+a3 => Mux1.IN16
+a3 => Mux2.IN16
+a3 => Mux3.IN16
+a3 => Mux4.IN16
+a3 => Mux5.IN16
+a3 => Mux6.IN16
+a <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+b <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+c <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+d <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+e <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+f <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+g <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|vectorToBits:inst21
+clk => de1~reg0.CLK
+clk => de2~reg0.CLK
+clk => de3~reg0.CLK
+clk => de[2].CLK
+clk => de[1].CLK
+clk => de[0].CLK
+clk => a0~reg0.CLK
+clk => a1~reg0.CLK
+clk => a2~reg0.CLK
+clk => a3~reg0.CLK
+clk => tenMOM[5].CLK
+clk => tenMOM[4].CLK
+clk => tenMOM[3].CLK
+clk => tenMOM[2].CLK
+clk => tempP[5].CLK
+clk => tempP[4].CLK
+clk => tempP[3].CLK
+clk => tempP[2].CLK
+clk => tenP[5].CLK
+clk => tenP[4].CLK
+clk => tenP[3].CLK
+clk => tenP[2].CLK
+clk => temp[5].CLK
+clk => temp[4].CLK
+clk => temp[3].CLK
+clk => temp[2].CLK
+clk => ten[5].CLK
+clk => ten[4].CLK
+clk => ten[3].CLK
+clk => ten[2].CLK
+inputLFSR[5] => Div0.IN9
+inputLFSR[5] => Mod0.IN11
+inputLFSR[4] => Div0.IN8
+inputLFSR[4] => Mod0.IN10
+inputLFSR[3] => Div0.IN7
+inputLFSR[3] => Mod0.IN9
+inputLFSR[2] => Div0.IN6
+inputLFSR[2] => Mod0.IN8
+inputLFSR[1] => Div0.IN5
+inputLFSR[1] => Mod0.IN7
+inputLFSR[0] => Div0.IN4
+inputLFSR[0] => Mod0.IN6
+inputPoints[5] => Div1.IN9
+inputPoints[5] => Mod1.IN11
+inputPoints[4] => Div1.IN8
+inputPoints[4] => Mod1.IN10
+inputPoints[3] => Div1.IN7
+inputPoints[3] => Mod1.IN9
+inputPoints[2] => Div1.IN6
+inputPoints[2] => Mod1.IN8
+inputPoints[1] => Div1.IN5
+inputPoints[1] => Mod1.IN7
+inputPoints[0] => Div1.IN4
+inputPoints[0] => Mod1.IN6
+inputPointsMOM[5] => ~NO_FANOUT~
+inputPointsMOM[4] => ~NO_FANOUT~
+inputPointsMOM[3] => ~NO_FANOUT~
+inputPointsMOM[2] => ~NO_FANOUT~
+inputPointsMOM[1] => ~NO_FANOUT~
+inputPointsMOM[0] => ~NO_FANOUT~
+a0 <= a0~reg0.DB_MAX_OUTPUT_PORT_TYPE
+a1 <= a1~reg0.DB_MAX_OUTPUT_PORT_TYPE
+a2 <= a2~reg0.DB_MAX_OUTPUT_PORT_TYPE
+a3 <= a3~reg0.DB_MAX_OUTPUT_PORT_TYPE
+de1 <= de1~reg0.DB_MAX_OUTPUT_PORT_TYPE
+de2 <= de2~reg0.DB_MAX_OUTPUT_PORT_TYPE
+de3 <= de3~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 

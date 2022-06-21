@@ -1,5 +1,5 @@
 Analysis & Synthesis report for lfsr
-Tue Jun 14 00:14:59 2022
+Tue Jun 21 17:05:23 2022
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -14,8 +14,10 @@ Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Elapsed Time Per Partition
- 10. Analysis & Synthesis Messages
+  9. Inverted Register Statistics
+ 10. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod0
+ 11. Elapsed Time Per Partition
+ 12. Analysis & Synthesis Messages
 
 
 
@@ -41,16 +43,16 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Jun 14 00:14:59 2022      ;
+; Analysis & Synthesis Status        ; Successful - Tue Jun 21 17:05:23 2022      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; lfsr                                       ;
 ; Top-level Entity Name              ; lfsr                                       ;
 ; Family                             ; Cyclone IV GX                              ;
-; Total logic elements               ; 1                                          ;
-;     Total combinational functions  ; 1                                          ;
-;     Dedicated logic registers      ; 0                                          ;
-; Total registers                    ; 0                                          ;
-; Total pins                         ; 12                                         ;
+; Total logic elements               ; 46                                         ;
+;     Total combinational functions  ; 45                                         ;
+;     Dedicated logic registers      ; 13                                         ;
+; Total registers                    ; 13                                         ;
+; Total pins                         ; 13                                         ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 0                                          ;
 ; Embedded Multiplier 9-bit elements ; 0                                          ;
@@ -165,13 +167,22 @@ applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                        ;
-+----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                 ; Library ;
-+----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------+---------+
-; lfsr.vhd                         ; yes             ; User VHDL File  ; C:/Users/User/Documents/GitHub/Digital_electronics_study/src/LFSR_r/lfsr.vhd ;         ;
-+----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                             ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                         ; Library ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------------------------+---------+
+; lfsr.vhd                         ; yes             ; User VHDL File               ; C:/Users/User/Documents/GitHub/Digital_electronics_study/src/final/LFSR_r/lfsr.vhd                   ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/altera/13.1/quartus/libraries/megafunctions/lpm_divide.tdf                                        ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/altera/13.1/quartus/libraries/megafunctions/abs_divider.inc                                       ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/altera/13.1/quartus/libraries/megafunctions/sign_div_unsign.inc                                   ;         ;
+; aglobal131.inc                   ; yes             ; Megafunction                 ; c:/altera/13.1/quartus/libraries/megafunctions/aglobal131.inc                                        ;         ;
+; db/lpm_divide_gdm.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/User/Documents/GitHub/Digital_electronics_study/src/final/LFSR_r/db/lpm_divide_gdm.tdf      ;         ;
+; db/sign_div_unsign_bkh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/User/Documents/GitHub/Digital_electronics_study/src/final/LFSR_r/db/sign_div_unsign_bkh.tdf ;         ;
+; db/alt_u_div_48f.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/User/Documents/GitHub/Digital_electronics_study/src/final/LFSR_r/db/alt_u_div_48f.tdf       ;         ;
+; db/add_sub_1tc.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/User/Documents/GitHub/Digital_electronics_study/src/final/LFSR_r/db/add_sub_1tc.tdf         ;         ;
+; db/add_sub_2tc.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/User/Documents/GitHub/Digital_electronics_study/src/final/LFSR_r/db/add_sub_2tc.tdf         ;         ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------+
@@ -179,22 +190,26 @@ applicable agreement for further details.
 +--------------------------+------------------+
 ; Resource                 ; Usage            ;
 +--------------------------+------------------+
-; I/O pins                 ; 12               ;
+; I/O pins                 ; 13               ;
 ; DSP block 9-bit elements ; 0                ;
-; Maximum fan-out node     ; inSeed[4]~input  ;
-; Maximum fan-out          ; 2                ;
-; Total fan-out            ; 20               ;
-; Average fan-out          ; 0.80             ;
+; Maximum fan-out node     ; clk~input        ;
+; Maximum fan-out          ; 13               ;
+; Total fan-out            ; 152              ;
+; Average fan-out          ; 1.81             ;
 +--------------------------+------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                     ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+---------------------+--------------+
-; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+---------------------+--------------+
-; |lfsr                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 12   ; 0            ; |lfsr               ; work         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+---------------------+--------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                   ;
++----------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node             ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                   ; Library Name ;
++----------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------+--------------+
+; |lfsr                                  ; 45 (7)            ; 13 (13)      ; 0           ; 0            ; 0       ; 0         ; 0         ; 13   ; 0            ; |lfsr                                                                                                 ; work         ;
+;    |lpm_divide:Mod0|                   ; 38 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |lfsr|lpm_divide:Mod0                                                                                 ; work         ;
+;       |lpm_divide_gdm:auto_generated|  ; 38 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |lfsr|lpm_divide:Mod0|lpm_divide_gdm:auto_generated                                                   ; work         ;
+;          |sign_div_unsign_bkh:divider| ; 38 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |lfsr|lpm_divide:Mod0|lpm_divide_gdm:auto_generated|sign_div_unsign_bkh:divider                       ; work         ;
+;             |alt_u_div_48f:divider|    ; 38 (38)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |lfsr|lpm_divide:Mod0|lpm_divide_gdm:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_48f:divider ; work         ;
++----------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -203,7 +218,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 0     ;
+; Total registers                              ; 13    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -211,6 +226,39 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; tempInt[0]                             ; 2       ;
+; Total number of inverted registers = 1 ;         ;
++----------------------------------------+---------+
+
+
++------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_divide:Mod0 ;
++------------------------+----------------+------------------------+
+; Parameter Name         ; Value          ; Type                   ;
++------------------------+----------------+------------------------+
+; LPM_WIDTHN             ; 6              ; Untyped                ;
+; LPM_WIDTHD             ; 6              ; Untyped                ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_PIPELINE           ; 0              ; Untyped                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
+; CBXI_PARAMETER         ; lpm_divide_gdm ; Untyped                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
++------------------------+----------------+------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +-------------------------------+
@@ -228,24 +276,42 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Tue Jun 14 00:14:58 2022
+    Info: Processing started: Tue Jun 21 17:05:21 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off lfsr -c lfsr
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file lfsr.vhd
     Info (12022): Found design unit 1: lfsr-Main
     Info (12023): Found entity 1: lfsr
 Info (12127): Elaborating entity "lfsr" for the top level hierarchy
+Info (278001): Inferred 1 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod0"
+Info (12130): Elaborated megafunction instantiation "lpm_divide:Mod0"
+Info (12133): Instantiated megafunction "lpm_divide:Mod0" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTHN" = "6"
+    Info (12134): Parameter "LPM_WIDTHD" = "6"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_gdm.tdf
+    Info (12023): Found entity 1: lpm_divide_gdm
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_bkh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_bkh
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_48f.tdf
+    Info (12023): Found entity 1: alt_u_div_48f
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_1tc.tdf
+    Info (12023): Found entity 1: add_sub_1tc
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_2tc.tdf
+    Info (12023): Found entity 1: add_sub_2tc
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 13 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 6 input pins
+Info (21057): Implemented 59 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 7 input pins
     Info (21059): Implemented 6 output pins
-    Info (21061): Implemented 1 logic cells
+    Info (21061): Implemented 46 logic cells
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4767 megabytes
-    Info: Processing ended: Tue Jun 14 00:14:59 2022
-    Info: Elapsed time: 00:00:01
+    Info: Peak virtual memory: 4749 megabytes
+    Info: Processing ended: Tue Jun 21 17:05:23 2022
+    Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:01
 
 

@@ -6,11 +6,10 @@ use ieee.std_logic_unsigned.all;
 
 entity seven    is
 
-port ( a0,a1,a2,a3: in  std_logic; ----輸入4位
+port ( a0,a1,a2,a3: in  std_logic; ----輸入位
 
-a,b,c,d,e,f,g : out std_logic;
+a,b,c,d,e,f,g : out std_logic
 
-clk: in  std_logic
 
 );      --7段碼
 
@@ -32,7 +31,7 @@ variable dout: std_logic_vector (6 downto 0);
 begin
 
 case q is
-when "0000" => dout := "0000000";
+when "0000" => dout := "0000000";--0
 
 when "0001" => dout := "1111001";
 
@@ -50,7 +49,7 @@ when "0111" => dout := "1111000";
 
 when "1000" => dout := "0000000";
 
-when "1001" => dout := "0011000";
+when "1001" => dout := "0011000";--9
 
 when others => dout := "0000000";
 

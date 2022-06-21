@@ -2,4 +2,100 @@
 TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
+Type  : Slow 1100mV 85C Model Setup 'clk'
+Slack : -10.515
+TNS   : -79.819
+
+Type  : Slow 1100mV 85C Model Setup 'c13'
+Slack : -7.643
+TNS   : -173.549
+
+Type  : Slow 1100mV 85C Model Hold 'clk'
+Slack : 0.316
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'c13'
+Slack : 0.710
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'c13'
+Slack : -0.724
+TNS   : -54.398
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clk'
+Slack : -0.724
+TNS   : -24.459
+
+Type  : Slow 1100mV 0C Model Setup 'clk'
+Slack : -10.872
+TNS   : -79.181
+
+Type  : Slow 1100mV 0C Model Setup 'c13'
+Slack : -7.996
+TNS   : -180.658
+
+Type  : Slow 1100mV 0C Model Hold 'clk'
+Slack : 0.035
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'c13'
+Slack : 0.660
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'c13'
+Slack : -0.724
+TNS   : -57.640
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clk'
+Slack : -0.724
+TNS   : -24.984
+
+Type  : Fast 1100mV 85C Model Setup 'clk'
+Slack : -4.158
+TNS   : -24.482
+
+Type  : Fast 1100mV 85C Model Setup 'c13'
+Slack : -2.625
+TNS   : -54.128
+
+Type  : Fast 1100mV 85C Model Hold 'clk'
+Slack : -0.042
+TNS   : -0.369
+
+Type  : Fast 1100mV 85C Model Hold 'c13'
+Slack : 0.192
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'c13'
+Slack : -0.482
+TNS   : -25.069
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clk'
+Slack : -0.094
+TNS   : -1.959
+
+Type  : Fast 1100mV 0C Model Setup 'clk'
+Slack : -3.895
+TNS   : -22.199
+
+Type  : Fast 1100mV 0C Model Setup 'c13'
+Slack : -2.434
+TNS   : -49.201
+
+Type  : Fast 1100mV 0C Model Hold 'clk'
+Slack : -0.077
+TNS   : -0.681
+
+Type  : Fast 1100mV 0C Model Hold 'c13'
+Slack : 0.171
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'c13'
+Slack : -0.462
+TNS   : -24.830
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clk'
+Slack : -0.093
+TNS   : -1.983
+
 ------------------------------------------------------------

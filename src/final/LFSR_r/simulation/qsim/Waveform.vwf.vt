@@ -18,7 +18,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "06/07/2022 21:41:01"
+// Generated on "06/21/2022 17:07:16"
                                                                         
 // Verilog Self-Checking Test Bench (with test vectors) for design :    lfsr
 // 
@@ -27,15 +27,17 @@
 
 `timescale 1 ps/ 1 ps
 module lfsr_vlg_sample_tst(
+	clk,
 	inSeed,
 	sampler_tx
 );
+input  clk;
 input [0:5] inSeed;
 output sampler_tx;
 
 reg sample;
 time current_time;
-always @(inSeed)
+always @(clk or inSeed)
                                                                                 
 begin                                                 
  if ($realtime > 0)                                   
@@ -58,16 +60,16 @@ module lfsr_vlg_check_tst (
 	outt,
 	sampler_rx
 );
-input  outt;
+input [0:5] outt;
 input sampler_rx;
 
-reg  outt_expected;
+reg [0:5] outt_expected;
 
-reg  outt_prev;
+reg [0:5] outt_prev;
 
-reg  outt_expected_prev;
+reg [0:5] outt_expected_prev;
 
-reg  last_outt_exp;
+reg [0:5] last_outt_exp;
 
 reg trigger;
 
@@ -100,11 +102,60 @@ begin
 end
 
 
-
-// expected outt
+// expected outt[ 5 ]
+always
+begin
+	outt_expected[5] = 1'b0;
+	outt_expected[5] = #10000 1'b1;
+	#10000;
+end 
+// expected outt[ 4 ]
+always
+begin
+	outt_expected[4] = 1'b0;
+	outt_expected[4] = #20000 1'b1;
+	#20000;
+end 
+// expected outt[ 3 ]
 initial
 begin
-	outt_expected = 1'bX;
+	repeat(12)
+	begin
+		outt_expected[3] = 1'b0;
+		outt_expected[3] = #40000 1'b1;
+		# 40000;
+	end
+	outt_expected[3] = 1'b0;
+end 
+// expected outt[ 2 ]
+initial
+begin
+	repeat(6)
+	begin
+		outt_expected[2] = 1'b0;
+		outt_expected[2] = #80000 1'b1;
+		# 80000;
+	end
+	outt_expected[2] = 1'b0;
+end 
+// expected outt[ 1 ]
+initial
+begin
+	repeat(3)
+	begin
+		outt_expected[1] = 1'b0;
+		outt_expected[1] = #160000 1'b1;
+		# 160000;
+	end
+	outt_expected[1] = 1'b0;
+end 
+// expected outt[ 0 ]
+initial
+begin
+	outt_expected[0] = 1'b0;
+	outt_expected[0] = #320000 1'b1;
+	outt_expected[0] = #320000 1'b0;
+	outt_expected[0] = #320000 1'b1;
 end 
 // generate trigger
 always @(outt_expected or outt)
@@ -121,17 +172,82 @@ begin
 	$display("| real outt = %b | ",outt_prev);
 `endif
 	if (
-		( outt_expected_prev !== 1'bx ) && ( outt_prev !== outt_expected_prev )
-		&& ((outt_expected_prev !== last_outt_exp) ||
+		( outt_expected_prev[0] !== 1'bx ) && ( outt_prev[0] !== outt_expected_prev[0] )
+		&& ((outt_expected_prev[0] !== last_outt_exp[0]) ||
 			on_first_change[1])
 	)
 	begin
-		$display ("ERROR! Vector Mismatch for output port outt :: @time = %t",  $realtime);
+		$display ("ERROR! Vector Mismatch for output port outt[0] :: @time = %t",  $realtime);
 		$display ("     Expected value = %b", outt_expected_prev);
 		$display ("     Real value = %b", outt_prev);
 		nummismatches = nummismatches + 1;
 		on_first_change[1] = 1'b0;
-		last_outt_exp = outt_expected_prev;
+		last_outt_exp[0] = outt_expected_prev[0];
+	end
+	if (
+		( outt_expected_prev[1] !== 1'bx ) && ( outt_prev[1] !== outt_expected_prev[1] )
+		&& ((outt_expected_prev[1] !== last_outt_exp[1]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port outt[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", outt_expected_prev);
+		$display ("     Real value = %b", outt_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_outt_exp[1] = outt_expected_prev[1];
+	end
+	if (
+		( outt_expected_prev[2] !== 1'bx ) && ( outt_prev[2] !== outt_expected_prev[2] )
+		&& ((outt_expected_prev[2] !== last_outt_exp[2]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port outt[2] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", outt_expected_prev);
+		$display ("     Real value = %b", outt_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_outt_exp[2] = outt_expected_prev[2];
+	end
+	if (
+		( outt_expected_prev[3] !== 1'bx ) && ( outt_prev[3] !== outt_expected_prev[3] )
+		&& ((outt_expected_prev[3] !== last_outt_exp[3]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port outt[3] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", outt_expected_prev);
+		$display ("     Real value = %b", outt_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_outt_exp[3] = outt_expected_prev[3];
+	end
+	if (
+		( outt_expected_prev[4] !== 1'bx ) && ( outt_prev[4] !== outt_expected_prev[4] )
+		&& ((outt_expected_prev[4] !== last_outt_exp[4]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port outt[4] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", outt_expected_prev);
+		$display ("     Real value = %b", outt_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_outt_exp[4] = outt_expected_prev[4];
+	end
+	if (
+		( outt_expected_prev[5] !== 1'bx ) && ( outt_prev[5] !== outt_expected_prev[5] )
+		&& ((outt_expected_prev[5] !== last_outt_exp[5]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port outt[5] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", outt_expected_prev);
+		$display ("     Real value = %b", outt_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_outt_exp[5] = outt_expected_prev[5];
 	end
 
 	trigger <= ~trigger;
@@ -152,18 +268,28 @@ endmodule
 module lfsr_vlg_vec_tst();
 // constants                                           
 // general purpose registers
+reg clk;
 reg [0:5] inSeed;
 // wires                                               
-wire outt;
+wire [0:5] outt;
 
 wire sampler;                             
 
 // assign statements (if any)                          
 lfsr i1 (
 // port map - connection between master ports and signals/registers   
+	.clk(clk),
 	.inSeed(inSeed),
 	.outt(outt)
 );
+
+// clk
+always
+begin
+	clk = 1'b0;
+	clk = #5000 1'b1;
+	#5000;
+end 
 // inSeed[ 5 ]
 always
 begin
@@ -221,6 +347,7 @@ begin
 end 
 
 lfsr_vlg_sample_tst tb_sample (
+	.clk(clk),
 	.inSeed(inSeed),
 	.sampler_tx(sampler)
 );

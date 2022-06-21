@@ -44,13 +44,6 @@ applicable agreement for further details.
 		(text "Add" (rect 98 27 115 39)(font "Arial" ))
 		(line (pt 136 32)(pt 120 32)(line_width 1))
 	)
-	(port
-		(pt 136 48)
-		(output)
-		(text "Nadd" (rect 0 0 21 12)(font "Arial" ))
-		(text "Nadd" (rect 94 43 115 55)(font "Arial" ))
-		(line (pt 136 48)(pt 120 48)(line_width 1))
-	)
 	(drawing
 		(rectangle (rect 16 16 120 64)(line_width 1))
 	)

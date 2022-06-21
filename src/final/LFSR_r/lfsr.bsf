@@ -26,9 +26,16 @@ applicable agreement for further details.
 	(port
 		(pt 0 32)
 		(input)
+		(text "clk" (rect 0 0 10 12)(font "Arial" ))
+		(text "clk" (rect 21 27 31 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 1))
+	)
+	(port
+		(pt 0 48)
+		(input)
 		(text "inSeed[0..5]" (rect 0 0 46 12)(font "Arial" ))
-		(text "inSeed[0..5]" (rect 21 27 67 39)(font "Arial" ))
-		(line (pt 0 32)(pt 16 32)(line_width 3))
+		(text "inSeed[0..5]" (rect 21 43 67 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48)(line_width 3))
 	)
 	(port
 		(pt 184 32)
